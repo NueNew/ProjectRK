@@ -79,6 +79,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Master_files\From_Customers.Designer.vb">
+      <DependentUpon>From_Customers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Master_files\From_Customers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Master_files\M_Customers.Designer.vb">
       <DependentUpon>M_Customers.vb</DependentUpon>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form_Master_files\From_Customers.resx">
+      <DependentUpon>From_Customers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\M_Customers.resx">
       <DependentUpon>M_Customers.vb</DependentUpon>
     </EmbeddedResource>
