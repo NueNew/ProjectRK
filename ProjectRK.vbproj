@@ -85,6 +85,12 @@
     <Compile Include="Form_Master_files\Form_Category.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Master_files\Form_CategoryD.Designer.vb">
+      <DependentUpon>Form_CategoryD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Master_files\Form_CategoryD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Master_files\From_Customers.Designer.vb">
       <DependentUpon>From_Customers.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form_Master_files\Form_Category.resx">
       <DependentUpon>Form_Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Master_files\Form_CategoryD.resx">
+      <DependentUpon>Form_CategoryD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\From_Customers.resx">
       <DependentUpon>From_Customers.vb</DependentUpon>

@@ -4,7 +4,6 @@ C:\MYPROJECT\ProjectRK\bin\Debug\ProjectRK.pdb
 C:\MYPROJECT\ProjectRK\bin\Debug\ProjectRK.xml
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbprojResolveAssemblyReference.cache
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.From_Customers.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.M_Customers.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.From_Main.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Resources.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbproj.GenerateResource.cache
@@ -12,3 +11,5 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbproj.CoreCompileInputs.cache
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.exe
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.xml
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.pdb
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Category.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_CategoryD.resources
