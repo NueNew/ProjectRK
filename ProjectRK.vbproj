@@ -91,6 +91,18 @@
     <Compile Include="Form_Master_files\Form_CategoryD.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Master_files\Form_Product.Designer.vb">
+      <DependentUpon>Form_Product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Master_files\Form_Product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Master_files\Form_ProductD.Designer.vb">
+      <DependentUpon>Form_ProductD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Master_files\Form_ProductD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Master_files\From_Customers.Designer.vb">
       <DependentUpon>From_Customers.vb</DependentUpon>
     </Compile>
@@ -126,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\Form_CategoryD.resx">
       <DependentUpon>Form_CategoryD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Master_files\Form_Product.resx">
+      <DependentUpon>Form_Product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Master_files\Form_ProductD.resx">
+      <DependentUpon>Form_ProductD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\From_Customers.resx">
       <DependentUpon>From_Customers.vb</DependentUpon>

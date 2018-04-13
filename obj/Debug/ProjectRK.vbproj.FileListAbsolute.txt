@@ -13,3 +13,5 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.xml
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.pdb
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Category.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_CategoryD.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Product.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_ProductD.resources
