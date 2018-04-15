@@ -18,3 +18,8 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_ProductD.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Employee.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Donate.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_POS.resources
+C:\MYPROJECT\ProjectRK\bin\Debug\EntityFramework.dll
+C:\MYPROJECT\ProjectRK\bin\Debug\EntityFramework.SqlServer.dll
+C:\MYPROJECT\ProjectRK\bin\Debug\EntityFramework.xml
+C:\MYPROJECT\ProjectRK\bin\Debug\EntityFramework.SqlServer.xml
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbproj.CopyComplete
