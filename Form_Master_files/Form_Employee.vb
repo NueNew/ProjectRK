@@ -49,7 +49,7 @@ Public Class Form_Employee
         bindingSrc = New BindingSource(dataSt, "employees")
 
         TextID.DataBindings.Add("Text", bindingSrc, "EmployeeID")
-        TextFirstName.DataBindings.Add("Text", bindingSrc, "EmployeeName")
+        TextName.DataBindings.Add("Text", bindingSrc, "EmployeeName")
         TextPhone.DataBindings.Add("Text", bindingSrc, "Phone")
         TextAddress.DataBindings.Add("Text", bindingSrc, "Address")
         PictureBox1.DataBindings.Add("Image", bindingSrc, "Photo", True)
@@ -84,7 +84,7 @@ Public Class Form_Employee
         command.CommandText = sql
         command.Parameters.Clear()
 
-        command.Parameters.AddWithValue("fname", TextFirstName.Text)
+        command.Parameters.AddWithValue("fname", TextName.Text)
         command.Parameters.AddWithValue("ph", TextPhone.Text)
         command.Parameters.AddWithValue("add", TextAddress.Text)
         command.Parameters.AddWithValue("username", TextUsername.Text)
@@ -115,12 +115,12 @@ Public Class Form_Employee
 
     Private Sub UpdateData()
 
-        sql = "UPDATE Employees EmployeeName = @fname, Address = @add, Phone = @ph, Username = @username, Password = @password, Photo = @pic WHERE EmployeeID = @eid "
+        sql = "UPDATE Employees Set EmployeeName = @fname,                Address = @add, Phone = @ph, Username = @username,               Password = @password, Photo = @pic WHERE EmployeeID = @eid "
 
         command.CommandText = sql
         command.Parameters.Clear()
-
-        command.Parameters.AddWithValue("fname", TextFirstName.Text)
+        command.Parameters.AddWithValue("eid", TextID.Text)
+        command.Parameters.AddWithValue("fname", TextName.Text)
         command.Parameters.AddWithValue("ph", TextPhone.Text)
         command.Parameters.AddWithValue("add", TextAddress.Text)
         command.Parameters.AddWithValue("username", TextUsername.Text)

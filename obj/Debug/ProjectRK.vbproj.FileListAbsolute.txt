@@ -16,3 +16,5 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_CategoryD.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Product.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_ProductD.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Employee.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Donate.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_POS.resources

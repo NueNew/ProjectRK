@@ -44,7 +44,7 @@ Partial Class Form_Employee
         Me.ButtonOK = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextSearch = New System.Windows.Forms.TextBox()
-        Me.TextFirstName = New System.Windows.Forms.TextBox()
+        Me.TextName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -244,12 +244,12 @@ Partial Class Form_Employee
         Me.TextSearch.Size = New System.Drawing.Size(153, 29)
         Me.TextSearch.TabIndex = 21
         '
-        'TextFirstName
+        'TextName
         '
-        Me.TextFirstName.Location = New System.Drawing.Point(231, 221)
-        Me.TextFirstName.Name = "TextFirstName"
-        Me.TextFirstName.Size = New System.Drawing.Size(195, 29)
-        Me.TextFirstName.TabIndex = 128
+        Me.TextName.Location = New System.Drawing.Point(231, 221)
+        Me.TextName.Name = "TextName"
+        Me.TextName.Size = New System.Drawing.Size(195, 29)
+        Me.TextName.TabIndex = 128
         '
         'Label2
         '
@@ -292,7 +292,7 @@ Partial Class Form_Employee
         Me.TextAddress.Multiline = True
         Me.TextAddress.Name = "TextAddress"
         Me.TextAddress.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextAddress.Size = New System.Drawing.Size(195, 74)
+        Me.TextAddress.Size = New System.Drawing.Size(303, 166)
         Me.TextAddress.TabIndex = 131
         '
         'TextPhone
@@ -382,7 +382,7 @@ Partial Class Form_Employee
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextUsername)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextFirstName)
+        Me.Controls.Add(Me.TextName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextID)
         Me.Controls.Add(Me.Label1)
@@ -425,7 +425,7 @@ Partial Class Form_Employee
     Friend WithEvents ButtonOK As Button
     Friend WithEvents Label16 As Label
     Friend WithEvents TextSearch As TextBox
-    Friend WithEvents TextFirstName As TextBox
+    Friend WithEvents TextName As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextID As TextBox
     Friend WithEvents Label1 As Label

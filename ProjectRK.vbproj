@@ -49,8 +49,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -115,6 +117,23 @@
     <Compile Include="Form_Master_files\From_Customers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Transection_files\DataClassesPos.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesPos.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_Donate.Designer.vb">
+      <DependentUpon>Form_Donate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_Donate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_POS.Designer.vb">
+      <DependentUpon>Form_POS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_POS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="From_Main.Designer.vb">
       <DependentUpon>From_Main.vb</DependentUpon>
     </Compile>
@@ -157,6 +176,12 @@
     <EmbeddedResource Include="Form_Master_files\From_Customers.resx">
       <DependentUpon>From_Customers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transection_files\Form_Donate.resx">
+      <DependentUpon>Form_Donate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transection_files\Form_POS.resx">
+      <DependentUpon>Form_POS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From_Main.resx">
       <DependentUpon>From_Main.vb</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +193,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Form_Transection_files\DataClassesPos.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesPos.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Form_Transection_files\DataClassesPos.dbml.layout">
+      <DependentUpon>DataClassesPos.dbml</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -180,7 +213,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Form_Transection_files\" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

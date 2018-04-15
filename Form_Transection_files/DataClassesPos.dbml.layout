@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesPos">
+  <DataContextMoniker Name="/DataClassesPosDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9231c73b-b683-47a1-bb65-940567b51e5a" absoluteBounds="1, 0.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesPosDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30fcf700-8a83-4abc-bce5-56cbf2d9827b" absoluteBounds="1.0149999999999997, 1.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bca27ca-d2c4-4ad7-a065-40a0e589ede3" absoluteBounds="3.5, 0.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesPosDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b34f8408-1901-4a33-9e02-ca47287c33eb" absoluteBounds="3.515, 1.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.41429768880208); (3.5 : 1.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPosDataContext/Customer/Customer_Order" />
+      <nodes>
+        <classShapeMoniker Id="9231c73b-b683-47a1-bb65-940567b51e5a" />
+        <classShapeMoniker Id="7bca27ca-d2c4-4ad7-a065-40a0e589ede3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ede03dd7-7914-4e71-8956-6059ac071512" absoluteBounds="6, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClassesPosDataContext/OrdersDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75878643-453e-413e-854f-76c13f6dd9f7" absoluteBounds="6.015, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.41429768880208); (6 : 1.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPosDataContext/Order/Order_OrdersDetail" />
+      <nodes>
+        <classShapeMoniker Id="7bca27ca-d2c4-4ad7-a065-40a0e589ede3" />
+        <classShapeMoniker Id="ede03dd7-7914-4e71-8956-6059ac071512" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="13942d59-7f94-4ecf-abca-935259e751e2" absoluteBounds="6, 3, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesPosDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4972d014-8b6e-4c0f-b6bd-ff27730fb885" absoluteBounds="6.015, 3.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7 : 3); (7 : 2.39589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPosDataContext/Product/Product_OrdersDetail" />
+      <nodes>
+        <classShapeMoniker Id="13942d59-7f94-4ecf-abca-935259e751e2" />
+        <classShapeMoniker Id="ede03dd7-7914-4e71-8956-6059ac071512" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fa180418-995d-48d3-b277-c7462706caa0" absoluteBounds="3.625, 3.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesPosDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b61b3a5-15bf-404b-beca-53cea1e8b6c4" absoluteBounds="3.64, 3.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5625 : 3.125); (4.5625 : 2.20359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesPosDataContext/Employee/Employee_Order" />
+      <nodes>
+        <classShapeMoniker Id="fa180418-995d-48d3-b277-c7462706caa0" />
+        <classShapeMoniker Id="7bca27ca-d2c4-4ad7-a065-40a0e589ede3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
