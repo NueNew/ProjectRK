@@ -155,6 +155,7 @@ Public Class Form_Donate
                     od = New OrdersDetailsD()
                     od.ProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
                     od.Donation = lsvProductList.Items(i).SubItems(2).Text 'จำนวนเงินที่บริจาค 0 1 2
+                    o.OrdersDetailsDs.Add(od) 'ทำการใส่ข้อมูลลงในตาราง OrdersDeatailsD
                 Next
 
                 Using ts As New TransactionScope()
