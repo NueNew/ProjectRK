@@ -25,6 +25,7 @@ Partial Class Form_Donate
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lsvProductList = New System.Windows.Forms.ListView()
         Me.lblProductDName = New System.Windows.Forms.Label()
+        Me.txtDon = New System.Windows.Forms.TextBox()
         Me.txtProductDID = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -41,7 +42,8 @@ Partial Class Form_Donate
         Me.lblNet = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmdSave = New System.Windows.Forms.Button()
-        Me.txtDon = New System.Windows.Forms.TextBox()
+        Me.txtOrderDID = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -79,6 +81,13 @@ Partial Class Form_Donate
         Me.lblProductDName.Name = "lblProductDName"
         Me.lblProductDName.Size = New System.Drawing.Size(387, 31)
         Me.lblProductDName.TabIndex = 7
+        '
+        'txtDon
+        '
+        Me.txtDon.Location = New System.Drawing.Point(530, 75)
+        Me.txtDon.Name = "txtDon"
+        Me.txtDon.Size = New System.Drawing.Size(81, 29)
+        Me.txtDon.TabIndex = 0
         '
         'txtProductDID
         '
@@ -237,18 +246,31 @@ Partial Class Form_Donate
         Me.cmdSave.Text = "บันทึก"
         Me.cmdSave.UseVisualStyleBackColor = True
         '
-        'txtDon
+        'txtOrderDID
         '
-        Me.txtDon.Location = New System.Drawing.Point(530, 75)
-        Me.txtDon.Name = "txtDon"
-        Me.txtDon.Size = New System.Drawing.Size(81, 29)
-        Me.txtDon.TabIndex = 0
+        Me.txtOrderDID.Location = New System.Drawing.Point(477, 45)
+        Me.txtOrderDID.Name = "txtOrderDID"
+        Me.txtOrderDID.ReadOnly = True
+        Me.txtOrderDID.Size = New System.Drawing.Size(127, 29)
+        Me.txtOrderDID.TabIndex = 30
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(346, 45)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(122, 24)
+        Me.Label10.TabIndex = 29
+        Me.Label10.Text = "เลขที่ใบบริจาค :"
         '
         'Form_Donate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.txtOrderDID)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdClear)
@@ -289,4 +311,6 @@ Partial Class Form_Donate
     Friend WithEvents Label4 As Label
     Friend WithEvents cmdSave As Button
     Friend WithEvents txtDon As TextBox
+    Friend WithEvents txtOrderDID As TextBox
+    Friend WithEvents Label10 As Label
 End Class

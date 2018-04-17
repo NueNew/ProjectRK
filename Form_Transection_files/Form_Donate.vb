@@ -2,10 +2,32 @@
 Option Strict On
 Imports System.Transactions
 
+Imports System.Data
+Imports System.Data.SqlClient
+
+
+
 Public Class Form_Donate
     Dim db As New DataClassesPosDataContext
 
+    Public Shared Service_Bill1 As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report
+
     Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        If connection.State = ConnectionState.Closed Then
+            connection.Open()
+        End If
+
+        command.CommandText = "SELECT * from OrdersD where OrderDID = (select max(OrderDID) from OrdersD)"
+        adapter = New SqlDataAdapter(command)
+        dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
+        adapter.Fill(dataSt, "OrdersD") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        Dim item As Integer
+        item = CInt(dataSt.Tables("OrdersD").Rows(0).Item("OrderDID").ToString())
+        txtOrderDID.Text = Format(item + 1)
+
+
+
         lsvProductList.Columns.Add("รหัสสินค้า", 81, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ชื่อบริจาค", 150, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("จำนวนเงิน", 70, HorizontalAlignment.Right)
@@ -164,6 +186,12 @@ Public Class Form_Donate
                     ts.Complete()
                 End Using
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Service_Bill1 = txtOrderDID.Text
+                Form_Report_DONATE.Show()
+
+
+
                 lsvProductList.Clear()
                 ClearCustomerData()
                 ClearProductData()
