@@ -1,16 +1,43 @@
 ﻿Option Explicit On
 Option Strict On
 Imports System.Transactions
+Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class Form_POS
     Dim db As New DataClassesPosDataContext
 
+    Public Shared Service_Bill As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report(ใบเสร็จออกมา)
+
+
+
+
     Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lsvProductList.Columns.Add("รหัสสินค้า", 60, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ชื่อสินค้า", 150, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ราคาขาย", 65, HorizontalAlignment.Right)
-        lsvProductList.Columns.Add("จำนวน", 50, HorizontalAlignment.Right)
-        lsvProductList.Columns.Add("รวมเป็นเงิน", 70, HorizontalAlignment.Right)
+
+        '<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
+        'จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น 2
+        If connection.State = ConnectionState.Closed Then
+            connection.Open()
+        End If
+
+        command.CommandText = "SELECT * from Orders where OrderID = (select max(OrderID) from Orders)"
+        adapter = New SqlDataAdapter(command)
+        dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
+        adapter.Fill(dataSt, "Orders") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        Dim item As Integer
+        item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
+        txtOrderID.Text = Format(item + 1)
+
+        'ปิด>>>
+
+
+
+
+        lsvProductList.Columns.Add("รหัสสินค้า", 100, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("ชื่อสินค้า", 210, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("ราคาขาย", 100, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("จำนวน", 90, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("รวมเป็นเงิน", 104, HorizontalAlignment.Left)
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True
@@ -163,7 +190,7 @@ Public Class Form_POS
         txtProductID.Focus()
     End Sub
 
-    Private Sub cmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
+    Public Sub cmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
         If txtCustomerID.Text.Trim() = "" Then
             MessageBox.Show("กรุณาป้อนรหัสลูกค้า !!!", "ข้อผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Information)
             txtCustomerID.Focus()
@@ -185,20 +212,28 @@ Public Class Form_POS
                     od.UnitPrice = CDec(lsvProductList.Items(i).SubItems(2).Text)
                     od.Quantity = CShort(lsvProductList.Items(i).SubItems(3).Text)
                     od.Discount = 0
-                    o.OrdersDetails.Add(od) 'ลองเช็คดูก่อน
+                    o.OrdersDetails.Add(od) 'ใช้คำสั่ง Add
                 Next
+
 
                 Using ts As New TransactionScope()
                     db.Orders.InsertOnSubmit(o)
                     db.SubmitChanges()
                     ts.Complete()
                 End Using
+
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+                Service_Bill = txtOrderID.Text
+                Form_Report_POS.Show()
+
                 lsvProductList.Clear()
                 ClearCustomerData()
                 ClearProductData()
                 lblNet.Text = "0"
                 txtCustomerID.Focus()
+
             End If
         End If
     End Sub
@@ -217,5 +252,9 @@ Public Class Form_POS
 
     Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         db.Connection.Close()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtOrderID.TextChanged
+
     End Sub
 End Class
