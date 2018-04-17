@@ -130,4 +130,9 @@ Public Class Form_Category
         command.Parameters.AddWithValue("n", TextSearch.Text)
         BindingData(command)
     End Sub
+
+    Private Sub Form_Category_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Dim frm As New From_Main()
+        frm.Show()
+    End Sub
 End Class

@@ -257,4 +257,9 @@ Public Class Form_POS
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtOrderID.TextChanged
 
     End Sub
+
+    Private Sub Form_POS_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Dim frm As New From_Main()
+        frm.Show()
+    End Sub
 End Class

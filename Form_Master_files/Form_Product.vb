@@ -202,5 +202,8 @@ Public Class Form_Product
         BindingData(command)
     End Sub
 
-
+    Private Sub Form_Product_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Dim frm As New From_Main()
+        frm.Show()
+    End Sub
 End Class

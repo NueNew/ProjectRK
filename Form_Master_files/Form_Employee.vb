@@ -196,4 +196,9 @@ Public Class Form_Employee
 
         BindingData(command)
     End Sub
+
+    Private Sub Form_Employee_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Dim frm As New From_Main()
+        frm.Show()
+    End Sub
 End Class

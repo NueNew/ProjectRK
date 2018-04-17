@@ -217,4 +217,8 @@ Public Class Form_Donate
         db.Connection.Close()
     End Sub
 
+    Private Sub Form_Donate_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Dim frm As New From_Main()
+        frm.Show()
+    End Sub
 End Class
