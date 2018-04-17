@@ -122,16 +122,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms_Report_files\CrystalReport01.vb">
+    <Compile Include="Forms_Report_files\CR_DON.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport01.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\CrystalReport1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>CR_DON.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\CR_POS.vb">
@@ -150,12 +144,6 @@
       <DependentUpon>Form_Report_POS.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms_Report_files\Form_Report_POS.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\REPORT.Designer.vb">
-      <DependentUpon>REPORT.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms_Report_files\REPORT.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Master_files\Form_Category.Designer.vb">
@@ -245,13 +233,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms_Report_files\CrystalReport01.rpt">
+    <EmbeddedResource Include="Forms_Report_files\CR_DON.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport01.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+      <LastGenOutput>CR_DON.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\CR_POS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -262,9 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_Report_POS.resx">
       <DependentUpon>Form_Report_POS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\REPORT.resx">
-      <DependentUpon>REPORT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\Form_Category.resx">
       <DependentUpon>Form_Category.vb</DependentUpon>

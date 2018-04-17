@@ -158,4 +158,3 @@ C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resource
 C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.exe.config
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_DONATE.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.REPORT.resources
