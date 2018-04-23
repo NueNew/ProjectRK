@@ -115,6 +115,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formss_Report_files\Form_Report_งบดุล.Designer.vb">
+      <DependentUpon>Form_Report_งบดุล.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formss_Report_files\Form_Report_งบดุล.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -193,10 +199,22 @@
     <Compile Include="Form_Transection_files\Form_Donate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Transection_files\Form_Expenses.Designer.vb">
+      <DependentUpon>Form_Expenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_Expenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Transection_files\Form_POS.Designer.vb">
       <DependentUpon>Form_POS.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Transection_files\Form_POS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Transection_files\T_1.Designer.vb">
+      <DependentUpon>T_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\T_1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="From_Main.Designer.vb">
@@ -226,6 +244,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectV2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProjectV2DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectV2DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProjectV2DataSetPOS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +256,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formss_Report_files\Form_Report_งบดุล.resx">
+      <DependentUpon>Form_Report_งบดุล.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -271,8 +297,14 @@
     <EmbeddedResource Include="Form_Transection_files\Form_Donate.resx">
       <DependentUpon>Form_Donate.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transection_files\Form_Expenses.resx">
+      <DependentUpon>Form_Expenses.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_POS.resx">
       <DependentUpon>Form_POS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transection_files\T_1.resx">
+      <DependentUpon>T_1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_Main.resx">
       <DependentUpon>From_Main.vb</DependentUpon>
@@ -314,6 +346,17 @@
     </None>
     <None Include="ProjectV2DataSet.xss">
       <DependentUpon>ProjectV2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectV2DataSet1.xsc">
+      <DependentUpon>ProjectV2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectV2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectV2DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectV2DataSet1.xss">
+      <DependentUpon>ProjectV2DataSet1.xsd</DependentUpon>
     </None>
     <None Include="ProjectV2DataSetPOS.xsc">
       <DependentUpon>ProjectV2DataSetPOS.xsd</DependentUpon>

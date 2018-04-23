@@ -25,7 +25,6 @@ Public Class Form_Report_DONATE
     End Sub
 
     Private Sub Form_Report_DONATE_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
+
     End Sub
 End Class

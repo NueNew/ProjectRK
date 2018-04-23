@@ -51,7 +51,6 @@ Public Class Form_POS
             .DataSource = es.ToList()
             .EndUpdate()
         End With
-        txtAmount.ContextMenu = New ContextMenu()
         txtProductID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"
@@ -61,8 +60,9 @@ Public Class Form_POS
         txtProductID.Text = ""
         lblProductName.Text = ""
         lblSalePrice.Text = "0"
-        txtAmount.Text = "1"
         lblTotal.Text = "0"
+        txtStockLeft.Text = "0"
+        num_exit.Value = 1
     End Sub
 
     Private Sub txtCustomerID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCustomerID.KeyDown
@@ -91,15 +91,20 @@ Public Class Form_POS
     Private Sub txtProductID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProductID.KeyDown
         If txtProductID.Text.Trim() = "" Then Exit Sub
         If e.KeyCode = Keys.Enter Then
-            Dim ps = From p In db.Products Select p.ProductID, p.ProductName, p.UnitPrice
+            Dim ps = From p In db.Products Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock
                      Where ProductID = CInt(txtProductID.Text)
 
             If ps.Count() > 0 Then
                 txtProductID.Text = ps.FirstOrDefault().ProductID.ToString()
                 lblProductName.Text = ps.FirstOrDefault().ProductName.Trim()
                 lblSalePrice.Text = ps.FirstOrDefault().UnitPrice.ToString()
+                txtStockLeft.Text = ps.FirstOrDefault().UnitsInStock.ToString()
+
+
+                num_exit.Maximum = Convert.ToInt16(txtStockLeft.Text) 'ให้ค่าไม่เกินกับข้อมูลสินค้าในฐานข้อมูล 
+                'ให้การเลือกจำนวนไม่เกิน ข้อมูลในตารางสินค้า โดยที่ได้แปลงค่าจาก String เป็น Decimal
                 CalculateTotal()
-                txtAmount.Focus()
+                num_exit.Focus()
             Else
                 MessageBox.Show("รหัสสินค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 ClearCustomerData()
@@ -108,19 +113,20 @@ Public Class Form_POS
         End If
     End Sub
 
-    Private Sub txtAmount_TextChanged(sender As Object, e As EventArgs) Handles txtAmount.TextChanged
-        If (txtAmount.Text.Trim() = "") Then
-            txtAmount.Text = "1"
-        End If
-        If (CInt(txtAmount.Text) = 0) Then
-            txtAmount.Text = "1"
-        End If
-        CalculateTotal()
-    End Sub
+    'Private Sub txtAmount_TextChanged(sender As Object, e As EventArgs) Handles txtStockLeft.TextChanged
+    'If (txtAmount.Text.Trim() = "") Then
+    '        txtAmount.Text = "1"
+    '    End If
+    '    If (CInt(txtAmount.Text) = 0) Then
+    '        txtAmount.Text = "1"
+    '    End If
+    '    CalculateTotal()
+    'End Sub
 
     Private Sub CalculateTotal()
         Dim Total As Double
-        Total = CDbl(lblSalePrice.Text) * CInt(txtAmount.Text)
+        'Total = CDbl(lblSalePrice.Text) * CInt(txtAmount.Text)
+        Total = CDbl(lblSalePrice.Text) * num_exit.Value
         lblTotal.Text = Total.ToString("#,##0.00")
     End Sub
 
@@ -129,10 +135,12 @@ Public Class Form_POS
             txtProductID.Focus()
             Exit Sub
         End If
-        If CInt(txtAmount.Text) = 0 Then
-            txtAmount.Focus()
-            Exit Sub
-        End If
+        'If CInt(txtAmount.Text) = 0 Then
+        '    txtAmount.Focus()
+        '    Exit Sub
+        'End If
+
+
 
         Dim i As Integer = 0
         Dim lvi As ListViewItem
@@ -153,9 +161,16 @@ Public Class Form_POS
             txtProductID.Text,
             lblProductName.Text,
             lblSalePrice.Text,
-            txtAmount.Text,
+            num_exit.Value.ToString,
             lblTotal.Text
         }
+        'งงจ้าตอนนี้ คิดว่าจะเปลี่ยนเป็น numexit
+        ' num_exit.Value.ToString, '
+        'ลองเปลี่ยน txtAmount.Text เป็น num_exit.value.ToString
+
+
+
+
         lvi = New ListViewItem(anyData)
         lsvProductList.Items.Add(lvi)
         CalculateNet()
@@ -204,20 +219,45 @@ Public Class Form_POS
                 o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
                 o.OrderDate = Date.Now
 
+                Dim p As New Product() 'บอกว่า p คือตาราง Product 
                 Dim i As Integer
                 Dim od As OrdersDetail
                 For i = 0 To lsvProductList.Items.Count - 1
                     od = New OrdersDetail()
+                    p = New Product()
                     od.ProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
                     od.UnitPrice = CDec(lsvProductList.Items(i).SubItems(2).Text)
                     od.Quantity = CShort(lsvProductList.Items(i).SubItems(3).Text)
                     od.Discount = 0
+                    'p.ProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)                         'หารหัสสินค้า
+                    'p.UnitsInStock = CShort(p.UnitsInStock) - CShort(lsvProductList.Items(i).SubItems(3).Text)    'หาจำนวนสินค้า - จำนวนที่ขาย
                     o.OrdersDetails.Add(od) 'ใช้คำสั่ง Add
+
                 Next
 
+                'ทดลอง ณ เพลา จะตีสอง
+                For i = 0 To lsvProductList.Items.Count - 1
+                    Dim cmdU As New SqlCommand("Update P set P.UnitsInStock = P.UnitsInStock - " & CInt(lsvProductList.Items(i).SubItems(3).Text) & " FROM Products AS P INNER JOIN OrdersDetails AS S ON (P.ProductID = S.ProductID) WHERE S.ProductID='" & CStr(lsvProductList.Items(i).SubItems(0).Text) & "'", connection)
+
+                    'Dim cmdU As New SqlCommand("Update P set P.Amount = P.Amount - " & CInt(ListView1.Items(i).SubItems(4).Text) & " FROM tblProduct AS P INNER JOIN tblSeller_Detail AS S ON (P.ProductName = S.ProductName) WHERE S.ProductName='" & CStr(ListView1.Items(i).SubItems(1).Text) & "'", cn)
+
+                    'connection.Open()
+                    cmdU.ExecuteNonQuery()
+                    'connection.Close()
+
+                Next
+                '
+
+                'ลองใช้คำสั่ง update เพื่อแก้ไขตาราง Product 23-4-61
+                'For i = 0 To lsvProductList.Items.Count - 1
+                '    p = New Product
+                '    p.ProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+                '    p.UnitsInStock = p.UnitsInStock - CShort(lsvProductList.Items(i).SubItems(3).Text)
+                'Next
 
                 Using ts As New TransactionScope()
                     db.Orders.InsertOnSubmit(o)
+                    'db.Products.(p)
                     db.SubmitChanges()
                     ts.Complete()
                 End Using
@@ -225,7 +265,7 @@ Public Class Form_POS
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
-                Service_Bill = txtOrderID.Text
+                Service_Bill = txtOrderID.Text 'ส่งค่าไปหน้าปริ้นใบเสร็จ
                 Form_Report_POS.Show()
 
                 lsvProductList.Clear()
@@ -244,7 +284,7 @@ Public Class Form_POS
         End If
     End Sub
 
-    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmount.KeyPress
+    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStockLeft.KeyPress
         If e.KeyChar < "0" Or e.KeyChar > "9" Then
             e.Handled = True
         End If
@@ -259,7 +299,10 @@ Public Class Form_POS
     End Sub
 
     Private Sub Form_POS_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
+
+    End Sub
+
+    Private Sub num_exit_ValueChanged(sender As Object, e As EventArgs) Handles num_exit.ValueChanged
+        CalculateTotal()
     End Sub
 End Class

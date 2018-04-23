@@ -23,11 +23,13 @@ Partial Class Form_POS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.num_exit = New System.Windows.Forms.NumericUpDown()
         Me.lsvProductList = New System.Windows.Forms.ListView()
-        Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.txtStockLeft = New System.Windows.Forms.TextBox()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblSalePrice = New System.Windows.Forms.Label()
         Me.lblProductName = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtProductID = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -49,29 +51,39 @@ Partial Class Form_POS
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtOrderID = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.num_exit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox2.Controls.Add(Me.num_exit)
         Me.GroupBox2.Controls.Add(Me.lsvProductList)
-        Me.GroupBox2.Controls.Add(Me.txtAmount)
+        Me.GroupBox2.Controls.Add(Me.txtStockLeft)
         Me.GroupBox2.Controls.Add(Me.lblTotal)
         Me.GroupBox2.Controls.Add(Me.lblSalePrice)
         Me.GroupBox2.Controls.Add(Me.lblProductName)
+        Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.txtProductID)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(140, 339)
+        Me.GroupBox2.Location = New System.Drawing.Point(151, 339)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(691, 342)
+        Me.GroupBox2.Size = New System.Drawing.Size(774, 391)
         Me.GroupBox2.TabIndex = 16
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "รายการสั้่งซื้อ"
+        '
+        'num_exit
+        '
+        Me.num_exit.Location = New System.Drawing.Point(458, 73)
+        Me.num_exit.Name = "num_exit"
+        Me.num_exit.Size = New System.Drawing.Size(85, 29)
+        Me.num_exit.TabIndex = 11
         '
         'lsvProductList
         '
@@ -82,13 +94,14 @@ Partial Class Form_POS
         Me.lsvProductList.TabStop = False
         Me.lsvProductList.UseCompatibleStateImageBehavior = False
         '
-        'txtAmount
+        'txtStockLeft
         '
-        Me.txtAmount.Location = New System.Drawing.Point(456, 73)
-        Me.txtAmount.Name = "txtAmount"
-        Me.txtAmount.Size = New System.Drawing.Size(90, 29)
-        Me.txtAmount.TabIndex = 1
-        Me.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtStockLeft.Location = New System.Drawing.Point(666, 73)
+        Me.txtStockLeft.Name = "txtStockLeft"
+        Me.txtStockLeft.ReadOnly = True
+        Me.txtStockLeft.Size = New System.Drawing.Size(102, 29)
+        Me.txtStockLeft.TabIndex = 1
+        Me.txtStockLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lblTotal
         '
@@ -115,6 +128,15 @@ Partial Class Form_POS
         Me.lblProductName.Name = "lblProductName"
         Me.lblProductName.Size = New System.Drawing.Size(210, 29)
         Me.lblProductName.TabIndex = 7
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(662, 46)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(112, 24)
+        Me.Label11.TabIndex = 4
+        Me.Label11.Text = "จำนวนในฐาน"
         '
         'txtProductID
         '
@@ -177,7 +199,7 @@ Partial Class Form_POS
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(140, 138)
+        Me.GroupBox1.Location = New System.Drawing.Point(151, 138)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(394, 195)
         Me.GroupBox1.TabIndex = 15
@@ -239,7 +261,7 @@ Partial Class Form_POS
         '
         Me.cmdClear.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdClear.Location = New System.Drawing.Point(899, 480)
+        Me.cmdClear.Location = New System.Drawing.Point(931, 502)
         Me.cmdClear.Name = "cmdClear"
         Me.cmdClear.Size = New System.Drawing.Size(97, 34)
         Me.cmdClear.TabIndex = 18
@@ -250,7 +272,7 @@ Partial Class Form_POS
         '
         Me.cmdAdd.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdAdd.Location = New System.Drawing.Point(899, 422)
+        Me.cmdAdd.Location = New System.Drawing.Point(931, 444)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(97, 34)
         Me.cmdAdd.TabIndex = 17
@@ -264,7 +286,7 @@ Partial Class Form_POS
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(607, 191)
+        Me.lblNet.Location = New System.Drawing.Point(618, 191)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(205, 53)
         Me.lblNet.TabIndex = 21
@@ -274,7 +296,7 @@ Partial Class Form_POS
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(711, 143)
+        Me.Label4.Location = New System.Drawing.Point(722, 143)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 20
@@ -284,7 +306,7 @@ Partial Class Form_POS
         '
         Me.cmdSave.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdSave.Location = New System.Drawing.Point(899, 561)
+        Me.cmdSave.Location = New System.Drawing.Point(931, 583)
         Me.cmdSave.Name = "cmdSave"
         Me.cmdSave.Size = New System.Drawing.Size(97, 32)
         Me.cmdSave.TabIndex = 19
@@ -295,7 +317,7 @@ Partial Class Form_POS
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(424, 58)
+        Me.Label10.Location = New System.Drawing.Point(435, 58)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(112, 24)
         Me.Label10.TabIndex = 20
@@ -313,7 +335,7 @@ Partial Class Form_POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.ClientSize = New System.Drawing.Size(1030, 729)
         Me.Controls.Add(Me.txtOrderID)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -329,6 +351,7 @@ Partial Class Form_POS
         Me.Text = "Form_POS"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.num_exit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -338,7 +361,6 @@ Partial Class Form_POS
 
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents lsvProductList As ListView
-    Friend WithEvents txtAmount As TextBox
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblSalePrice As Label
     Friend WithEvents lblProductName As Label
@@ -362,4 +384,7 @@ Partial Class Form_POS
     Friend WithEvents cmdSave As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents txtOrderID As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents num_exit As NumericUpDown
+    Friend WithEvents txtStockLeft As TextBox
 End Class
