@@ -59,6 +59,8 @@ Partial Class Form_Product
         Me.TextID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -285,11 +287,11 @@ Partial Class Form_Product
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(141, 386)
+        Me.Label7.Location = New System.Drawing.Point(149, 386)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(130, 24)
+        Me.Label7.Size = New System.Drawing.Size(156, 24)
         Me.Label7.TabIndex = 111
-        Me.Label7.Text = "รายละเอียดสินค้า"
+        Me.Label7.Text = "รายละเอียดวัตถุมงคล"
         '
         'TextDetail
         '
@@ -310,7 +312,7 @@ Partial Class Form_Product
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(208, 343)
+        Me.Label6.Location = New System.Drawing.Point(234, 342)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 24)
         Me.Label6.TabIndex = 108
@@ -319,7 +321,7 @@ Partial Class Form_Product
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(222, 307)
+        Me.Label3.Location = New System.Drawing.Point(252, 305)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 24)
         Me.Label3.TabIndex = 107
@@ -342,11 +344,11 @@ Partial Class Form_Product
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(208, 269)
+        Me.Label2.Location = New System.Drawing.Point(200, 267)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 24)
+        Me.Label2.Size = New System.Drawing.Size(97, 24)
         Me.Label2.TabIndex = 104
-        Me.Label2.Text = "ชื่อสินค้า"
+        Me.Label2.Text = "ชื่อวัตถุมงคล"
         '
         'TextID
         '
@@ -369,11 +371,28 @@ Partial Class Form_Product
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(347, 542)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker1.TabIndex = 121
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(151, 542)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(154, 24)
+        Me.Label4.TabIndex = 111
+        Me.Label4.Text = "วันที่นำเข้าวัตถุมงคล"
+        '
         'Form_Product
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.Label11)
@@ -382,6 +401,7 @@ Partial Class Form_Product
         Me.Controls.Add(Me.ComboCategory)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextDetail)
         Me.Controls.Add(Me.TextStock)
@@ -442,4 +462,6 @@ Partial Class Form_Product
     Friend WithEvents TextID As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label4 As Label
 End Class

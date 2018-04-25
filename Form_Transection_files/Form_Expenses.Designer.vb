@@ -24,88 +24,165 @@ Partial Class Form_Expenses
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Expenses))
-        Dim ExpensesIDLabel As System.Windows.Forms.Label
-        Dim ExpensesNameLabel As System.Windows.Forms.Label
-        Dim ExpensesPriceLabel As System.Windows.Forms.Label
-        Dim ExpensesDateLabel As System.Windows.Forms.Label
-        Me.ProjectV2DataSet1 = New ProjectRK.ProjectV2DataSet1()
-        Me.ExpensesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ExpensesTableAdapter = New ProjectRK.ProjectV2DataSet1TableAdapters.ExpensesTableAdapter()
-        Me.TableAdapterManager = New ProjectRK.ProjectV2DataSet1TableAdapters.TableAdapterManager()
-        Me.ExpensesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtDetail = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtMoney = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.ExpensesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.ExpensesIDTextBox = New System.Windows.Forms.TextBox()
-        Me.ExpensesNameTextBox = New System.Windows.Forms.TextBox()
-        Me.ExpensesPriceTextBox = New System.Windows.Forms.TextBox()
-        Me.ExpensesDateDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        ExpensesIDLabel = New System.Windows.Forms.Label()
-        ExpensesNameLabel = New System.Windows.Forms.Label()
-        ExpensesPriceLabel = New System.Windows.Forms.Label()
-        ExpensesDateLabel = New System.Windows.Forms.Label()
-        CType(Me.ProjectV2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ExpensesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ExpensesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ExpensesBindingNavigator.SuspendLayout()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ButtonOK = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TextSearch = New System.Windows.Forms.TextBox()
+        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BindingNavigator1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ProjectV2DataSet1
+        'Label1
         '
-        Me.ProjectV2DataSet1.DataSetName = "ProjectV2DataSet1"
-        Me.ProjectV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(122, 206)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 24)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "รหัส"
         '
-        'ExpensesBindingSource
+        'txtID
         '
-        Me.ExpensesBindingSource.DataMember = "Expenses"
-        Me.ExpensesBindingSource.DataSource = Me.ProjectV2DataSet1
+        Me.txtID.Location = New System.Drawing.Point(260, 206)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(100, 29)
+        Me.txtID.TabIndex = 1
         '
-        'ExpensesTableAdapter
+        'Label2
         '
-        Me.ExpensesTableAdapter.ClearBeforeFill = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(122, 255)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(89, 24)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "รายละเอียด"
         '
-        'TableAdapterManager
+        'txtDetail
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CategoriesDTableAdapter = Nothing
-        Me.TableAdapterManager.CategoriesTableAdapter = Nothing
-        Me.TableAdapterManager.CustomersTableAdapter = Nothing
-        Me.TableAdapterManager.EmployeesTableAdapter = Nothing
-        Me.TableAdapterManager.ExpensesTableAdapter = Me.ExpensesTableAdapter
-        Me.TableAdapterManager.OrdersDetailsDTableAdapter = Nothing
-        Me.TableAdapterManager.OrdersDetailsTableAdapter = Nothing
-        Me.TableAdapterManager.OrdersDTableAdapter = Nothing
-        Me.TableAdapterManager.OrdersTableAdapter = Nothing
-        Me.TableAdapterManager.ProductsDTableAdapter = Nothing
-        Me.TableAdapterManager.ProductsTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProjectRK.ProjectV2DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.txtDetail.Location = New System.Drawing.Point(260, 255)
+        Me.txtDetail.Multiline = True
+        Me.txtDetail.Name = "txtDetail"
+        Me.txtDetail.Size = New System.Drawing.Size(439, 158)
+        Me.txtDetail.TabIndex = 1
         '
-        'ExpensesBindingNavigator
+        'Label3
         '
-        Me.ExpensesBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.ExpensesBindingNavigator.BindingSource = Me.ExpensesBindingSource
-        Me.ExpensesBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.ExpensesBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.ExpensesBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ExpensesBindingNavigatorSaveItem})
-        Me.ExpensesBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.ExpensesBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.ExpensesBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.ExpensesBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.ExpensesBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.ExpensesBindingNavigator.Name = "ExpensesBindingNavigator"
-        Me.ExpensesBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ExpensesBindingNavigator.Size = New System.Drawing.Size(784, 25)
-        Me.ExpensesBindingNavigator.TabIndex = 0
-        Me.ExpensesBindingNavigator.Text = "BindingNavigator1"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(125, 448)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(86, 24)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "จำนวนเงิน"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(444, 206)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 24)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "เวลา"
+        '
+        'txtMoney
+        '
+        Me.txtMoney.Location = New System.Drawing.Point(260, 445)
+        Me.txtMoney.Name = "txtMoney"
+        Me.txtMoney.Size = New System.Drawing.Size(100, 29)
+        Me.txtMoney.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(379, 448)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 24)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "บาท"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(499, 206)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker1.TabIndex = 2
+        '
+        'Label10
+        '
+        Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label10.Location = New System.Drawing.Point(0, 112)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(784, 2)
+        Me.Label10.TabIndex = 124
+        '
+        'BindingNavigator1
+        '
+        Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.BindingNavigator1.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
+        Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton})
+        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 87)
+        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.BindingNavigator1.Name = "BindingNavigator1"
+        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
+        Me.BindingNavigator1.Size = New System.Drawing.Size(784, 25)
+        Me.BindingNavigator1.TabIndex = 123
+        Me.BindingNavigator1.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -139,17 +216,10 @@ Partial Class Form_Expenses
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -157,7 +227,7 @@ Partial Class Form_Expenses
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -166,139 +236,124 @@ Partial Class Form_Expenses
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'BindingNavigatorAddNewItem
+        'SaveToolStripButton
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SaveToolStripButton.Text = "&Save"
         '
-        'BindingNavigatorDeleteItem
+        'Label11
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label11.Location = New System.Drawing.Point(0, 85)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(784, 2)
+        Me.Label11.TabIndex = 122
         '
-        'ExpensesBindingNavigatorSaveItem
+        'Panel1
         '
-        Me.ExpensesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ExpensesBindingNavigatorSaveItem.Image = CType(resources.GetObject("ExpensesBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.ExpensesBindingNavigatorSaveItem.Name = "ExpensesBindingNavigatorSaveItem"
-        Me.ExpensesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.ExpensesBindingNavigatorSaveItem.Text = "Save Data"
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.ButtonOK)
+        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.TextSearch)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(784, 85)
+        Me.Panel1.TabIndex = 121
         '
-        'ExpensesIDLabel
+        'Label12
         '
-        ExpensesIDLabel.AutoSize = True
-        ExpensesIDLabel.Location = New System.Drawing.Point(218, 217)
-        ExpensesIDLabel.Name = "ExpensesIDLabel"
-        ExpensesIDLabel.Size = New System.Drawing.Size(70, 13)
-        ExpensesIDLabel.TabIndex = 1
-        ExpensesIDLabel.Text = "Expenses ID:"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Brown
+        Me.Label12.Location = New System.Drawing.Point(185, 25)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(210, 37)
+        Me.Label12.TabIndex = 23
+        Me.Label12.Text = "รายการค่าใช้จ่าย"
         '
-        'ExpensesIDTextBox
+        'ButtonOK
         '
-        Me.ExpensesIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ExpensesBindingSource, "ExpensesID", True))
-        Me.ExpensesIDTextBox.Location = New System.Drawing.Point(311, 214)
-        Me.ExpensesIDTextBox.Name = "ExpensesIDTextBox"
-        Me.ExpensesIDTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.ExpensesIDTextBox.TabIndex = 2
+        Me.ButtonOK.Location = New System.Drawing.Point(815, 30)
+        Me.ButtonOK.Name = "ButtonOK"
+        Me.ButtonOK.Size = New System.Drawing.Size(57, 31)
+        Me.ButtonOK.TabIndex = 22
+        Me.ButtonOK.Text = "ตกลง"
+        Me.ButtonOK.UseVisualStyleBackColor = True
         '
-        'ExpensesNameLabel
+        'Label16
         '
-        ExpensesNameLabel.AutoSize = True
-        ExpensesNameLabel.Location = New System.Drawing.Point(218, 243)
-        ExpensesNameLabel.Name = "ExpensesNameLabel"
-        ExpensesNameLabel.Size = New System.Drawing.Size(87, 13)
-        ExpensesNameLabel.TabIndex = 3
-        ExpensesNameLabel.Text = "Expenses Name:"
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(473, 32)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(91, 24)
+        Me.Label16.TabIndex = 20
+        Me.Label16.Text = "ค้นหา (ชื่อ)"
         '
-        'ExpensesNameTextBox
+        'TextSearch
         '
-        Me.ExpensesNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ExpensesBindingSource, "ExpensesName", True))
-        Me.ExpensesNameTextBox.Location = New System.Drawing.Point(311, 240)
-        Me.ExpensesNameTextBox.Name = "ExpensesNameTextBox"
-        Me.ExpensesNameTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.ExpensesNameTextBox.TabIndex = 4
-        '
-        'ExpensesPriceLabel
-        '
-        ExpensesPriceLabel.AutoSize = True
-        ExpensesPriceLabel.Location = New System.Drawing.Point(218, 269)
-        ExpensesPriceLabel.Name = "ExpensesPriceLabel"
-        ExpensesPriceLabel.Size = New System.Drawing.Size(83, 13)
-        ExpensesPriceLabel.TabIndex = 5
-        ExpensesPriceLabel.Text = "Expenses Price:"
-        '
-        'ExpensesPriceTextBox
-        '
-        Me.ExpensesPriceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ExpensesBindingSource, "ExpensesPrice", True))
-        Me.ExpensesPriceTextBox.Location = New System.Drawing.Point(311, 266)
-        Me.ExpensesPriceTextBox.Name = "ExpensesPriceTextBox"
-        Me.ExpensesPriceTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.ExpensesPriceTextBox.TabIndex = 6
-        '
-        'ExpensesDateLabel
-        '
-        ExpensesDateLabel.AutoSize = True
-        ExpensesDateLabel.Location = New System.Drawing.Point(218, 296)
-        ExpensesDateLabel.Name = "ExpensesDateLabel"
-        ExpensesDateLabel.Size = New System.Drawing.Size(82, 13)
-        ExpensesDateLabel.TabIndex = 7
-        ExpensesDateLabel.Text = "Expenses Date:"
-        '
-        'ExpensesDateDateTimePicker
-        '
-        Me.ExpensesDateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ExpensesBindingSource, "ExpensesDate", True))
-        Me.ExpensesDateDateTimePicker.Location = New System.Drawing.Point(311, 292)
-        Me.ExpensesDateDateTimePicker.Name = "ExpensesDateDateTimePicker"
-        Me.ExpensesDateDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.ExpensesDateDateTimePicker.TabIndex = 8
+        Me.TextSearch.Location = New System.Drawing.Point(619, 33)
+        Me.TextSearch.Name = "TextSearch"
+        Me.TextSearch.Size = New System.Drawing.Size(153, 29)
+        Me.TextSearch.TabIndex = 21
         '
         'Form_Expenses
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 561)
-        Me.Controls.Add(ExpensesIDLabel)
-        Me.Controls.Add(Me.ExpensesIDTextBox)
-        Me.Controls.Add(ExpensesNameLabel)
-        Me.Controls.Add(Me.ExpensesNameTextBox)
-        Me.Controls.Add(ExpensesPriceLabel)
-        Me.Controls.Add(Me.ExpensesPriceTextBox)
-        Me.Controls.Add(ExpensesDateLabel)
-        Me.Controls.Add(Me.ExpensesDateDateTimePicker)
-        Me.Controls.Add(Me.ExpensesBindingNavigator)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.BindingNavigator1)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.txtMoney)
+        Me.Controls.Add(Me.txtDetail)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_Expenses"
         Me.Text = "Form_Expenses"
-        CType(Me.ProjectV2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ExpensesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ExpensesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ExpensesBindingNavigator.ResumeLayout(False)
-        Me.ExpensesBindingNavigator.PerformLayout()
+        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BindingNavigator1.ResumeLayout(False)
+        Me.BindingNavigator1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ProjectV2DataSet1 As ProjectV2DataSet1
-    Friend WithEvents ExpensesBindingSource As BindingSource
-    Friend WithEvents ExpensesTableAdapter As ProjectV2DataSet1TableAdapters.ExpensesTableAdapter
-    Friend WithEvents TableAdapterManager As ProjectV2DataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents ExpensesBindingNavigator As BindingNavigator
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtDetail As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtMoney As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label10 As Label
+    Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
@@ -310,9 +365,11 @@ Partial Class Form_Expenses
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents ExpensesBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents ExpensesIDTextBox As TextBox
-    Friend WithEvents ExpensesNameTextBox As TextBox
-    Friend WithEvents ExpensesPriceTextBox As TextBox
-    Friend WithEvents ExpensesDateDateTimePicker As DateTimePicker
+    Friend WithEvents SaveToolStripButton As ToolStripButton
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label12 As Label
+    Friend WithEvents ButtonOK As Button
+    Friend WithEvents Label16 As Label
+    Friend WithEvents TextSearch As TextBox
 End Class

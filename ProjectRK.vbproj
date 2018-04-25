@@ -121,6 +121,12 @@
     <Compile Include="Formss_Report_files\Form_Report_งบดุล.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms_Report_files\CRRIID.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRRIID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Formss_Report_files\Form_Report_งบดุล.resx">
       <DependentUpon>Form_Report_งบดุล.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\CRRIID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRRIID.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>

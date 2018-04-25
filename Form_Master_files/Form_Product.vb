@@ -57,6 +57,7 @@ Public Class Form_Product
         TextStock.DataBindings.Add("Text", bindingSrc, "UnitsInStock")
         TextDetail.DataBindings.Add("Text", bindingSrc, "QuantityPerUnit")
         PictureBox1.DataBindings.Add("Image", bindingSrc, "Picture", True)
+        DateTimePicker1.DataBindings.Add("Text", bindingSrc, "DateAdd") 'ทำการทับค่าโดยเอาค่าจาก DATABASE มาเป็น Text
 
         '-- Complex Binding for Category
         command.CommandText = "SELECT CategoryID, CategoryName FROM Categories"
@@ -85,7 +86,7 @@ Public Class Form_Product
         End If
     End Sub
     Private Sub InsertData()
-        sql = "INSERT INTO Products(CategoryID,  ProductName, UnitPrice, UnitsInStock, QuantityPerUnit, Picture) 
+        sql = "INSERT INTO Products(CategoryID,  ProductName, UnitPrice, UnitsInStock, QuantityPerUnit, Picture,Date) 
                VALUES(@cid, @name, @prc, @stk, @dtl, @pic)"
 
         command.CommandText = sql
@@ -98,6 +99,14 @@ Public Class Form_Product
         command.Parameters.AddWithValue("prc", TextPrice.Text)
         command.Parameters.AddWithValue("stk", TextStock.Text)
         command.Parameters.AddWithValue("dtl", TextDetail.Text)
+        command.Parameters.AddWithValue("date", DateTimePicker1.Value)
+        'Dim dateStr = $"{DateTimePicker1.Value.Year}/
+        '{DateTimePicker1.Value.Month}/
+        '{DateTimePicker1.Value.Day}"
+
+        'command.Parameters.AddWithValue("exp", dateStr)
+
+
 
 
         If Not (PictureBox1.Image Is Nothing) Then
@@ -117,7 +126,7 @@ Public Class Form_Product
     End Sub
     Private Sub UpdateData()
         sql = "UPDATE Products SET CategoryID = @cid, ProductName = @name, 
-			   UnitPrice = @prc, UnitsInStock = @stk, QuantityPerUnit = @dtl, Picture = @pic 
+			   UnitPrice = @prc, UnitsInStock = @stk, QuantityPerUnit = @dtl, Picture = @pic, DateAdd = @date 
                WHERE ProductID = @pid"
 
         command.CommandText = sql
@@ -128,7 +137,15 @@ Public Class Form_Product
         command.Parameters.AddWithValue("prc", TextPrice.Text)
         command.Parameters.AddWithValue("stk", TextStock.Text)
         command.Parameters.AddWithValue("dtl", TextDetail.Text)
+        command.Parameters.AddWithValue("date", DateTimePicker1.Value)
 
+        ''เกี่ยวกับเวันที่เวลา
+        'Dim dateStr = $"{DateTimePicker1.Value.Year}/
+        '{DateTimePicker1.Value.Month}/
+        '{DateTimePicker1.Value.Day}"
+
+        'command.Parameters.AddWithValue("date", dateStr)
+        ''
 
         If Not (PictureBox1.Image Is Nothing) Then
             Dim pic() As Byte = ReadImage()
