@@ -42,7 +42,6 @@ C:\MYPROJECT\ProjectRK\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.
 C:\MYPROJECT\ProjectRK\bin\Debug\ShockwaveFlashObjects.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\stdole.dll
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_POS.resources
 C:\MYPROJECT\ProjectRK\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\Microsoft.ReportViewer.Design.dll
@@ -153,6 +152,9 @@ C:\MYPROJECT\ProjectRK\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dl
 C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.exe.config
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_DONATE.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Login.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Expenses.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form1.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form2.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_DON.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_POS.resources

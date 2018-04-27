@@ -53,11 +53,11 @@ Partial Class Form_Donate
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.GroupBox2.Controls.Add(Me.lsvProductList)
         Me.GroupBox2.Controls.Add(Me.lblProductDName)
-        Me.GroupBox2.Controls.Add(Me.txtDon)
         Me.GroupBox2.Controls.Add(Me.txtProductDID)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.txtDon)
         Me.GroupBox2.Location = New System.Drawing.Point(111, 309)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(653, 311)
@@ -77,16 +77,16 @@ Partial Class Form_Donate
         'lblProductDName
         '
         Me.lblProductDName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblProductDName.Location = New System.Drawing.Point(128, 75)
+        Me.lblProductDName.Location = New System.Drawing.Point(120, 77)
         Me.lblProductDName.Name = "lblProductDName"
-        Me.lblProductDName.Size = New System.Drawing.Size(387, 31)
+        Me.lblProductDName.Size = New System.Drawing.Size(411, 29)
         Me.lblProductDName.TabIndex = 7
         '
         'txtDon
         '
-        Me.txtDon.Location = New System.Drawing.Point(530, 75)
+        Me.txtDon.Location = New System.Drawing.Point(526, 77)
         Me.txtDon.Name = "txtDon"
-        Me.txtDon.Size = New System.Drawing.Size(81, 29)
+        Me.txtDon.Size = New System.Drawing.Size(85, 29)
         Me.txtDon.TabIndex = 0
         '
         'txtProductDID

@@ -120,11 +120,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Report_files\CRRIID.vb">
+    <Compile Include="Forms_Report_files\CR_Import_Products.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CRRIID.rpt</DependentUpon>
+      <DependentUpon>CR_Import_Products.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_Report_CR_DON.Designer.vb">
+      <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_Report_CR_DON.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_Report_CR_POS.Designer.vb">
+      <DependentUpon>Form_Report_CR_POS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_Report_CR_POS.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
@@ -144,18 +156,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CR_POS.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_Report_DONATE.Designer.vb">
-      <DependentUpon>Form_Report_DONATE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_Report_DONATE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_Report_POS.Designer.vb">
-      <DependentUpon>Form_Report_POS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_Report_POS.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Master_files\Form_Category.Designer.vb">
       <DependentUpon>Form_Category.vb</DependentUpon>
@@ -233,11 +233,35 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Test\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Test\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms_Report_files\CRRIID.rpt">
+    <EmbeddedResource Include="Forms_Report_files\CR_Import_Products.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CRRIID.vb</LastGenOutput>
+      <LastGenOutput>CR_Import_Products.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_DON.resx">
+      <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_POS.resx">
+      <DependentUpon>Form_Report_CR_POS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
@@ -249,12 +273,6 @@
     <EmbeddedResource Include="Forms_Report_files\CR_POS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_POS.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\Form_Report_DONATE.resx">
-      <DependentUpon>Form_Report_DONATE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\Form_Report_POS.resx">
-      <DependentUpon>Form_Report_POS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\Form_Category.resx">
       <DependentUpon>Form_Category.vb</DependentUpon>
@@ -291,6 +309,16 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

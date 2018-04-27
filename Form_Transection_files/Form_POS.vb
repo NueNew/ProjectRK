@@ -3,13 +3,13 @@ Option Strict On
 Imports System.Transactions
 Imports System.Data
 Imports System.Data.SqlClient
+Imports CrystalDecisions.CrystalReports.Engine
+
 
 Public Class Form_POS
     Dim db As New DataClassesDataContext
 
-    Public Shared Service_Bill As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report(ใบเสร็จออกมา)
-
-
+    ' Public Shared Service_Bill As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report(ใบเสร็จออกมา)
 
 
     Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -265,14 +265,25 @@ Public Class Form_POS
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
-                Service_Bill = txtOrderID.Text 'ส่งค่าไปหน้าปริ้นใบเสร็จ
-                Form_Report_POS.Show()
+                ' Service_Bill = txtOrderID.Text 'ส่งค่าไปหน้าปริ้นใบเสร็จ
 
                 lsvProductList.Clear()
                 ClearCustomerData()
                 ClearProductData()
                 lblNet.Text = "0"
                 txtCustomerID.Focus()
+
+                Dim rpt As New ReportDocument
+                Dim directory As String = My.Application.Info.DirectoryPath
+
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_POS.rpt")
+                rpt.SetParameterValue("ORDERID", Me.txtOrderID.Text)
+
+                Form_Report_CR_POS.CrystalReportViewer1.ReportSource = rpt
+                Form_Report_CR_POS.CrystalReportViewer1.Refresh()
+                Form_Report_CR_POS.Show()
+                Form_Report_CR_POS.WindowState = FormWindowState.Maximized
+
 
             End If
         End If

@@ -2,7 +2,7 @@
     Private Sub ออกจากระบบToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ออกจากระบบToolStripMenuItem.Click
 
 
-        If MessageBox.Show("คุณต้องการบันทึกรายการสั่งซื้อสินค้า ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) =
+        If MessageBox.Show("คุณต้องการออกจากระบบ ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) =
             DialogResult.Yes Then
 
             If connection.State = ConnectionState.Open Then
@@ -65,15 +65,15 @@
     End Sub
 
     Private Sub ใบอนโมทนาบญToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ใบอนโมทนาบญToolStripMenuItem.Click
-        Dim frm As New Form_Report_DONATE()
-        Me.Hide()
-        frm.Show()
+        'Dim frm As New Form()
+        'Me.Hide()
+        'frm.Show()
     End Sub
 
     Private Sub ใบเสรจวตถมงคลToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ใบเสรจวตถมงคลToolStripMenuItem.Click
-        Dim frm As New Form_Report_POS()
-        Me.Hide()
-        frm.Show()
+        'Dim frm As New Form_Report_POS()
+        'Me.Hide()
+        'frm.Show()
     End Sub
 
     Private Sub From_Main_Closed(sender As Object, e As EventArgs) Handles Me.Closed

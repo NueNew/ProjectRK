@@ -71,15 +71,16 @@ Partial Class Form_POS
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(151, 339)
+        Me.GroupBox2.Location = New System.Drawing.Point(132, 339)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(774, 391)
+        Me.GroupBox2.Size = New System.Drawing.Size(803, 391)
         Me.GroupBox2.TabIndex = 16
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "รายการสั้่งซื้อ"
+        Me.GroupBox2.Text = "รายการสั่งซื้อ"
         '
         'num_exit
         '
+        Me.num_exit.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.num_exit.Location = New System.Drawing.Point(458, 73)
         Me.num_exit.Name = "num_exit"
         Me.num_exit.Size = New System.Drawing.Size(85, 29)
@@ -87,6 +88,7 @@ Partial Class Form_POS
         '
         'lsvProductList
         '
+        Me.lsvProductList.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lsvProductList.Location = New System.Drawing.Point(43, 103)
         Me.lsvProductList.Name = "lsvProductList"
         Me.lsvProductList.Size = New System.Drawing.Size(604, 200)
@@ -96,7 +98,8 @@ Partial Class Form_POS
         '
         'txtStockLeft
         '
-        Me.txtStockLeft.Location = New System.Drawing.Point(666, 73)
+        Me.txtStockLeft.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtStockLeft.Location = New System.Drawing.Point(681, 73)
         Me.txtStockLeft.Name = "txtStockLeft"
         Me.txtStockLeft.ReadOnly = True
         Me.txtStockLeft.Size = New System.Drawing.Size(102, 29)
@@ -105,6 +108,7 @@ Partial Class Form_POS
         '
         'lblTotal
         '
+        Me.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTotal.Location = New System.Drawing.Point(547, 73)
         Me.lblTotal.Name = "lblTotal"
@@ -114,6 +118,7 @@ Partial Class Form_POS
         '
         'lblSalePrice
         '
+        Me.lblSalePrice.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblSalePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblSalePrice.Location = New System.Drawing.Point(355, 73)
         Me.lblSalePrice.Name = "lblSalePrice"
@@ -123,6 +128,7 @@ Partial Class Form_POS
         '
         'lblProductName
         '
+        Me.lblProductName.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblProductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblProductName.Location = New System.Drawing.Point(144, 73)
         Me.lblProductName.Name = "lblProductName"
@@ -131,15 +137,17 @@ Partial Class Form_POS
         '
         'Label11
         '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(662, 46)
+        Me.Label11.Location = New System.Drawing.Point(679, 47)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(112, 24)
+        Me.Label11.Size = New System.Drawing.Size(104, 24)
         Me.Label11.TabIndex = 4
-        Me.Label11.Text = "จำนวนในฐาน"
+        Me.Label11.Text = "สินค้าคงเหลือ"
         '
         'txtProductID
         '
+        Me.txtProductID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtProductID.Location = New System.Drawing.Point(43, 73)
         Me.txtProductID.Name = "txtProductID"
         Me.txtProductID.Size = New System.Drawing.Size(100, 29)
@@ -147,6 +155,7 @@ Partial Class Form_POS
         '
         'Label9
         '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(543, 46)
         Me.Label9.Name = "Label9"
@@ -156,6 +165,7 @@ Partial Class Form_POS
         '
         'Label8
         '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(452, 46)
         Me.Label8.Name = "Label8"
@@ -165,6 +175,7 @@ Partial Class Form_POS
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(360, 46)
         Me.Label7.Name = "Label7"
@@ -174,6 +185,7 @@ Partial Class Form_POS
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(140, 47)
         Me.Label6.Name = "Label6"
@@ -183,6 +195,7 @@ Partial Class Form_POS
         '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(39, 46)
         Me.Label5.Name = "Label5"
@@ -199,7 +212,7 @@ Partial Class Form_POS
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(151, 138)
+        Me.GroupBox1.Location = New System.Drawing.Point(178, 138)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(394, 195)
         Me.GroupBox1.TabIndex = 15
@@ -208,6 +221,7 @@ Partial Class Form_POS
         '
         'cboEmployee
         '
+        Me.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cboEmployee.FormattingEnabled = True
         Me.cboEmployee.Location = New System.Drawing.Point(66, 146)
@@ -217,6 +231,7 @@ Partial Class Form_POS
         '
         'lblContactName
         '
+        Me.lblContactName.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblContactName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblContactName.Location = New System.Drawing.Point(118, 67)
         Me.lblContactName.Name = "lblContactName"
@@ -225,6 +240,7 @@ Partial Class Form_POS
         '
         'txtCustomerID
         '
+        Me.txtCustomerID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtCustomerID.Location = New System.Drawing.Point(16, 67)
         Me.txtCustomerID.Name = "txtCustomerID"
         Me.txtCustomerID.Size = New System.Drawing.Size(77, 29)
@@ -232,6 +248,7 @@ Partial Class Form_POS
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(62, 119)
         Me.Label3.Name = "Label3"
@@ -241,6 +258,7 @@ Partial Class Form_POS
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(114, 42)
         Me.Label2.Name = "Label2"
@@ -250,6 +268,7 @@ Partial Class Form_POS
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 42)
         Me.Label1.Name = "Label1"
@@ -261,7 +280,7 @@ Partial Class Form_POS
         '
         Me.cmdClear.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdClear.Location = New System.Drawing.Point(931, 502)
+        Me.cmdClear.Location = New System.Drawing.Point(958, 502)
         Me.cmdClear.Name = "cmdClear"
         Me.cmdClear.Size = New System.Drawing.Size(97, 34)
         Me.cmdClear.TabIndex = 18
@@ -272,7 +291,7 @@ Partial Class Form_POS
         '
         Me.cmdAdd.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdAdd.Location = New System.Drawing.Point(931, 444)
+        Me.cmdAdd.Location = New System.Drawing.Point(958, 444)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(97, 34)
         Me.cmdAdd.TabIndex = 17
@@ -286,7 +305,7 @@ Partial Class Form_POS
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(618, 191)
+        Me.lblNet.Location = New System.Drawing.Point(645, 191)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(205, 53)
         Me.lblNet.TabIndex = 21
@@ -296,7 +315,7 @@ Partial Class Form_POS
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(722, 143)
+        Me.Label4.Location = New System.Drawing.Point(749, 143)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 20
@@ -306,7 +325,7 @@ Partial Class Form_POS
         '
         Me.cmdSave.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdSave.Location = New System.Drawing.Point(931, 583)
+        Me.cmdSave.Location = New System.Drawing.Point(958, 583)
         Me.cmdSave.Name = "cmdSave"
         Me.cmdSave.Size = New System.Drawing.Size(97, 32)
         Me.cmdSave.TabIndex = 19
@@ -317,7 +336,7 @@ Partial Class Form_POS
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(435, 58)
+        Me.Label10.Location = New System.Drawing.Point(420, 58)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(112, 24)
         Me.Label10.TabIndex = 20
@@ -325,6 +344,7 @@ Partial Class Form_POS
         '
         'txtOrderID
         '
+        Me.txtOrderID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtOrderID.Location = New System.Drawing.Point(555, 58)
         Me.txtOrderID.Name = "txtOrderID"
         Me.txtOrderID.ReadOnly = True
@@ -335,7 +355,7 @@ Partial Class Form_POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1030, 729)
+        Me.ClientSize = New System.Drawing.Size(1085, 729)
         Me.Controls.Add(Me.txtOrderID)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

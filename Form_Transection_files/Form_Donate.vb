@@ -5,12 +5,12 @@ Imports System.Transactions
 Imports System.Data
 Imports System.Data.SqlClient
 
+Imports CrystalDecisions.CrystalReports.Engine
 
 
 Public Class Form_Donate
     Dim db As New DataClassesDataContext
 
-    Public Shared Service_Bill1 As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report
 
     Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -187,9 +187,6 @@ Public Class Form_Donate
                 End Using
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                Service_Bill1 = txtOrderDID.Text
-                Form_Report_DONATE.Show()
-
 
 
                 lsvProductList.Clear()
@@ -197,6 +194,19 @@ Public Class Form_Donate
                 ClearProductData()
                 lblNet.Text = "0"
                 txtCustomerID.Focus()
+
+
+                Dim rpt As New ReportDocument
+                Dim directory As String = My.Application.Info.DirectoryPath
+
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_DON.rpt")
+                rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
+
+                Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
+                Form_Report_CR_DON.CrystalReportViewer1.Refresh()
+                Form_Report_CR_DON.Show()
+                Form_Report_CR_DON.WindowState = FormWindowState.Maximized
+
             End If
         End If
     End Sub
