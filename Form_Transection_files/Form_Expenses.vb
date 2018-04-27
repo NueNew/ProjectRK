@@ -9,17 +9,6 @@ Public Class Form_Expenses
         End If
         BindingNavigator1.DeleteItem = Nothing
         BindingData()
-
-        ''<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
-        ''จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น
-        'command.CommandText = "SELECT * from Expenses where ExpensesID = (select max(ExpensesID) from Expenses)"
-        'adapter = New SqlDataAdapter(command)
-        'dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
-        'adapter.Fill(dataSt, "Expenses") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        'Dim item As Integer
-        'item = CInt(dataSt.Tables("Expenses").Rows(0).Item("ExpensesID").ToString())
-        'txtID.Text = Format(item + 1)
-        ''ปิด>>>
     End Sub
 
     Private Sub BindingData(Optional cmd As SqlCommand = Nothing) 'ทำการผูกเพื่อแปะข้อมูลตามช่อง
@@ -58,7 +47,6 @@ Public Class Form_Expenses
         dataSt = New DataSet()
         adapter.Fill(dataSt, "Expenses")
         bindingSrc = New BindingSource(dataSt, "Expenses")
-
         txtID.DataBindings.Add("Text", bindingSrc, "ExpensesID")
         txtDetail.DataBindings.Add("Text", bindingSrc, "ExpensesName")
         txtMoney.DataBindings.Add("text", bindingSrc, "ExpensesPrice")
@@ -91,12 +79,11 @@ Public Class Form_Expenses
     End Sub 'ทำตามคำสั่งเมื่อกดปุ่ม save บนแถบเมนู
 
     Private Sub InsertData()
-        sql = "INSERT INTO Expenses(ExpensesID,  ExpensesName, ExpensesPrice, ExpensesDate) 
-               VALUES(@id, @name, @prc, @date)"
+        sql = "INSERT INTO Expenses(ExpensesName, ExpensesPrice, ExpensesDate) 
+               VALUES(@name, @prc, @date)"
 
         command.CommandText = sql
         command.Parameters.Clear()
-        command.Parameters.AddWithValue("id", txtID.Text)
         command.Parameters.AddWithValue("name", txtDetail.Text)
         command.Parameters.AddWithValue("prc", txtMoney.Text)
         command.Parameters.AddWithValue("date", DateTimePicker1.Value)

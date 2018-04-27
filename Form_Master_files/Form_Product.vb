@@ -100,14 +100,6 @@ Public Class Form_Product
         command.Parameters.AddWithValue("stk", TextStock.Text)
         command.Parameters.AddWithValue("dtl", TextDetail.Text)
         command.Parameters.AddWithValue("date", DateTimePicker1.Value)
-        'Dim dateStr = $"{DateTimePicker1.Value.Year}/
-        '{DateTimePicker1.Value.Month}/
-        '{DateTimePicker1.Value.Day}"
-
-        'command.Parameters.AddWithValue("exp", dateStr)
-
-
-
 
         If Not (PictureBox1.Image Is Nothing) Then
             Dim pic() As Byte = ReadImage()

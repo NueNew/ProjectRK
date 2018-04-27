@@ -43,10 +43,6 @@ C:\MYPROJECT\ProjectRK\bin\Debug\ShockwaveFlashObjects.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\stdole.dll
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_POS.resources
-C:\MYPROJECT\ProjectRK\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\MYPROJECT\ProjectRK\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\MYPROJECT\ProjectRK\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\MYPROJECT\ProjectRK\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\MYPROJECT\ProjectRK\bin\Debug\Microsoft.ReportViewer.Design.dll
@@ -159,6 +155,4 @@ C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resource
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.exe.config
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_DONATE.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Login.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_งบดุล.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Expenses.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.T_1.resources

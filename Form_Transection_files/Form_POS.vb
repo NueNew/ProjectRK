@@ -5,7 +5,7 @@ Imports System.Data
 Imports System.Data.SqlClient
 
 Public Class Form_POS
-    Dim db As New DataClassesPosDataContext
+    Dim db As New DataClassesDataContext
 
     Public Shared Service_Bill As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report(ใบเสร็จออกมา)
 

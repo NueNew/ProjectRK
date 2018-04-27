@@ -71,6 +71,7 @@ Partial Class Form_Expenses
         '
         Me.txtID.Location = New System.Drawing.Point(260, 206)
         Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(100, 29)
         Me.txtID.TabIndex = 1
         '

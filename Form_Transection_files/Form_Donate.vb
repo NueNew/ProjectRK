@@ -8,7 +8,7 @@ Imports System.Data.SqlClient
 
 
 Public Class Form_Donate
-    Dim db As New DataClassesPosDataContext
+    Dim db As New DataClassesDataContext
 
     Public Shared Service_Bill1 As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report
 
@@ -176,7 +176,7 @@ Public Class Form_Donate
                 For i = 0 To lsvProductList.Items.Count - 1
                     od = New OrdersDetailsD()
                     od.ProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-                    od.Donation = lsvProductList.Items(i).SubItems(2).Text 'จำนวนเงินที่บริจาค 0 1 2
+                    od.Donation = CType(lsvProductList.Items(i).SubItems(2).Text, Decimal?) 'จำนวนเงินที่บริจาค 0 1 2
                     o.OrdersDetailsDs.Add(od) 'ทำการใส่ข้อมูลลงในตาราง OrdersDeatailsD
                 Next
 
@@ -213,12 +213,4 @@ Public Class Form_Donate
         End If
     End Sub
 
-    Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        db.Connection.Close()
-    End Sub
-
-    Private Sub Form_Donate_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
-    End Sub
 End Class

@@ -115,11 +115,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formss_Report_files\Form_Report_งบดุล.Designer.vb">
-      <DependentUpon>Form_Report_งบดุล.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formss_Report_files\Form_Report_งบดุล.vb">
-      <SubType>Form</SubType>
+    <Compile Include="DataClasses.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="Forms_Report_files\CRRIID.vb">
       <AutoGen>True</AutoGen>
@@ -194,11 +193,6 @@
     <Compile Include="Form_Master_files\From_Customers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Transection_files\DataClassesPos.designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClassesPos.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Form_Transection_files\Form_Donate.Designer.vb">
       <DependentUpon>Form_Donate.vb</DependentUpon>
     </Compile>
@@ -215,12 +209,6 @@
       <DependentUpon>Form_POS.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Transection_files\Form_POS.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Transection_files\T_1.Designer.vb">
-      <DependentUpon>T_1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Transection_files\T_1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="From_Main.Designer.vb">
@@ -245,26 +233,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ProjectV2DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectV2DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectV2DataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectV2DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectV2DataSetPOS.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectV2DataSetPOS.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formss_Report_files\Form_Report_งบดุล.resx">
-      <DependentUpon>Form_Report_งบดุล.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\CRRIID.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRRIID.vb</LastGenOutput>
@@ -313,9 +283,6 @@
     <EmbeddedResource Include="Form_Transection_files\Form_POS.resx">
       <DependentUpon>Form_POS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Transection_files\T_1.resx">
-      <DependentUpon>T_1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="From_Main.resx">
       <DependentUpon>From_Main.vb</DependentUpon>
     </EmbeddedResource>
@@ -327,13 +294,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Form_Transection_files\DataClassesPos.dbml">
+    <None Include="DataClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClassesPos.designer.vb</LastGenOutput>
+      <LastGenOutput>DataClasses.designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Form_Transection_files\DataClassesPos.dbml.layout">
-      <DependentUpon>DataClassesPos.dbml</DependentUpon>
+    <None Include="DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -346,39 +313,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="ProjectV2DataSet.xsc">
-      <DependentUpon>ProjectV2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProjectV2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjectV2DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjectV2DataSet.xss">
-      <DependentUpon>ProjectV2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProjectV2DataSet1.xsc">
-      <DependentUpon>ProjectV2DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ProjectV2DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjectV2DataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjectV2DataSet1.xss">
-      <DependentUpon>ProjectV2DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ProjectV2DataSetPOS.xsc">
-      <DependentUpon>ProjectV2DataSetPOS.xsd</DependentUpon>
-    </None>
-    <None Include="ProjectV2DataSetPOS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjectV2DataSetPOS.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjectV2DataSetPOS.xss">
-      <DependentUpon>ProjectV2DataSetPOS.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -388,20 +322,6 @@
   <ItemGroup>
     <None Include="Resouce\2887.jpg" />
     <None Include="Resouce\Bangkok-Vector.jpg" />
-    <Content Include="SqlServerTypes\Loader.cs" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

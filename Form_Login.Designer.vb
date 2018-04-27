@@ -58,7 +58,7 @@ Partial Class Form_Login
         Me.Button1.Location = New System.Drawing.Point(246, 276)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 45)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "ตกลง"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -70,7 +70,7 @@ Partial Class Form_Login
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(63)
         Me.TextBoxPassword.Size = New System.Drawing.Size(218, 43)
-        Me.TextBoxPassword.TabIndex = 1
+        Me.TextBoxPassword.TabIndex = 2
         '
         'TextBoxUsername
         '
