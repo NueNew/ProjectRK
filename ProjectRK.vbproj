@@ -120,11 +120,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Report_files\CR_Import_Products.vb">
+    <Compile Include="Forms_Report_files\CrystalReport2.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CR_Import_Products.rpt</DependentUpon>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\CrystalReport3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_REPORT_ADV.Designer.vb">
+      <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_REPORT_ADV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_Report_CR_IMPORT.Designer.vb">
+      <DependentUpon>Form_Report_CR_IMPORT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\Form_Report_CR_IMPORT.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\Form_Report_CR_DON.Designer.vb">
       <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
@@ -137,6 +155,12 @@
     </Compile>
     <Compile Include="Forms_Report_files\Form_Report_CR_POS.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\รายงานนำเข้าสินค้า.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>รายงานนำเข้าสินค้า.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
@@ -251,17 +275,36 @@
     <Compile Include="Test\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="รายได้บริจาค.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>รายได้บริจาค.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms_Report_files\CR_Import_Products.rpt">
+    <EmbeddedResource Include="Forms_Report_files\CrystalReport2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CR_Import_Products.vb</LastGenOutput>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\Form_REPORT_ADV.resx">
+      <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_IMPORT.resx">
+      <DependentUpon>Form_Report_CR_IMPORT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_DON.resx">
       <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_POS.resx">
       <DependentUpon>Form_Report_CR_POS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\รายงานนำเข้าสินค้า.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>รายงานนำเข้าสินค้า.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
@@ -341,6 +384,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="รายได้บริจาค.xsc">
+      <DependentUpon>รายได้บริจาค.xsd</DependentUpon>
+    </None>
+    <None Include="รายได้บริจาค.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>รายได้บริจาค.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="รายได้บริจาค.xss">
+      <DependentUpon>รายได้บริจาค.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

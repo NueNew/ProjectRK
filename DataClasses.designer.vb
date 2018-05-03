@@ -37,53 +37,17 @@ Partial Public Class DataClassesDataContext
     End Sub
   Partial Private Sub DeleteCategory(instance As Category)
     End Sub
+  Partial Private Sub InsertTEST(instance As TEST)
+    End Sub
+  Partial Private Sub UpdateTEST(instance As TEST)
+    End Sub
+  Partial Private Sub DeleteTEST(instance As TEST)
+    End Sub
   Partial Private Sub InsertProductsD(instance As ProductsD)
     End Sub
   Partial Private Sub UpdateProductsD(instance As ProductsD)
     End Sub
   Partial Private Sub DeleteProductsD(instance As ProductsD)
-    End Sub
-  Partial Private Sub InsertCategoriesD(instance As CategoriesD)
-    End Sub
-  Partial Private Sub UpdateCategoriesD(instance As CategoriesD)
-    End Sub
-  Partial Private Sub DeleteCategoriesD(instance As CategoriesD)
-    End Sub
-  Partial Private Sub InsertCustomer(instance As Customer)
-    End Sub
-  Partial Private Sub UpdateCustomer(instance As Customer)
-    End Sub
-  Partial Private Sub DeleteCustomer(instance As Customer)
-    End Sub
-  Partial Private Sub InsertEmployee(instance As Employee)
-    End Sub
-  Partial Private Sub UpdateEmployee(instance As Employee)
-    End Sub
-  Partial Private Sub DeleteEmployee(instance As Employee)
-    End Sub
-  Partial Private Sub InsertExpense(instance As Expense)
-    End Sub
-  Partial Private Sub UpdateExpense(instance As Expense)
-    End Sub
-  Partial Private Sub DeleteExpense(instance As Expense)
-    End Sub
-  Partial Private Sub InsertOrder(instance As [Order])
-    End Sub
-  Partial Private Sub UpdateOrder(instance As [Order])
-    End Sub
-  Partial Private Sub DeleteOrder(instance As [Order])
-    End Sub
-  Partial Private Sub InsertOrdersD(instance As OrdersD)
-    End Sub
-  Partial Private Sub UpdateOrdersD(instance As OrdersD)
-    End Sub
-  Partial Private Sub DeleteOrdersD(instance As OrdersD)
-    End Sub
-  Partial Private Sub InsertOrdersDetail(instance As OrdersDetail)
-    End Sub
-  Partial Private Sub UpdateOrdersDetail(instance As OrdersDetail)
-    End Sub
-  Partial Private Sub DeleteOrdersDetail(instance As OrdersDetail)
     End Sub
   Partial Private Sub InsertOrdersDetailsD(instance As OrdersDetailsD)
     End Sub
@@ -96,6 +60,54 @@ Partial Public Class DataClassesDataContext
   Partial Private Sub UpdateProduct(instance As Product)
     End Sub
   Partial Private Sub DeleteProduct(instance As Product)
+    End Sub
+  Partial Private Sub InsertOrdersDetail(instance As OrdersDetail)
+    End Sub
+  Partial Private Sub UpdateOrdersDetail(instance As OrdersDetail)
+    End Sub
+  Partial Private Sub DeleteOrdersDetail(instance As OrdersDetail)
+    End Sub
+  Partial Private Sub InsertOrdersD(instance As OrdersD)
+    End Sub
+  Partial Private Sub UpdateOrdersD(instance As OrdersD)
+    End Sub
+  Partial Private Sub DeleteOrdersD(instance As OrdersD)
+    End Sub
+  Partial Private Sub InsertOrder(instance As [Order])
+    End Sub
+  Partial Private Sub UpdateOrder(instance As [Order])
+    End Sub
+  Partial Private Sub DeleteOrder(instance As [Order])
+    End Sub
+  Partial Private Sub InsertEmployee(instance As Employee)
+    End Sub
+  Partial Private Sub UpdateEmployee(instance As Employee)
+    End Sub
+  Partial Private Sub DeleteEmployee(instance As Employee)
+    End Sub
+  Partial Private Sub InsertCustomer(instance As Customer)
+    End Sub
+  Partial Private Sub UpdateCustomer(instance As Customer)
+    End Sub
+  Partial Private Sub DeleteCustomer(instance As Customer)
+    End Sub
+  Partial Private Sub InsertCategoryBalance(instance As CategoryBalance)
+    End Sub
+  Partial Private Sub UpdateCategoryBalance(instance As CategoryBalance)
+    End Sub
+  Partial Private Sub DeleteCategoryBalance(instance As CategoryBalance)
+    End Sub
+  Partial Private Sub InsertCategoriesD(instance As CategoriesD)
+    End Sub
+  Partial Private Sub UpdateCategoriesD(instance As CategoriesD)
+    End Sub
+  Partial Private Sub DeleteCategoriesD(instance As CategoriesD)
+    End Sub
+  Partial Private Sub InsertExpense(instance As Expense)
+    End Sub
+  Partial Private Sub UpdateExpense(instance As Expense)
+    End Sub
+  Partial Private Sub DeleteExpense(instance As Expense)
     End Sub
   #End Region
 	
@@ -130,51 +142,15 @@ Partial Public Class DataClassesDataContext
 		End Get
 	End Property
 	
+	Public ReadOnly Property TESTs() As System.Data.Linq.Table(Of TEST)
+		Get
+			Return Me.GetTable(Of TEST)
+		End Get
+	End Property
+	
 	Public ReadOnly Property ProductsDs() As System.Data.Linq.Table(Of ProductsD)
 		Get
 			Return Me.GetTable(Of ProductsD)
-		End Get
-	End Property
-	
-	Public ReadOnly Property CategoriesDs() As System.Data.Linq.Table(Of CategoriesD)
-		Get
-			Return Me.GetTable(Of CategoriesD)
-		End Get
-	End Property
-	
-	Public ReadOnly Property Customers() As System.Data.Linq.Table(Of Customer)
-		Get
-			Return Me.GetTable(Of Customer)
-		End Get
-	End Property
-	
-	Public ReadOnly Property Employees() As System.Data.Linq.Table(Of Employee)
-		Get
-			Return Me.GetTable(Of Employee)
-		End Get
-	End Property
-	
-	Public ReadOnly Property Expenses() As System.Data.Linq.Table(Of Expense)
-		Get
-			Return Me.GetTable(Of Expense)
-		End Get
-	End Property
-	
-	Public ReadOnly Property Orders() As System.Data.Linq.Table(Of [Order])
-		Get
-			Return Me.GetTable(Of [Order])
-		End Get
-	End Property
-	
-	Public ReadOnly Property OrdersDs() As System.Data.Linq.Table(Of OrdersD)
-		Get
-			Return Me.GetTable(Of OrdersD)
-		End Get
-	End Property
-	
-	Public ReadOnly Property OrdersDetails() As System.Data.Linq.Table(Of OrdersDetail)
-		Get
-			Return Me.GetTable(Of OrdersDetail)
 		End Get
 	End Property
 	
@@ -187,6 +163,54 @@ Partial Public Class DataClassesDataContext
 	Public ReadOnly Property Products() As System.Data.Linq.Table(Of Product)
 		Get
 			Return Me.GetTable(Of Product)
+		End Get
+	End Property
+	
+	Public ReadOnly Property OrdersDetails() As System.Data.Linq.Table(Of OrdersDetail)
+		Get
+			Return Me.GetTable(Of OrdersDetail)
+		End Get
+	End Property
+	
+	Public ReadOnly Property OrdersDs() As System.Data.Linq.Table(Of OrdersD)
+		Get
+			Return Me.GetTable(Of OrdersD)
+		End Get
+	End Property
+	
+	Public ReadOnly Property Orders() As System.Data.Linq.Table(Of [Order])
+		Get
+			Return Me.GetTable(Of [Order])
+		End Get
+	End Property
+	
+	Public ReadOnly Property Employees() As System.Data.Linq.Table(Of Employee)
+		Get
+			Return Me.GetTable(Of Employee)
+		End Get
+	End Property
+	
+	Public ReadOnly Property Customers() As System.Data.Linq.Table(Of Customer)
+		Get
+			Return Me.GetTable(Of Customer)
+		End Get
+	End Property
+	
+	Public ReadOnly Property CategoryBalances() As System.Data.Linq.Table(Of CategoryBalance)
+		Get
+			Return Me.GetTable(Of CategoryBalance)
+		End Get
+	End Property
+	
+	Public ReadOnly Property CategoriesDs() As System.Data.Linq.Table(Of CategoriesD)
+		Get
+			Return Me.GetTable(Of CategoriesD)
+		End Get
+	End Property
+	
+	Public ReadOnly Property Expenses() As System.Data.Linq.Table(Of Expense)
+		Get
+			Return Me.GetTable(Of Expense)
 		End Get
 	End Property
 End Class
@@ -317,6 +341,190 @@ Partial Public Class Category
 	Private Sub detach_Products(ByVal entity As Product)
 		Me.SendPropertyChanging
 		entity.Category = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.TEST")>  _
+Partial Public Class TEST
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _ID As Integer
+	
+	Private _DATE As System.Nullable(Of Date)
+	
+	Private _NAME As String
+	
+	Private _MONEY As System.Nullable(Of Decimal)
+	
+	Private _CBID As System.Nullable(Of Integer)
+	
+	Private _CategoryBalance As EntityRef(Of CategoryBalance)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDChanged()
+    End Sub
+    Partial Private Sub OnDATEChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnDATEChanged()
+    End Sub
+    Partial Private Sub OnNAMEChanging(value As String)
+    End Sub
+    Partial Private Sub OnNAMEChanged()
+    End Sub
+    Partial Private Sub OnMONEYChanging(value As System.Nullable(Of Decimal))
+    End Sub
+    Partial Private Sub OnMONEYChanged()
+    End Sub
+    Partial Private Sub OnCBIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCBIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._CategoryBalance = CType(Nothing, EntityRef(Of CategoryBalance))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property ID() As Integer
+		Get
+			Return Me._ID
+		End Get
+		Set
+			If ((Me._ID = value)  _
+						= false) Then
+				Me.OnIDChanging(value)
+				Me.SendPropertyChanging
+				Me._ID = value
+				Me.SendPropertyChanged("ID")
+				Me.OnIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="DATE", Storage:="_DATE", DbType:="Date")>  _
+	Public Property [DATE]() As System.Nullable(Of Date)
+		Get
+			Return Me._DATE
+		End Get
+		Set
+			If (Me._DATE.Equals(value) = false) Then
+				Me.OnDATEChanging(value)
+				Me.SendPropertyChanging
+				Me._DATE = value
+				Me.SendPropertyChanged("[DATE]")
+				Me.OnDATEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME", DbType:="NVarChar(50)")>  _
+	Public Property NAME() As String
+		Get
+			Return Me._NAME
+		End Get
+		Set
+			If (String.Equals(Me._NAME, value) = false) Then
+				Me.OnNAMEChanging(value)
+				Me.SendPropertyChanging
+				Me._NAME = value
+				Me.SendPropertyChanged("NAME")
+				Me.OnNAMEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_MONEY", DbType:="Money")>  _
+	Public Property MONEY() As System.Nullable(Of Decimal)
+		Get
+			Return Me._MONEY
+		End Get
+		Set
+			If (Me._MONEY.Equals(value) = false) Then
+				Me.OnMONEYChanging(value)
+				Me.SendPropertyChanging
+				Me._MONEY = value
+				Me.SendPropertyChanged("MONEY")
+				Me.OnMONEYChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int")>  _
+	Public Property CBID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CBID
+		End Get
+		Set
+			If (Me._CBID.Equals(value) = false) Then
+				If Me._CategoryBalance.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnCBIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CBID = value
+				Me.SendPropertyChanged("CBID")
+				Me.OnCBIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_TEST", Storage:="_CategoryBalance", ThisKey:="CBID", OtherKey:="CBID", IsForeignKey:=true)>  _
+	Public Property CategoryBalance() As CategoryBalance
+		Get
+			Return Me._CategoryBalance.Entity
+		End Get
+		Set
+			Dim previousValue As CategoryBalance = Me._CategoryBalance.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._CategoryBalance.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._CategoryBalance.Entity = Nothing
+					previousValue.TESTs.Remove(Me)
+				End If
+				Me._CategoryBalance.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.TESTs.Add(Me)
+					Me._CBID = value.CBID
+				Else
+					Me._CBID = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("CategoryBalance")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
 	End Sub
 End Class
 
@@ -505,1334 +713,6 @@ Partial Public Class ProductsD
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.CategoriesD")>  _
-Partial Public Class CategoriesD
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _CategoryDID As Integer
-	
-	Private _CategoryDName As String
-	
-	Private _Description As String
-	
-	Private _ProductsDs As EntitySet(Of ProductsD)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnCategoryDIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnCategoryDIDChanged()
-    End Sub
-    Partial Private Sub OnCategoryDNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnCategoryDNameChanged()
-    End Sub
-    Partial Private Sub OnDescriptionChanging(value As String)
-    End Sub
-    Partial Private Sub OnDescriptionChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._ProductsDs = New EntitySet(Of ProductsD)(AddressOf Me.attach_ProductsDs, AddressOf Me.detach_ProductsDs)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryDID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property CategoryDID() As Integer
-		Get
-			Return Me._CategoryDID
-		End Get
-		Set
-			If ((Me._CategoryDID = value)  _
-						= false) Then
-				Me.OnCategoryDIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CategoryDID = value
-				Me.SendPropertyChanged("CategoryDID")
-				Me.OnCategoryDIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryDName", DbType:="NVarChar(50)")>  _
-	Public Property CategoryDName() As String
-		Get
-			Return Me._CategoryDName
-		End Get
-		Set
-			If (String.Equals(Me._CategoryDName, value) = false) Then
-				Me.OnCategoryDNameChanging(value)
-				Me.SendPropertyChanging
-				Me._CategoryDName = value
-				Me.SendPropertyChanged("CategoryDName")
-				Me.OnCategoryDNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Description", DbType:="NText", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Description() As String
-		Get
-			Return Me._Description
-		End Get
-		Set
-			If (String.Equals(Me._Description, value) = false) Then
-				Me.OnDescriptionChanging(value)
-				Me.SendPropertyChanging
-				Me._Description = value
-				Me.SendPropertyChanged("Description")
-				Me.OnDescriptionChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesD_ProductsD", Storage:="_ProductsDs", ThisKey:="CategoryDID", OtherKey:="CategoryDID")>  _
-	Public Property ProductsDs() As EntitySet(Of ProductsD)
-		Get
-			Return Me._ProductsDs
-		End Get
-		Set
-			Me._ProductsDs.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_ProductsDs(ByVal entity As ProductsD)
-		Me.SendPropertyChanging
-		entity.CategoriesD = Me
-	End Sub
-	
-	Private Sub detach_ProductsDs(ByVal entity As ProductsD)
-		Me.SendPropertyChanging
-		entity.CategoriesD = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Customers")>  _
-Partial Public Class Customer
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _CustomerID As Integer
-	
-	Private _CustomerName As String
-	
-	Private _Address As String
-	
-	Private _Phone As String
-	
-	Private _Orders As EntitySet(Of [Order])
-	
-	Private _OrdersDs As EntitySet(Of OrdersD)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnCustomerIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnCustomerIDChanged()
-    End Sub
-    Partial Private Sub OnCustomerNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnCustomerNameChanged()
-    End Sub
-    Partial Private Sub OnAddressChanging(value As String)
-    End Sub
-    Partial Private Sub OnAddressChanged()
-    End Sub
-    Partial Private Sub OnPhoneChanging(value As String)
-    End Sub
-    Partial Private Sub OnPhoneChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._Orders = New EntitySet(Of [Order])(AddressOf Me.attach_Orders, AddressOf Me.detach_Orders)
-		Me._OrdersDs = New EntitySet(Of OrdersD)(AddressOf Me.attach_OrdersDs, AddressOf Me.detach_OrdersDs)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property CustomerID() As Integer
-		Get
-			Return Me._CustomerID
-		End Get
-		Set
-			If ((Me._CustomerID = value)  _
-						= false) Then
-				Me.OnCustomerIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CustomerID = value
-				Me.SendPropertyChanged("CustomerID")
-				Me.OnCustomerIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerName", DbType:="NVarChar(200) NOT NULL", CanBeNull:=false)>  _
-	Public Property CustomerName() As String
-		Get
-			Return Me._CustomerName
-		End Get
-		Set
-			If (String.Equals(Me._CustomerName, value) = false) Then
-				Me.OnCustomerNameChanging(value)
-				Me.SendPropertyChanging
-				Me._CustomerName = value
-				Me.SendPropertyChanged("CustomerName")
-				Me.OnCustomerNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Address", DbType:="NVarChar(200)")>  _
-	Public Property Address() As String
-		Get
-			Return Me._Address
-		End Get
-		Set
-			If (String.Equals(Me._Address, value) = false) Then
-				Me.OnAddressChanging(value)
-				Me.SendPropertyChanging
-				Me._Address = value
-				Me.SendPropertyChanged("Address")
-				Me.OnAddressChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Phone", DbType:="NVarChar(24)")>  _
-	Public Property Phone() As String
-		Get
-			Return Me._Phone
-		End Get
-		Set
-			If (String.Equals(Me._Phone, value) = false) Then
-				Me.OnPhoneChanging(value)
-				Me.SendPropertyChanging
-				Me._Phone = value
-				Me.SendPropertyChanged("Phone")
-				Me.OnPhoneChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_Order", Storage:="_Orders", ThisKey:="CustomerID", OtherKey:="CustomerID")>  _
-	Public Property Orders() As EntitySet(Of [Order])
-		Get
-			Return Me._Orders
-		End Get
-		Set
-			Me._Orders.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_OrdersD", Storage:="_OrdersDs", ThisKey:="CustomerID", OtherKey:="CustomerID")>  _
-	Public Property OrdersDs() As EntitySet(Of OrdersD)
-		Get
-			Return Me._OrdersDs
-		End Get
-		Set
-			Me._OrdersDs.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_Orders(ByVal entity As [Order])
-		Me.SendPropertyChanging
-		entity.Customer = Me
-	End Sub
-	
-	Private Sub detach_Orders(ByVal entity As [Order])
-		Me.SendPropertyChanging
-		entity.Customer = Nothing
-	End Sub
-	
-	Private Sub attach_OrdersDs(ByVal entity As OrdersD)
-		Me.SendPropertyChanging
-		entity.Customer = Me
-	End Sub
-	
-	Private Sub detach_OrdersDs(ByVal entity As OrdersD)
-		Me.SendPropertyChanging
-		entity.Customer = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Employees")>  _
-Partial Public Class Employee
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _EmployeeID As Integer
-	
-	Private _EmployeeName As String
-	
-	Private _Address As String
-	
-	Private _Phone As String
-	
-	Private _Photo As System.Data.Linq.Binary
-	
-	Private _Username As String
-	
-	Private _Password As String
-	
-	Private _Orders As EntitySet(Of [Order])
-	
-	Private _OrdersDs As EntitySet(Of OrdersD)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnEmployeeIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnEmployeeIDChanged()
-    End Sub
-    Partial Private Sub OnEmployeeNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnEmployeeNameChanged()
-    End Sub
-    Partial Private Sub OnAddressChanging(value As String)
-    End Sub
-    Partial Private Sub OnAddressChanged()
-    End Sub
-    Partial Private Sub OnPhoneChanging(value As String)
-    End Sub
-    Partial Private Sub OnPhoneChanged()
-    End Sub
-    Partial Private Sub OnPhotoChanging(value As System.Data.Linq.Binary)
-    End Sub
-    Partial Private Sub OnPhotoChanged()
-    End Sub
-    Partial Private Sub OnUsernameChanging(value As String)
-    End Sub
-    Partial Private Sub OnUsernameChanged()
-    End Sub
-    Partial Private Sub OnPasswordChanging(value As String)
-    End Sub
-    Partial Private Sub OnPasswordChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._Orders = New EntitySet(Of [Order])(AddressOf Me.attach_Orders, AddressOf Me.detach_Orders)
-		Me._OrdersDs = New EntitySet(Of OrdersD)(AddressOf Me.attach_OrdersDs, AddressOf Me.detach_OrdersDs)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property EmployeeID() As Integer
-		Get
-			Return Me._EmployeeID
-		End Get
-		Set
-			If ((Me._EmployeeID = value)  _
-						= false) Then
-				Me.OnEmployeeIDChanging(value)
-				Me.SendPropertyChanging
-				Me._EmployeeID = value
-				Me.SendPropertyChanged("EmployeeID")
-				Me.OnEmployeeIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeName", DbType:="NVarChar(200) NOT NULL", CanBeNull:=false)>  _
-	Public Property EmployeeName() As String
-		Get
-			Return Me._EmployeeName
-		End Get
-		Set
-			If (String.Equals(Me._EmployeeName, value) = false) Then
-				Me.OnEmployeeNameChanging(value)
-				Me.SendPropertyChanging
-				Me._EmployeeName = value
-				Me.SendPropertyChanged("EmployeeName")
-				Me.OnEmployeeNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Address", DbType:="NVarChar(200)")>  _
-	Public Property Address() As String
-		Get
-			Return Me._Address
-		End Get
-		Set
-			If (String.Equals(Me._Address, value) = false) Then
-				Me.OnAddressChanging(value)
-				Me.SendPropertyChanging
-				Me._Address = value
-				Me.SendPropertyChanged("Address")
-				Me.OnAddressChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Phone", DbType:="NVarChar(24)")>  _
-	Public Property Phone() As String
-		Get
-			Return Me._Phone
-		End Get
-		Set
-			If (String.Equals(Me._Phone, value) = false) Then
-				Me.OnPhoneChanging(value)
-				Me.SendPropertyChanging
-				Me._Phone = value
-				Me.SendPropertyChanged("Phone")
-				Me.OnPhoneChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Photo", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Photo() As System.Data.Linq.Binary
-		Get
-			Return Me._Photo
-		End Get
-		Set
-			If (Object.Equals(Me._Photo, value) = false) Then
-				Me.OnPhotoChanging(value)
-				Me.SendPropertyChanging
-				Me._Photo = value
-				Me.SendPropertyChanged("Photo")
-				Me.OnPhotoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(20)")>  _
-	Public Property Username() As String
-		Get
-			Return Me._Username
-		End Get
-		Set
-			If (String.Equals(Me._Username, value) = false) Then
-				Me.OnUsernameChanging(value)
-				Me.SendPropertyChanging
-				Me._Username = value
-				Me.SendPropertyChanged("Username")
-				Me.OnUsernameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="NVarChar(20)")>  _
-	Public Property Password() As String
-		Get
-			Return Me._Password
-		End Get
-		Set
-			If (String.Equals(Me._Password, value) = false) Then
-				Me.OnPasswordChanging(value)
-				Me.SendPropertyChanging
-				Me._Password = value
-				Me.SendPropertyChanged("Password")
-				Me.OnPasswordChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_Order", Storage:="_Orders", ThisKey:="EmployeeID", OtherKey:="EmployeeID")>  _
-	Public Property Orders() As EntitySet(Of [Order])
-		Get
-			Return Me._Orders
-		End Get
-		Set
-			Me._Orders.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_OrdersD", Storage:="_OrdersDs", ThisKey:="EmployeeID", OtherKey:="EmployeeID")>  _
-	Public Property OrdersDs() As EntitySet(Of OrdersD)
-		Get
-			Return Me._OrdersDs
-		End Get
-		Set
-			Me._OrdersDs.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_Orders(ByVal entity As [Order])
-		Me.SendPropertyChanging
-		entity.Employee = Me
-	End Sub
-	
-	Private Sub detach_Orders(ByVal entity As [Order])
-		Me.SendPropertyChanging
-		entity.Employee = Nothing
-	End Sub
-	
-	Private Sub attach_OrdersDs(ByVal entity As OrdersD)
-		Me.SendPropertyChanging
-		entity.Employee = Me
-	End Sub
-	
-	Private Sub detach_OrdersDs(ByVal entity As OrdersD)
-		Me.SendPropertyChanging
-		entity.Employee = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Expenses")>  _
-Partial Public Class Expense
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _ExpensesID As Integer
-	
-	Private _ExpensesName As String
-	
-	Private _ExpensesPrice As System.Nullable(Of Decimal)
-	
-	Private _ExpensesDate As System.Nullable(Of Date)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnExpensesIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnExpensesIDChanged()
-    End Sub
-    Partial Private Sub OnExpensesNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnExpensesNameChanged()
-    End Sub
-    Partial Private Sub OnExpensesPriceChanging(value As System.Nullable(Of Decimal))
-    End Sub
-    Partial Private Sub OnExpensesPriceChanged()
-    End Sub
-    Partial Private Sub OnExpensesDateChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnExpensesDateChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property ExpensesID() As Integer
-		Get
-			Return Me._ExpensesID
-		End Get
-		Set
-			If ((Me._ExpensesID = value)  _
-						= false) Then
-				Me.OnExpensesIDChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesID = value
-				Me.SendPropertyChanged("ExpensesID")
-				Me.OnExpensesIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesName", DbType:="NVarChar(500)")>  _
-	Public Property ExpensesName() As String
-		Get
-			Return Me._ExpensesName
-		End Get
-		Set
-			If (String.Equals(Me._ExpensesName, value) = false) Then
-				Me.OnExpensesNameChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesName = value
-				Me.SendPropertyChanged("ExpensesName")
-				Me.OnExpensesNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesPrice", DbType:="Money")>  _
-	Public Property ExpensesPrice() As System.Nullable(Of Decimal)
-		Get
-			Return Me._ExpensesPrice
-		End Get
-		Set
-			If (Me._ExpensesPrice.Equals(value) = false) Then
-				Me.OnExpensesPriceChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesPrice = value
-				Me.SendPropertyChanged("ExpensesPrice")
-				Me.OnExpensesPriceChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesDate", DbType:="DateTime")>  _
-	Public Property ExpensesDate() As System.Nullable(Of Date)
-		Get
-			Return Me._ExpensesDate
-		End Get
-		Set
-			If (Me._ExpensesDate.Equals(value) = false) Then
-				Me.OnExpensesDateChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesDate = value
-				Me.SendPropertyChanged("ExpensesDate")
-				Me.OnExpensesDateChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Orders")>  _
-Partial Public Class [Order]
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _OrderID As Integer
-	
-	Private _CustomerID As System.Nullable(Of Integer)
-	
-	Private _EmployeeID As System.Nullable(Of Integer)
-	
-	Private _OrderDate As System.Nullable(Of Date)
-	
-	Private _OrdersDetails As EntitySet(Of OrdersDetail)
-	
-	Private _Customer As EntityRef(Of Customer)
-	
-	Private _Employee As EntityRef(Of Employee)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnOrderIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnOrderIDChanged()
-    End Sub
-    Partial Private Sub OnCustomerIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnCustomerIDChanged()
-    End Sub
-    Partial Private Sub OnEmployeeIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnEmployeeIDChanged()
-    End Sub
-    Partial Private Sub OnOrderDateChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnOrderDateChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._OrdersDetails = New EntitySet(Of OrdersDetail)(AddressOf Me.attach_OrdersDetails, AddressOf Me.detach_OrdersDetails)
-		Me._Customer = CType(Nothing, EntityRef(Of Customer))
-		Me._Employee = CType(Nothing, EntityRef(Of Employee))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property OrderID() As Integer
-		Get
-			Return Me._OrderID
-		End Get
-		Set
-			If ((Me._OrderID = value)  _
-						= false) Then
-				Me.OnOrderIDChanging(value)
-				Me.SendPropertyChanging
-				Me._OrderID = value
-				Me.SendPropertyChanged("OrderID")
-				Me.OnOrderIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerID", DbType:="Int")>  _
-	Public Property CustomerID() As System.Nullable(Of Integer)
-		Get
-			Return Me._CustomerID
-		End Get
-		Set
-			If (Me._CustomerID.Equals(value) = false) Then
-				If Me._Customer.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnCustomerIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CustomerID = value
-				Me.SendPropertyChanged("CustomerID")
-				Me.OnCustomerIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", DbType:="Int")>  _
-	Public Property EmployeeID() As System.Nullable(Of Integer)
-		Get
-			Return Me._EmployeeID
-		End Get
-		Set
-			If (Me._EmployeeID.Equals(value) = false) Then
-				If Me._Employee.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnEmployeeIDChanging(value)
-				Me.SendPropertyChanging
-				Me._EmployeeID = value
-				Me.SendPropertyChanged("EmployeeID")
-				Me.OnEmployeeIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderDate", DbType:="DateTime")>  _
-	Public Property OrderDate() As System.Nullable(Of Date)
-		Get
-			Return Me._OrderDate
-		End Get
-		Set
-			If (Me._OrderDate.Equals(value) = false) Then
-				Me.OnOrderDateChanging(value)
-				Me.SendPropertyChanging
-				Me._OrderDate = value
-				Me.SendPropertyChanged("OrderDate")
-				Me.OnOrderDateChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Order_OrdersDetail", Storage:="_OrdersDetails", ThisKey:="OrderID", OtherKey:="OrderID")>  _
-	Public Property OrdersDetails() As EntitySet(Of OrdersDetail)
-		Get
-			Return Me._OrdersDetails
-		End Get
-		Set
-			Me._OrdersDetails.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_Order", Storage:="_Customer", ThisKey:="CustomerID", OtherKey:="CustomerID", IsForeignKey:=true)>  _
-	Public Property Customer() As Customer
-		Get
-			Return Me._Customer.Entity
-		End Get
-		Set
-			Dim previousValue As Customer = Me._Customer.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Customer.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Customer.Entity = Nothing
-					previousValue.Orders.Remove(Me)
-				End If
-				Me._Customer.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.Orders.Add(Me)
-					Me._CustomerID = value.CustomerID
-				Else
-					Me._CustomerID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("Customer")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_Order", Storage:="_Employee", ThisKey:="EmployeeID", OtherKey:="EmployeeID", IsForeignKey:=true)>  _
-	Public Property Employee() As Employee
-		Get
-			Return Me._Employee.Entity
-		End Get
-		Set
-			Dim previousValue As Employee = Me._Employee.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Employee.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Employee.Entity = Nothing
-					previousValue.Orders.Remove(Me)
-				End If
-				Me._Employee.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.Orders.Add(Me)
-					Me._EmployeeID = value.EmployeeID
-				Else
-					Me._EmployeeID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("Employee")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_OrdersDetails(ByVal entity As OrdersDetail)
-		Me.SendPropertyChanging
-		entity.[Order] = Me
-	End Sub
-	
-	Private Sub detach_OrdersDetails(ByVal entity As OrdersDetail)
-		Me.SendPropertyChanging
-		entity.[Order] = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersD")>  _
-Partial Public Class OrdersD
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _OrderDID As Integer
-	
-	Private _CustomerID As System.Nullable(Of Integer)
-	
-	Private _EmployeeID As System.Nullable(Of Integer)
-	
-	Private _OrderDDate As System.Nullable(Of Date)
-	
-	Private _OrdersDetailsDs As EntitySet(Of OrdersDetailsD)
-	
-	Private _Customer As EntityRef(Of Customer)
-	
-	Private _Employee As EntityRef(Of Employee)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnOrderDIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnOrderDIDChanged()
-    End Sub
-    Partial Private Sub OnCustomerIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnCustomerIDChanged()
-    End Sub
-    Partial Private Sub OnEmployeeIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnEmployeeIDChanged()
-    End Sub
-    Partial Private Sub OnOrderDDateChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnOrderDDateChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._OrdersDetailsDs = New EntitySet(Of OrdersDetailsD)(AddressOf Me.attach_OrdersDetailsDs, AddressOf Me.detach_OrdersDetailsDs)
-		Me._Customer = CType(Nothing, EntityRef(Of Customer))
-		Me._Employee = CType(Nothing, EntityRef(Of Employee))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderDID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property OrderDID() As Integer
-		Get
-			Return Me._OrderDID
-		End Get
-		Set
-			If ((Me._OrderDID = value)  _
-						= false) Then
-				Me.OnOrderDIDChanging(value)
-				Me.SendPropertyChanging
-				Me._OrderDID = value
-				Me.SendPropertyChanged("OrderDID")
-				Me.OnOrderDIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerID", DbType:="Int")>  _
-	Public Property CustomerID() As System.Nullable(Of Integer)
-		Get
-			Return Me._CustomerID
-		End Get
-		Set
-			If (Me._CustomerID.Equals(value) = false) Then
-				If Me._Customer.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnCustomerIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CustomerID = value
-				Me.SendPropertyChanged("CustomerID")
-				Me.OnCustomerIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", DbType:="Int")>  _
-	Public Property EmployeeID() As System.Nullable(Of Integer)
-		Get
-			Return Me._EmployeeID
-		End Get
-		Set
-			If (Me._EmployeeID.Equals(value) = false) Then
-				If Me._Employee.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnEmployeeIDChanging(value)
-				Me.SendPropertyChanging
-				Me._EmployeeID = value
-				Me.SendPropertyChanged("EmployeeID")
-				Me.OnEmployeeIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderDDate", DbType:="DateTime")>  _
-	Public Property OrderDDate() As System.Nullable(Of Date)
-		Get
-			Return Me._OrderDDate
-		End Get
-		Set
-			If (Me._OrderDDate.Equals(value) = false) Then
-				Me.OnOrderDDateChanging(value)
-				Me.SendPropertyChanging
-				Me._OrderDDate = value
-				Me.SendPropertyChanged("OrderDDate")
-				Me.OnOrderDDateChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="OrdersD_OrdersDetailsD", Storage:="_OrdersDetailsDs", ThisKey:="OrderDID", OtherKey:="OrderDID")>  _
-	Public Property OrdersDetailsDs() As EntitySet(Of OrdersDetailsD)
-		Get
-			Return Me._OrdersDetailsDs
-		End Get
-		Set
-			Me._OrdersDetailsDs.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_OrdersD", Storage:="_Customer", ThisKey:="CustomerID", OtherKey:="CustomerID", IsForeignKey:=true)>  _
-	Public Property Customer() As Customer
-		Get
-			Return Me._Customer.Entity
-		End Get
-		Set
-			Dim previousValue As Customer = Me._Customer.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Customer.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Customer.Entity = Nothing
-					previousValue.OrdersDs.Remove(Me)
-				End If
-				Me._Customer.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.OrdersDs.Add(Me)
-					Me._CustomerID = value.CustomerID
-				Else
-					Me._CustomerID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("Customer")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_OrdersD", Storage:="_Employee", ThisKey:="EmployeeID", OtherKey:="EmployeeID", IsForeignKey:=true)>  _
-	Public Property Employee() As Employee
-		Get
-			Return Me._Employee.Entity
-		End Get
-		Set
-			Dim previousValue As Employee = Me._Employee.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Employee.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Employee.Entity = Nothing
-					previousValue.OrdersDs.Remove(Me)
-				End If
-				Me._Employee.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.OrdersDs.Add(Me)
-					Me._EmployeeID = value.EmployeeID
-				Else
-					Me._EmployeeID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("Employee")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
-		Me.SendPropertyChanging
-		entity.OrdersD = Me
-	End Sub
-	
-	Private Sub detach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
-		Me.SendPropertyChanging
-		entity.OrdersD = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersDetails")>  _
-Partial Public Class OrdersDetail
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _OrderID As Integer
-	
-	Private _ProductID As Integer
-	
-	Private _UnitPrice As System.Nullable(Of Decimal)
-	
-	Private _Quantity As System.Nullable(Of Short)
-	
-	Private _Discount As System.Nullable(Of Single)
-	
-	Private _Order As EntityRef(Of [Order])
-	
-	Private _Product As EntityRef(Of Product)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnOrderIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnOrderIDChanged()
-    End Sub
-    Partial Private Sub OnProductIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnProductIDChanged()
-    End Sub
-    Partial Private Sub OnUnitPriceChanging(value As System.Nullable(Of Decimal))
-    End Sub
-    Partial Private Sub OnUnitPriceChanged()
-    End Sub
-    Partial Private Sub OnQuantityChanging(value As System.Nullable(Of Short))
-    End Sub
-    Partial Private Sub OnQuantityChanged()
-    End Sub
-    Partial Private Sub OnDiscountChanging(value As System.Nullable(Of Single))
-    End Sub
-    Partial Private Sub OnDiscountChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._Order = CType(Nothing, EntityRef(Of [Order]))
-		Me._Product = CType(Nothing, EntityRef(Of Product))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property OrderID() As Integer
-		Get
-			Return Me._OrderID
-		End Get
-		Set
-			If ((Me._OrderID = value)  _
-						= false) Then
-				If Me._Order.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnOrderIDChanging(value)
-				Me.SendPropertyChanging
-				Me._OrderID = value
-				Me.SendPropertyChanged("OrderID")
-				Me.OnOrderIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ProductID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property ProductID() As Integer
-		Get
-			Return Me._ProductID
-		End Get
-		Set
-			If ((Me._ProductID = value)  _
-						= false) Then
-				If Me._Product.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnProductIDChanging(value)
-				Me.SendPropertyChanging
-				Me._ProductID = value
-				Me.SendPropertyChanged("ProductID")
-				Me.OnProductIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UnitPrice", DbType:="Money")>  _
-	Public Property UnitPrice() As System.Nullable(Of Decimal)
-		Get
-			Return Me._UnitPrice
-		End Get
-		Set
-			If (Me._UnitPrice.Equals(value) = false) Then
-				Me.OnUnitPriceChanging(value)
-				Me.SendPropertyChanging
-				Me._UnitPrice = value
-				Me.SendPropertyChanged("UnitPrice")
-				Me.OnUnitPriceChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Quantity", DbType:="SmallInt")>  _
-	Public Property Quantity() As System.Nullable(Of Short)
-		Get
-			Return Me._Quantity
-		End Get
-		Set
-			If (Me._Quantity.Equals(value) = false) Then
-				Me.OnQuantityChanging(value)
-				Me.SendPropertyChanging
-				Me._Quantity = value
-				Me.SendPropertyChanged("Quantity")
-				Me.OnQuantityChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Discount", DbType:="Real")>  _
-	Public Property Discount() As System.Nullable(Of Single)
-		Get
-			Return Me._Discount
-		End Get
-		Set
-			If (Me._Discount.Equals(value) = false) Then
-				Me.OnDiscountChanging(value)
-				Me.SendPropertyChanging
-				Me._Discount = value
-				Me.SendPropertyChanged("Discount")
-				Me.OnDiscountChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Order_OrdersDetail", Storage:="_Order", ThisKey:="OrderID", OtherKey:="OrderID", IsForeignKey:=true)>  _
-	Public Property [Order]() As [Order]
-		Get
-			Return Me._Order.Entity
-		End Get
-		Set
-			Dim previousValue As [Order] = Me._Order.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Order.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Order.Entity = Nothing
-					previousValue.OrdersDetails.Remove(Me)
-				End If
-				Me._Order.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.OrdersDetails.Add(Me)
-					Me._OrderID = value.OrderID
-				Else
-					Me._OrderID = CType(Nothing, Integer)
-				End If
-				Me.SendPropertyChanged("[Order]")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Product_OrdersDetail", Storage:="_Product", ThisKey:="ProductID", OtherKey:="ProductID", IsForeignKey:=true)>  _
-	Public Property Product() As Product
-		Get
-			Return Me._Product.Entity
-		End Get
-		Set
-			Dim previousValue As Product = Me._Product.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Product.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Product.Entity = Nothing
-					previousValue.OrdersDetails.Remove(Me)
-				End If
-				Me._Product.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.OrdersDetails.Add(Me)
-					Me._ProductID = value.ProductID
-				Else
-					Me._ProductID = CType(Nothing, Integer)
-				End If
-				Me.SendPropertyChanged("Product")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersDetailsD")>  _
 Partial Public Class OrdersDetailsD
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
@@ -1845,9 +725,9 @@ Partial Public Class OrdersDetailsD
 	
 	Private _Donation As System.Nullable(Of Decimal)
 	
-	Private _OrdersD As EntityRef(Of OrdersD)
-	
 	Private _ProductsD As EntityRef(Of ProductsD)
+	
+	Private _OrdersD As EntityRef(Of OrdersD)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -1872,8 +752,8 @@ Partial Public Class OrdersDetailsD
 	
 	Public Sub New()
 		MyBase.New
-		Me._OrdersD = CType(Nothing, EntityRef(Of OrdersD))
 		Me._ProductsD = CType(Nothing, EntityRef(Of ProductsD))
+		Me._OrdersD = CType(Nothing, EntityRef(Of OrdersD))
 		OnCreated
 	End Sub
 	
@@ -1933,34 +813,6 @@ Partial Public Class OrdersDetailsD
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="OrdersD_OrdersDetailsD", Storage:="_OrdersD", ThisKey:="OrderDID", OtherKey:="OrderDID", IsForeignKey:=true)>  _
-	Public Property OrdersD() As OrdersD
-		Get
-			Return Me._OrdersD.Entity
-		End Get
-		Set
-			Dim previousValue As OrdersD = Me._OrdersD.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._OrdersD.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._OrdersD.Entity = Nothing
-					previousValue.OrdersDetailsDs.Remove(Me)
-				End If
-				Me._OrdersD.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.OrdersDetailsDs.Add(Me)
-					Me._OrderDID = value.OrderDID
-				Else
-					Me._OrderDID = CType(Nothing, Integer)
-				End If
-				Me.SendPropertyChanged("OrdersD")
-			End If
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="ProductsD_OrdersDetailsD", Storage:="_ProductsD", ThisKey:="ProductDID", OtherKey:="ProductDID", IsForeignKey:=true)>  _
 	Public Property ProductsD() As ProductsD
 		Get
@@ -1985,6 +837,34 @@ Partial Public Class OrdersDetailsD
 					Me._ProductDID = CType(Nothing, Integer)
 				End If
 				Me.SendPropertyChanged("ProductsD")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="OrdersD_OrdersDetailsD", Storage:="_OrdersD", ThisKey:="OrderDID", OtherKey:="OrderDID", IsForeignKey:=true)>  _
+	Public Property OrdersD() As OrdersD
+		Get
+			Return Me._OrdersD.Entity
+		End Get
+		Set
+			Dim previousValue As OrdersD = Me._OrdersD.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._OrdersD.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._OrdersD.Entity = Nothing
+					previousValue.OrdersDetailsDs.Remove(Me)
+				End If
+				Me._OrdersD.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDetailsDs.Add(Me)
+					Me._OrderDID = value.OrderDID
+				Else
+					Me._OrderDID = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("OrdersD")
 			End If
 		End Set
 	End Property
@@ -2278,5 +1158,1506 @@ Partial Public Class Product
 	Private Sub detach_OrdersDetails(ByVal entity As OrdersDetail)
 		Me.SendPropertyChanging
 		entity.Product = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersDetails")>  _
+Partial Public Class OrdersDetail
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _OrderID As Integer
+	
+	Private _ProductID As Integer
+	
+	Private _UnitPrice As System.Nullable(Of Decimal)
+	
+	Private _Quantity As System.Nullable(Of Short)
+	
+	Private _Discount As System.Nullable(Of Single)
+	
+	Private _Product As EntityRef(Of Product)
+	
+	Private _Order As EntityRef(Of [Order])
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnOrderIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnOrderIDChanged()
+    End Sub
+    Partial Private Sub OnProductIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnProductIDChanged()
+    End Sub
+    Partial Private Sub OnUnitPriceChanging(value As System.Nullable(Of Decimal))
+    End Sub
+    Partial Private Sub OnUnitPriceChanged()
+    End Sub
+    Partial Private Sub OnQuantityChanging(value As System.Nullable(Of Short))
+    End Sub
+    Partial Private Sub OnQuantityChanged()
+    End Sub
+    Partial Private Sub OnDiscountChanging(value As System.Nullable(Of Single))
+    End Sub
+    Partial Private Sub OnDiscountChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._Product = CType(Nothing, EntityRef(Of Product))
+		Me._Order = CType(Nothing, EntityRef(Of [Order]))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property OrderID() As Integer
+		Get
+			Return Me._OrderID
+		End Get
+		Set
+			If ((Me._OrderID = value)  _
+						= false) Then
+				If Me._Order.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnOrderIDChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderID = value
+				Me.SendPropertyChanged("OrderID")
+				Me.OnOrderIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ProductID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property ProductID() As Integer
+		Get
+			Return Me._ProductID
+		End Get
+		Set
+			If ((Me._ProductID = value)  _
+						= false) Then
+				If Me._Product.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnProductIDChanging(value)
+				Me.SendPropertyChanging
+				Me._ProductID = value
+				Me.SendPropertyChanged("ProductID")
+				Me.OnProductIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UnitPrice", DbType:="Money")>  _
+	Public Property UnitPrice() As System.Nullable(Of Decimal)
+		Get
+			Return Me._UnitPrice
+		End Get
+		Set
+			If (Me._UnitPrice.Equals(value) = false) Then
+				Me.OnUnitPriceChanging(value)
+				Me.SendPropertyChanging
+				Me._UnitPrice = value
+				Me.SendPropertyChanged("UnitPrice")
+				Me.OnUnitPriceChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Quantity", DbType:="SmallInt")>  _
+	Public Property Quantity() As System.Nullable(Of Short)
+		Get
+			Return Me._Quantity
+		End Get
+		Set
+			If (Me._Quantity.Equals(value) = false) Then
+				Me.OnQuantityChanging(value)
+				Me.SendPropertyChanging
+				Me._Quantity = value
+				Me.SendPropertyChanged("Quantity")
+				Me.OnQuantityChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Discount", DbType:="Real")>  _
+	Public Property Discount() As System.Nullable(Of Single)
+		Get
+			Return Me._Discount
+		End Get
+		Set
+			If (Me._Discount.Equals(value) = false) Then
+				Me.OnDiscountChanging(value)
+				Me.SendPropertyChanging
+				Me._Discount = value
+				Me.SendPropertyChanged("Discount")
+				Me.OnDiscountChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Product_OrdersDetail", Storage:="_Product", ThisKey:="ProductID", OtherKey:="ProductID", IsForeignKey:=true)>  _
+	Public Property Product() As Product
+		Get
+			Return Me._Product.Entity
+		End Get
+		Set
+			Dim previousValue As Product = Me._Product.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Product.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Product.Entity = Nothing
+					previousValue.OrdersDetails.Remove(Me)
+				End If
+				Me._Product.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDetails.Add(Me)
+					Me._ProductID = value.ProductID
+				Else
+					Me._ProductID = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("Product")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Order_OrdersDetail", Storage:="_Order", ThisKey:="OrderID", OtherKey:="OrderID", IsForeignKey:=true)>  _
+	Public Property [Order]() As [Order]
+		Get
+			Return Me._Order.Entity
+		End Get
+		Set
+			Dim previousValue As [Order] = Me._Order.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Order.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Order.Entity = Nothing
+					previousValue.OrdersDetails.Remove(Me)
+				End If
+				Me._Order.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDetails.Add(Me)
+					Me._OrderID = value.OrderID
+				Else
+					Me._OrderID = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("[Order]")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersD")>  _
+Partial Public Class OrdersD
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _OrderDID As Integer
+	
+	Private _CustomerID As System.Nullable(Of Integer)
+	
+	Private _EmployeeID As System.Nullable(Of Integer)
+	
+	Private _OrderDDate As System.Nullable(Of Date)
+	
+	Private _CBID As System.Nullable(Of Integer)
+	
+	Private _OrdersDetailsDs As EntitySet(Of OrdersDetailsD)
+	
+	Private _Employee As EntityRef(Of Employee)
+	
+	Private _Customer As EntityRef(Of Customer)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnOrderDIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnOrderDIDChanged()
+    End Sub
+    Partial Private Sub OnCustomerIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCustomerIDChanged()
+    End Sub
+    Partial Private Sub OnEmployeeIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnEmployeeIDChanged()
+    End Sub
+    Partial Private Sub OnOrderDDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnOrderDDateChanged()
+    End Sub
+    Partial Private Sub OnCBIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCBIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._OrdersDetailsDs = New EntitySet(Of OrdersDetailsD)(AddressOf Me.attach_OrdersDetailsDs, AddressOf Me.detach_OrdersDetailsDs)
+		Me._Employee = CType(Nothing, EntityRef(Of Employee))
+		Me._Customer = CType(Nothing, EntityRef(Of Customer))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderDID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property OrderDID() As Integer
+		Get
+			Return Me._OrderDID
+		End Get
+		Set
+			If ((Me._OrderDID = value)  _
+						= false) Then
+				Me.OnOrderDIDChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderDID = value
+				Me.SendPropertyChanged("OrderDID")
+				Me.OnOrderDIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerID", DbType:="Int")>  _
+	Public Property CustomerID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CustomerID
+		End Get
+		Set
+			If (Me._CustomerID.Equals(value) = false) Then
+				If Me._Customer.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnCustomerIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CustomerID = value
+				Me.SendPropertyChanged("CustomerID")
+				Me.OnCustomerIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", DbType:="Int")>  _
+	Public Property EmployeeID() As System.Nullable(Of Integer)
+		Get
+			Return Me._EmployeeID
+		End Get
+		Set
+			If (Me._EmployeeID.Equals(value) = false) Then
+				If Me._Employee.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnEmployeeIDChanging(value)
+				Me.SendPropertyChanging
+				Me._EmployeeID = value
+				Me.SendPropertyChanged("EmployeeID")
+				Me.OnEmployeeIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderDDate", DbType:="DateTime")>  _
+	Public Property OrderDDate() As System.Nullable(Of Date)
+		Get
+			Return Me._OrderDDate
+		End Get
+		Set
+			If (Me._OrderDDate.Equals(value) = false) Then
+				Me.OnOrderDDateChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderDDate = value
+				Me.SendPropertyChanged("OrderDDate")
+				Me.OnOrderDDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int")>  _
+	Public Property CBID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CBID
+		End Get
+		Set
+			If (Me._CBID.Equals(value) = false) Then
+				Me.OnCBIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CBID = value
+				Me.SendPropertyChanged("CBID")
+				Me.OnCBIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="OrdersD_OrdersDetailsD", Storage:="_OrdersDetailsDs", ThisKey:="OrderDID", OtherKey:="OrderDID")>  _
+	Public Property OrdersDetailsDs() As EntitySet(Of OrdersDetailsD)
+		Get
+			Return Me._OrdersDetailsDs
+		End Get
+		Set
+			Me._OrdersDetailsDs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_OrdersD", Storage:="_Employee", ThisKey:="EmployeeID", OtherKey:="EmployeeID", IsForeignKey:=true)>  _
+	Public Property Employee() As Employee
+		Get
+			Return Me._Employee.Entity
+		End Get
+		Set
+			Dim previousValue As Employee = Me._Employee.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Employee.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Employee.Entity = Nothing
+					previousValue.OrdersDs.Remove(Me)
+				End If
+				Me._Employee.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDs.Add(Me)
+					Me._EmployeeID = value.EmployeeID
+				Else
+					Me._EmployeeID = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("Employee")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_OrdersD", Storage:="_Customer", ThisKey:="CustomerID", OtherKey:="CustomerID", IsForeignKey:=true)>  _
+	Public Property Customer() As Customer
+		Get
+			Return Me._Customer.Entity
+		End Get
+		Set
+			Dim previousValue As Customer = Me._Customer.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Customer.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Customer.Entity = Nothing
+					previousValue.OrdersDs.Remove(Me)
+				End If
+				Me._Customer.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDs.Add(Me)
+					Me._CustomerID = value.CustomerID
+				Else
+					Me._CustomerID = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("Customer")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
+		Me.SendPropertyChanging
+		entity.OrdersD = Me
+	End Sub
+	
+	Private Sub detach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
+		Me.SendPropertyChanging
+		entity.OrdersD = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Orders")>  _
+Partial Public Class [Order]
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _OrderID As Integer
+	
+	Private _CustomerID As System.Nullable(Of Integer)
+	
+	Private _EmployeeID As System.Nullable(Of Integer)
+	
+	Private _OrderDate As System.Nullable(Of Date)
+	
+	Private _CBID As System.Nullable(Of Integer)
+	
+	Private _OrdersDetails As EntitySet(Of OrdersDetail)
+	
+	Private _Employee As EntityRef(Of Employee)
+	
+	Private _Customer As EntityRef(Of Customer)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnOrderIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnOrderIDChanged()
+    End Sub
+    Partial Private Sub OnCustomerIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCustomerIDChanged()
+    End Sub
+    Partial Private Sub OnEmployeeIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnEmployeeIDChanged()
+    End Sub
+    Partial Private Sub OnOrderDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnOrderDateChanged()
+    End Sub
+    Partial Private Sub OnCBIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCBIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._OrdersDetails = New EntitySet(Of OrdersDetail)(AddressOf Me.attach_OrdersDetails, AddressOf Me.detach_OrdersDetails)
+		Me._Employee = CType(Nothing, EntityRef(Of Employee))
+		Me._Customer = CType(Nothing, EntityRef(Of Customer))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property OrderID() As Integer
+		Get
+			Return Me._OrderID
+		End Get
+		Set
+			If ((Me._OrderID = value)  _
+						= false) Then
+				Me.OnOrderIDChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderID = value
+				Me.SendPropertyChanged("OrderID")
+				Me.OnOrderIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerID", DbType:="Int")>  _
+	Public Property CustomerID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CustomerID
+		End Get
+		Set
+			If (Me._CustomerID.Equals(value) = false) Then
+				If Me._Customer.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnCustomerIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CustomerID = value
+				Me.SendPropertyChanged("CustomerID")
+				Me.OnCustomerIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", DbType:="Int")>  _
+	Public Property EmployeeID() As System.Nullable(Of Integer)
+		Get
+			Return Me._EmployeeID
+		End Get
+		Set
+			If (Me._EmployeeID.Equals(value) = false) Then
+				If Me._Employee.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnEmployeeIDChanging(value)
+				Me.SendPropertyChanging
+				Me._EmployeeID = value
+				Me.SendPropertyChanged("EmployeeID")
+				Me.OnEmployeeIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderDate", DbType:="DateTime")>  _
+	Public Property OrderDate() As System.Nullable(Of Date)
+		Get
+			Return Me._OrderDate
+		End Get
+		Set
+			If (Me._OrderDate.Equals(value) = false) Then
+				Me.OnOrderDateChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderDate = value
+				Me.SendPropertyChanged("OrderDate")
+				Me.OnOrderDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int")>  _
+	Public Property CBID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CBID
+		End Get
+		Set
+			If (Me._CBID.Equals(value) = false) Then
+				Me.OnCBIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CBID = value
+				Me.SendPropertyChanged("CBID")
+				Me.OnCBIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Order_OrdersDetail", Storage:="_OrdersDetails", ThisKey:="OrderID", OtherKey:="OrderID")>  _
+	Public Property OrdersDetails() As EntitySet(Of OrdersDetail)
+		Get
+			Return Me._OrdersDetails
+		End Get
+		Set
+			Me._OrdersDetails.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_Order", Storage:="_Employee", ThisKey:="EmployeeID", OtherKey:="EmployeeID", IsForeignKey:=true)>  _
+	Public Property Employee() As Employee
+		Get
+			Return Me._Employee.Entity
+		End Get
+		Set
+			Dim previousValue As Employee = Me._Employee.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Employee.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Employee.Entity = Nothing
+					previousValue.Orders.Remove(Me)
+				End If
+				Me._Employee.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.Orders.Add(Me)
+					Me._EmployeeID = value.EmployeeID
+				Else
+					Me._EmployeeID = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("Employee")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_Order", Storage:="_Customer", ThisKey:="CustomerID", OtherKey:="CustomerID", IsForeignKey:=true)>  _
+	Public Property Customer() As Customer
+		Get
+			Return Me._Customer.Entity
+		End Get
+		Set
+			Dim previousValue As Customer = Me._Customer.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Customer.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Customer.Entity = Nothing
+					previousValue.Orders.Remove(Me)
+				End If
+				Me._Customer.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.Orders.Add(Me)
+					Me._CustomerID = value.CustomerID
+				Else
+					Me._CustomerID = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("Customer")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_OrdersDetails(ByVal entity As OrdersDetail)
+		Me.SendPropertyChanging
+		entity.[Order] = Me
+	End Sub
+	
+	Private Sub detach_OrdersDetails(ByVal entity As OrdersDetail)
+		Me.SendPropertyChanging
+		entity.[Order] = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Employees")>  _
+Partial Public Class Employee
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _EmployeeID As Integer
+	
+	Private _EmployeeName As String
+	
+	Private _Address As String
+	
+	Private _Phone As String
+	
+	Private _Photo As System.Data.Linq.Binary
+	
+	Private _Username As String
+	
+	Private _Password As String
+	
+	Private _OrdersDs As EntitySet(Of OrdersD)
+	
+	Private _Orders As EntitySet(Of [Order])
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnEmployeeIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnEmployeeIDChanged()
+    End Sub
+    Partial Private Sub OnEmployeeNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnEmployeeNameChanged()
+    End Sub
+    Partial Private Sub OnAddressChanging(value As String)
+    End Sub
+    Partial Private Sub OnAddressChanged()
+    End Sub
+    Partial Private Sub OnPhoneChanging(value As String)
+    End Sub
+    Partial Private Sub OnPhoneChanged()
+    End Sub
+    Partial Private Sub OnPhotoChanging(value As System.Data.Linq.Binary)
+    End Sub
+    Partial Private Sub OnPhotoChanged()
+    End Sub
+    Partial Private Sub OnUsernameChanging(value As String)
+    End Sub
+    Partial Private Sub OnUsernameChanged()
+    End Sub
+    Partial Private Sub OnPasswordChanging(value As String)
+    End Sub
+    Partial Private Sub OnPasswordChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._OrdersDs = New EntitySet(Of OrdersD)(AddressOf Me.attach_OrdersDs, AddressOf Me.detach_OrdersDs)
+		Me._Orders = New EntitySet(Of [Order])(AddressOf Me.attach_Orders, AddressOf Me.detach_Orders)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property EmployeeID() As Integer
+		Get
+			Return Me._EmployeeID
+		End Get
+		Set
+			If ((Me._EmployeeID = value)  _
+						= false) Then
+				Me.OnEmployeeIDChanging(value)
+				Me.SendPropertyChanging
+				Me._EmployeeID = value
+				Me.SendPropertyChanged("EmployeeID")
+				Me.OnEmployeeIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeName", DbType:="NVarChar(200) NOT NULL", CanBeNull:=false)>  _
+	Public Property EmployeeName() As String
+		Get
+			Return Me._EmployeeName
+		End Get
+		Set
+			If (String.Equals(Me._EmployeeName, value) = false) Then
+				Me.OnEmployeeNameChanging(value)
+				Me.SendPropertyChanging
+				Me._EmployeeName = value
+				Me.SendPropertyChanged("EmployeeName")
+				Me.OnEmployeeNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Address", DbType:="NVarChar(200)")>  _
+	Public Property Address() As String
+		Get
+			Return Me._Address
+		End Get
+		Set
+			If (String.Equals(Me._Address, value) = false) Then
+				Me.OnAddressChanging(value)
+				Me.SendPropertyChanging
+				Me._Address = value
+				Me.SendPropertyChanged("Address")
+				Me.OnAddressChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Phone", DbType:="NVarChar(24)")>  _
+	Public Property Phone() As String
+		Get
+			Return Me._Phone
+		End Get
+		Set
+			If (String.Equals(Me._Phone, value) = false) Then
+				Me.OnPhoneChanging(value)
+				Me.SendPropertyChanging
+				Me._Phone = value
+				Me.SendPropertyChanged("Phone")
+				Me.OnPhoneChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Photo", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property Photo() As System.Data.Linq.Binary
+		Get
+			Return Me._Photo
+		End Get
+		Set
+			If (Object.Equals(Me._Photo, value) = false) Then
+				Me.OnPhotoChanging(value)
+				Me.SendPropertyChanging
+				Me._Photo = value
+				Me.SendPropertyChanged("Photo")
+				Me.OnPhotoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(20)")>  _
+	Public Property Username() As String
+		Get
+			Return Me._Username
+		End Get
+		Set
+			If (String.Equals(Me._Username, value) = false) Then
+				Me.OnUsernameChanging(value)
+				Me.SendPropertyChanging
+				Me._Username = value
+				Me.SendPropertyChanged("Username")
+				Me.OnUsernameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Password", DbType:="NVarChar(20)")>  _
+	Public Property Password() As String
+		Get
+			Return Me._Password
+		End Get
+		Set
+			If (String.Equals(Me._Password, value) = false) Then
+				Me.OnPasswordChanging(value)
+				Me.SendPropertyChanging
+				Me._Password = value
+				Me.SendPropertyChanged("Password")
+				Me.OnPasswordChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_OrdersD", Storage:="_OrdersDs", ThisKey:="EmployeeID", OtherKey:="EmployeeID")>  _
+	Public Property OrdersDs() As EntitySet(Of OrdersD)
+		Get
+			Return Me._OrdersDs
+		End Get
+		Set
+			Me._OrdersDs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Employee_Order", Storage:="_Orders", ThisKey:="EmployeeID", OtherKey:="EmployeeID")>  _
+	Public Property Orders() As EntitySet(Of [Order])
+		Get
+			Return Me._Orders
+		End Get
+		Set
+			Me._Orders.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_OrdersDs(ByVal entity As OrdersD)
+		Me.SendPropertyChanging
+		entity.Employee = Me
+	End Sub
+	
+	Private Sub detach_OrdersDs(ByVal entity As OrdersD)
+		Me.SendPropertyChanging
+		entity.Employee = Nothing
+	End Sub
+	
+	Private Sub attach_Orders(ByVal entity As [Order])
+		Me.SendPropertyChanging
+		entity.Employee = Me
+	End Sub
+	
+	Private Sub detach_Orders(ByVal entity As [Order])
+		Me.SendPropertyChanging
+		entity.Employee = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Customers")>  _
+Partial Public Class Customer
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _CustomerID As Integer
+	
+	Private _CustomerName As String
+	
+	Private _Address As String
+	
+	Private _Phone As String
+	
+	Private _OrdersDs As EntitySet(Of OrdersD)
+	
+	Private _Orders As EntitySet(Of [Order])
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnCustomerIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnCustomerIDChanged()
+    End Sub
+    Partial Private Sub OnCustomerNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnCustomerNameChanged()
+    End Sub
+    Partial Private Sub OnAddressChanging(value As String)
+    End Sub
+    Partial Private Sub OnAddressChanged()
+    End Sub
+    Partial Private Sub OnPhoneChanging(value As String)
+    End Sub
+    Partial Private Sub OnPhoneChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._OrdersDs = New EntitySet(Of OrdersD)(AddressOf Me.attach_OrdersDs, AddressOf Me.detach_OrdersDs)
+		Me._Orders = New EntitySet(Of [Order])(AddressOf Me.attach_Orders, AddressOf Me.detach_Orders)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property CustomerID() As Integer
+		Get
+			Return Me._CustomerID
+		End Get
+		Set
+			If ((Me._CustomerID = value)  _
+						= false) Then
+				Me.OnCustomerIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CustomerID = value
+				Me.SendPropertyChanged("CustomerID")
+				Me.OnCustomerIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CustomerName", DbType:="NVarChar(200) NOT NULL", CanBeNull:=false)>  _
+	Public Property CustomerName() As String
+		Get
+			Return Me._CustomerName
+		End Get
+		Set
+			If (String.Equals(Me._CustomerName, value) = false) Then
+				Me.OnCustomerNameChanging(value)
+				Me.SendPropertyChanging
+				Me._CustomerName = value
+				Me.SendPropertyChanged("CustomerName")
+				Me.OnCustomerNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Address", DbType:="NVarChar(200)")>  _
+	Public Property Address() As String
+		Get
+			Return Me._Address
+		End Get
+		Set
+			If (String.Equals(Me._Address, value) = false) Then
+				Me.OnAddressChanging(value)
+				Me.SendPropertyChanging
+				Me._Address = value
+				Me.SendPropertyChanged("Address")
+				Me.OnAddressChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Phone", DbType:="NVarChar(24)")>  _
+	Public Property Phone() As String
+		Get
+			Return Me._Phone
+		End Get
+		Set
+			If (String.Equals(Me._Phone, value) = false) Then
+				Me.OnPhoneChanging(value)
+				Me.SendPropertyChanging
+				Me._Phone = value
+				Me.SendPropertyChanged("Phone")
+				Me.OnPhoneChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_OrdersD", Storage:="_OrdersDs", ThisKey:="CustomerID", OtherKey:="CustomerID")>  _
+	Public Property OrdersDs() As EntitySet(Of OrdersD)
+		Get
+			Return Me._OrdersDs
+		End Get
+		Set
+			Me._OrdersDs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Customer_Order", Storage:="_Orders", ThisKey:="CustomerID", OtherKey:="CustomerID")>  _
+	Public Property Orders() As EntitySet(Of [Order])
+		Get
+			Return Me._Orders
+		End Get
+		Set
+			Me._Orders.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_OrdersDs(ByVal entity As OrdersD)
+		Me.SendPropertyChanging
+		entity.Customer = Me
+	End Sub
+	
+	Private Sub detach_OrdersDs(ByVal entity As OrdersD)
+		Me.SendPropertyChanging
+		entity.Customer = Nothing
+	End Sub
+	
+	Private Sub attach_Orders(ByVal entity As [Order])
+		Me.SendPropertyChanging
+		entity.Customer = Me
+	End Sub
+	
+	Private Sub detach_Orders(ByVal entity As [Order])
+		Me.SendPropertyChanging
+		entity.Customer = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.CategoryBalance")>  _
+Partial Public Class CategoryBalance
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _CBID As Integer
+	
+	Private _CBNAME As String
+	
+	Private _TESTs As EntitySet(Of TEST)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnCBIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnCBIDChanged()
+    End Sub
+    Partial Private Sub OnCBNAMEChanging(value As String)
+    End Sub
+    Partial Private Sub OnCBNAMEChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._TESTs = New EntitySet(Of TEST)(AddressOf Me.attach_TESTs, AddressOf Me.detach_TESTs)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property CBID() As Integer
+		Get
+			Return Me._CBID
+		End Get
+		Set
+			If ((Me._CBID = value)  _
+						= false) Then
+				Me.OnCBIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CBID = value
+				Me.SendPropertyChanged("CBID")
+				Me.OnCBIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBNAME", DbType:="NVarChar(50)")>  _
+	Public Property CBNAME() As String
+		Get
+			Return Me._CBNAME
+		End Get
+		Set
+			If (String.Equals(Me._CBNAME, value) = false) Then
+				Me.OnCBNAMEChanging(value)
+				Me.SendPropertyChanging
+				Me._CBNAME = value
+				Me.SendPropertyChanged("CBNAME")
+				Me.OnCBNAMEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_TEST", Storage:="_TESTs", ThisKey:="CBID", OtherKey:="CBID")>  _
+	Public Property TESTs() As EntitySet(Of TEST)
+		Get
+			Return Me._TESTs
+		End Get
+		Set
+			Me._TESTs.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_TESTs(ByVal entity As TEST)
+		Me.SendPropertyChanging
+		entity.CategoryBalance = Me
+	End Sub
+	
+	Private Sub detach_TESTs(ByVal entity As TEST)
+		Me.SendPropertyChanging
+		entity.CategoryBalance = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.CategoriesD")>  _
+Partial Public Class CategoriesD
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _CategoryDID As Integer
+	
+	Private _CategoryDName As String
+	
+	Private _Description As String
+	
+	Private _ProductsDs As EntitySet(Of ProductsD)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnCategoryDIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnCategoryDIDChanged()
+    End Sub
+    Partial Private Sub OnCategoryDNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnCategoryDNameChanged()
+    End Sub
+    Partial Private Sub OnDescriptionChanging(value As String)
+    End Sub
+    Partial Private Sub OnDescriptionChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._ProductsDs = New EntitySet(Of ProductsD)(AddressOf Me.attach_ProductsDs, AddressOf Me.detach_ProductsDs)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryDID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property CategoryDID() As Integer
+		Get
+			Return Me._CategoryDID
+		End Get
+		Set
+			If ((Me._CategoryDID = value)  _
+						= false) Then
+				Me.OnCategoryDIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CategoryDID = value
+				Me.SendPropertyChanged("CategoryDID")
+				Me.OnCategoryDIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryDName", DbType:="NVarChar(50)")>  _
+	Public Property CategoryDName() As String
+		Get
+			Return Me._CategoryDName
+		End Get
+		Set
+			If (String.Equals(Me._CategoryDName, value) = false) Then
+				Me.OnCategoryDNameChanging(value)
+				Me.SendPropertyChanging
+				Me._CategoryDName = value
+				Me.SendPropertyChanged("CategoryDName")
+				Me.OnCategoryDNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Description", DbType:="NText", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property Description() As String
+		Get
+			Return Me._Description
+		End Get
+		Set
+			If (String.Equals(Me._Description, value) = false) Then
+				Me.OnDescriptionChanging(value)
+				Me.SendPropertyChanging
+				Me._Description = value
+				Me.SendPropertyChanged("Description")
+				Me.OnDescriptionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesD_ProductsD", Storage:="_ProductsDs", ThisKey:="CategoryDID", OtherKey:="CategoryDID")>  _
+	Public Property ProductsDs() As EntitySet(Of ProductsD)
+		Get
+			Return Me._ProductsDs
+		End Get
+		Set
+			Me._ProductsDs.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_ProductsDs(ByVal entity As ProductsD)
+		Me.SendPropertyChanging
+		entity.CategoriesD = Me
+	End Sub
+	
+	Private Sub detach_ProductsDs(ByVal entity As ProductsD)
+		Me.SendPropertyChanging
+		entity.CategoriesD = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Expenses")>  _
+Partial Public Class Expense
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _ExpensesID As Integer
+	
+	Private _ExpensesName As String
+	
+	Private _ExpensesPrice As System.Nullable(Of Decimal)
+	
+	Private _ExpensesDate As System.Nullable(Of Date)
+	
+	Private _CBID As System.Nullable(Of Integer)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnExpensesIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnExpensesIDChanged()
+    End Sub
+    Partial Private Sub OnExpensesNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnExpensesNameChanged()
+    End Sub
+    Partial Private Sub OnExpensesPriceChanging(value As System.Nullable(Of Decimal))
+    End Sub
+    Partial Private Sub OnExpensesPriceChanged()
+    End Sub
+    Partial Private Sub OnExpensesDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnExpensesDateChanged()
+    End Sub
+    Partial Private Sub OnCBIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCBIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property ExpensesID() As Integer
+		Get
+			Return Me._ExpensesID
+		End Get
+		Set
+			If ((Me._ExpensesID = value)  _
+						= false) Then
+				Me.OnExpensesIDChanging(value)
+				Me.SendPropertyChanging
+				Me._ExpensesID = value
+				Me.SendPropertyChanged("ExpensesID")
+				Me.OnExpensesIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesName", DbType:="NVarChar(500)")>  _
+	Public Property ExpensesName() As String
+		Get
+			Return Me._ExpensesName
+		End Get
+		Set
+			If (String.Equals(Me._ExpensesName, value) = false) Then
+				Me.OnExpensesNameChanging(value)
+				Me.SendPropertyChanging
+				Me._ExpensesName = value
+				Me.SendPropertyChanged("ExpensesName")
+				Me.OnExpensesNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesPrice", DbType:="Money")>  _
+	Public Property ExpensesPrice() As System.Nullable(Of Decimal)
+		Get
+			Return Me._ExpensesPrice
+		End Get
+		Set
+			If (Me._ExpensesPrice.Equals(value) = false) Then
+				Me.OnExpensesPriceChanging(value)
+				Me.SendPropertyChanging
+				Me._ExpensesPrice = value
+				Me.SendPropertyChanged("ExpensesPrice")
+				Me.OnExpensesPriceChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesDate", DbType:="DateTime")>  _
+	Public Property ExpensesDate() As System.Nullable(Of Date)
+		Get
+			Return Me._ExpensesDate
+		End Get
+		Set
+			If (Me._ExpensesDate.Equals(value) = false) Then
+				Me.OnExpensesDateChanging(value)
+				Me.SendPropertyChanging
+				Me._ExpensesDate = value
+				Me.SendPropertyChanged("ExpensesDate")
+				Me.OnExpensesDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int")>  _
+	Public Property CBID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CBID
+		End Get
+		Set
+			If (Me._CBID.Equals(value) = false) Then
+				Me.OnCBIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CBID = value
+				Me.SendPropertyChanged("CBID")
+				Me.OnCBIDChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
 	End Sub
 End Class

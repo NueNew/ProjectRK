@@ -8,6 +8,16 @@
       <Association Name="Category_Product" Member="Products" ThisKey="CategoryID" OtherKey="CategoryID" Type="Product" />
     </Type>
   </Table>
+  <Table Name="dbo.TEST" Member="TESTs">
+    <Type Name="TEST">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MONEY" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CategoryBalance_TEST" Member="CategoryBalance" ThisKey="CBID" OtherKey="CBID" Type="CategoryBalance" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.ProductsD" Member="ProductsDs">
     <Type Name="ProductsD">
       <Column Name="ProductDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -18,85 +28,13 @@
       <Association Name="CategoriesD_ProductsD" Member="CategoriesD" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="CategoriesD" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.CategoriesD" Member="CategoriesDs">
-    <Type Name="CategoriesD">
-      <Column Name="CategoryDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CategoryDName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="CategoriesD_ProductsD" Member="ProductsDs" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="ProductsD" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Customers" Member="Customers">
-    <Type Name="Customer">
-      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
-      <Association Name="Customer_Order" Member="Orders" ThisKey="CustomerID" OtherKey="CustomerID" Type="Order" />
-      <Association Name="Customer_OrdersD" Member="OrdersDs" ThisKey="CustomerID" OtherKey="CustomerID" Type="OrdersD" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Employees" Member="Employees">
-    <Type Name="Employee">
-      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
-      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Association Name="Employee_Order" Member="Orders" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Order" />
-      <Association Name="Employee_OrdersD" Member="OrdersDs" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="OrdersD" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Expenses" Member="Expenses">
-    <Type Name="Expense">
-      <Column Name="ExpensesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ExpensesName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="ExpensesPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="ExpensesDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Orders" Member="Orders">
-    <Type Name="Order">
-      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="Order_OrdersDetail" Member="OrdersDetails" ThisKey="OrderID" OtherKey="OrderID" Type="OrdersDetail" />
-      <Association Name="Customer_Order" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
-      <Association Name="Employee_Order" Member="Employee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.OrdersD" Member="OrdersDs">
-    <Type Name="OrdersD">
-      <Column Name="OrderDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="OrderDDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="OrdersD_OrdersDetailsD" Member="OrdersDetailsDs" ThisKey="OrderDID" OtherKey="OrderDID" Type="OrdersDetailsD" />
-      <Association Name="Customer_OrdersD" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
-      <Association Name="Employee_OrdersD" Member="Employee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.OrdersDetails" Member="OrdersDetails">
-    <Type Name="OrdersDetail">
-      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="Quantity" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="Discount" Type="System.Single" DbType="Real" CanBeNull="true" />
-      <Association Name="Order_OrdersDetail" Member="Order" ThisKey="OrderID" OtherKey="OrderID" Type="Order" IsForeignKey="true" />
-      <Association Name="Product_OrdersDetail" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.OrdersDetailsD" Member="OrdersDetailsDs">
     <Type Name="OrdersDetailsD">
       <Column Name="OrderDID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ProductDID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Donation" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Association Name="OrdersD_OrdersDetailsD" Member="OrdersD" ThisKey="OrderDID" OtherKey="OrderDID" Type="OrdersD" IsForeignKey="true" />
       <Association Name="ProductsD_OrdersDetailsD" Member="ProductsD" ThisKey="ProductDID" OtherKey="ProductDID" Type="ProductsD" IsForeignKey="true" />
+      <Association Name="OrdersD_OrdersDetailsD" Member="OrdersD" ThisKey="OrderDID" OtherKey="OrderDID" Type="OrdersD" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Products" Member="Products">
@@ -111,6 +49,88 @@
       <Column Name="DateAdd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="Product_OrdersDetail" Member="OrdersDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrdersDetail" />
       <Association Name="Category_Product" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrdersDetails" Member="OrdersDetails">
+    <Type Name="OrdersDetail">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Association Name="Product_OrdersDetail" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+      <Association Name="Order_OrdersDetail" Member="Order" ThisKey="OrderID" OtherKey="OrderID" Type="Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrdersD" Member="OrdersDs">
+    <Type Name="OrdersD">
+      <Column Name="OrderDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderDDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrdersD_OrdersDetailsD" Member="OrdersDetailsDs" ThisKey="OrderDID" OtherKey="OrderDID" Type="OrdersDetailsD" />
+      <Association Name="Employee_OrdersD" Member="Employee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Customer_OrdersD" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrdersDetail" Member="OrdersDetails" ThisKey="OrderID" OtherKey="OrderID" Type="OrdersDetail" />
+      <Association Name="Employee_Order" Member="Employee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Customer_Order" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Employee_OrdersD" Member="OrdersDs" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="OrdersD" />
+      <Association Name="Employee_Order" Member="Orders" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Association Name="Customer_OrdersD" Member="OrdersDs" ThisKey="CustomerID" OtherKey="CustomerID" Type="OrdersD" />
+      <Association Name="Customer_Order" Member="Orders" ThisKey="CustomerID" OtherKey="CustomerID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoryBalance" Member="CategoryBalances">
+    <Type Name="CategoryBalance">
+      <Column Name="CBID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CBNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CategoryBalance_TEST" Member="TESTs" ThisKey="CBID" OtherKey="CBID" Type="TEST" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoriesD" Member="CategoriesDs">
+    <Type Name="CategoriesD">
+      <Column Name="CategoryDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryDName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CategoriesD_ProductsD" Member="ProductsDs" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="ProductsD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Expenses" Member="Expenses">
+    <Type Name="Expense">
+      <Column Name="ExpensesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpensesName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ExpensesPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ExpensesDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -92,7 +92,25 @@ Public Class Form_Expenses
             MessageBox.Show("เกิดข้อผิดพลาด ไม่สามารถเพิ่มข้อมูลได้")
         Else
             MessageBox.Show("บันทึกข้อมูลแล้ว")
+            InsT()
             BindingData()
+        End If
+    End Sub
+
+    Private Sub InsT()
+
+        sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@D,@N,@M,@C)"
+        command.CommandText = sql
+        command.Parameters.AddWithValue("D", DateTime.Now.Date)
+        command.Parameters.AddWithValue("N", txtDetail.Text)
+        command.Parameters.AddWithValue("M", txtMoney.Text)
+        command.Parameters.AddWithValue("C", 3)
+
+        Dim r As Integer = command.ExecuteNonQuery()
+        If r = -1 Then
+            MessageBox.Show("เกิดข้อผิดพลาด ไม่สามารถเพิ่มข้อมูลได้")
+        Else
+            MessageBox.Show("บันทึกข้อมูลแล้ว")
         End If
     End Sub
 

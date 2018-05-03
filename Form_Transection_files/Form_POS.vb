@@ -31,8 +31,6 @@ Public Class Form_POS
         'ปิด>>>
 
 
-
-
         lsvProductList.Columns.Add("รหัสสินค้า", 100, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ชื่อสินค้า", 210, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ราคาขาย", 100, HorizontalAlignment.Left)
@@ -220,6 +218,7 @@ Public Class Form_POS
                 o.OrderDate = Date.Now
 
                 Dim p As New Product() 'บอกว่า p คือตาราง Product 
+
                 Dim i As Integer
                 Dim od As OrdersDetail
                 For i = 0 To lsvProductList.Items.Count - 1
@@ -229,43 +228,35 @@ Public Class Form_POS
                     od.UnitPrice = CDec(lsvProductList.Items(i).SubItems(2).Text)
                     od.Quantity = CShort(lsvProductList.Items(i).SubItems(3).Text)
                     od.Discount = 0
-                    'p.ProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)                         'หารหัสสินค้า
-                    'p.UnitsInStock = CShort(p.UnitsInStock) - CShort(lsvProductList.Items(i).SubItems(3).Text)    'หาจำนวนสินค้า - จำนวนที่ขาย
                     o.OrdersDetails.Add(od) 'ใช้คำสั่ง Add
-
                 Next
 
-                'ทดลอง ณ เพลา จะตีสอง
+                'เอาข้อมูลเข้า BalanceSheet
+                For i = 0 To lsvProductList.Items.Count - 1
+                    sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@DATT,@N,@M,@C)"
+                    command.CommandText = sql
+                    command.Parameters.AddWithValue("DATT", DateTime.Now.Date)
+                    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
+                    command.Parameters.AddWithValue("M", lblNet.Text)
+                    command.Parameters.AddWithValue("C", 1)
+                    command.ExecuteNonQuery()
+                Next
+
+                'ตัดสต็อก
                 For i = 0 To lsvProductList.Items.Count - 1
                     Dim cmdU As New SqlCommand("Update P set P.UnitsInStock = P.UnitsInStock - " & CInt(lsvProductList.Items(i).SubItems(3).Text) & " FROM Products AS P INNER JOIN OrdersDetails AS S ON (P.ProductID = S.ProductID) WHERE S.ProductID='" & CStr(lsvProductList.Items(i).SubItems(0).Text) & "'", connection)
-
-                    'Dim cmdU As New SqlCommand("Update P set P.Amount = P.Amount - " & CInt(ListView1.Items(i).SubItems(4).Text) & " FROM tblProduct AS P INNER JOIN tblSeller_Detail AS S ON (P.ProductName = S.ProductName) WHERE S.ProductName='" & CStr(ListView1.Items(i).SubItems(1).Text) & "'", cn)
-
-                    'connection.Open()
                     cmdU.ExecuteNonQuery()
-                    'connection.Close()
-
                 Next
-                '
 
-                'ลองใช้คำสั่ง update เพื่อแก้ไขตาราง Product 23-4-61
-                'For i = 0 To lsvProductList.Items.Count - 1
-                '    p = New Product
-                '    p.ProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-                '    p.UnitsInStock = p.UnitsInStock - CShort(lsvProductList.Items(i).SubItems(3).Text)
-                'Next
 
                 Using ts As New TransactionScope()
                     db.Orders.InsertOnSubmit(o)
-                    'db.Products.(p)
                     db.SubmitChanges()
                     ts.Complete()
                 End Using
 
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-
-                ' Service_Bill = txtOrderID.Text 'ส่งค่าไปหน้าปริ้นใบเสร็จ
 
                 lsvProductList.Clear()
                 ClearCustomerData()
@@ -283,7 +274,7 @@ Public Class Form_POS
                 Form_Report_CR_POS.CrystalReportViewer1.Refresh()
                 Form_Report_CR_POS.Show()
                 Form_Report_CR_POS.WindowState = FormWindowState.Maximized
-
+                Me.Refresh() 'ทดลองให้รีเฟส
 
             End If
         End If
