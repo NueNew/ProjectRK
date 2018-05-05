@@ -198,7 +198,7 @@ Public Class Form_Employee
     End Sub
 
     Private Sub Form_Employee_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
+        'Dim frm As New From_Main()
+        'frm.Show()
     End Sub
 End Class

@@ -173,15 +173,12 @@ Public Class Form_Donate
 
                 Dim i As Integer
                 Dim od As OrdersDetailsD
-                Dim T As TEST 'คือตารางTEST
 
                 For i = 0 To lsvProductList.Items.Count - 1
                     od = New OrdersDetailsD()
                     od.ProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
                     od.Donation = CType(lsvProductList.Items(i).SubItems(2).Text, Decimal?) 'จำนวนเงินที่บริจาค 0 1 2
                     o.OrdersDetailsDs.Add(od) 'ทำการใส่ข้อมูลลงในตาราง OrdersDeatailsD
-                    'T.NAME = lsvProductList.Items(i).SubItems(1).Text
-                    'T.MONEY = CType(lsvProductList.Items(i).SubItems(2).Text, Decimal?)
                 Next
 
                 Using ts As New TransactionScope()
@@ -192,27 +189,17 @@ Public Class Form_Donate
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
-
                 'เอาข้อมูลเข้า BalanceSheet
                 For i = 0 To lsvProductList.Items.Count - 1
                     sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@D,@N,@M,@C)"
                     command.CommandText = sql
+                    command.Parameters.Clear()
                     command.Parameters.AddWithValue("D", DateTime.Now.Date)
                     command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
-                    command.Parameters.AddWithValue("M", lblNet.Text)
+                    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(2).Text)
                     command.Parameters.AddWithValue("C", 1)
                     command.ExecuteNonQuery()
                 Next
-
-
-                'ตัดสต็อก
-                For i = 0 To lsvProductList.Items.Count - 1
-                    'Dim cmdU As New SqlCommand("INSERT T  set T.UnitsInStock = P.UnitsInStock - " & CInt(lsvProductList.Items(i).SubItems(3).Text) & " FROM Products AS P INNER JOIN OrdersDetails AS S ON (P.ProductID = S.ProductID) WHERE S.ProductID='" & CStr(lsvProductList.Items(i).SubItems(0).Text) & "'", connection)
-                    'cmdU.ExecuteNonQuery()
-
-                Next
-
-
 
                 lsvProductList.Clear()
                 ClearCustomerData()
@@ -220,7 +207,7 @@ Public Class Form_Donate
                 lblNet.Text = "0"
                 txtCustomerID.Focus()
 
-
+                'ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
                 Dim rpt As New ReportDocument
                 Dim directory As String = My.Application.Info.DirectoryPath
 
@@ -231,6 +218,7 @@ Public Class Form_Donate
                 Form_Report_CR_DON.CrystalReportViewer1.Refresh()
                 Form_Report_CR_DON.Show()
                 Form_Report_CR_DON.WindowState = FormWindowState.Maximized
+                '
 
             End If
         End If

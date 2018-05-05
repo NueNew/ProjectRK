@@ -231,22 +231,25 @@ Public Class Form_POS
                     o.OrdersDetails.Add(od) 'ใช้คำสั่ง Add
                 Next
 
-                'เอาข้อมูลเข้า BalanceSheet
-                For i = 0 To lsvProductList.Items.Count - 1
-                    sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@DATT,@N,@M,@C)"
-                    command.CommandText = sql
-                    command.Parameters.AddWithValue("DATT", DateTime.Now.Date)
-                    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
-                    command.Parameters.AddWithValue("M", lblNet.Text)
-                    command.Parameters.AddWithValue("C", 1)
-                    command.ExecuteNonQuery()
-                Next
 
                 'ตัดสต็อก
                 For i = 0 To lsvProductList.Items.Count - 1
                     Dim cmdU As New SqlCommand("Update P set P.UnitsInStock = P.UnitsInStock - " & CInt(lsvProductList.Items(i).SubItems(3).Text) & " FROM Products AS P INNER JOIN OrdersDetails AS S ON (P.ProductID = S.ProductID) WHERE S.ProductID='" & CStr(lsvProductList.Items(i).SubItems(0).Text) & "'", connection)
                     cmdU.ExecuteNonQuery()
                 Next
+
+                'เอาข้อมูลเข้า BalanceSheet
+                For i = 0 To lsvProductList.Items.Count - 1
+                    sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@DATT,@N,@M,@C)"
+                    command.CommandText = sql
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("DATT", DateTime.Now.Date)
+                    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
+                    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(4).Text)
+                    command.Parameters.AddWithValue("C", 2)
+                    command.ExecuteNonQuery()
+                Next
+
 
 
                 Using ts As New TransactionScope()

@@ -139,7 +139,7 @@ Public Class From_Customers
     End Sub
 
     Private Sub From_Customers_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
+        'Dim frm As New From_Main()
+        'frm.Show()
     End Sub
 End Class

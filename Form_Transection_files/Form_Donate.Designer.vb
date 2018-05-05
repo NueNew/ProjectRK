@@ -25,11 +25,11 @@ Partial Class Form_Donate
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lsvProductList = New System.Windows.Forms.ListView()
         Me.lblProductDName = New System.Windows.Forms.Label()
-        Me.txtDon = New System.Windows.Forms.TextBox()
         Me.txtProductDID = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtDon = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cboEmployee = New System.Windows.Forms.ComboBox()
         Me.lblContactName = New System.Windows.Forms.Label()
@@ -77,17 +77,10 @@ Partial Class Form_Donate
         'lblProductDName
         '
         Me.lblProductDName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblProductDName.Location = New System.Drawing.Point(120, 77)
+        Me.lblProductDName.Location = New System.Drawing.Point(125, 77)
         Me.lblProductDName.Name = "lblProductDName"
-        Me.lblProductDName.Size = New System.Drawing.Size(411, 29)
+        Me.lblProductDName.Size = New System.Drawing.Size(400, 29)
         Me.lblProductDName.TabIndex = 7
-        '
-        'txtDon
-        '
-        Me.txtDon.Location = New System.Drawing.Point(526, 77)
-        Me.txtDon.Name = "txtDon"
-        Me.txtDon.Size = New System.Drawing.Size(85, 29)
-        Me.txtDon.TabIndex = 0
         '
         'txtProductDID
         '
@@ -122,6 +115,13 @@ Partial Class Form_Donate
         Me.Label5.Size = New System.Drawing.Size(96, 24)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "รหัสบริจาค :"
+        '
+        'txtDon
+        '
+        Me.txtDon.Location = New System.Drawing.Point(526, 77)
+        Me.txtDon.Name = "txtDon"
+        Me.txtDon.Size = New System.Drawing.Size(85, 29)
+        Me.txtDon.TabIndex = 0
         '
         'GroupBox1
         '

@@ -8,6 +8,15 @@ Public Class Form_ProductD
         End If
         BindingNavigator1.DeleteItem = Nothing
         BindingData()
+
+        'Bangkok-Vector
+        'For Each ctrl As Control In Me.Controls
+        '    If TypeOf ctrl Is MdiClient Then
+        '        ctrl.BackgroundImage = My.Resources.Bangkok_Vector
+        '    End If
+        'Next
+
+        'Me.BackgroundImage = My.Resources.Bangkok_Vector
     End Sub
     Private Sub BindingData(Optional cmd As SqlCommand = Nothing)
         Dim tbx As TextBox
@@ -83,9 +92,9 @@ Public Class Form_ProductD
     End Sub
 
     Private Sub UpdateData()
-        sql = "UPDATE ProductsD SET CategoryDID = @cid, ProductName = @name, 
-			   UnitPrice = @prc, UnitsInStock = @stk, QuantityPerUnit = @dtl, Picture = @pic 
-               WHERE ProductID = @pid"
+        sql = "UPDATE ProductsD SET CategoryDID = @cid, ProductDName = @name, 
+			   QuantityPerUnit = @dtl
+               WHERE ProductDID = @pid"
 
         command.CommandText = sql
         command.Parameters.Clear()
@@ -153,7 +162,7 @@ Public Class Form_ProductD
     End Sub
 
     Private Sub Form_ProductD_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
+        'Dim frm As New From_Main()
+        'frm.Show()
     End Sub
 End Class

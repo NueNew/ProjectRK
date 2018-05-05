@@ -120,16 +120,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Report_files\CrystalReport2.vb">
+    <Compile Include="Forms_Report_files\BLS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <DependentUpon>BLS.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms_Report_files\CrystalReport3.vb">
+    <Compile Include="Forms_Report_files\CR_EXPE.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <DependentUpon>CR_EXPE.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\Form_REPORT_ADV.Designer.vb">
@@ -193,6 +193,12 @@
     <Compile Include="Form_Master_files\Form_CategoryD.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Master_files\Form_CategoryE.Designer.vb">
+      <DependentUpon>Form_CategoryE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Master_files\Form_CategoryE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Master_files\Form_Employee.Designer.vb">
       <DependentUpon>Form_Employee.vb</DependentUpon>
     </Compile>
@@ -221,6 +227,12 @@
       <DependentUpon>Form_Donate.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Transection_files\Form_Donate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_EXPE.Designer.vb">
+      <DependentUpon>Form_EXPE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\Form_EXPE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Transection_files\Form_Expenses.Designer.vb">
@@ -275,20 +287,15 @@
     <Compile Include="Test\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="รายได้บริจาค.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>รายได้บริจาค.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms_Report_files\CrystalReport2.rpt">
+    <EmbeddedResource Include="Forms_Report_files\BLS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+      <LastGenOutput>BLS.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\CrystalReport3.rpt">
+    <EmbeddedResource Include="Forms_Report_files\CR_EXPE.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+      <LastGenOutput>CR_EXPE.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_REPORT_ADV.resx">
       <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
@@ -323,6 +330,9 @@
     <EmbeddedResource Include="Form_Master_files\Form_CategoryD.resx">
       <DependentUpon>Form_CategoryD.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Master_files\Form_CategoryE.resx">
+      <DependentUpon>Form_CategoryE.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\Form_Employee.resx">
       <DependentUpon>Form_Employee.vb</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_Donate.resx">
       <DependentUpon>Form_Donate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transection_files\Form_EXPE.resx">
+      <DependentUpon>Form_EXPE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_Expenses.resx">
       <DependentUpon>Form_Expenses.vb</DependentUpon>
@@ -384,17 +397,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="รายได้บริจาค.xsc">
-      <DependentUpon>รายได้บริจาค.xsd</DependentUpon>
-    </None>
-    <None Include="รายได้บริจาค.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>รายได้บริจาค.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="รายได้บริจาค.xss">
-      <DependentUpon>รายได้บริจาค.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -404,6 +406,9 @@
   <ItemGroup>
     <None Include="Resouce\2887.jpg" />
     <None Include="Resouce\Bangkok-Vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\057-diskette.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

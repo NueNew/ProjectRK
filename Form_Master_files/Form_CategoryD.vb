@@ -37,7 +37,7 @@ Public Class Form_CategoryD
         CreateAutoComplete()
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
         If TextID.Text = "" Then
             InsertData()
         Else
@@ -82,7 +82,7 @@ Public Class Form_CategoryD
         End If
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorDeleteItem.Click
+    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs)
         Dim result As DialogResult =
        MessageBox.Show("ท่านต้องการลบข้อมูลหมวดหมู่รายนี้จริงหรือไม่", "ยืนยันการลบ",
                         MessageBoxButtons.OKCancel)
@@ -132,7 +132,7 @@ Public Class Form_CategoryD
     End Sub
 
     Private Sub Form_CategoryD_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
+        'Dim frm As New From_Main()
+        'frm.Show()
     End Sub
 End Class

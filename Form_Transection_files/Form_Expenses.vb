@@ -97,6 +97,8 @@ Public Class Form_Expenses
         End If
     End Sub
 
+
+
     Private Sub InsT()
 
         sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@D,@N,@M,@C)"

@@ -160,3 +160,5 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_DON.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_POS.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_REPORT_ADV.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_IMPORT.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_CategoryE.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_EXPE.resources
