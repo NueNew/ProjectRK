@@ -25,16 +25,6 @@ Public Class Form_EXPE
                  Select catE.CategoryEID, catE.CategoryEName
 
 
-        'Dim cb = From cbl In db.CategoryBalances
-        '         Select cbl.CBID, cbl.CBNAME
-
-        'With ComboBox1
-        '    .BeginUpdate()
-        '    .DisplayMember = "CBNAME"
-        '    .ValueMember = "CBID"
-        '    .DataSource = cb.ToList
-        '    .EndUpdate()
-        'End With
 
         With cboCatE
             .BeginUpdate()
@@ -164,7 +154,7 @@ Public Class Form_EXPE
                     t.NAME = lsvProductList.Items(i).SubItems(1).Text
                     expe.ExpensesName = lsvProductList.Items(i).SubItems(2).Text
                     expe.ExpensesPrice = CType(lsvProductList.Items(i).SubItems(3).Text, Decimal?)
-                    t.MONEY = CType(lsvProductList.Items(i).SubItems(3).Text, Decimal?)
+                    t.MONEY = CType(lsvProductList.Items(i).SubItems(3).Text, Decimal?) * -1
                     t.DATE = Date.Now
                     expe.CBID = CType(3, Integer?)
                     t.CBID = CType(3, Integer?)
@@ -176,6 +166,25 @@ Public Class Form_EXPE
                     db.SubmitChanges()
                     ts.Complete()
                 End Using
+                lsvProductList.Clear()
+
+                '            ClearProductData()
+                '            lblNet.Text = "0"
+                '            txtProductDID.Focus()
+
+                ''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
+                Dim rpt As New ReportDocument
+                Dim directory As String = My.Application.Info.DirectoryPath
+
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
+                '            'rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
+
+                '            'Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
+                '            'Form_Report_CR_DON.CrystalReportViewer1.Refresh()
+                '            'Form_Report_CR_DON.Show()
+                '            'Form_Report_CR_DON.WindowState = FormWindowState.Maximized
+                '            ''
+
             End If
         End If
     End Sub
@@ -221,25 +230,7 @@ Public Class Form_EXPE
     '                command.ExecuteNonQuery()
     '            Next
 
-    '            lsvProductList.Clear()
-
-    '            ClearProductData()
-    '            lblNet.Text = "0"
-    '            txtProductDID.Focus()
-
-    '            ''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
-    '            'Dim rpt As New ReportDocument
-    '            'Dim directory As String = My.Application.Info.DirectoryPath
-
-    '            'rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_DON.rpt")
-    '            'rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
-
-    '            'Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
-    '            'Form_Report_CR_DON.CrystalReportViewer1.Refresh()
-    '            'Form_Report_CR_DON.Show()
-    '            'Form_Report_CR_DON.WindowState = FormWindowState.Maximized
-    '            ''
-
+    '          
     '        End If
     '    End If
     'End Sub

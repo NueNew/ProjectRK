@@ -20,13 +20,13 @@ Public Class Form_POS
             connection.Open()
         End If
 
-        command.CommandText = "SELECT * from Orders where OrderID = (select max(OrderID) from Orders)"
-        adapter = New SqlDataAdapter(command)
-        dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
-        adapter.Fill(dataSt, "Orders") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        Dim item As Integer
-        item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
-        txtOrderID.Text = Format(item + 1)
+        'command.CommandText = "SELECT * from Orders where OrderID = (select max(OrderID) from Orders)"
+        'adapter = New SqlDataAdapter(command)
+        'dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
+        'adapter.Fill(dataSt, "Orders") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        'Dim item As Integer
+        'item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
+        'txtOrderID.Text = Format(item + 1)
 
         'ปิด>>>
 

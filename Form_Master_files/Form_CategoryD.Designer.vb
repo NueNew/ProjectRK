@@ -56,6 +56,7 @@ Partial Class Form_CategoryD
         '
         'TextDetail
         '
+        Me.TextDetail.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextDetail.Location = New System.Drawing.Point(316, 418)
         Me.TextDetail.Margin = New System.Windows.Forms.Padding(6)
         Me.TextDetail.Multiline = True
@@ -66,6 +67,7 @@ Partial Class Form_CategoryD
         '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(310, 382)
         Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -76,6 +78,7 @@ Partial Class Form_CategoryD
         '
         'TextName
         '
+        Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextName.Location = New System.Drawing.Point(316, 309)
         Me.TextName.Margin = New System.Windows.Forms.Padding(6)
         Me.TextName.Name = "TextName"
@@ -84,6 +87,7 @@ Partial Class Form_CategoryD
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(310, 272)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -94,6 +98,7 @@ Partial Class Form_CategoryD
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(310, 165)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -104,6 +109,7 @@ Partial Class Form_CategoryD
         '
         'ButtonOK
         '
+        Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ButtonOK.Location = New System.Drawing.Point(854, 20)
         Me.ButtonOK.Margin = New System.Windows.Forms.Padding(6)
         Me.ButtonOK.Name = "ButtonOK"
@@ -114,6 +120,7 @@ Partial Class Form_CategoryD
         '
         'Label10
         '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(433, 29)
         Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -124,6 +131,7 @@ Partial Class Form_CategoryD
         '
         'TextSearch
         '
+        Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextSearch.Location = New System.Drawing.Point(563, 23)
         Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
         Me.TextSearch.Name = "TextSearch"
@@ -132,6 +140,7 @@ Partial Class Form_CategoryD
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Brown
@@ -168,6 +177,7 @@ Partial Class Form_CategoryD
         '
         'TextID
         '
+        Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextID.Location = New System.Drawing.Point(316, 201)
         Me.TextID.Margin = New System.Windows.Forms.Padding(6)
         Me.TextID.Name = "TextID"
@@ -313,6 +323,7 @@ Partial Class Form_CategoryD
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_CategoryD"
         Me.Text = "Form_CategoryD"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()

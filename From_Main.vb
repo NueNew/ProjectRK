@@ -80,4 +80,14 @@
         Dim frm As New Form_Login()
         frm.Show()
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Dim frm As New Form_CategoryE()
+        frm.Show()
+    End Sub
+
+    Private Sub รายจายToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายจายToolStripMenuItem.Click
+        Dim frm As New Form_EXPE
+        frm.Show()
+    End Sub
 End Class

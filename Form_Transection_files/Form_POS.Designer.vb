@@ -369,6 +369,7 @@ Partial Class Form_POS
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_POS"
         Me.Text = "Form_POS"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.num_exit, System.ComponentModel.ISupportInitialize).EndInit()

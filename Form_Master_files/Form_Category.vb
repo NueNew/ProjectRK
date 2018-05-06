@@ -37,7 +37,7 @@ Public Class Form_Category
         CreateAutoComplete()
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) 
         If TextID.Text = "" Then
             InsertData()
         Else
@@ -82,7 +82,7 @@ Public Class Form_Category
         End If
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorDeleteItem.Click
+    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) 
         Dim result As DialogResult =
        MessageBox.Show("ท่านต้องการลบข้อมูลหมวดหมู่รายนี้จริงหรือไม่", "ยืนยันการลบ",
                         MessageBoxButtons.OKCancel)
@@ -134,5 +134,36 @@ Public Class Form_Category
     Private Sub Form_Category_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Dim frm As New From_Main()
         frm.Show()
+    End Sub
+
+    Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
+        If TextID.Text = "" Then
+            InsertData()
+        Else
+            UpdateData()
+        End If
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Dim result As DialogResult =
+        MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
+                         MessageBoxButtons.OKCancel)
+
+        If result = DialogResult.Cancel Then
+            Exit Sub
+        End If
+
+        sql = "DELETE FROM ProductsD WHERE ProductDID = @id"
+        command.CommandText = sql
+        command.Parameters.Clear()
+        command.Parameters.AddWithValue("id", TextID.Text)
+
+        Dim r As Integer = command.ExecuteNonQuery()
+        If r = -1 Then
+            MessageBox.Show("เกิดข้อผิดพลาด ไม่สามารถลบข้อมูลได้")
+        Else
+            MessageBox.Show("ข้อมูลถูกลบแล้ว")
+            BindingData()
+        End If
     End Sub
 End Class

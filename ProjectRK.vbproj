@@ -120,10 +120,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Report_files\BLS.vb">
+    <Compile Include="Forms_Report_files\CR_BL.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BLS.rpt</DependentUpon>
+      <DependentUpon>CR_BL.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\CR_EXPE.vb">
@@ -235,12 +235,6 @@
     <Compile Include="Form_Transection_files\Form_EXPE.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Transection_files\Form_Expenses.Designer.vb">
-      <DependentUpon>Form_Expenses.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Transection_files\Form_Expenses.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_Transection_files\Form_POS.Designer.vb">
       <DependentUpon>Form_POS.vb</DependentUpon>
     </Compile>
@@ -289,9 +283,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms_Report_files\BLS.rpt">
+    <EmbeddedResource Include="Forms_Report_files\CR_BL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>BLS.vb</LastGenOutput>
+      <LastGenOutput>CR_BL.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\CR_EXPE.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -350,9 +344,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_EXPE.resx">
       <DependentUpon>Form_EXPE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Transection_files\Form_Expenses.resx">
-      <DependentUpon>Form_Expenses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_POS.resx">
       <DependentUpon>Form_POS.vb</DependentUpon>

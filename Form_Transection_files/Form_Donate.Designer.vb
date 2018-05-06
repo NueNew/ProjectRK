@@ -44,6 +44,10 @@ Partial Class Form_Donate
         Me.cmdSave = New System.Windows.Forms.Button()
         Me.txtOrderDID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.cboCatE = New System.Windows.Forms.ComboBox()
+        Me.txtDetail = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,6 +55,10 @@ Partial Class Form_Donate
         'GroupBox2
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox2.Controls.Add(Me.cboCatE)
+        Me.GroupBox2.Controls.Add(Me.txtDetail)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.lsvProductList)
         Me.GroupBox2.Controls.Add(Me.lblProductDName)
         Me.GroupBox2.Controls.Add(Me.txtProductDID)
@@ -60,14 +68,14 @@ Partial Class Form_Donate
         Me.GroupBox2.Controls.Add(Me.txtDon)
         Me.GroupBox2.Location = New System.Drawing.Point(111, 309)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(653, 311)
+        Me.GroupBox2.Size = New System.Drawing.Size(672, 433)
         Me.GroupBox2.TabIndex = 23
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "รายการบริจาค"
         '
         'lsvProductList
         '
-        Me.lsvProductList.Location = New System.Drawing.Point(43, 103)
+        Me.lsvProductList.Location = New System.Drawing.Point(43, 203)
         Me.lsvProductList.Name = "lsvProductList"
         Me.lsvProductList.Size = New System.Drawing.Size(568, 170)
         Me.lsvProductList.TabIndex = 10
@@ -77,14 +85,14 @@ Partial Class Form_Donate
         'lblProductDName
         '
         Me.lblProductDName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblProductDName.Location = New System.Drawing.Point(125, 77)
+        Me.lblProductDName.Location = New System.Drawing.Point(125, 177)
         Me.lblProductDName.Name = "lblProductDName"
         Me.lblProductDName.Size = New System.Drawing.Size(400, 29)
         Me.lblProductDName.TabIndex = 7
         '
         'txtProductDID
         '
-        Me.txtProductDID.Location = New System.Drawing.Point(43, 77)
+        Me.txtProductDID.Location = New System.Drawing.Point(43, 177)
         Me.txtProductDID.Name = "txtProductDID"
         Me.txtProductDID.Size = New System.Drawing.Size(81, 29)
         Me.txtProductDID.TabIndex = 0
@@ -118,7 +126,7 @@ Partial Class Form_Donate
         '
         'txtDon
         '
-        Me.txtDon.Location = New System.Drawing.Point(526, 77)
+        Me.txtDon.Location = New System.Drawing.Point(526, 177)
         Me.txtDon.Name = "txtDon"
         Me.txtDon.Size = New System.Drawing.Size(85, 29)
         Me.txtDon.TabIndex = 0
@@ -248,6 +256,7 @@ Partial Class Form_Donate
         '
         'txtOrderDID
         '
+        Me.txtOrderDID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtOrderDID.Location = New System.Drawing.Point(477, 45)
         Me.txtOrderDID.Name = "txtOrderDID"
         Me.txtOrderDID.ReadOnly = True
@@ -263,6 +272,39 @@ Partial Class Form_Donate
         Me.Label10.Size = New System.Drawing.Size(122, 24)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "เลขที่ใบบริจาค :"
+        '
+        'cboCatE
+        '
+        Me.cboCatE.FormattingEnabled = True
+        Me.cboCatE.Location = New System.Drawing.Point(48, 123)
+        Me.cboCatE.Name = "cboCatE"
+        Me.cboCatE.Size = New System.Drawing.Size(174, 32)
+        Me.cboCatE.TabIndex = 43
+        '
+        'txtDetail
+        '
+        Me.txtDetail.Location = New System.Drawing.Point(228, 123)
+        Me.txtDetail.Name = "txtDetail"
+        Me.txtDetail.Size = New System.Drawing.Size(280, 29)
+        Me.txtDetail.TabIndex = 42
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(233, 96)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(134, 24)
+        Me.Label7.TabIndex = 41
+        Me.Label7.Text = "ชื่อรายการบริจาค:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(44, 96)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(144, 24)
+        Me.Label8.TabIndex = 40
+        Me.Label8.Text = "ประเภทการบริจาค:"
         '
         'Form_Donate
         '
@@ -282,6 +324,7 @@ Partial Class Form_Donate
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_Donate"
         Me.Text = "Form_Donate"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -313,4 +356,8 @@ Partial Class Form_Donate
     Friend WithEvents txtDon As TextBox
     Friend WithEvents txtOrderDID As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents cboCatE As ComboBox
+    Friend WithEvents txtDetail As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
 End Class

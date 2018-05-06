@@ -115,7 +115,7 @@ Public Class Form_ProductD
     End Sub
     Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorDeleteItem.Click
         Dim result As DialogResult =
-        MessageBox.Show("ท่านต้องการลบข้อมูลลูกค้ารายนี้จริงหรือไม่", "ยืนยันการลบ",
+        MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
                          MessageBoxButtons.OKCancel)
 
         If result = DialogResult.Cancel Then

@@ -25,25 +25,24 @@ Partial Class Form_CategoryE
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_CategoryE))
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.TextDetail = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextID = New System.Windows.Forms.TextBox()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ButtonOK = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -77,97 +76,6 @@ Partial Class Form_CategoryE
         Me.BindingNavigator1.TabIndex = 145
         Me.BindingNavigator1.Text = "BindingNavigator2"
         '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 44)
-        Me.ToolStripLabel1.Text = "จาก    {0}"
-        Me.ToolStripLabel1.ToolTipText = "Total number of items"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 47)
-        '
-        'ToolStripTextBox1
-        '
-        Me.ToolStripTextBox1.AccessibleName = "Position"
-        Me.ToolStripTextBox1.AutoSize = False
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 40)
-        Me.ToolStripTextBox1.Text = "0"
-        Me.ToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ToolStripTextBox1.ToolTipText = "Current position"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 47)
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 47)
-        '
-        'TextDetail
-        '
-        Me.TextDetail.Location = New System.Drawing.Point(314, 369)
-        Me.TextDetail.Margin = New System.Windows.Forms.Padding(6)
-        Me.TextDetail.Multiline = True
-        Me.TextDetail.Name = "TextDetail"
-        Me.TextDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextDetail.Size = New System.Drawing.Size(428, 146)
-        Me.TextDetail.TabIndex = 144
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(308, 333)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 24)
-        Me.Label5.TabIndex = 143
-        Me.Label5.Text = "รายละเอียด"
-        '
-        'TextName
-        '
-        Me.TextName.Location = New System.Drawing.Point(314, 260)
-        Me.TextName.Margin = New System.Windows.Forms.Padding(6)
-        Me.TextName.Name = "TextName"
-        Me.TextName.Size = New System.Drawing.Size(418, 29)
-        Me.TextName.TabIndex = 142
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(308, 223)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 24)
-        Me.Label2.TabIndex = 141
-        Me.Label2.Text = "ชื่อหมวดหมู่"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(308, 116)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 24)
-        Me.Label1.TabIndex = 139
-        Me.Label1.Text = "รหัส"
-        '
-        'TextID
-        '
-        Me.TextID.Location = New System.Drawing.Point(314, 152)
-        Me.TextID.Margin = New System.Windows.Forms.Padding(6)
-        Me.TextID.Name = "TextID"
-        Me.TextID.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(226, 29)
-        Me.TextID.TabIndex = 140
-        '
         'ToolStripButton1
         '
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -176,6 +84,14 @@ Partial Class Form_CategoryE
         Me.ToolStripButton1.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton1.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton1.Text = "Add new"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 44)
+        Me.ToolStripLabel1.Text = "จาก    {0}"
+        Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
         'ToolStripButton2
         '
@@ -204,6 +120,27 @@ Partial Class Form_CategoryE
         Me.ToolStripButton4.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton4.Text = "Move previous"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 47)
+        '
+        'ToolStripTextBox1
+        '
+        Me.ToolStripTextBox1.AccessibleName = "Position"
+        Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 40)
+        Me.ToolStripTextBox1.Text = "0"
+        Me.ToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ToolStripTextBox1.ToolTipText = "Current position"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 47)
+        '
         'ToolStripButton5
         '
         Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -222,6 +159,11 @@ Partial Class Form_CategoryE
         Me.ToolStripButton6.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton6.Text = "Move last"
         '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 47)
+        '
         'ToolStripButton7
         '
         Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -231,15 +173,68 @@ Partial Class Form_CategoryE
         Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton7.Text = "&Save"
         '
-        'Label11
+        'TextDetail
         '
-        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label11.Location = New System.Drawing.Point(0, 83)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(1008, 4)
-        Me.Label11.TabIndex = 147
+        Me.TextDetail.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextDetail.Location = New System.Drawing.Point(314, 369)
+        Me.TextDetail.Margin = New System.Windows.Forms.Padding(6)
+        Me.TextDetail.Multiline = True
+        Me.TextDetail.Name = "TextDetail"
+        Me.TextDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextDetail.Size = New System.Drawing.Size(428, 146)
+        Me.TextDetail.TabIndex = 144
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(308, 333)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 24)
+        Me.Label5.TabIndex = 143
+        Me.Label5.Text = "รายละเอียด"
+        '
+        'TextName
+        '
+        Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextName.Location = New System.Drawing.Point(314, 260)
+        Me.TextName.Margin = New System.Windows.Forms.Padding(6)
+        Me.TextName.Name = "TextName"
+        Me.TextName.Size = New System.Drawing.Size(418, 29)
+        Me.TextName.TabIndex = 142
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(308, 223)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(95, 24)
+        Me.Label2.TabIndex = 141
+        Me.Label2.Text = "ชื่อหมวดหมู่"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(308, 116)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 24)
+        Me.Label1.TabIndex = 139
+        Me.Label1.Text = "รหัส"
+        '
+        'TextID
+        '
+        Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextID.Location = New System.Drawing.Point(314, 152)
+        Me.TextID.Margin = New System.Windows.Forms.Padding(6)
+        Me.TextID.Name = "TextID"
+        Me.TextID.ReadOnly = True
+        Me.TextID.Size = New System.Drawing.Size(226, 29)
+        Me.TextID.TabIndex = 140
         '
         'Panel1
         '
@@ -257,6 +252,7 @@ Partial Class Form_CategoryE
         '
         'ButtonOK
         '
+        Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ButtonOK.Location = New System.Drawing.Point(854, 20)
         Me.ButtonOK.Margin = New System.Windows.Forms.Padding(6)
         Me.ButtonOK.Name = "ButtonOK"
@@ -267,6 +263,7 @@ Partial Class Form_CategoryE
         '
         'Label10
         '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(433, 29)
         Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -277,6 +274,7 @@ Partial Class Form_CategoryE
         '
         'TextSearch
         '
+        Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextSearch.Location = New System.Drawing.Point(563, 23)
         Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
         Me.TextSearch.Name = "TextSearch"
@@ -285,6 +283,7 @@ Partial Class Form_CategoryE
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Brown
@@ -300,7 +299,6 @@ Partial Class Form_CategoryE
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.TextDetail)
@@ -310,9 +308,10 @@ Partial Class Form_CategoryE
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextID)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_CategoryE"
         Me.Text = "Form_CategoryE"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
@@ -342,7 +341,6 @@ Partial Class Form_CategoryE
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TextID As TextBox
-    Friend WithEvents Label11 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ButtonOK As Button
     Friend WithEvents Label10 As Label
