@@ -10,27 +10,29 @@ Public Class Form_POS
     Dim db As New DataClassesDataContext
 
     ' Public Shared Service_Bill As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report(ใบเสร็จออกมา)
-
-
-    Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub reloadPOS()
         '<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
         'จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น 2
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
 
-        'command.CommandText = "SELECT * from Orders where OrderID = (select max(OrderID) from Orders)"
-        'adapter = New SqlDataAdapter(command)
-        'dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
-        'adapter.Fill(dataSt, "Orders") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        'Dim item As Integer
-        'item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
-        'txtOrderID.Text = Format(item + 1)
+        command.CommandText = "SELECT * from Orders where OrderID = (select max(OrderID) from Orders)"
+        adapter = New SqlDataAdapter(command)
+        dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
+        adapter.Fill(dataSt, "Orders") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        Dim item As Integer
+        item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
+        txtOrderID.Text = Format(item + 1)
 
         'ปิด>>>
+    End Sub
 
+    Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        reloadPOS()
+
+        lsvProductList.Columns.Add("ประเภทสินค้า", 0, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("รหัสสินค้า", 100, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ชื่อสินค้า", 210, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ราคาขาย", 100, HorizontalAlignment.Left)
@@ -60,6 +62,7 @@ Public Class Form_POS
         lblSalePrice.Text = "0"
         lblTotal.Text = "0"
         txtStockLeft.Text = "0"
+        txtCate.Text = ""
         num_exit.Value = 1
     End Sub
 
@@ -89,7 +92,7 @@ Public Class Form_POS
     Private Sub txtProductID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProductID.KeyDown
         If txtProductID.Text.Trim() = "" Then Exit Sub
         If e.KeyCode = Keys.Enter Then
-            Dim ps = From p In db.Products Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock
+            Dim ps = From p In db.Products Join c In db.Categories On p.CategoryID Equals c.CategoryID Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock, c.CategoryName
                      Where ProductID = CInt(txtProductID.Text)
 
             If ps.Count() > 0 Then
@@ -97,7 +100,7 @@ Public Class Form_POS
                 lblProductName.Text = ps.FirstOrDefault().ProductName.Trim()
                 lblSalePrice.Text = ps.FirstOrDefault().UnitPrice.ToString()
                 txtStockLeft.Text = ps.FirstOrDefault().UnitsInStock.ToString()
-
+                txtCate.Text = ps.FirstOrDefault().CategoryName.ToString()
 
                 num_exit.Maximum = Convert.ToInt16(txtStockLeft.Text) 'ให้ค่าไม่เกินกับข้อมูลสินค้าในฐานข้อมูล 
                 'ให้การเลือกจำนวนไม่เกิน ข้อมูลในตารางสินค้า โดยที่ได้แปลงค่าจาก String เป็น Decimal
@@ -144,7 +147,7 @@ Public Class Form_POS
         Dim lvi As ListViewItem
         Dim tmpProductID As Integer = 0
         For i = 0 To lsvProductList.Items.Count - 1
-            tmpProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+            tmpProductID = CInt(lsvProductList.Items(i).SubItems(1).Text)
             If CInt(txtProductID.Text.Trim()) = tmpProductID Then
                 MessageBox.Show("คุณเลือกสินค้าซ้ำกัน กรุณาเลือกใหม่ !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 ClearProductData()
@@ -156,6 +159,7 @@ Public Class Form_POS
 
         Dim anyData() As String
         anyData = New String() {
+            txtCate.Text,
             txtProductID.Text,
             lblProductName.Text,
             lblSalePrice.Text,
@@ -192,7 +196,7 @@ Public Class Form_POS
         Dim i As Integer = 0
         Dim tmpNetTotal As Double = 0
         For i = 0 To lsvProductList.Items.Count - 1
-            tmpNetTotal += CDbl(lsvProductList.Items(i).SubItems(4).Text)
+            tmpNetTotal += CDbl(lsvProductList.Items(i).SubItems(5).Text)
         Next
         lblNet.Text = tmpNetTotal.ToString("#,##0.00")
     End Sub
@@ -216,7 +220,7 @@ Public Class Form_POS
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
                 o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
                 o.OrderDate = Date.Now
-
+                o.CBID = 2
                 Dim p As New Product() 'บอกว่า p คือตาราง Product 
 
                 Dim i As Integer
@@ -224,9 +228,9 @@ Public Class Form_POS
                 For i = 0 To lsvProductList.Items.Count - 1
                     od = New OrdersDetail()
                     p = New Product()
-                    od.ProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-                    od.UnitPrice = CDec(lsvProductList.Items(i).SubItems(2).Text)
-                    od.Quantity = CShort(lsvProductList.Items(i).SubItems(3).Text)
+                    od.ProductID = CInt(lsvProductList.Items(i).SubItems(1).Text)
+                    od.UnitPrice = CDec(lsvProductList.Items(i).SubItems(3).Text)
+                    od.Quantity = CShort(lsvProductList.Items(i).SubItems(4).Text)
                     od.Discount = 0
                     o.OrdersDetails.Add(od) 'ใช้คำสั่ง Add
                 Next
@@ -234,7 +238,7 @@ Public Class Form_POS
 
                 'ตัดสต็อก
                 For i = 0 To lsvProductList.Items.Count - 1
-                    Dim cmdU As New SqlCommand("Update P set P.UnitsInStock = P.UnitsInStock - " & CInt(lsvProductList.Items(i).SubItems(3).Text) & " FROM Products AS P INNER JOIN OrdersDetails AS S ON (P.ProductID = S.ProductID) WHERE S.ProductID='" & CStr(lsvProductList.Items(i).SubItems(0).Text) & "'", connection)
+                    Dim cmdU As New SqlCommand("Update P set P.UnitsInStock = P.UnitsInStock - " & CInt(lsvProductList.Items(i).SubItems(4).Text) & " FROM Products AS P INNER JOIN OrdersDetails AS S ON (P.ProductID = S.ProductID) WHERE S.ProductID='" & CStr(lsvProductList.Items(i).SubItems(1).Text) & "'", connection)
                     cmdU.ExecuteNonQuery()
                 Next
 
@@ -244,8 +248,8 @@ Public Class Form_POS
                     command.CommandText = sql
                     command.Parameters.Clear()
                     command.Parameters.AddWithValue("DATT", DateTime.Now.Date)
-                    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
-                    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(4).Text)
+                    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(0).Text)
+                    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(5).Text)
                     command.Parameters.AddWithValue("C", 2)
                     command.ExecuteNonQuery()
                 Next
@@ -277,7 +281,7 @@ Public Class Form_POS
                 Form_Report_CR_POS.CrystalReportViewer1.Refresh()
                 Form_Report_CR_POS.Show()
                 Form_Report_CR_POS.WindowState = FormWindowState.Maximized
-                Me.Refresh() 'ทดลองให้รีเฟส
+                reloadPOS()
 
             End If
         End If

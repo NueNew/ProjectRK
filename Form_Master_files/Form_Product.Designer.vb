@@ -100,16 +100,16 @@ Partial Class Form_Product
         Me.Label12.ForeColor = System.Drawing.Color.Brown
         Me.Label12.Location = New System.Drawing.Point(186, 30)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(214, 37)
+        Me.Label12.Size = New System.Drawing.Size(274, 46)
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "จัดการ วัตถุมงคล"
         '
         'ButtonOK
         '
         Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ButtonOK.Location = New System.Drawing.Point(807, 41)
+        Me.ButtonOK.Location = New System.Drawing.Point(896, 43)
         Me.ButtonOK.Name = "ButtonOK"
-        Me.ButtonOK.Size = New System.Drawing.Size(57, 31)
+        Me.ButtonOK.Size = New System.Drawing.Size(76, 36)
         Me.ButtonOK.TabIndex = 22
         Me.ButtonOK.Text = "ตกลง"
         Me.ButtonOK.UseVisualStyleBackColor = True
@@ -120,25 +120,26 @@ Partial Class Form_Product
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(551, 43)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(91, 24)
+        Me.Label16.Size = New System.Drawing.Size(115, 29)
         Me.Label16.TabIndex = 20
         Me.Label16.Text = "ค้นหา (ชื่อ)"
         '
         'TextSearch
         '
         Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextSearch.Location = New System.Drawing.Point(648, 43)
+        Me.TextSearch.Location = New System.Drawing.Point(681, 43)
         Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(153, 29)
+        Me.TextSearch.Size = New System.Drawing.Size(209, 34)
         Me.TextSearch.TabIndex = 21
         '
         'LinkLabel1
         '
         Me.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(742, 387)
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(715, 385)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(74, 24)
+        Me.LinkLabel1.Size = New System.Drawing.Size(113, 32)
         Me.LinkLabel1.TabIndex = 116
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "เลือกภาพ"
@@ -147,19 +148,21 @@ Partial Class Form_Product
         '
         Me.ComboCategory.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboCategory.FormattingEnabled = True
-        Me.ComboCategory.Location = New System.Drawing.Point(352, 148)
+        Me.ComboCategory.Location = New System.Drawing.Point(364, 148)
         Me.ComboCategory.Name = "ComboCategory"
-        Me.ComboCategory.Size = New System.Drawing.Size(195, 32)
+        Me.ComboCategory.Size = New System.Drawing.Size(195, 39)
         Me.ComboCategory.TabIndex = 114
         '
         'Label9
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(208, 156)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(220, 148)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 24)
+        Me.Label9.Size = New System.Drawing.Size(111, 32)
         Me.Label9.TabIndex = 113
         Me.Label9.Text = "หมวดหมู่"
         '
@@ -167,7 +170,7 @@ Partial Class Form_Product
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(618, 148)
+        Me.PictureBox1.Location = New System.Drawing.Point(630, 148)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(198, 223)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -178,16 +181,18 @@ Partial Class Form_Product
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(149, 347)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(93, 394)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(156, 24)
+        Me.Label7.Size = New System.Drawing.Size(238, 32)
         Me.Label7.TabIndex = 111
         Me.Label7.Text = "รายละเอียดวัตถุมงคล"
         '
         'TextDetail
         '
         Me.TextDetail.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextDetail.Location = New System.Drawing.Point(352, 349)
+        Me.TextDetail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextDetail.Location = New System.Drawing.Point(364, 394)
         Me.TextDetail.Multiline = True
         Me.TextDetail.Name = "TextDetail"
         Me.TextDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -197,18 +202,20 @@ Partial Class Form_Product
         'TextStock
         '
         Me.TextStock.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextStock.Location = New System.Drawing.Point(352, 300)
+        Me.TextStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextStock.Location = New System.Drawing.Point(364, 345)
         Me.TextStock.Name = "TextStock"
-        Me.TextStock.Size = New System.Drawing.Size(195, 29)
+        Me.TextStock.Size = New System.Drawing.Size(195, 38)
         Me.TextStock.TabIndex = 109
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(234, 303)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(234, 348)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 24)
+        Me.Label6.Size = New System.Drawing.Size(97, 32)
         Me.Label6.TabIndex = 108
         Me.Label6.Text = "คงเหลือ"
         '
@@ -216,54 +223,60 @@ Partial Class Form_Product
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(252, 266)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(262, 304)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 24)
+        Me.Label3.Size = New System.Drawing.Size(69, 32)
         Me.Label3.TabIndex = 107
         Me.Label3.Text = "ราคา"
         '
         'TextPrice
         '
         Me.TextPrice.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextPrice.Location = New System.Drawing.Point(352, 261)
+        Me.TextPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextPrice.Location = New System.Drawing.Point(364, 298)
         Me.TextPrice.Name = "TextPrice"
-        Me.TextPrice.Size = New System.Drawing.Size(195, 29)
+        Me.TextPrice.Size = New System.Drawing.Size(195, 38)
         Me.TextPrice.TabIndex = 106
         '
         'TextName
         '
         Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextName.Location = New System.Drawing.Point(352, 223)
+        Me.TextName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextName.Location = New System.Drawing.Point(364, 249)
         Me.TextName.Name = "TextName"
-        Me.TextName.Size = New System.Drawing.Size(195, 29)
+        Me.TextName.Size = New System.Drawing.Size(195, 38)
         Me.TextName.TabIndex = 105
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(200, 228)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(181, 255)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 24)
+        Me.Label2.Size = New System.Drawing.Size(150, 32)
         Me.Label2.TabIndex = 104
         Me.Label2.Text = "ชื่อวัตถุมงคล"
         '
         'TextID
         '
         Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextID.Location = New System.Drawing.Point(352, 187)
+        Me.TextID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextID.Location = New System.Drawing.Point(364, 200)
         Me.TextID.Name = "TextID"
         Me.TextID.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(195, 29)
+        Me.TextID.Size = New System.Drawing.Size(195, 38)
         Me.TextID.TabIndex = 103
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(230, 191)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(269, 200)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 24)
+        Me.Label1.Size = New System.Drawing.Size(61, 32)
         Me.Label1.TabIndex = 102
         Me.Label1.Text = "รหัส"
         '
@@ -274,18 +287,20 @@ Partial Class Form_Product
         'DateTimePicker1
         '
         Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DateTimePicker1.Location = New System.Drawing.Point(347, 503)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(364, 511)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 38)
         Me.DateTimePicker1.TabIndex = 121
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(151, 503)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(101, 511)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(154, 24)
+        Me.Label4.Size = New System.Drawing.Size(230, 32)
         Me.Label4.TabIndex = 111
         Me.Label4.Text = "วันที่นำเข้าวัตถุมงคล"
         '
@@ -301,14 +316,14 @@ Partial Class Form_Product
         Me.BindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(40, 40)
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton7})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(275, 564)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(275, 569)
         Me.BindingNavigator1.MoveFirstItem = Me.ToolStripButton3
         Me.BindingNavigator1.MoveLastItem = Me.ToolStripButton6
         Me.BindingNavigator1.MoveNextItem = Me.ToolStripButton5
         Me.BindingNavigator1.MovePreviousItem = Me.ToolStripButton4
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(460, 47)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(522, 47)
         Me.BindingNavigator1.TabIndex = 139
         Me.BindingNavigator1.Text = "BindingNavigator2"
         '
@@ -325,7 +340,7 @@ Partial Class Form_Product
         '
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 44)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(102, 44)
         Me.ToolStripLabel1.Text = "จาก    {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -411,7 +426,7 @@ Partial Class Form_Product
         '
         'Form_Product
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.BindingNavigator1)

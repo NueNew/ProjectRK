@@ -44,19 +44,21 @@ Partial Class Form_EXPE
         'txtOrderDID
         '
         Me.txtOrderDID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtOrderDID.Location = New System.Drawing.Point(518, 23)
+        Me.txtOrderDID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtOrderDID.Location = New System.Drawing.Point(558, 53)
         Me.txtOrderDID.Name = "txtOrderDID"
         Me.txtOrderDID.ReadOnly = True
-        Me.txtOrderDID.Size = New System.Drawing.Size(127, 29)
+        Me.txtOrderDID.Size = New System.Drawing.Size(127, 38)
         Me.txtOrderDID.TabIndex = 32
         '
         'Label10
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(372, 26)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label10.Location = New System.Drawing.Point(343, 59)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(140, 24)
+        Me.Label10.Size = New System.Drawing.Size(209, 32)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "เลขที่ใบค่าใช้จ่าย :"
         '
@@ -67,7 +69,7 @@ Partial Class Form_EXPE
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(423, 147)
+        Me.lblNet.Location = New System.Drawing.Point(451, 147)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(205, 53)
         Me.lblNet.TabIndex = 34
@@ -77,9 +79,10 @@ Partial Class Form_EXPE
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.Location = New System.Drawing.Point(296, 157)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 24)
+        Me.Label4.Size = New System.Drawing.Size(152, 32)
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "รวมเป็นเงิน :"
         '
@@ -93,6 +96,7 @@ Partial Class Form_EXPE
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtPrice)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(82, 203)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(735, 311)
@@ -103,23 +107,23 @@ Partial Class Form_EXPE
         'cboCatE
         '
         Me.cboCatE.FormattingEnabled = True
-        Me.cboCatE.Location = New System.Drawing.Point(67, 71)
+        Me.cboCatE.Location = New System.Drawing.Point(32, 71)
         Me.cboCatE.Name = "cboCatE"
-        Me.cboCatE.Size = New System.Drawing.Size(174, 32)
+        Me.cboCatE.Size = New System.Drawing.Size(174, 39)
         Me.cboCatE.TabIndex = 39
         '
         'txtDetail
         '
-        Me.txtDetail.Location = New System.Drawing.Point(280, 71)
+        Me.txtDetail.Location = New System.Drawing.Point(248, 71)
         Me.txtDetail.Name = "txtDetail"
-        Me.txtDetail.Size = New System.Drawing.Size(280, 29)
+        Me.txtDetail.Size = New System.Drawing.Size(326, 38)
         Me.txtDetail.TabIndex = 11
         '
         'lsvProductList
         '
-        Me.lsvProductList.Location = New System.Drawing.Point(6, 109)
+        Me.lsvProductList.Location = New System.Drawing.Point(32, 116)
         Me.lsvProductList.Name = "lsvProductList"
-        Me.lsvProductList.Size = New System.Drawing.Size(686, 170)
+        Me.lsvProductList.Size = New System.Drawing.Size(673, 170)
         Me.lsvProductList.TabIndex = 10
         Me.lsvProductList.TabStop = False
         Me.lsvProductList.UseCompatibleStateImageBehavior = False
@@ -129,25 +133,25 @@ Partial Class Form_EXPE
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(577, 37)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 24)
+        Me.Label9.Size = New System.Drawing.Size(141, 32)
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "จำนวนเงิน :"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(276, 40)
+        Me.Label6.Location = New System.Drawing.Point(242, 34)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(157, 24)
+        Me.Label6.Size = New System.Drawing.Size(240, 32)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "ชื่อรายการค่าใช้จ่าย :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(93, 40)
+        Me.Label5.Location = New System.Drawing.Point(26, 34)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(131, 24)
+        Me.Label5.Size = New System.Drawing.Size(195, 32)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "ประเภทค่าใช้จ่าย"
         '
@@ -155,16 +159,17 @@ Partial Class Form_EXPE
         '
         Me.txtPrice.Location = New System.Drawing.Point(581, 71)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(85, 29)
+        Me.txtPrice.Size = New System.Drawing.Size(124, 38)
         Me.txtPrice.TabIndex = 0
         '
         'cmdClear
         '
         Me.cmdClear.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.cmdClear.Location = New System.Drawing.Point(858, 297)
         Me.cmdClear.Name = "cmdClear"
-        Me.cmdClear.Size = New System.Drawing.Size(97, 34)
+        Me.cmdClear.Size = New System.Drawing.Size(97, 49)
         Me.cmdClear.TabIndex = 37
         Me.cmdClear.Text = "ล้าง"
         Me.cmdClear.UseVisualStyleBackColor = True
@@ -173,9 +178,10 @@ Partial Class Form_EXPE
         '
         Me.cmdAdd.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdAdd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.cmdAdd.Location = New System.Drawing.Point(858, 239)
         Me.cmdAdd.Name = "cmdAdd"
-        Me.cmdAdd.Size = New System.Drawing.Size(97, 34)
+        Me.cmdAdd.Size = New System.Drawing.Size(97, 43)
         Me.cmdAdd.TabIndex = 36
         Me.cmdAdd.Text = "เพิ่มรายการ"
         Me.cmdAdd.UseVisualStyleBackColor = True
@@ -184,9 +190,10 @@ Partial Class Form_EXPE
         '
         Me.cmdSave.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdSave.Location = New System.Drawing.Point(858, 378)
+        Me.cmdSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cmdSave.Location = New System.Drawing.Point(858, 365)
         Me.cmdSave.Name = "cmdSave"
-        Me.cmdSave.Size = New System.Drawing.Size(97, 32)
+        Me.cmdSave.Size = New System.Drawing.Size(97, 50)
         Me.cmdSave.TabIndex = 38
         Me.cmdSave.Text = "บันทึก"
         Me.cmdSave.UseVisualStyleBackColor = True
@@ -204,7 +211,7 @@ Partial Class Form_EXPE
         '
         'Form_EXPE
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.Button1)

@@ -86,8 +86,8 @@ Public Class Form_Product
         End If
     End Sub
     Private Sub InsertData()
-        sql = "INSERT INTO Products(CategoryID,  ProductName, UnitPrice, UnitsInStock, QuantityPerUnit, Picture,Date) 
-               VALUES(@cid, @name, @prc, @stk, @dtl, @pic)"
+        sql = "INSERT INTO Products(CategoryID,  ProductName, UnitPrice, UnitsInStock, QuantityPerUnit, Picture,DateAdd) 
+               VALUES(@cid, @name, @prc, @stk, @dtl, @pic,@date)"
 
         command.CommandText = sql
         command.Parameters.Clear()

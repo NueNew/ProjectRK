@@ -59,7 +59,8 @@ Partial Class From_Customers
         'TextAddress
         '
         Me.TextAddress.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextAddress.Location = New System.Drawing.Point(261, 341)
+        Me.TextAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextAddress.Location = New System.Drawing.Point(315, 341)
         Me.TextAddress.Margin = New System.Windows.Forms.Padding(6)
         Me.TextAddress.Multiline = True
         Me.TextAddress.Name = "TextAddress"
@@ -71,71 +72,78 @@ Partial Class From_Customers
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(191, 341)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(237, 341)
         Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 24)
+        Me.Label5.Size = New System.Drawing.Size(60, 32)
         Me.Label5.TabIndex = 65
         Me.Label5.Text = "ที่อยู่"
         '
         'TextPhone
         '
         Me.TextPhone.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextPhone.Location = New System.Drawing.Point(261, 276)
+        Me.TextPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextPhone.Location = New System.Drawing.Point(315, 276)
         Me.TextPhone.Margin = New System.Windows.Forms.Padding(6)
         Me.TextPhone.Name = "TextPhone"
-        Me.TextPhone.Size = New System.Drawing.Size(435, 29)
+        Me.TextPhone.Size = New System.Drawing.Size(435, 38)
         Me.TextPhone.TabIndex = 62
         '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(160, 274)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(190, 276)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 24)
+        Me.Label3.Size = New System.Drawing.Size(107, 32)
         Me.Label3.TabIndex = 61
         Me.Label3.Text = "โทรศัพท์"
         '
         'TextName
         '
         Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextName.Location = New System.Drawing.Point(259, 202)
+        Me.TextName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextName.Location = New System.Drawing.Point(313, 202)
         Me.TextName.Margin = New System.Windows.Forms.Padding(6)
         Me.TextName.Name = "TextName"
-        Me.TextName.Size = New System.Drawing.Size(437, 29)
+        Me.TextName.Size = New System.Drawing.Size(437, 38)
         Me.TextName.TabIndex = 60
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(164, 202)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 24)
+        Me.Label2.Size = New System.Drawing.Size(135, 32)
         Me.Label2.TabIndex = 59
         Me.Label2.Text = "ชื่อผู้บริจาค"
         '
         'TextID
         '
         Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextID.Location = New System.Drawing.Point(261, 139)
+        Me.TextID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextID.Location = New System.Drawing.Point(315, 139)
         Me.TextID.Margin = New System.Windows.Forms.Padding(6)
         Me.TextID.Name = "TextID"
         Me.TextID.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(96, 29)
+        Me.TextID.Size = New System.Drawing.Size(96, 38)
         Me.TextID.TabIndex = 57
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(197, 139)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(238, 139)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 24)
+        Me.Label1.Size = New System.Drawing.Size(61, 32)
         Me.Label1.TabIndex = 56
         Me.Label1.Text = "รหัส"
         '
@@ -164,7 +172,7 @@ Partial Class From_Customers
         Me.Label12.Location = New System.Drawing.Point(188, 23)
         Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(222, 31)
+        Me.Label12.Size = New System.Drawing.Size(278, 39)
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "จัดการข้อมูลผู้บริจาค"
         '
@@ -182,10 +190,10 @@ Partial Class From_Customers
         'ButtonOK
         '
         Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ButtonOK.Location = New System.Drawing.Point(858, 15)
+        Me.ButtonOK.Location = New System.Drawing.Point(889, 29)
         Me.ButtonOK.Margin = New System.Windows.Forms.Padding(6)
         Me.ButtonOK.Name = "ButtonOK"
-        Me.ButtonOK.Size = New System.Drawing.Size(105, 50)
+        Me.ButtonOK.Size = New System.Drawing.Size(75, 40)
         Me.ButtonOK.TabIndex = 22
         Me.ButtonOK.Text = "ตกลง"
         Me.ButtonOK.UseVisualStyleBackColor = True
@@ -194,20 +202,20 @@ Partial Class From_Customers
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(437, 24)
+        Me.Label10.Location = New System.Drawing.Point(483, 31)
         Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 24)
+        Me.Label10.Size = New System.Drawing.Size(109, 29)
         Me.Label10.TabIndex = 20
         Me.Label10.Text = "ค้นหา(ชื่อ)"
         '
         'TextSearch
         '
         Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextSearch.Location = New System.Drawing.Point(554, 25)
+        Me.TextSearch.Location = New System.Drawing.Point(600, 32)
         Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
         Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(277, 29)
+        Me.TextSearch.Size = New System.Drawing.Size(277, 34)
         Me.TextSearch.TabIndex = 21
         '
         'BindingNavigator1
@@ -229,7 +237,7 @@ Partial Class From_Customers
         Me.BindingNavigator1.MovePreviousItem = Me.ToolStripButton4
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(460, 47)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(483, 47)
         Me.BindingNavigator1.TabIndex = 139
         Me.BindingNavigator1.Text = "BindingNavigator2"
         '
@@ -246,7 +254,7 @@ Partial Class From_Customers
         '
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 44)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(102, 44)
         Me.ToolStripLabel1.Text = "จาก    {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -332,7 +340,7 @@ Partial Class From_Customers
         '
         'From_Customers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.BindingNavigator1)

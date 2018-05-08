@@ -11,14 +11,12 @@ Imports CrystalDecisions.CrystalReports.Engine
 Public Class Form_Donate
     Dim db As New DataClassesDataContext
 
-
-    Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub reloadDon()
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
 
-
+        '
         command.CommandText = "SELECT * from OrdersD where OrderDID = (select max(OrderDID) from OrdersD)"
         adapter = New SqlDataAdapter(command)
         dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
@@ -26,13 +24,17 @@ Public Class Form_Donate
         Dim item As Integer
         item = CInt(dataSt.Tables("OrdersD").Rows(0).Item("OrderDID").ToString())
         txtOrderDID.Text = Format(item + 1)
+        '
+    End Sub
+    Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
+        reloadDon()
 
-        lsvProductList.Columns.Add("รหัสสินค้า", 81, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ประเภทสินค้า", 100, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ชื่อบริจาค", 150, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("จำนวนเงิน", 70, HorizontalAlignment.Right)
+        lsvProductList.Columns.Add("รหัส", 0, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("ประเภทบริจาค", 200, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("รายละเอียด", 250, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("จำนวนเงิน", 100, HorizontalAlignment.Right)
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True
@@ -237,7 +239,7 @@ Public Class Form_Donate
                 Form_Report_CR_DON.Show()
                 Form_Report_CR_DON.WindowState = FormWindowState.Maximized
                 '
-                Me.Close()
+                reloadDon()
             End If
         End If
     End Sub
@@ -257,5 +259,9 @@ Public Class Form_Donate
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
         MF.Show()
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
     End Sub
 End Class

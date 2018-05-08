@@ -174,10 +174,10 @@ Public Class Form_EXPE
                 '            txtProductDID.Focus()
 
                 ''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
-                Dim rpt As New ReportDocument
-                Dim directory As String = My.Application.Info.DirectoryPath
+                'Dim rpt As New ReportDocument
+                'Dim directory As String = My.Application.Info.DirectoryPath
 
-                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
+                'rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
                 '            'rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
 
                 '            'Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt

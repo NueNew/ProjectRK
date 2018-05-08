@@ -107,7 +107,7 @@ Partial Class Form_Employee
         Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ButtonOK.Location = New System.Drawing.Point(883, 41)
         Me.ButtonOK.Name = "ButtonOK"
-        Me.ButtonOK.Size = New System.Drawing.Size(57, 31)
+        Me.ButtonOK.Size = New System.Drawing.Size(81, 41)
         Me.ButtonOK.TabIndex = 22
         Me.ButtonOK.Text = "ตกลง"
         Me.ButtonOK.UseVisualStyleBackColor = True
@@ -116,7 +116,7 @@ Partial Class Form_Employee
         '
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(587, 43)
+        Me.Label16.Location = New System.Drawing.Point(549, 46)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(115, 29)
         Me.Label16.TabIndex = 20
@@ -125,18 +125,18 @@ Partial Class Form_Employee
         'TextSearch
         '
         Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextSearch.Location = New System.Drawing.Point(684, 43)
+        Me.TextSearch.Location = New System.Drawing.Point(660, 44)
         Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(193, 34)
+        Me.TextSearch.Size = New System.Drawing.Size(217, 34)
         Me.TextSearch.TabIndex = 21
         '
         'TextName
         '
         Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextName.Location = New System.Drawing.Point(231, 168)
+        Me.TextName.Location = New System.Drawing.Point(285, 168)
         Me.TextName.Name = "TextName"
-        Me.TextName.Size = New System.Drawing.Size(195, 38)
+        Me.TextName.Size = New System.Drawing.Size(303, 38)
         Me.TextName.TabIndex = 128
         '
         'Label2
@@ -154,10 +154,10 @@ Partial Class Form_Employee
         '
         Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextID.Location = New System.Drawing.Point(231, 118)
+        Me.TextID.Location = New System.Drawing.Point(285, 118)
         Me.TextID.Name = "TextID"
         Me.TextID.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(195, 38)
+        Me.TextID.Size = New System.Drawing.Size(109, 38)
         Me.TextID.TabIndex = 126
         '
         'Label1
@@ -186,7 +186,7 @@ Partial Class Form_Employee
         '
         Me.TextAddress.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextAddress.Location = New System.Drawing.Point(231, 293)
+        Me.TextAddress.Location = New System.Drawing.Point(285, 293)
         Me.TextAddress.Multiline = True
         Me.TextAddress.Name = "TextAddress"
         Me.TextAddress.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -197,9 +197,9 @@ Partial Class Form_Employee
         '
         Me.TextPhone.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextPhone.Location = New System.Drawing.Point(231, 228)
+        Me.TextPhone.Location = New System.Drawing.Point(285, 228)
         Me.TextPhone.Name = "TextPhone"
-        Me.TextPhone.Size = New System.Drawing.Size(195, 38)
+        Me.TextPhone.Size = New System.Drawing.Size(303, 38)
         Me.TextPhone.TabIndex = 130
         '
         'Label6
@@ -239,7 +239,7 @@ Partial Class Form_Employee
         '
         Me.TextUsername.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextUsername.Location = New System.Drawing.Point(293, 505)
+        Me.TextUsername.Location = New System.Drawing.Point(338, 504)
         Me.TextUsername.Name = "TextUsername"
         Me.TextUsername.Size = New System.Drawing.Size(195, 38)
         Me.TextUsername.TabIndex = 128
@@ -249,7 +249,7 @@ Partial Class Form_Employee
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(531, 510)
+        Me.Label4.Location = New System.Drawing.Point(559, 510)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(106, 32)
         Me.Label4.TabIndex = 127
@@ -259,7 +259,7 @@ Partial Class Form_Employee
         '
         Me.TextPassword.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextPassword.Location = New System.Drawing.Point(615, 505)
+        Me.TextPassword.Location = New System.Drawing.Point(683, 505)
         Me.TextPassword.Name = "TextPassword"
         Me.TextPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextPassword.Size = New System.Drawing.Size(195, 38)

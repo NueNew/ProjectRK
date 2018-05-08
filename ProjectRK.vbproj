@@ -440,5 +440,6 @@
   <ItemGroup>
     <None Include="Resources\2887_renamed.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
