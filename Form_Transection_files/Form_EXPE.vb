@@ -81,6 +81,7 @@ Public Class Form_EXPE
         CalculateNet()
         ClearProductData()
         cmdSave.Enabled = True
+        txtDetail.Focus()
 
         'Dim i As Integer = 0
         'Dim lvi As ListViewItem
@@ -189,49 +190,10 @@ Public Class Form_EXPE
         End If
     End Sub
 
-
-    'Private Sub cmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
-
-
-    '    If lsvProductList.Items.Count > 0 Then
-    '        If MessageBox.Show("คุณต้องการบันทึกรายการสั่งซื้อสินค้า ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
-    '            Dim As New OrdersD()
-    '            'o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
-    '            'o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
-    '            'o.OrderDDate = Date.Now
-
-    '            Dim i As Integer
-    '            Dim od As OrdersDetailsD
-
-    '            For i = 0 To lsvProductList.Items.Count - 1
-    '                od = New OrdersDetailsD()
-    '                od.ProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-    '                od.Donation = CType(lsvProductList.Items(i).SubItems(2).Text, Decimal?) 'จำนวนเงินที่บริจาค 0 1 2
-    '                o.OrdersDetailsDs.Add(od) 'ทำการใส่ข้อมูลลงในตาราง OrdersDeatailsD
-    '            Next
-
-    '            Using ts As New TransactionScope()
-    '                db.OrdersDs.InsertOnSubmit(o)
-    '                db.SubmitChanges()
-    '                ts.Complete()
-    '            End Using
-    '            MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
 
 
-    '            'เอาข้อมูลเข้า BalanceSheet
-    '            For i = 0 To lsvProductList.Items.Count - 1
-    '                sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@D,@N,@M,@C)"
-    '                command.CommandText = sql
-    '                command.Parameters.Clear()
-    '                command.Parameters.AddWithValue("D", DateTime.Now.Date)
-    '                command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
-    '                command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(2).Text)
-    '                command.Parameters.AddWithValue("C", 1)
-    '                command.ExecuteNonQuery()
-    '            Next
-
-    '          
-    '        End If
-    '    End If
-    'End Sub
 End Class

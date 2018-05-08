@@ -23,7 +23,7 @@
       <Column Name="CategoryDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CategoryDName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="CategoriesD_ProductsD" Member="ProductsDs" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="ProductsD" />
+      <Association Name="CategoriesD_OrdersDetailsD" Member="OrdersDetailsDs" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="OrdersDetailsD" />
     </Type>
   </Table>
   <Table Name="dbo.CategoriesE" Member="CategoriesEs">
@@ -120,10 +120,11 @@
   <Table Name="dbo.OrdersDetailsD" Member="OrdersDetailsDs">
     <Type Name="OrdersDetailsD">
       <Column Name="OrderDID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ProductDID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryDID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Donation" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="CategoriesD_OrdersDetailsD" Member="CategoriesD" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="CategoriesD" IsForeignKey="true" />
       <Association Name="OrdersD_OrdersDetailsD" Member="OrdersD" ThisKey="OrderDID" OtherKey="OrderDID" Type="OrdersD" IsForeignKey="true" />
-      <Association Name="ProductsD_OrdersDetailsD" Member="ProductsD" ThisKey="ProductDID" OtherKey="ProductDID" Type="ProductsD" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Products" Member="Products">
@@ -138,16 +139,6 @@
       <Column Name="DateAdd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="Product_OrdersDetail" Member="OrdersDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrdersDetail" />
       <Association Name="Category_Product" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ProductsD" Member="ProductsDs">
-    <Type Name="ProductsD">
-      <Column Name="ProductDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ProductDName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="CategoryDID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="QuantityPerUnit" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Association Name="ProductsD_OrdersDetailsD" Member="OrdersDetailsDs" ThisKey="ProductDID" OtherKey="ProductDID" Type="OrdersDetailsD" />
-      <Association Name="CategoriesD_ProductsD" Member="CategoriesD" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="CategoriesD" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

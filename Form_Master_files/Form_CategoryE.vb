@@ -133,15 +133,9 @@ Public Class Form_CategoryE
         BindingData(command)
     End Sub
 
-    Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
-        If TextID.Text = "" Then
-            InsertData()
-        Else
-            UpdateData()
-        End If
-    End Sub
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs)
         Dim result As DialogResult =
         MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
                          MessageBoxButtons.OKCancel)
@@ -161,6 +155,19 @@ Public Class Form_CategoryE
         Else
             MessageBox.Show("ข้อมูลถูกลบแล้ว")
             BindingData()
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
+
+    Private Sub ToolStripButton7_Click_1(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
+        If TextID.Text = "" Then
+            InsertData()
+        Else
+            UpdateData()
         End If
     End Sub
 End Class

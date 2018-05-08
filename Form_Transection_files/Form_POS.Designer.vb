@@ -50,6 +50,7 @@ Partial Class Form_POS
         Me.cmdSave = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtOrderID = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.num_exit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -351,11 +352,23 @@ Partial Class Form_POS
         Me.txtOrderID.Size = New System.Drawing.Size(127, 29)
         Me.txtOrderID.TabIndex = 22
         '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Location = New System.Drawing.Point(132, 31)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 79)
+        Me.Button1.TabIndex = 141
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Form_POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1085, 729)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtOrderID)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -366,6 +379,7 @@ Partial Class Form_POS
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cmdSave)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_POS"
         Me.Text = "Form_POS"
@@ -408,4 +422,5 @@ Partial Class Form_POS
     Friend WithEvents Label11 As Label
     Friend WithEvents num_exit As NumericUpDown
     Friend WithEvents txtStockLeft As TextBox
+    Friend WithEvents Button1 As Button
 End Class

@@ -17,20 +17,24 @@ Public Class Form_Login
 
         If table.Rows.Count() <= 0 Then
 
-            MessageBox.Show("Username Or Password Are Invalid")
+            MessageBox.Show("กรุณาใส่ข้อมูลผู้ใช้และรหัสผ่านให้ถูกต้อง")
 
         Else
 
             'MessageBox.Show("Login Successfully")
 
-            Dim frm As New From_Main()
+            Dim frm As New MF()
 
-            Me.Hide()
+
 
             frm.Show()
-
+            Me.Hide()
         End If
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
+
+    End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class From_Customers
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class From_Customers
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(From_Customers))
@@ -34,6 +34,7 @@ Partial Class From_Customers
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonOK = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextSearch = New System.Windows.Forms.TextBox()
@@ -140,33 +141,48 @@ Partial Class From_Customers
         '
         'Panel1
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.ButtonOK)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.TextSearch)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1008, 83)
+        Me.Panel1.Size = New System.Drawing.Size(1008, 97)
         Me.Panel1.TabIndex = 54
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Brown
-        Me.Label12.Location = New System.Drawing.Point(58, 24)
+        Me.Label12.Location = New System.Drawing.Point(188, 23)
         Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(222, 31)
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "จัดการข้อมูลผู้บริจาค"
         '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Location = New System.Drawing.Point(66, 13)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 79)
+        Me.Button1.TabIndex = 141
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'ButtonOK
         '
-        Me.ButtonOK.Location = New System.Drawing.Point(859, 15)
+        Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ButtonOK.Location = New System.Drawing.Point(858, 15)
         Me.ButtonOK.Margin = New System.Windows.Forms.Padding(6)
         Me.ButtonOK.Name = "ButtonOK"
         Me.ButtonOK.Size = New System.Drawing.Size(105, 50)
@@ -176,8 +192,9 @@ Partial Class From_Customers
         '
         'Label10
         '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(438, 24)
+        Me.Label10.Location = New System.Drawing.Point(437, 24)
         Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(86, 24)
@@ -186,7 +203,8 @@ Partial Class From_Customers
         '
         'TextSearch
         '
-        Me.TextSearch.Location = New System.Drawing.Point(555, 25)
+        Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextSearch.Location = New System.Drawing.Point(554, 25)
         Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
         Me.TextSearch.Name = "TextSearch"
         Me.TextSearch.Size = New System.Drawing.Size(277, 29)
@@ -328,6 +346,7 @@ Partial Class From_Customers
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "From_Customers"
         Me.Text = "From_Customers"
@@ -367,4 +386,5 @@ Partial Class From_Customers
     Friend WithEvents ToolStripButton6 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents ToolStripButton7 As ToolStripButton
+    Friend WithEvents Button1 As Button
 End Class

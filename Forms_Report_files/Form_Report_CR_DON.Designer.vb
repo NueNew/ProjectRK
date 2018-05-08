@@ -44,7 +44,7 @@ Partial Class Form_Report_CR_DON
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "Form_Report_CR_DON"
-        Me.Text = "Form_Report_CR_DON"
+        Me.Text = "แสดงใบอนุโมทนาบุญ"
         Me.ResumeLayout(False)
 
     End Sub

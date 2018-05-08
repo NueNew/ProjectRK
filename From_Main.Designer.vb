@@ -26,12 +26,8 @@ Partial Class From_Main
         Me.ทะเบยนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ผบรจาคToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.เรองบรจาคToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ประเภทบรจาคToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.วตถมงคลToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ประเภทวตถมงคลToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.พนกงานวดมคนายกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,16 +45,22 @@ Partial Class From_Main
         Me.ใบแสดงคาใชจายToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.งบดลToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.เกยวกบToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ออกจากระบบToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.header = New System.Windows.Forms.Label()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ทะเบยนToolStripMenuItem, Me.รายการToolStripMenuItem, Me.รายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem, Me.ออกจากระบบToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ทะเบยนToolStripMenuItem, Me.รายการToolStripMenuItem, Me.รายงานToolStripMenuItem, Me.ออกจากระบบToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 703)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
         Me.MenuStrip1.Size = New System.Drawing.Size(784, 46)
@@ -67,14 +69,16 @@ Partial Class From_Main
         '
         'ทะเบยนToolStripMenuItem
         '
-        Me.ทะเบยนToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ผบรจาคToolStripMenuItem, Me.ToolStripSeparator1, Me.เรองบรจาคToolStripMenuItem, Me.ประเภทบรจาคToolStripMenuItem, Me.ToolStripSeparator2, Me.วตถมงคลToolStripMenuItem, Me.ประเภทวตถมงคลToolStripMenuItem, Me.ToolStripSeparator8, Me.ToolStripMenuItem1, Me.ToolStripSeparator3, Me.พนกงานวดมคนายกToolStripMenuItem})
+        Me.ทะเบยนToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ผบรจาคToolStripMenuItem, Me.ToolStripSeparator1, Me.ประเภทบรจาคToolStripMenuItem, Me.ToolStripSeparator2, Me.ToolStripMenuItem1, Me.ToolStripSeparator3, Me.ToolStripMenuItem3, Me.ToolStripMenuItem2, Me.ToolStripSeparator8, Me.พนกงานวดมคนายกToolStripMenuItem})
         Me.ทะเบยนToolStripMenuItem.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ทะเบยนToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._018_star
         Me.ทะเบยนToolStripMenuItem.Name = "ทะเบยนToolStripMenuItem"
-        Me.ทะเบยนToolStripMenuItem.Size = New System.Drawing.Size(96, 40)
+        Me.ทะเบยนToolStripMenuItem.Size = New System.Drawing.Size(112, 40)
         Me.ทะเบยนToolStripMenuItem.Text = "ทะเบียน"
         '
         'ผบรจาคToolStripMenuItem
         '
+        Me.ผบรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._002_add_user
         Me.ผบรจาคToolStripMenuItem.Name = "ผบรจาคToolStripMenuItem"
         Me.ผบรจาคToolStripMenuItem.Size = New System.Drawing.Size(278, 40)
         Me.ผบรจาคToolStripMenuItem.Text = "ผู้บริจาค"
@@ -83,12 +87,6 @@ Partial Class From_Main
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(275, 6)
-        '
-        'เรองบรจาคToolStripMenuItem
-        '
-        Me.เรองบรจาคToolStripMenuItem.Name = "เรองบรจาคToolStripMenuItem"
-        Me.เรองบรจาคToolStripMenuItem.Size = New System.Drawing.Size(278, 40)
-        Me.เรองบรจาคToolStripMenuItem.Text = "เรื่องบริจาค"
         '
         'ประเภทบรจาคToolStripMenuItem
         '
@@ -100,23 +98,6 @@ Partial Class From_Main
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(275, 6)
-        '
-        'วตถมงคลToolStripMenuItem
-        '
-        Me.วตถมงคลToolStripMenuItem.Name = "วตถมงคลToolStripMenuItem"
-        Me.วตถมงคลToolStripMenuItem.Size = New System.Drawing.Size(278, 40)
-        Me.วตถมงคลToolStripMenuItem.Text = "วัตถุมงคล"
-        '
-        'ประเภทวตถมงคลToolStripMenuItem
-        '
-        Me.ประเภทวตถมงคลToolStripMenuItem.Name = "ประเภทวตถมงคลToolStripMenuItem"
-        Me.ประเภทวตถมงคลToolStripMenuItem.Size = New System.Drawing.Size(278, 40)
-        Me.ประเภทวตถมงคลToolStripMenuItem.Text = "ประเภทวัตถุมงคล"
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(275, 6)
         '
         'ToolStripMenuItem1
         '
@@ -139,12 +120,14 @@ Partial Class From_Main
         '
         Me.รายการToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.บรจาคToolStripMenuItem, Me.ToolStripSeparator4, Me.จำหนายวตถมงคลToolStripMenuItem, Me.ToolStripSeparator5, Me.รายจายToolStripMenuItem})
         Me.รายการToolStripMenuItem.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.รายการToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._004_pie_chart
         Me.รายการToolStripMenuItem.Name = "รายการToolStripMenuItem"
-        Me.รายการToolStripMenuItem.Size = New System.Drawing.Size(91, 40)
+        Me.รายการToolStripMenuItem.Size = New System.Drawing.Size(107, 40)
         Me.รายการToolStripMenuItem.Text = "รายการ"
         '
         'บรจาคToolStripMenuItem
         '
+        Me.บรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.change
         Me.บรจาคToolStripMenuItem.Name = "บรจาคToolStripMenuItem"
         Me.บรจาคToolStripMenuItem.Size = New System.Drawing.Size(245, 40)
         Me.บรจาคToolStripMenuItem.Text = "บริจาค"
@@ -156,6 +139,7 @@ Partial Class From_Main
         '
         'จำหนายวตถมงคลToolStripMenuItem
         '
+        Me.จำหนายวตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._004_cash_register
         Me.จำหนายวตถมงคลToolStripMenuItem.Name = "จำหนายวตถมงคลToolStripMenuItem"
         Me.จำหนายวตถมงคลToolStripMenuItem.Size = New System.Drawing.Size(245, 40)
         Me.จำหนายวตถมงคลToolStripMenuItem.Text = "จำหน่ายวัตถุมงคล"
@@ -167,6 +151,7 @@ Partial Class From_Main
         '
         'รายจายToolStripMenuItem
         '
+        Me.รายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.get_money
         Me.รายจายToolStripMenuItem.Name = "รายจายToolStripMenuItem"
         Me.รายจายToolStripMenuItem.Size = New System.Drawing.Size(245, 40)
         Me.รายจายToolStripMenuItem.Text = "รายจ่าย"
@@ -175,12 +160,14 @@ Partial Class From_Main
         '
         Me.รายงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ใบอนโมทนาบญToolStripMenuItem, Me.ใบเสรจวตถมงคลToolStripMenuItem, Me.ToolStripSeparator7, Me.รายงานนำเขาสนคาToolStripMenuItem, Me.ใบแสดงคาใชจายToolStripMenuItem, Me.ToolStripSeparator6, Me.งบดลToolStripMenuItem})
         Me.รายงานToolStripMenuItem.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.รายงานToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._017_notepad
         Me.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem"
-        Me.รายงานToolStripMenuItem.Size = New System.Drawing.Size(92, 40)
+        Me.รายงานToolStripMenuItem.Size = New System.Drawing.Size(108, 40)
         Me.รายงานToolStripMenuItem.Text = "รายงาน"
         '
         'ใบอนโมทนาบญToolStripMenuItem
         '
+        Me.ใบอนโมทนาบญToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.investment
         Me.ใบอนโมทนาบญToolStripMenuItem.Name = "ใบอนโมทนาบญToolStripMenuItem"
         Me.ใบอนโมทนาบญToolStripMenuItem.Size = New System.Drawing.Size(316, 40)
         Me.ใบอนโมทนาบญToolStripMenuItem.Text = "ใบอนุโมทนาบุญ"
@@ -215,23 +202,57 @@ Partial Class From_Main
         '
         'งบดลToolStripMenuItem
         '
+        Me.งบดลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._019_shuffle
         Me.งบดลToolStripMenuItem.Name = "งบดลToolStripMenuItem"
         Me.งบดลToolStripMenuItem.Size = New System.Drawing.Size(316, 40)
         Me.งบดลToolStripMenuItem.Text = "รายได้ - รายจ่าย"
         '
-        'เกยวกบToolStripMenuItem
-        '
-        Me.เกยวกบToolStripMenuItem.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
-        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(95, 40)
-        Me.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ"
-        '
         'ออกจากระบบToolStripMenuItem
         '
         Me.ออกจากระบบToolStripMenuItem.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ออกจากระบบToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._068_padlock
         Me.ออกจากระบบToolStripMenuItem.Name = "ออกจากระบบToolStripMenuItem"
-        Me.ออกจากระบบToolStripMenuItem.Size = New System.Drawing.Size(146, 40)
+        Me.ออกจากระบบToolStripMenuItem.Size = New System.Drawing.Size(162, 40)
         Me.ออกจากระบบToolStripMenuItem.Text = "ออกจากระบบ"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.header)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(784, 47)
+        Me.Panel1.TabIndex = 1
+        '
+        'header
+        '
+        Me.header.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.header.AutoSize = True
+        Me.header.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.header.Location = New System.Drawing.Point(261, 8)
+        Me.header.Name = "header"
+        Me.header.Size = New System.Drawing.Size(253, 36)
+        Me.header.TabIndex = 0
+        Me.header.Text = "ระบบบริหารจัดการรายได้วัด"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(278, 40)
+        Me.ToolStripMenuItem2.Text = "วัตถุมงคล"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(278, 40)
+        Me.ToolStripMenuItem3.Text = "ประเภทวัตถุมงคล"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(275, 6)
         '
         'From_Main
         '
@@ -240,16 +261,22 @@ Partial Class From_Main
         Me.BackgroundImage = Global.ProjectRK.My.Resources.Resources._2887
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 749)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(6, 9, 6, 9)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "From_Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "From_Main"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -259,15 +286,11 @@ Partial Class From_Main
     Friend WithEvents ทะเบยนToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents รายการToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents รายงานToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents เกยวกบToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ออกจากระบบToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ผบรจาคToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents เรองบรจาคToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ประเภทบรจาคToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents วตถมงคลToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ประเภทวตถมงคลToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents พนกงานวดมคนายกToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents บรจาคToolStripMenuItem As ToolStripMenuItem
@@ -282,6 +305,10 @@ Partial Class From_Main
     Friend WithEvents ใบแสดงคาใชจายToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents งบดลToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents header As Label
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
 End Class

@@ -24,6 +24,15 @@ Partial Class Form_CategoryE
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_CategoryE))
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ButtonOK = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextSearch = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextID = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
@@ -37,21 +46,116 @@ Partial Class Form_CategoryE
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
+        Me.TextName = New System.Windows.Forms.TextBox()
         Me.TextDetail = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextID = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ButtonOK = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextSearch = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.ButtonOK)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.TextSearch)
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1008, 98)
+        Me.Panel1.TabIndex = 146
+        '
+        'ButtonOK
+        '
+        Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ButtonOK.Location = New System.Drawing.Point(895, 29)
+        Me.ButtonOK.Margin = New System.Windows.Forms.Padding(6)
+        Me.ButtonOK.Name = "ButtonOK"
+        Me.ButtonOK.Size = New System.Drawing.Size(71, 32)
+        Me.ButtonOK.TabIndex = 26
+        Me.ButtonOK.Text = "ตกลง"
+        Me.ButtonOK.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(465, 34)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(109, 29)
+        Me.Label10.TabIndex = 24
+        Me.Label10.Text = "ค้นหา(ชื่อ)"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Location = New System.Drawing.Point(41, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 79)
+        Me.Button1.TabIndex = 147
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'TextSearch
+        '
+        Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextSearch.Location = New System.Drawing.Point(593, 32)
+        Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
+        Me.TextSearch.Name = "TextSearch"
+        Me.TextSearch.Size = New System.Drawing.Size(277, 34)
+        Me.TextSearch.TabIndex = 25
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Brown
+        Me.Label12.Location = New System.Drawing.Point(141, 24)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(359, 46)
+        Me.Label12.TabIndex = 23
+        Me.Label12.Text = "จัดการประเภท รายจ่าย"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(303, 135)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 29)
+        Me.Label1.TabIndex = 147
+        Me.Label1.Text = "รหัส"
+        '
+        'TextID
+        '
+        Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextID.Location = New System.Drawing.Point(309, 171)
+        Me.TextID.Margin = New System.Windows.Forms.Padding(6)
+        Me.TextID.Name = "TextID"
+        Me.TextID.ReadOnly = True
+        Me.TextID.Size = New System.Drawing.Size(226, 34)
+        Me.TextID.TabIndex = 148
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(303, 242)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(122, 29)
+        Me.Label2.TabIndex = 149
+        Me.Label2.Text = "ชื่อหมวดหมู่"
         '
         'BindingNavigator1
         '
@@ -65,15 +169,15 @@ Partial Class Form_CategoryE
         Me.BindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(40, 40)
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton7})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(266, 566)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(271, 547)
         Me.BindingNavigator1.MoveFirstItem = Me.ToolStripButton3
         Me.BindingNavigator1.MoveLastItem = Me.ToolStripButton6
         Me.BindingNavigator1.MoveNextItem = Me.ToolStripButton5
         Me.BindingNavigator1.MovePreviousItem = Me.ToolStripButton4
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(460, 47)
-        Me.BindingNavigator1.TabIndex = 145
+        Me.BindingNavigator1.Size = New System.Drawing.Size(522, 47)
+        Me.BindingNavigator1.TabIndex = 153
         Me.BindingNavigator1.Text = "BindingNavigator2"
         '
         'ToolStripButton1
@@ -89,7 +193,7 @@ Partial Class Form_CategoryE
         '
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 44)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(102, 44)
         Me.ToolStripLabel1.Text = "จาก    {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -173,155 +277,74 @@ Partial Class Form_CategoryE
         Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton7.Text = "&Save"
         '
+        'TextName
+        '
+        Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextName.Location = New System.Drawing.Point(309, 279)
+        Me.TextName.Margin = New System.Windows.Forms.Padding(6)
+        Me.TextName.Name = "TextName"
+        Me.TextName.Size = New System.Drawing.Size(418, 34)
+        Me.TextName.TabIndex = 150
+        '
         'TextDetail
         '
         Me.TextDetail.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextDetail.Location = New System.Drawing.Point(314, 369)
+        Me.TextDetail.Location = New System.Drawing.Point(309, 388)
         Me.TextDetail.Margin = New System.Windows.Forms.Padding(6)
         Me.TextDetail.Multiline = True
         Me.TextDetail.Name = "TextDetail"
         Me.TextDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextDetail.Size = New System.Drawing.Size(428, 146)
-        Me.TextDetail.TabIndex = 144
+        Me.TextDetail.Size = New System.Drawing.Size(428, 108)
+        Me.TextDetail.TabIndex = 152
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(308, 333)
+        Me.Label5.Location = New System.Drawing.Point(303, 352)
         Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 24)
-        Me.Label5.TabIndex = 143
+        Me.Label5.Size = New System.Drawing.Size(117, 29)
+        Me.Label5.TabIndex = 151
         Me.Label5.Text = "รายละเอียด"
-        '
-        'TextName
-        '
-        Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextName.Location = New System.Drawing.Point(314, 260)
-        Me.TextName.Margin = New System.Windows.Forms.Padding(6)
-        Me.TextName.Name = "TextName"
-        Me.TextName.Size = New System.Drawing.Size(418, 29)
-        Me.TextName.TabIndex = 142
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(308, 223)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 24)
-        Me.Label2.TabIndex = 141
-        Me.Label2.Text = "ชื่อหมวดหมู่"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(308, 116)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 24)
-        Me.Label1.TabIndex = 139
-        Me.Label1.Text = "รหัส"
-        '
-        'TextID
-        '
-        Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextID.Location = New System.Drawing.Point(314, 152)
-        Me.TextID.Margin = New System.Windows.Forms.Padding(6)
-        Me.TextID.Name = "TextID"
-        Me.TextID.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(226, 29)
-        Me.TextID.TabIndex = 140
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.ButtonOK)
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.TextSearch)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1008, 83)
-        Me.Panel1.TabIndex = 146
-        '
-        'ButtonOK
-        '
-        Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ButtonOK.Location = New System.Drawing.Point(854, 20)
-        Me.ButtonOK.Margin = New System.Windows.Forms.Padding(6)
-        Me.ButtonOK.Name = "ButtonOK"
-        Me.ButtonOK.Size = New System.Drawing.Size(105, 50)
-        Me.ButtonOK.TabIndex = 26
-        Me.ButtonOK.Text = "ตกลง"
-        Me.ButtonOK.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(433, 29)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 24)
-        Me.Label10.TabIndex = 24
-        Me.Label10.Text = "ค้นหา(ชื่อ)"
-        '
-        'TextSearch
-        '
-        Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextSearch.Location = New System.Drawing.Point(563, 23)
-        Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
-        Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(277, 29)
-        Me.TextSearch.TabIndex = 25
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Brown
-        Me.Label12.Location = New System.Drawing.Point(22, 20)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(275, 37)
-        Me.Label12.TabIndex = 23
-        Me.Label12.Text = "จัดการประเภท บริจาค"
         '
         'Form_CategoryE
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.BindingNavigator1)
-        Me.Controls.Add(Me.TextDetail)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextName)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextID)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.BindingNavigator1)
+        Me.Controls.Add(Me.TextName)
+        Me.Controls.Add(Me.TextDetail)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_CategoryE"
         Me.Text = "Form_CategoryE"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents ButtonOK As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TextSearch As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextID As TextBox
+    Friend WithEvents Label2 As Label
     Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
@@ -335,15 +358,7 @@ Partial Class Form_CategoryE
     Friend WithEvents ToolStripButton6 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents ToolStripButton7 As ToolStripButton
+    Friend WithEvents TextName As TextBox
     Friend WithEvents TextDetail As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextName As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextID As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents ButtonOK As Button
-    Friend WithEvents Label10 As Label
-    Friend WithEvents TextSearch As TextBox
-    Friend WithEvents Label12 As Label
 End Class

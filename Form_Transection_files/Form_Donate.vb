@@ -30,6 +30,7 @@ Public Class Form_Donate
 
 
         lsvProductList.Columns.Add("รหัสสินค้า", 81, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("ประเภทสินค้า", 100, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ชื่อบริจาค", 150, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("จำนวนเงิน", 70, HorizontalAlignment.Right)
         lsvProductList.View = View.Details
@@ -45,14 +46,27 @@ Public Class Form_Donate
             .DataSource = es.ToList()
             .EndUpdate()
         End With
-        txtProductDID.ContextMenu = New ContextMenu()
+
+
+        'ทำการเอาค่าจาก table CategoriesD มาแปะใน combobox เลือกประเภทบริจาค
+        Dim es1 = From em1 In db.CategoriesDs
+                  Select em1.CategoryDID, em1.CategoryDName
+        With cboCatD
+            .BeginUpdate()
+            .DisplayMember = "CategoryDName"
+            .ValueMember = "CategoryDID"
+            .DataSource = es1.ToList
+            .EndUpdate()
+        End With
+
+
+        ' txtProductDID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"
     End Sub
 
     Private Sub ClearProductData()
-        txtProductDID.Text = ""
-        lblProductDName.Text = ""
+
         txtDon.Text = "0" 'ล้างค่าช่องจำนวนเงิน
     End Sub
 
@@ -65,7 +79,7 @@ Public Class Form_Donate
             If cs.Count() > 0 Then
                 txtCustomerID.Text = cs.FirstOrDefault.CustomerID.ToString 'ลองใส่เป็น tostring
                 lblContactName.Text = cs.FirstOrDefault().CustomerName.Trim()
-                txtProductDID.Focus()
+
             Else
                 MessageBox.Show("รหัสลูกค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 ClearCustomerData()
@@ -79,49 +93,50 @@ Public Class Form_Donate
         lblContactName.Text = ""
     End Sub
 
-    Private Sub txtProductID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProductDID.KeyDown
-        If txtProductDID.Text.Trim() = "" Then Exit Sub
-        If e.KeyCode = Keys.Enter Then
-            Dim ps = From p In db.ProductsDs Select p.ProductDID, p.ProductDName
-                     Where ProductDID = CInt(txtProductDID.Text)
+    'Private Sub txtProductID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProductDID.KeyDown
+    '    If txtProductDID.Text.Trim() = "" Then Exit Sub
+    '    If e.KeyCode = Keys.Enter Then
+    '        Dim ps = From p In db.ProductsDs Select p.ProductDID, p.ProductDName
+    '                 Where ProductDID = CInt(txtProductDID.Text)
 
-            If ps.Count() > 0 Then
-                txtProductDID.Text = ps.FirstOrDefault().ProductDID.ToString()
-                lblProductDName.Text = ps.FirstOrDefault().ProductDName.Trim()
-            Else
-                MessageBox.Show("รหัสสินค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                ClearCustomerData()
-                txtProductDID.Focus()
-            End If
-        End If
-    End Sub
+    '        If ps.Count() > 0 Then
+    '            txtProductDID.Text = ps.FirstOrDefault().ProductDID.ToString()
+    '            lblProductDName.Text = ps.FirstOrDefault().ProductDName.Trim()
+    '        Else
+    '            MessageBox.Show("รหัสสินค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '            ClearCustomerData()
+    '            txtProductDID.Focus()
+    '        End If
+    '    End If
+    'End Sub
 
 
 
     Private Sub cmdAdd_Click(sender As Object, e As EventArgs) Handles cmdAdd.Click
-        If (txtProductDID.Text.Trim() = "") Or (lblProductDName.Text.Trim() = "") Then
-            txtProductDID.Focus()
-            Exit Sub
-        End If
+        'If (txtProductDID.Text.Trim() = "") Or (lblProductDName.Text.Trim() = "") Then
+        '    txtProductDID.Focus()
+        '    Exit Sub
+        'End If
 
         Dim i As Integer = 0
         Dim lvi As ListViewItem
         Dim tmpProductDID As Integer = 0
-        For i = 0 To lsvProductList.Items.Count - 1
-            tmpProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-            If CInt(txtProductDID.Text.Trim()) = tmpProductDID Then
-                MessageBox.Show("คุณเลือกสินค้าซ้ำกัน กรุณาเลือกใหม่ !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                ClearProductData()
-                txtProductDID.Focus()
-                txtProductDID.SelectAll()
-                Exit Sub
-            End If
-        Next
+        'For i = 0 To lsvProductList.Items.Count - 1
+        '    tmpProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+        '    If CInt(txtProductDID.Text.Trim()) = tmpProductDID Then
+        '        MessageBox.Show("คุณเลือกสินค้าซ้ำกัน กรุณาเลือกใหม่ !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '        ClearProductData()
+        '        txtProductDID.Focus()
+        '        txtProductDID.SelectAll()
+        '        Exit Sub
+        '    End If
+        'Next
 
         Dim anyData() As String
         anyData = New String() {
-            txtProductDID.Text,
-            lblProductDName.Text,
+            cboCatD.SelectedValue.ToString,
+            cboCatD.Text.ToString,
+            txtDetail.Text,
             txtDon.Text
         }
         lvi = New ListViewItem(anyData)
@@ -129,7 +144,7 @@ Public Class Form_Donate
         CalculateNet()
         ClearProductData()
         cmdSave.Enabled = True
-        txtProductDID.Focus()
+        txtDetail.Focus()
     End Sub
 
     Private Sub lsvProductList_DoubleClick(sender As Object, e As EventArgs) Handles lsvProductList.DoubleClick
@@ -140,14 +155,14 @@ Public Class Form_Donate
             lsvProductList.Items.Remove(lvi)
         Next
         CalculateNet()
-        txtProductDID.Focus()
+
     End Sub
 
     Private Sub CalculateNet()
         Dim i As Integer = 0
         Dim tmpNetTotal As Double = 0
         For i = 0 To lsvProductList.Items.Count - 1
-            tmpNetTotal += CDbl(lsvProductList.Items(i).SubItems(2).Text)
+            tmpNetTotal += CDbl(lsvProductList.Items(i).SubItems(3).Text)
         Next
         lblNet.Text = tmpNetTotal.ToString("#,##0.00")
     End Sub
@@ -155,12 +170,13 @@ Public Class Form_Donate
     Private Sub cmdClear_Click(sender As Object, e As EventArgs) Handles cmdClear.Click
         lsvProductList.Items.Clear()
         lblNet.Text = "0"
-        txtProductDID.Focus()
+        cboCatD.SelectedValue = 0
+        txtDetail.Focus()
     End Sub
 
     Private Sub cmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
         If txtCustomerID.Text.Trim() = "" Then
-            MessageBox.Show("กรุณาป้อนรหัสลูกค้า !!!", "ข้อผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("กรุณาป้อนรหัสผู้บริจาค !!!", "ข้อผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Information)
             txtCustomerID.Focus()
             Exit Sub
         End If
@@ -177,8 +193,9 @@ Public Class Form_Donate
 
                 For i = 0 To lsvProductList.Items.Count - 1
                     od = New OrdersDetailsD()
-                    od.ProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-                    od.Donation = CType(lsvProductList.Items(i).SubItems(2).Text, Decimal?) 'จำนวนเงินที่บริจาค 0 1 2
+                    od.CategoryDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+                    od.Donation = CType(lsvProductList.Items(i).SubItems(3).Text, Decimal?) 'จำนวนเงินที่บริจาค 0 1 2
+                    o.CBID = CType(3, Integer?)
                     o.OrdersDetailsDs.Add(od) 'ทำการใส่ข้อมูลลงในตาราง OrdersDeatailsD
                 Next
 
@@ -190,14 +207,14 @@ Public Class Form_Donate
                 MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
-                'เอาข้อมูลเข้า BalanceSheet
+                'เอาข้อมูลเข้า TEST
                 For i = 0 To lsvProductList.Items.Count - 1
                     sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@D,@N,@M,@C)"
                     command.CommandText = sql
                     command.Parameters.Clear()
                     command.Parameters.AddWithValue("D", DateTime.Now.Date)
                     command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
-                    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(2).Text)
+                    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(3).Text)
                     command.Parameters.AddWithValue("C", 1)
                     command.ExecuteNonQuery()
                 Next
@@ -212,7 +229,7 @@ Public Class Form_Donate
                 Dim rpt As New ReportDocument
                 Dim directory As String = My.Application.Info.DirectoryPath
 
-                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_DON.rpt")
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\R_DON.rpt")
                 rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
 
                 Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
@@ -220,12 +237,12 @@ Public Class Form_Donate
                 Form_Report_CR_DON.Show()
                 Form_Report_CR_DON.WindowState = FormWindowState.Maximized
                 '
-
+                Me.Close()
             End If
         End If
     End Sub
 
-    Private Sub txtProductID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProductDID.KeyPress, txtDon.KeyPress
+    Private Sub txtProductID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDon.KeyPress
         If e.KeyChar < "0" Or e.KeyChar > "9" Then
             e.Handled = True
         End If
@@ -237,4 +254,8 @@ Public Class Form_Donate
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
 End Class

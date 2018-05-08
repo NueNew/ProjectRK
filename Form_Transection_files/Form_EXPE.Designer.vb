@@ -37,12 +37,14 @@ Partial Class Form_EXPE
         Me.cmdClear = New System.Windows.Forms.Button()
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.cmdSave = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtOrderDID
         '
-        Me.txtOrderDID.Location = New System.Drawing.Point(305, 209)
+        Me.txtOrderDID.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtOrderDID.Location = New System.Drawing.Point(518, 23)
         Me.txtOrderDID.Name = "txtOrderDID"
         Me.txtOrderDID.ReadOnly = True
         Me.txtOrderDID.Size = New System.Drawing.Size(127, 29)
@@ -52,11 +54,11 @@ Partial Class Form_EXPE
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(174, 209)
+        Me.Label10.Location = New System.Drawing.Point(372, 26)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(122, 24)
+        Me.Label10.Size = New System.Drawing.Size(140, 24)
         Me.Label10.TabIndex = 31
-        Me.Label10.Text = "เลขที่ใบบริจาค :"
+        Me.Label10.Text = "เลขที่ใบค่าใช้จ่าย :"
         '
         'lblNet
         '
@@ -65,7 +67,7 @@ Partial Class Form_EXPE
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(641, 209)
+        Me.lblNet.Location = New System.Drawing.Point(423, 147)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(205, 53)
         Me.lblNet.TabIndex = 34
@@ -75,7 +77,7 @@ Partial Class Form_EXPE
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(745, 161)
+        Me.Label4.Location = New System.Drawing.Point(296, 157)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 33
@@ -91,7 +93,7 @@ Partial Class Form_EXPE
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtPrice)
-        Me.GroupBox2.Location = New System.Drawing.Point(111, 294)
+        Me.GroupBox2.Location = New System.Drawing.Point(82, 203)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(735, 311)
         Me.GroupBox2.TabIndex = 35
@@ -160,7 +162,7 @@ Partial Class Form_EXPE
         '
         Me.cmdClear.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdClear.Location = New System.Drawing.Point(887, 388)
+        Me.cmdClear.Location = New System.Drawing.Point(858, 297)
         Me.cmdClear.Name = "cmdClear"
         Me.cmdClear.Size = New System.Drawing.Size(97, 34)
         Me.cmdClear.TabIndex = 37
@@ -171,7 +173,7 @@ Partial Class Form_EXPE
         '
         Me.cmdAdd.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdAdd.Location = New System.Drawing.Point(887, 330)
+        Me.cmdAdd.Location = New System.Drawing.Point(858, 239)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(97, 34)
         Me.cmdAdd.TabIndex = 36
@@ -182,18 +184,30 @@ Partial Class Form_EXPE
         '
         Me.cmdSave.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdSave.Location = New System.Drawing.Point(887, 469)
+        Me.cmdSave.Location = New System.Drawing.Point(858, 378)
         Me.cmdSave.Name = "cmdSave"
         Me.cmdSave.Size = New System.Drawing.Size(97, 32)
         Me.cmdSave.TabIndex = 38
         Me.cmdSave.Text = "บันทึก"
         Me.cmdSave.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Location = New System.Drawing.Point(82, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 79)
+        Me.Button1.TabIndex = 141
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Form_EXPE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cmdClear)
         Me.Controls.Add(Me.cmdAdd)
@@ -203,6 +217,7 @@ Partial Class Form_EXPE
         Me.Controls.Add(Me.txtOrderDID)
         Me.Controls.Add(Me.Label10)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_EXPE"
         Me.Text = "Form_EXPE"
@@ -229,4 +244,5 @@ Partial Class Form_EXPE
     Friend WithEvents cmdSave As Button
     Friend WithEvents cboCatE As ComboBox
     Friend WithEvents txtDetail As TextBox
+    Friend WithEvents Button1 As Button
 End Class

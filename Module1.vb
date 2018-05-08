@@ -12,4 +12,5 @@ Module Module1
     Public bindingSrc As BindingSource
     Public reader As SqlDataReader
     Public sql As String
+
 End Module

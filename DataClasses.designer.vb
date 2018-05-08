@@ -109,12 +109,6 @@ Partial Public Class DataClassesDataContext
     End Sub
   Partial Private Sub DeleteProduct(instance As Product)
     End Sub
-  Partial Private Sub InsertProductsD(instance As ProductsD)
-    End Sub
-  Partial Private Sub UpdateProductsD(instance As ProductsD)
-    End Sub
-  Partial Private Sub DeleteProductsD(instance As ProductsD)
-    End Sub
   #End Region
 	
 	Public Sub New()
@@ -217,12 +211,6 @@ Partial Public Class DataClassesDataContext
 	Public ReadOnly Property Products() As System.Data.Linq.Table(Of Product)
 		Get
 			Return Me.GetTable(Of Product)
-		End Get
-	End Property
-	
-	Public ReadOnly Property ProductsDs() As System.Data.Linq.Table(Of ProductsD)
-		Get
-			Return Me.GetTable(Of ProductsD)
 		End Get
 	End Property
 End Class
@@ -552,7 +540,7 @@ Partial Public Class CategoriesD
 	
 	Private _Description As String
 	
-	Private _ProductsDs As EntitySet(Of ProductsD)
+	Private _OrdersDetailsDs As EntitySet(Of OrdersDetailsD)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -577,7 +565,7 @@ Partial Public Class CategoriesD
 	
 	Public Sub New()
 		MyBase.New
-		Me._ProductsDs = New EntitySet(Of ProductsD)(AddressOf Me.attach_ProductsDs, AddressOf Me.detach_ProductsDs)
+		Me._OrdersDetailsDs = New EntitySet(Of OrdersDetailsD)(AddressOf Me.attach_OrdersDetailsDs, AddressOf Me.detach_OrdersDetailsDs)
 		OnCreated
 	End Sub
 	
@@ -630,13 +618,13 @@ Partial Public Class CategoriesD
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesD_ProductsD", Storage:="_ProductsDs", ThisKey:="CategoryDID", OtherKey:="CategoryDID")>  _
-	Public Property ProductsDs() As EntitySet(Of ProductsD)
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesD_OrdersDetailsD", Storage:="_OrdersDetailsDs", ThisKey:="CategoryDID", OtherKey:="CategoryDID")>  _
+	Public Property OrdersDetailsDs() As EntitySet(Of OrdersDetailsD)
 		Get
-			Return Me._ProductsDs
+			Return Me._OrdersDetailsDs
 		End Get
 		Set
-			Me._ProductsDs.Assign(value)
+			Me._OrdersDetailsDs.Assign(value)
 		End Set
 	End Property
 	
@@ -658,12 +646,12 @@ Partial Public Class CategoriesD
 		End If
 	End Sub
 	
-	Private Sub attach_ProductsDs(ByVal entity As ProductsD)
+	Private Sub attach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
 		Me.SendPropertyChanging
 		entity.CategoriesD = Me
 	End Sub
 	
-	Private Sub detach_ProductsDs(ByVal entity As ProductsD)
+	Private Sub detach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
 		Me.SendPropertyChanging
 		entity.CategoriesD = Nothing
 	End Sub
@@ -2427,13 +2415,15 @@ Partial Public Class OrdersDetailsD
 	
 	Private _OrderDID As Integer
 	
-	Private _ProductDID As Integer
+	Private _CategoryDID As Integer
 	
 	Private _Donation As System.Nullable(Of Decimal)
 	
-	Private _OrdersD As EntityRef(Of OrdersD)
+	Private _Detail As String
 	
-	Private _ProductsD As EntityRef(Of ProductsD)
+	Private _CategoriesD As EntityRef(Of CategoriesD)
+	
+	Private _OrdersD As EntityRef(Of OrdersD)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -2446,20 +2436,24 @@ Partial Public Class OrdersDetailsD
     End Sub
     Partial Private Sub OnOrderDIDChanged()
     End Sub
-    Partial Private Sub OnProductDIDChanging(value As Integer)
+    Partial Private Sub OnCategoryDIDChanging(value As Integer)
     End Sub
-    Partial Private Sub OnProductDIDChanged()
+    Partial Private Sub OnCategoryDIDChanged()
     End Sub
     Partial Private Sub OnDonationChanging(value As System.Nullable(Of Decimal))
     End Sub
     Partial Private Sub OnDonationChanged()
     End Sub
+    Partial Private Sub OnDetailChanging(value As String)
+    End Sub
+    Partial Private Sub OnDetailChanged()
+    End Sub
     #End Region
 	
 	Public Sub New()
 		MyBase.New
+		Me._CategoriesD = CType(Nothing, EntityRef(Of CategoriesD))
 		Me._OrdersD = CType(Nothing, EntityRef(Of OrdersD))
-		Me._ProductsD = CType(Nothing, EntityRef(Of ProductsD))
 		OnCreated
 	End Sub
 	
@@ -2483,22 +2477,22 @@ Partial Public Class OrdersDetailsD
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ProductDID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property ProductDID() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryDID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property CategoryDID() As Integer
 		Get
-			Return Me._ProductDID
+			Return Me._CategoryDID
 		End Get
 		Set
-			If ((Me._ProductDID = value)  _
+			If ((Me._CategoryDID = value)  _
 						= false) Then
-				If Me._ProductsD.HasLoadedOrAssignedValue Then
+				If Me._CategoriesD.HasLoadedOrAssignedValue Then
 					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
 				End If
-				Me.OnProductDIDChanging(value)
+				Me.OnCategoryDIDChanging(value)
 				Me.SendPropertyChanging
-				Me._ProductDID = value
-				Me.SendPropertyChanged("ProductDID")
-				Me.OnProductDIDChanged
+				Me._CategoryDID = value
+				Me.SendPropertyChanged("CategoryDID")
+				Me.OnCategoryDIDChanged
 			End If
 		End Set
 	End Property
@@ -2515,6 +2509,50 @@ Partial Public Class OrdersDetailsD
 				Me._Donation = value
 				Me.SendPropertyChanged("Donation")
 				Me.OnDonationChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Detail", DbType:="NVarChar(500)")>  _
+	Public Property Detail() As String
+		Get
+			Return Me._Detail
+		End Get
+		Set
+			If (String.Equals(Me._Detail, value) = false) Then
+				Me.OnDetailChanging(value)
+				Me.SendPropertyChanging
+				Me._Detail = value
+				Me.SendPropertyChanged("Detail")
+				Me.OnDetailChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesD_OrdersDetailsD", Storage:="_CategoriesD", ThisKey:="CategoryDID", OtherKey:="CategoryDID", IsForeignKey:=true)>  _
+	Public Property CategoriesD() As CategoriesD
+		Get
+			Return Me._CategoriesD.Entity
+		End Get
+		Set
+			Dim previousValue As CategoriesD = Me._CategoriesD.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._CategoriesD.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._CategoriesD.Entity = Nothing
+					previousValue.OrdersDetailsDs.Remove(Me)
+				End If
+				Me._CategoriesD.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDetailsDs.Add(Me)
+					Me._CategoryDID = value.CategoryDID
+				Else
+					Me._CategoryDID = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("CategoriesD")
 			End If
 		End Set
 	End Property
@@ -2543,34 +2581,6 @@ Partial Public Class OrdersDetailsD
 					Me._OrderDID = CType(Nothing, Integer)
 				End If
 				Me.SendPropertyChanged("OrdersD")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="ProductsD_OrdersDetailsD", Storage:="_ProductsD", ThisKey:="ProductDID", OtherKey:="ProductDID", IsForeignKey:=true)>  _
-	Public Property ProductsD() As ProductsD
-		Get
-			Return Me._ProductsD.Entity
-		End Get
-		Set
-			Dim previousValue As ProductsD = Me._ProductsD.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._ProductsD.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._ProductsD.Entity = Nothing
-					previousValue.OrdersDetailsDs.Remove(Me)
-				End If
-				Me._ProductsD.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.OrdersDetailsDs.Add(Me)
-					Me._ProductDID = value.ProductDID
-				Else
-					Me._ProductDID = CType(Nothing, Integer)
-				End If
-				Me.SendPropertyChanged("ProductsD")
 			End If
 		End Set
 	End Property
@@ -2864,190 +2874,5 @@ Partial Public Class Product
 	Private Sub detach_OrdersDetails(ByVal entity As OrdersDetail)
 		Me.SendPropertyChanging
 		entity.Product = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.ProductsD")>  _
-Partial Public Class ProductsD
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _ProductDID As Integer
-	
-	Private _ProductDName As String
-	
-	Private _CategoryDID As System.Nullable(Of Integer)
-	
-	Private _QuantityPerUnit As String
-	
-	Private _OrdersDetailsDs As EntitySet(Of OrdersDetailsD)
-	
-	Private _CategoriesD As EntityRef(Of CategoriesD)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnProductDIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnProductDIDChanged()
-    End Sub
-    Partial Private Sub OnProductDNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnProductDNameChanged()
-    End Sub
-    Partial Private Sub OnCategoryDIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnCategoryDIDChanged()
-    End Sub
-    Partial Private Sub OnQuantityPerUnitChanging(value As String)
-    End Sub
-    Partial Private Sub OnQuantityPerUnitChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._OrdersDetailsDs = New EntitySet(Of OrdersDetailsD)(AddressOf Me.attach_OrdersDetailsDs, AddressOf Me.detach_OrdersDetailsDs)
-		Me._CategoriesD = CType(Nothing, EntityRef(Of CategoriesD))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ProductDID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property ProductDID() As Integer
-		Get
-			Return Me._ProductDID
-		End Get
-		Set
-			If ((Me._ProductDID = value)  _
-						= false) Then
-				Me.OnProductDIDChanging(value)
-				Me.SendPropertyChanging
-				Me._ProductDID = value
-				Me.SendPropertyChanged("ProductDID")
-				Me.OnProductDIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ProductDName", DbType:="NVarChar(50)")>  _
-	Public Property ProductDName() As String
-		Get
-			Return Me._ProductDName
-		End Get
-		Set
-			If (String.Equals(Me._ProductDName, value) = false) Then
-				Me.OnProductDNameChanging(value)
-				Me.SendPropertyChanging
-				Me._ProductDName = value
-				Me.SendPropertyChanged("ProductDName")
-				Me.OnProductDNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryDID", DbType:="Int")>  _
-	Public Property CategoryDID() As System.Nullable(Of Integer)
-		Get
-			Return Me._CategoryDID
-		End Get
-		Set
-			If (Me._CategoryDID.Equals(value) = false) Then
-				If Me._CategoriesD.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnCategoryDIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CategoryDID = value
-				Me.SendPropertyChanged("CategoryDID")
-				Me.OnCategoryDIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_QuantityPerUnit", DbType:="NVarChar(500)")>  _
-	Public Property QuantityPerUnit() As String
-		Get
-			Return Me._QuantityPerUnit
-		End Get
-		Set
-			If (String.Equals(Me._QuantityPerUnit, value) = false) Then
-				Me.OnQuantityPerUnitChanging(value)
-				Me.SendPropertyChanging
-				Me._QuantityPerUnit = value
-				Me.SendPropertyChanged("QuantityPerUnit")
-				Me.OnQuantityPerUnitChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="ProductsD_OrdersDetailsD", Storage:="_OrdersDetailsDs", ThisKey:="ProductDID", OtherKey:="ProductDID")>  _
-	Public Property OrdersDetailsDs() As EntitySet(Of OrdersDetailsD)
-		Get
-			Return Me._OrdersDetailsDs
-		End Get
-		Set
-			Me._OrdersDetailsDs.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesD_ProductsD", Storage:="_CategoriesD", ThisKey:="CategoryDID", OtherKey:="CategoryDID", IsForeignKey:=true)>  _
-	Public Property CategoriesD() As CategoriesD
-		Get
-			Return Me._CategoriesD.Entity
-		End Get
-		Set
-			Dim previousValue As CategoriesD = Me._CategoriesD.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._CategoriesD.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._CategoriesD.Entity = Nothing
-					previousValue.ProductsDs.Remove(Me)
-				End If
-				Me._CategoriesD.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.ProductsDs.Add(Me)
-					Me._CategoryDID = value.CategoryDID
-				Else
-					Me._CategoryDID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("CategoriesD")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
-		Me.SendPropertyChanging
-		entity.ProductsD = Me
-	End Sub
-	
-	Private Sub detach_OrdersDetailsDs(ByVal entity As OrdersDetailsD)
-		Me.SendPropertyChanging
-		entity.ProductsD = Nothing
 	End Sub
 End Class

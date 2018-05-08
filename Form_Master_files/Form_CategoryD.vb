@@ -65,7 +65,7 @@ Public Class Form_CategoryD
 
     Private Sub UpdateData()
         sql = "UPDATE CategoriesD SET CategoryDName = @n, Description = @d 
-               WHERE CatID = @i"
+               WHERE CategoryDID = @i"
 
         command.CommandText = sql
         command.Parameters.Clear()
@@ -165,5 +165,10 @@ Public Class Form_CategoryD
             MessageBox.Show("ข้อมูลถูกลบแล้ว")
             BindingData()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
     End Sub
 End Class

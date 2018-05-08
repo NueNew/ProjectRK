@@ -37,13 +37,6 @@ Public Class Form_Category
         CreateAutoComplete()
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) 
-        If TextID.Text = "" Then
-            InsertData()
-        Else
-            UpdateData()
-        End If
-    End Sub
 
     Private Sub InsertData()
         sql = "INSERT INTO Categories(CategoryName, Description) 
@@ -65,7 +58,7 @@ Public Class Form_Category
 
     Private Sub UpdateData()
         sql = "UPDATE Categories SET CategoryName = @n, Description = @d 
-               WHERE CatID = @i"
+               WHERE CategoryID = @i"
 
         command.CommandText = sql
         command.Parameters.Clear()
@@ -131,18 +124,6 @@ Public Class Form_Category
         BindingData(command)
     End Sub
 
-    Private Sub Form_Category_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
-    End Sub
-
-    Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
-        If TextID.Text = "" Then
-            InsertData()
-        Else
-            UpdateData()
-        End If
-    End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
         Dim result As DialogResult =
@@ -164,6 +145,19 @@ Public Class Form_Category
         Else
             MessageBox.Show("ข้อมูลถูกลบแล้ว")
             BindingData()
+        End If
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
+
+    Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
+        If TextID.Text = "" Then
+            InsertData()
+        Else
+            UpdateData()
         End If
     End Sub
 End Class

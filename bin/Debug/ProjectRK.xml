@@ -22,7 +22,62 @@ ProjectRK
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ProjectRK.My.Resources.Resources._002_add_user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._004_cash_register">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._004_pie_chart">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._017_notepad">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._018_star">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._018_star1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._019_shuffle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._028_home">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._028_home1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._028_home2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProjectRK.My.Resources.Resources._057_diskette">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._068_padlock">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -32,7 +87,32 @@ ProjectRK
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProjectRK.My.Resources.Resources._2887_renamed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._7070_home">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProjectRK.My.Resources.Resources.Bangkok_Vector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.change">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.get_money">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.investment">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

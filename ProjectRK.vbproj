@@ -120,6 +120,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms_Report_files\CR_BL.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +161,12 @@
     </Compile>
     <Compile Include="Forms_Report_files\Form_Report_CR_POS.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\R_DON.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_DON.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\รายงานนำเข้าสินค้า.vb">
       <AutoGen>True</AutoGen>
@@ -211,16 +223,16 @@
     <Compile Include="Form_Master_files\Form_Product.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Master_files\Form_ProductD.Designer.vb">
-      <DependentUpon>Form_ProductD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Master_files\Form_ProductD.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_Master_files\From_Customers.Designer.vb">
       <DependentUpon>From_Customers.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Master_files\From_Customers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Transection_files\FindR_DON.Designer.vb">
+      <DependentUpon>FindR_DON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transection_files\FindR_DON.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Transection_files\Form_Donate.Designer.vb">
@@ -247,6 +259,12 @@
     <Compile Include="From_Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MF.Designer.vb">
+      <DependentUpon>MF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MF.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -262,24 +280,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Test\CrystalReport1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Test\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Test\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Test\Form2.vb">
-      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +302,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_POS.resx">
       <DependentUpon>Form_Report_CR_POS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\R_DON.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_DON.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\รายงานนำเข้าสินค้า.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -333,11 +337,11 @@
     <EmbeddedResource Include="Form_Master_files\Form_Product.resx">
       <DependentUpon>Form_Product.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Master_files\Form_ProductD.resx">
-      <DependentUpon>Form_ProductD.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_Master_files\From_Customers.resx">
       <DependentUpon>From_Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transection_files\FindR_DON.resx">
+      <DependentUpon>FindR_DON.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_Donate.resx">
       <DependentUpon>Form_Donate.vb</DependentUpon>
@@ -351,21 +355,14 @@
     <EmbeddedResource Include="From_Main.resx">
       <DependentUpon>From_Main.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MF.resx">
+      <DependentUpon>MF.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -400,6 +397,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resouce\057-diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\017-notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\018-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\004-pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\068-padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\002-add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\investment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\019-shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\004-cash-register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\get-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\028-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\icon7070\7070-home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\icon7070\028-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2887_renamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -310,4 +310,9 @@ Public Class Form_POS
     Private Sub num_exit_ValueChanged(sender As Object, e As EventArgs) Handles num_exit.ValueChanged
         CalculateTotal()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
 End Class

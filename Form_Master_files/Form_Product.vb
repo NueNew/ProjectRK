@@ -211,10 +211,6 @@ Public Class Form_Product
         BindingData(command)
     End Sub
 
-    Private Sub Form_Product_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dim frm As New From_Main()
-        frm.Show()
-    End Sub
 
     Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
         If TextID.Text = "" Then
@@ -245,5 +241,11 @@ Public Class Form_Product
             MessageBox.Show("ข้อมูลถูกลบแล้ว")
             BindingData()
         End If
+    End Sub
+
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
     End Sub
 End Class

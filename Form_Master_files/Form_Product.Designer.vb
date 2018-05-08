@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_Product
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,12 @@ Partial Class Form_Product
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Product))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ButtonOK = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -67,23 +68,37 @@ Partial Class Form_Product
         '
         'Panel1
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.ButtonOK)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.TextSearch)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1008, 115)
+        Me.Panel1.Size = New System.Drawing.Size(1008, 109)
         Me.Panel1.TabIndex = 117
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Location = New System.Drawing.Point(52, 17)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 79)
+        Me.Button1.TabIndex = 142
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Brown
-        Me.Label12.Location = New System.Drawing.Point(185, 25)
+        Me.Label12.Location = New System.Drawing.Point(186, 30)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(214, 37)
         Me.Label12.TabIndex = 23
@@ -91,7 +106,8 @@ Partial Class Form_Product
         '
         'ButtonOK
         '
-        Me.ButtonOK.Location = New System.Drawing.Point(815, 30)
+        Me.ButtonOK.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ButtonOK.Location = New System.Drawing.Point(807, 41)
         Me.ButtonOK.Name = "ButtonOK"
         Me.ButtonOK.Size = New System.Drawing.Size(57, 31)
         Me.ButtonOK.TabIndex = 22
@@ -100,8 +116,9 @@ Partial Class Form_Product
         '
         'Label16
         '
+        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(559, 32)
+        Me.Label16.Location = New System.Drawing.Point(551, 43)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(91, 24)
         Me.Label16.TabIndex = 20
@@ -109,7 +126,8 @@ Partial Class Form_Product
         '
         'TextSearch
         '
-        Me.TextSearch.Location = New System.Drawing.Point(656, 32)
+        Me.TextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextSearch.Location = New System.Drawing.Point(648, 43)
         Me.TextSearch.Name = "TextSearch"
         Me.TextSearch.Size = New System.Drawing.Size(153, 29)
         Me.TextSearch.TabIndex = 21
@@ -118,7 +136,7 @@ Partial Class Form_Product
         '
         Me.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(742, 426)
+        Me.LinkLabel1.Location = New System.Drawing.Point(742, 387)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(74, 24)
         Me.LinkLabel1.TabIndex = 116
@@ -130,7 +148,7 @@ Partial Class Form_Product
         Me.ComboCategory.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboCategory.FormattingEnabled = True
-        Me.ComboCategory.Location = New System.Drawing.Point(352, 187)
+        Me.ComboCategory.Location = New System.Drawing.Point(352, 148)
         Me.ComboCategory.Name = "ComboCategory"
         Me.ComboCategory.Size = New System.Drawing.Size(195, 32)
         Me.ComboCategory.TabIndex = 114
@@ -139,7 +157,7 @@ Partial Class Form_Product
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(208, 195)
+        Me.Label9.Location = New System.Drawing.Point(208, 156)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 24)
         Me.Label9.TabIndex = 113
@@ -149,7 +167,7 @@ Partial Class Form_Product
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(618, 187)
+        Me.PictureBox1.Location = New System.Drawing.Point(618, 148)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(198, 223)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -160,7 +178,7 @@ Partial Class Form_Product
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(149, 386)
+        Me.Label7.Location = New System.Drawing.Point(149, 347)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(156, 24)
         Me.Label7.TabIndex = 111
@@ -169,7 +187,7 @@ Partial Class Form_Product
         'TextDetail
         '
         Me.TextDetail.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextDetail.Location = New System.Drawing.Point(352, 388)
+        Me.TextDetail.Location = New System.Drawing.Point(352, 349)
         Me.TextDetail.Multiline = True
         Me.TextDetail.Name = "TextDetail"
         Me.TextDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -179,7 +197,7 @@ Partial Class Form_Product
         'TextStock
         '
         Me.TextStock.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextStock.Location = New System.Drawing.Point(352, 339)
+        Me.TextStock.Location = New System.Drawing.Point(352, 300)
         Me.TextStock.Name = "TextStock"
         Me.TextStock.Size = New System.Drawing.Size(195, 29)
         Me.TextStock.TabIndex = 109
@@ -188,7 +206,7 @@ Partial Class Form_Product
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(234, 342)
+        Me.Label6.Location = New System.Drawing.Point(234, 303)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 24)
         Me.Label6.TabIndex = 108
@@ -198,7 +216,7 @@ Partial Class Form_Product
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(252, 305)
+        Me.Label3.Location = New System.Drawing.Point(252, 266)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 24)
         Me.Label3.TabIndex = 107
@@ -207,7 +225,7 @@ Partial Class Form_Product
         'TextPrice
         '
         Me.TextPrice.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextPrice.Location = New System.Drawing.Point(352, 300)
+        Me.TextPrice.Location = New System.Drawing.Point(352, 261)
         Me.TextPrice.Name = "TextPrice"
         Me.TextPrice.Size = New System.Drawing.Size(195, 29)
         Me.TextPrice.TabIndex = 106
@@ -215,7 +233,7 @@ Partial Class Form_Product
         'TextName
         '
         Me.TextName.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextName.Location = New System.Drawing.Point(352, 262)
+        Me.TextName.Location = New System.Drawing.Point(352, 223)
         Me.TextName.Name = "TextName"
         Me.TextName.Size = New System.Drawing.Size(195, 29)
         Me.TextName.TabIndex = 105
@@ -224,7 +242,7 @@ Partial Class Form_Product
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(200, 267)
+        Me.Label2.Location = New System.Drawing.Point(200, 228)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 24)
         Me.Label2.TabIndex = 104
@@ -233,7 +251,7 @@ Partial Class Form_Product
         'TextID
         '
         Me.TextID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextID.Location = New System.Drawing.Point(352, 226)
+        Me.TextID.Location = New System.Drawing.Point(352, 187)
         Me.TextID.Name = "TextID"
         Me.TextID.ReadOnly = True
         Me.TextID.Size = New System.Drawing.Size(195, 29)
@@ -243,7 +261,7 @@ Partial Class Form_Product
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(230, 230)
+        Me.Label1.Location = New System.Drawing.Point(230, 191)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 24)
         Me.Label1.TabIndex = 102
@@ -256,7 +274,7 @@ Partial Class Form_Product
         'DateTimePicker1
         '
         Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DateTimePicker1.Location = New System.Drawing.Point(347, 542)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(347, 503)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
         Me.DateTimePicker1.TabIndex = 121
@@ -265,7 +283,7 @@ Partial Class Form_Product
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(151, 542)
+        Me.Label4.Location = New System.Drawing.Point(151, 503)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(154, 24)
         Me.Label4.TabIndex = 111
@@ -283,7 +301,7 @@ Partial Class Form_Product
         Me.BindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(40, 40)
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton7})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(275, 625)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(275, 564)
         Me.BindingNavigator1.MoveFirstItem = Me.ToolStripButton3
         Me.BindingNavigator1.MoveLastItem = Me.ToolStripButton6
         Me.BindingNavigator1.MoveNextItem = Me.ToolStripButton5
@@ -415,6 +433,7 @@ Partial Class Form_Product
         Me.Controls.Add(Me.TextID)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form_Product"
         Me.Text = "Form_Product"
@@ -464,4 +483,5 @@ Partial Class Form_Product
     Friend WithEvents ToolStripButton6 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents ToolStripButton7 As ToolStripButton
+    Friend WithEvents Button1 As Button
 End Class

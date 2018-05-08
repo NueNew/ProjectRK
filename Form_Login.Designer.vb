@@ -29,6 +29,7 @@ Partial Class Form_Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,6 +37,7 @@ Partial Class Form_Login
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBoxPassword)
         Me.GroupBox1.Controls.Add(Me.TextBoxUsername)
@@ -55,9 +57,9 @@ Partial Class Form_Login
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button1.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(246, 276)
+        Me.Button1.Location = New System.Drawing.Point(136, 280)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 45)
+        Me.Button1.Size = New System.Drawing.Size(149, 45)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "ตกลง"
         Me.Button1.UseVisualStyleBackColor = True
@@ -117,6 +119,17 @@ Partial Class Form_Login
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ชื่อผู้ใช้ :"
         '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(291, 280)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(177, 45)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "ออกจากโปรแกรม"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 28.0!)
@@ -143,4 +156,5 @@ Partial Class Form_Login
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
 End Class
