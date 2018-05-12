@@ -43,7 +43,7 @@ Public Class Form_POS
     End Sub
 
     Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        whereCboVal()
+        'whereCboVal()
         cc()
         reloadPOS()
 
@@ -57,17 +57,6 @@ Public Class Form_POS
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True
 
-
-
-        Dim es = From em In db.Employees
-                 Select em.EmployeeID, em.EmployeeName
-        With cboEmployee
-            .BeginUpdate()
-            .DisplayMember = "EmployeeName"
-            .ValueMember = "EmployeeID"
-            .DataSource = es.ToList()
-            .EndUpdate()
-        End With
         txtProductID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"

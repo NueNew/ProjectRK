@@ -35,8 +35,6 @@ Partial Class Form_Donate
         Me.txtCustomerID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cboEmployee = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.cmdClear = New System.Windows.Forms.Button()
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.lblNet = New System.Windows.Forms.Label()
@@ -173,26 +171,6 @@ Partial Class Form_Donate
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "รหัสลูกค้า :"
         '
-        'cboEmployee
-        '
-        Me.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cboEmployee.FormattingEnabled = True
-        Me.cboEmployee.Location = New System.Drawing.Point(615, 261)
-        Me.cboEmployee.Name = "cboEmployee"
-        Me.cboEmployee.Size = New System.Drawing.Size(307, 32)
-        Me.cboEmployee.TabIndex = 4
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(611, 234)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(111, 24)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "พนักงานขาย :"
-        '
         'cmdClear
         '
         Me.cmdClear.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -224,7 +202,7 @@ Partial Class Form_Donate
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(615, 163)
+        Me.lblNet.Location = New System.Drawing.Point(657, 201)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(205, 53)
         Me.lblNet.TabIndex = 28
@@ -234,7 +212,7 @@ Partial Class Form_Donate
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(682, 113)
+        Me.Label4.Location = New System.Drawing.Point(724, 151)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 27
@@ -289,10 +267,8 @@ Partial Class Form_Donate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
-        Me.Controls.Add(Me.cboEmployee)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtOrderDID)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -320,10 +296,8 @@ Partial Class Form_Donate
     Friend WithEvents lsvProductList As ListView
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents cboEmployee As ComboBox
     Friend WithEvents lblContactName As Label
     Friend WithEvents txtCustomerID As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents cmdClear As Button

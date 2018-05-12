@@ -10,25 +10,23 @@ Imports CrystalDecisions.CrystalReports.Engine
 Public Class Form_EXPE
     Dim db As New DataClassesDataContext
 
-    Private Sub wheid()
-        cboEmployee.SelectedValue = Form_Login.TextBoxUsername
-    End Sub
+
 
 
     Private Sub reloadEX()
         ''<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
         ''จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น 2
-        'If connection.State = ConnectionState.Closed Then
-        '    connection.Open()
-        'End If
+        If connection.State = ConnectionState.Closed Then
+            connection.Open()
+        End If
 
-        'command.CommandText = "SELECT * from Expenses where ExpensesID = (select max(ExpensesID) from Expenses)"
-        'adapter = New SqlDataAdapter(command)
-        'dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
-        'adapter.Fill(dataSt, "es") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        'Dim item As Integer
-        'item = CInt(dataSt.Tables("es").Rows(0).Item("ExpensesID").ToString())
-        'txtExpensesID.Text = Format(item + 1)
+        command.CommandText = "SELECT * from OrdersE where OrderEID = (select max(OrderEID) from OrdersE)"
+        adapter = New SqlDataAdapter(command)
+        dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
+        adapter.Fill(dataSt, "es") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        Dim item As Integer
+        item = CInt(dataSt.Tables("es").Rows(0).Item("OrderEID").ToString())
+        txtExpensesID.Text = Format(item + 1)
         ''ปิด>>>
         ClearData()
         ClearProductData()
@@ -37,9 +35,9 @@ Public Class Form_EXPE
     Private Sub Form_EXPE_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         reloadEX()
-        lsvProductList.Columns.Add("รหัส", 100, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("รหัส", 0, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ประเภทค่าใช้จ่าย", 150, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ชื่อรายการค่าใช้จ่าย", 300, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("รายละเอียดค่าใช้จ่าย", 300, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("จำนวนเงิน", 104, HorizontalAlignment.Right)
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
@@ -127,6 +125,8 @@ Public Class Form_EXPE
                 Dim o As New OrdersE()
                 'o.EmployeeID = DirectCast()
                 o.OrderEDate = Date.Now
+                o.EmployeeID = CType(Form_Login.emp_id, Integer?)
+
                 Dim t As New TEST() 'ทำการประกาศตัวแปร T เป็นตาราง TEST
                 Dim od As OrdersDetailsE
 
@@ -147,16 +147,16 @@ Public Class Form_EXPE
 
 
                 ''เอาข้อมูลเข้า BalanceSheet
-                'For i = 0 To lsvProductList.Items.Count - 1
-                '    sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@DATT,@N,@M,@C)"
-                '    command.CommandText = sql
-                '    command.Parameters.Clear()
-                '    command.Parameters.AddWithValue("DATT", DateTime.Now.Date)
-                '    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
-                '    command.Parameters.AddWithValue("M", lsvProductList.Items(i).SubItems(3).Text) *-1
-                '    command.Parameters.AddWithValue("C", 3)
-                '    command.ExecuteNonQuery()
-                'Next
+                For i = 0 To lsvProductList.Items.Count - 1
+                    sql = "INSERT INTO TEST(DATE,NAME,MONEY,CBID) VALUES(@DATT,@N,@M,@C)"
+                    command.CommandText = sql
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("DATT", DateTime.Now.Date)
+                    command.Parameters.AddWithValue("N", lsvProductList.Items(i).SubItems(1).Text)
+                    command.Parameters.AddWithValue("M", CInt(lsvProductList.Items(i).SubItems(3).Text) * -1)
+                    command.Parameters.AddWithValue("C", 3)
+                    command.ExecuteNonQuery()
+                Next
                 Using ts As New TransactionScope
                     db.OrdersEs.InsertOnSubmit(o)
                     'db.TESTs.InsertOnSubmit(t)
@@ -173,17 +173,17 @@ Public Class Form_EXPE
 
 
                 ''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
-                'Dim rpt As New ReportDocument
-                'Dim directory As String = My.Application.Info.DirectoryPath
+                Dim rpt As New ReportDocument
+                Dim directory As String = My.Application.Info.DirectoryPath
 
-                'rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
-                '            'rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
+                rpt.SetParameterValue("EXPEID", Me.txtExpensesID.Text)
 
-                '            'Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
-                '            'Form_Report_CR_DON.CrystalReportViewer1.Refresh()
-                '            'Form_Report_CR_DON.Show()
-                '            'Form_Report_CR_DON.WindowState = FormWindowState.Maximized
-                '            ''
+                Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
+                Form_Report_CR_DON.CrystalReportViewer1.Refresh()
+                Form_Report_CR_DON.Show()
+                Form_Report_CR_DON.WindowState = FormWindowState.Maximized
+                ''
 
             End If
         End If
@@ -193,5 +193,20 @@ Public Class Form_EXPE
         Me.Close()
         MF.Show()
     End Sub
+
+    Private Sub cboCatE_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboCatE.SelectedValueChanged
+
+        Dim i As Integer = 0
+        Dim lvi As ListViewItem
+        Dim tmpProductID As Integer = 0
+        For i = 0 To lsvProductList.Items.Count - 1
+            tmpProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+            If CInt(cboCatE.SelectedValue) = tmpProductID Then
+                MessageBox.Show("คุณเลือกรายการซ้ำกัน กรุณาเลือกใหม่ ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ClearProductData()
+            End If
+        Next
+    End Sub
+
 
 End Class

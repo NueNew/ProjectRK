@@ -38,8 +38,6 @@ Partial Class Form_EXPE
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.cmdSave = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.cboEmployee = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -211,35 +209,11 @@ Partial Class Form_EXPE
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'cboEmployee
-        '
-        Me.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cboEmployee.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboEmployee.FormattingEnabled = True
-        Me.cboEmployee.Location = New System.Drawing.Point(701, 133)
-        Me.cboEmployee.Name = "cboEmployee"
-        Me.cboEmployee.Size = New System.Drawing.Size(262, 34)
-        Me.cboEmployee.TabIndex = 143
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(763, 98)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(158, 26)
-        Me.Label3.TabIndex = 142
-        Me.Label3.Text = "พนักงานรับเรื่อง :"
-        '
         'Form_EXPE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
-        Me.Controls.Add(Me.cboEmployee)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cmdClear)
@@ -278,6 +252,4 @@ Partial Class Form_EXPE
     Friend WithEvents cboCatE As ComboBox
     Friend WithEvents txtDetail As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents cboEmployee As ComboBox
-    Friend WithEvents Label3 As Label
 End Class

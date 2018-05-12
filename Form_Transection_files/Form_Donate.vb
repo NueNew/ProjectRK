@@ -25,6 +25,7 @@ Public Class Form_Donate
         item = CInt(dataSt.Tables("OrdersD").Rows(0).Item("OrderDID").ToString())
         txtOrderDID.Text = Format(item + 1)
         '
+
     End Sub
     Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MessageBox.Show(Form_Login.emp_id)
@@ -39,17 +40,7 @@ Public Class Form_Donate
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True
 
-        Dim es = From em In db.Employees
-                 Select em.EmployeeID, em.EmployeeName
-        With cboEmployee
-            .BeginUpdate()
-            .DisplayMember = "EmployeeName"
-            .ValueMember = "EmployeeID"
-            .DataSource = es.ToList()
-            .EndUpdate()
-        End With
 
-        cboEmployee.SelectedValue = Form_Login.emp_id
 
         'ทำการเอาค่าจาก table CategoriesD มาแปะใน combobox เลือกประเภทบริจาค
         Dim es1 = From em1 In db.CategoriesDs
@@ -69,6 +60,8 @@ Public Class Form_Donate
     End Sub
 
     Private Sub ClearProductData()
+        cboCatD.SelectedValue = 0
+        txtDetail.Text = ""
 
         txtDon.Text = "0" 'ล้างค่าช่องจำนวนเงิน
     End Sub
@@ -105,17 +98,16 @@ Public Class Form_Donate
 
         Dim i As Integer = 0
         Dim lvi As ListViewItem
-        Dim tmpProductDID As Integer = 0
-        'For i = 0 To lsvProductList.Items.Count - 1
-        '    tmpProductDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
-        '    If CInt(txtProductDID.Text.Trim()) = tmpProductDID Then
-        '        MessageBox.Show("คุณเลือกสินค้าซ้ำกัน กรุณาเลือกใหม่ !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '        ClearProductData()
-        '        txtProductDID.Focus()
-        '        txtProductDID.SelectAll()
-        '        Exit Sub
-        '    End If
-        'Next
+        Dim tmpProductID As Integer = 0
+        For i = 0 To lsvProductList.Items.Count - 1
+            tmpProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+            If CInt(cboCatD.SelectedValue) = tmpProductID Then
+                MessageBox.Show("คุณเลือกรายการซ้ำกัน กรุณาเลือกใหม่ ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ClearProductData()
+            End If
+        Next
+
+
 
         Dim anyData() As String
         anyData = New String() {
@@ -170,7 +162,7 @@ Public Class Form_Donate
             If MessageBox.Show("คุณต้องการบันทึกรายการสั่งซื้อสินค้า ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                 Dim o As New OrdersD()
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
-                o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
+                o.EmployeeID = CType(Form_Login.emp_id, Integer?)
                 o.OrderDDate = Date.Now
 
                 Dim i As Integer
@@ -247,4 +239,19 @@ Public Class Form_Donate
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
 
     End Sub
+
+    'สร้าง Sub มาเพื่อตรวจว่า ท่านได้เลือก ข้อมูลที่ซ้ำกับใน Listview หรือไม่
+    Private Sub cboCatD_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboCatD.SelectedValueChanged
+        Dim i As Integer = 0
+        Dim lvi As ListViewItem
+        Dim tmpProductID As Integer = 0
+        For i = 0 To lsvProductList.Items.Count - 1
+            tmpProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
+            If CInt(cboCatD.SelectedValue) = tmpProductID Then
+                MessageBox.Show("คุณเลือกรายการซ้ำกัน กรุณาเลือกใหม่ ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ClearProductData()
+            End If
+        Next
+    End Sub
+
 End Class
