@@ -73,12 +73,6 @@ Partial Public Class DataClassesDataContext
     End Sub
   Partial Private Sub DeleteEmployee(instance As Employee)
     End Sub
-  Partial Private Sub InsertExpense(instance As Expense)
-    End Sub
-  Partial Private Sub UpdateExpense(instance As Expense)
-    End Sub
-  Partial Private Sub DeleteExpense(instance As Expense)
-    End Sub
   Partial Private Sub InsertOrder(instance As [Order])
     End Sub
   Partial Private Sub UpdateOrder(instance As [Order])
@@ -102,6 +96,18 @@ Partial Public Class DataClassesDataContext
   Partial Private Sub UpdateOrdersDetailsD(instance As OrdersDetailsD)
     End Sub
   Partial Private Sub DeleteOrdersDetailsD(instance As OrdersDetailsD)
+    End Sub
+  Partial Private Sub InsertOrdersDetailsE(instance As OrdersDetailsE)
+    End Sub
+  Partial Private Sub UpdateOrdersDetailsE(instance As OrdersDetailsE)
+    End Sub
+  Partial Private Sub DeleteOrdersDetailsE(instance As OrdersDetailsE)
+    End Sub
+  Partial Private Sub InsertOrdersE(instance As OrdersE)
+    End Sub
+  Partial Private Sub UpdateOrdersE(instance As OrdersE)
+    End Sub
+  Partial Private Sub DeleteOrdersE(instance As OrdersE)
     End Sub
   Partial Private Sub InsertProduct(instance As Product)
     End Sub
@@ -178,12 +184,6 @@ Partial Public Class DataClassesDataContext
 		End Get
 	End Property
 	
-	Public ReadOnly Property Expenses() As System.Data.Linq.Table(Of Expense)
-		Get
-			Return Me.GetTable(Of Expense)
-		End Get
-	End Property
-	
 	Public ReadOnly Property Orders() As System.Data.Linq.Table(Of [Order])
 		Get
 			Return Me.GetTable(Of [Order])
@@ -205,6 +205,18 @@ Partial Public Class DataClassesDataContext
 	Public ReadOnly Property OrdersDetailsDs() As System.Data.Linq.Table(Of OrdersDetailsD)
 		Get
 			Return Me.GetTable(Of OrdersDetailsD)
+		End Get
+	End Property
+	
+	Public ReadOnly Property OrdersDetailsEs() As System.Data.Linq.Table(Of OrdersDetailsE)
+		Get
+			Return Me.GetTable(Of OrdersDetailsE)
+		End Get
+	End Property
+	
+	Public ReadOnly Property OrdersEs() As System.Data.Linq.Table(Of OrdersE)
+		Get
+			Return Me.GetTable(Of OrdersE)
 		End Get
 	End Property
 	
@@ -669,7 +681,7 @@ Partial Public Class CategoriesE
 	
 	Private _Description As String
 	
-	Private _Expenses As EntitySet(Of Expense)
+	Private _OrdersDetailsEs As EntitySet(Of OrdersDetailsE)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -694,7 +706,7 @@ Partial Public Class CategoriesE
 	
 	Public Sub New()
 		MyBase.New
-		Me._Expenses = New EntitySet(Of Expense)(AddressOf Me.attach_Expenses, AddressOf Me.detach_Expenses)
+		Me._OrdersDetailsEs = New EntitySet(Of OrdersDetailsE)(AddressOf Me.attach_OrdersDetailsEs, AddressOf Me.detach_OrdersDetailsEs)
 		OnCreated
 	End Sub
 	
@@ -747,13 +759,13 @@ Partial Public Class CategoriesE
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesE_Expense", Storage:="_Expenses", ThisKey:="CategoryEID", OtherKey:="CategoryEID")>  _
-	Public Property Expenses() As EntitySet(Of Expense)
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesE_OrdersDetailsE", Storage:="_OrdersDetailsEs", ThisKey:="CategoryEID", OtherKey:="CategoryEID")>  _
+	Public Property OrdersDetailsEs() As EntitySet(Of OrdersDetailsE)
 		Get
-			Return Me._Expenses
+			Return Me._OrdersDetailsEs
 		End Get
 		Set
-			Me._Expenses.Assign(value)
+			Me._OrdersDetailsEs.Assign(value)
 		End Set
 	End Property
 	
@@ -775,12 +787,12 @@ Partial Public Class CategoriesE
 		End If
 	End Sub
 	
-	Private Sub attach_Expenses(ByVal entity As Expense)
+	Private Sub attach_OrdersDetailsEs(ByVal entity As OrdersDetailsE)
 		Me.SendPropertyChanging
 		entity.CategoriesE = Me
 	End Sub
 	
-	Private Sub detach_Expenses(ByVal entity As Expense)
+	Private Sub detach_OrdersDetailsEs(ByVal entity As OrdersDetailsE)
 		Me.SendPropertyChanging
 		entity.CategoriesE = Nothing
 	End Sub
@@ -800,11 +812,11 @@ Partial Public Class CategoryBalance
 	
 	Private _TESTs As EntitySet(Of TEST)
 	
-	Private _Expenses As EntitySet(Of Expense)
-	
 	Private _Orders As EntitySet(Of [Order])
 	
 	Private _OrdersDs As EntitySet(Of OrdersD)
+	
+	Private _OrdersEs As EntitySet(Of OrdersE)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -830,9 +842,9 @@ Partial Public Class CategoryBalance
 	Public Sub New()
 		MyBase.New
 		Me._TESTs = New EntitySet(Of TEST)(AddressOf Me.attach_TESTs, AddressOf Me.detach_TESTs)
-		Me._Expenses = New EntitySet(Of Expense)(AddressOf Me.attach_Expenses, AddressOf Me.detach_Expenses)
 		Me._Orders = New EntitySet(Of [Order])(AddressOf Me.attach_Orders, AddressOf Me.detach_Orders)
 		Me._OrdersDs = New EntitySet(Of OrdersD)(AddressOf Me.attach_OrdersDs, AddressOf Me.detach_OrdersDs)
+		Me._OrdersEs = New EntitySet(Of OrdersE)(AddressOf Me.attach_OrdersEs, AddressOf Me.detach_OrdersEs)
 		OnCreated
 	End Sub
 	
@@ -895,16 +907,6 @@ Partial Public Class CategoryBalance
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_Expense", Storage:="_Expenses", ThisKey:="CBID", OtherKey:="CBID")>  _
-	Public Property Expenses() As EntitySet(Of Expense)
-		Get
-			Return Me._Expenses
-		End Get
-		Set
-			Me._Expenses.Assign(value)
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_Order", Storage:="_Orders", ThisKey:="CBID", OtherKey:="CBID")>  _
 	Public Property Orders() As EntitySet(Of [Order])
 		Get
@@ -922,6 +924,16 @@ Partial Public Class CategoryBalance
 		End Get
 		Set
 			Me._OrdersDs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_OrdersE", Storage:="_OrdersEs", ThisKey:="CBID", OtherKey:="CBID")>  _
+	Public Property OrdersEs() As EntitySet(Of OrdersE)
+		Get
+			Return Me._OrdersEs
+		End Get
+		Set
+			Me._OrdersEs.Assign(value)
 		End Set
 	End Property
 	
@@ -953,16 +965,6 @@ Partial Public Class CategoryBalance
 		entity.CategoryBalance = Nothing
 	End Sub
 	
-	Private Sub attach_Expenses(ByVal entity As Expense)
-		Me.SendPropertyChanging
-		entity.CategoryBalance = Me
-	End Sub
-	
-	Private Sub detach_Expenses(ByVal entity As Expense)
-		Me.SendPropertyChanging
-		entity.CategoryBalance = Nothing
-	End Sub
-	
 	Private Sub attach_Orders(ByVal entity As [Order])
 		Me.SendPropertyChanging
 		entity.CategoryBalance = Me
@@ -979,6 +981,16 @@ Partial Public Class CategoryBalance
 	End Sub
 	
 	Private Sub detach_OrdersDs(ByVal entity As OrdersD)
+		Me.SendPropertyChanging
+		entity.CategoryBalance = Nothing
+	End Sub
+	
+	Private Sub attach_OrdersEs(ByVal entity As OrdersE)
+		Me.SendPropertyChanging
+		entity.CategoryBalance = Me
+	End Sub
+	
+	Private Sub detach_OrdersEs(ByVal entity As OrdersE)
 		Me.SendPropertyChanging
 		entity.CategoryBalance = Nothing
 	End Sub
@@ -1395,246 +1407,6 @@ Partial Public Class Employee
 	Private Sub detach_OrdersDs(ByVal entity As OrdersD)
 		Me.SendPropertyChanging
 		entity.Employee = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Expenses")>  _
-Partial Public Class Expense
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _ExpensesID As Integer
-	
-	Private _CategoryEID As System.Nullable(Of Integer)
-	
-	Private _ExpensesName As String
-	
-	Private _ExpensesPrice As System.Nullable(Of Decimal)
-	
-	Private _ExpensesDate As System.Nullable(Of Date)
-	
-	Private _CBID As System.Nullable(Of Integer)
-	
-	Private _CategoriesE As EntityRef(Of CategoriesE)
-	
-	Private _CategoryBalance As EntityRef(Of CategoryBalance)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnExpensesIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnExpensesIDChanged()
-    End Sub
-    Partial Private Sub OnCategoryEIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnCategoryEIDChanged()
-    End Sub
-    Partial Private Sub OnExpensesNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnExpensesNameChanged()
-    End Sub
-    Partial Private Sub OnExpensesPriceChanging(value As System.Nullable(Of Decimal))
-    End Sub
-    Partial Private Sub OnExpensesPriceChanged()
-    End Sub
-    Partial Private Sub OnExpensesDateChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnExpensesDateChanged()
-    End Sub
-    Partial Private Sub OnCBIDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnCBIDChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._CategoriesE = CType(Nothing, EntityRef(Of CategoriesE))
-		Me._CategoryBalance = CType(Nothing, EntityRef(Of CategoryBalance))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property ExpensesID() As Integer
-		Get
-			Return Me._ExpensesID
-		End Get
-		Set
-			If ((Me._ExpensesID = value)  _
-						= false) Then
-				Me.OnExpensesIDChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesID = value
-				Me.SendPropertyChanged("ExpensesID")
-				Me.OnExpensesIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryEID", DbType:="Int")>  _
-	Public Property CategoryEID() As System.Nullable(Of Integer)
-		Get
-			Return Me._CategoryEID
-		End Get
-		Set
-			If (Me._CategoryEID.Equals(value) = false) Then
-				If Me._CategoriesE.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnCategoryEIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CategoryEID = value
-				Me.SendPropertyChanged("CategoryEID")
-				Me.OnCategoryEIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesName", DbType:="NVarChar(500)")>  _
-	Public Property ExpensesName() As String
-		Get
-			Return Me._ExpensesName
-		End Get
-		Set
-			If (String.Equals(Me._ExpensesName, value) = false) Then
-				Me.OnExpensesNameChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesName = value
-				Me.SendPropertyChanged("ExpensesName")
-				Me.OnExpensesNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesPrice", DbType:="Money")>  _
-	Public Property ExpensesPrice() As System.Nullable(Of Decimal)
-		Get
-			Return Me._ExpensesPrice
-		End Get
-		Set
-			If (Me._ExpensesPrice.Equals(value) = false) Then
-				Me.OnExpensesPriceChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesPrice = value
-				Me.SendPropertyChanged("ExpensesPrice")
-				Me.OnExpensesPriceChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpensesDate", DbType:="DateTime")>  _
-	Public Property ExpensesDate() As System.Nullable(Of Date)
-		Get
-			Return Me._ExpensesDate
-		End Get
-		Set
-			If (Me._ExpensesDate.Equals(value) = false) Then
-				Me.OnExpensesDateChanging(value)
-				Me.SendPropertyChanging
-				Me._ExpensesDate = value
-				Me.SendPropertyChanged("ExpensesDate")
-				Me.OnExpensesDateChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int")>  _
-	Public Property CBID() As System.Nullable(Of Integer)
-		Get
-			Return Me._CBID
-		End Get
-		Set
-			If (Me._CBID.Equals(value) = false) Then
-				If Me._CategoryBalance.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnCBIDChanging(value)
-				Me.SendPropertyChanging
-				Me._CBID = value
-				Me.SendPropertyChanged("CBID")
-				Me.OnCBIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesE_Expense", Storage:="_CategoriesE", ThisKey:="CategoryEID", OtherKey:="CategoryEID", IsForeignKey:=true)>  _
-	Public Property CategoriesE() As CategoriesE
-		Get
-			Return Me._CategoriesE.Entity
-		End Get
-		Set
-			Dim previousValue As CategoriesE = Me._CategoriesE.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._CategoriesE.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._CategoriesE.Entity = Nothing
-					previousValue.Expenses.Remove(Me)
-				End If
-				Me._CategoriesE.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.Expenses.Add(Me)
-					Me._CategoryEID = value.CategoryEID
-				Else
-					Me._CategoryEID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("CategoriesE")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_Expense", Storage:="_CategoryBalance", ThisKey:="CBID", OtherKey:="CBID", IsForeignKey:=true)>  _
-	Public Property CategoryBalance() As CategoryBalance
-		Get
-			Return Me._CategoryBalance.Entity
-		End Get
-		Set
-			Dim previousValue As CategoryBalance = Me._CategoryBalance.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._CategoryBalance.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._CategoryBalance.Entity = Nothing
-					previousValue.Expenses.Remove(Me)
-				End If
-				Me._CategoryBalance.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.Expenses.Add(Me)
-					Me._CBID = value.CBID
-				Else
-					Me._CBID = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("CategoryBalance")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
 	End Sub
 End Class
 
@@ -2601,6 +2373,388 @@ Partial Public Class OrdersDetailsD
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersDetailsE")>  _
+Partial Public Class OrdersDetailsE
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _OrderEID As Integer
+	
+	Private _CategoryEID As Integer
+	
+	Private _Money As System.Nullable(Of Decimal)
+	
+	Private _Detail As String
+	
+	Private _CategoriesE As EntityRef(Of CategoriesE)
+	
+	Private _OrdersE As EntityRef(Of OrdersE)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnOrderEIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnOrderEIDChanged()
+    End Sub
+    Partial Private Sub OnCategoryEIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnCategoryEIDChanged()
+    End Sub
+    Partial Private Sub OnMoneyChanging(value As System.Nullable(Of Decimal))
+    End Sub
+    Partial Private Sub OnMoneyChanged()
+    End Sub
+    Partial Private Sub OnDetailChanging(value As String)
+    End Sub
+    Partial Private Sub OnDetailChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._CategoriesE = CType(Nothing, EntityRef(Of CategoriesE))
+		Me._OrdersE = CType(Nothing, EntityRef(Of OrdersE))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderEID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property OrderEID() As Integer
+		Get
+			Return Me._OrderEID
+		End Get
+		Set
+			If ((Me._OrderEID = value)  _
+						= false) Then
+				If Me._OrdersE.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnOrderEIDChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderEID = value
+				Me.SendPropertyChanged("OrderEID")
+				Me.OnOrderEIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CategoryEID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property CategoryEID() As Integer
+		Get
+			Return Me._CategoryEID
+		End Get
+		Set
+			If ((Me._CategoryEID = value)  _
+						= false) Then
+				If Me._CategoriesE.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnCategoryEIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CategoryEID = value
+				Me.SendPropertyChanged("CategoryEID")
+				Me.OnCategoryEIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Money", DbType:="Money")>  _
+	Public Property Money() As System.Nullable(Of Decimal)
+		Get
+			Return Me._Money
+		End Get
+		Set
+			If (Me._Money.Equals(value) = false) Then
+				Me.OnMoneyChanging(value)
+				Me.SendPropertyChanging
+				Me._Money = value
+				Me.SendPropertyChanged("Money")
+				Me.OnMoneyChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Detail", DbType:="NVarChar(500)")>  _
+	Public Property Detail() As String
+		Get
+			Return Me._Detail
+		End Get
+		Set
+			If (String.Equals(Me._Detail, value) = false) Then
+				Me.OnDetailChanging(value)
+				Me.SendPropertyChanging
+				Me._Detail = value
+				Me.SendPropertyChanged("Detail")
+				Me.OnDetailChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoriesE_OrdersDetailsE", Storage:="_CategoriesE", ThisKey:="CategoryEID", OtherKey:="CategoryEID", IsForeignKey:=true)>  _
+	Public Property CategoriesE() As CategoriesE
+		Get
+			Return Me._CategoriesE.Entity
+		End Get
+		Set
+			Dim previousValue As CategoriesE = Me._CategoriesE.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._CategoriesE.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._CategoriesE.Entity = Nothing
+					previousValue.OrdersDetailsEs.Remove(Me)
+				End If
+				Me._CategoriesE.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDetailsEs.Add(Me)
+					Me._CategoryEID = value.CategoryEID
+				Else
+					Me._CategoryEID = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("CategoriesE")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="OrdersE_OrdersDetailsE", Storage:="_OrdersE", ThisKey:="OrderEID", OtherKey:="OrderEID", IsForeignKey:=true)>  _
+	Public Property OrdersE() As OrdersE
+		Get
+			Return Me._OrdersE.Entity
+		End Get
+		Set
+			Dim previousValue As OrdersE = Me._OrdersE.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._OrdersE.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._OrdersE.Entity = Nothing
+					previousValue.OrdersDetailsEs.Remove(Me)
+				End If
+				Me._OrdersE.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersDetailsEs.Add(Me)
+					Me._OrderEID = value.OrderEID
+				Else
+					Me._OrderEID = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("OrdersE")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.OrdersE")>  _
+Partial Public Class OrdersE
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _OrderEID As Integer
+	
+	Private _EmployeeID As System.Nullable(Of Integer)
+	
+	Private _OrderEDate As System.Nullable(Of Date)
+	
+	Private _CBID As System.Nullable(Of Integer)
+	
+	Private _OrdersDetailsEs As EntitySet(Of OrdersDetailsE)
+	
+	Private _CategoryBalance As EntityRef(Of CategoryBalance)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnOrderEIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnOrderEIDChanged()
+    End Sub
+    Partial Private Sub OnEmployeeIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnEmployeeIDChanged()
+    End Sub
+    Partial Private Sub OnOrderEDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnOrderEDateChanged()
+    End Sub
+    Partial Private Sub OnCBIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCBIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._OrdersDetailsEs = New EntitySet(Of OrdersDetailsE)(AddressOf Me.attach_OrdersDetailsEs, AddressOf Me.detach_OrdersDetailsEs)
+		Me._CategoryBalance = CType(Nothing, EntityRef(Of CategoryBalance))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderEID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property OrderEID() As Integer
+		Get
+			Return Me._OrderEID
+		End Get
+		Set
+			If ((Me._OrderEID = value)  _
+						= false) Then
+				Me.OnOrderEIDChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderEID = value
+				Me.SendPropertyChanged("OrderEID")
+				Me.OnOrderEIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EmployeeID", DbType:="Int")>  _
+	Public Property EmployeeID() As System.Nullable(Of Integer)
+		Get
+			Return Me._EmployeeID
+		End Get
+		Set
+			If (Me._EmployeeID.Equals(value) = false) Then
+				Me.OnEmployeeIDChanging(value)
+				Me.SendPropertyChanging
+				Me._EmployeeID = value
+				Me.SendPropertyChanged("EmployeeID")
+				Me.OnEmployeeIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OrderEDate", DbType:="DateTime")>  _
+	Public Property OrderEDate() As System.Nullable(Of Date)
+		Get
+			Return Me._OrderEDate
+		End Get
+		Set
+			If (Me._OrderEDate.Equals(value) = false) Then
+				Me.OnOrderEDateChanging(value)
+				Me.SendPropertyChanging
+				Me._OrderEDate = value
+				Me.SendPropertyChanged("OrderEDate")
+				Me.OnOrderEDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CBID", DbType:="Int")>  _
+	Public Property CBID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CBID
+		End Get
+		Set
+			If (Me._CBID.Equals(value) = false) Then
+				If Me._CategoryBalance.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnCBIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CBID = value
+				Me.SendPropertyChanged("CBID")
+				Me.OnCBIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="OrdersE_OrdersDetailsE", Storage:="_OrdersDetailsEs", ThisKey:="OrderEID", OtherKey:="OrderEID")>  _
+	Public Property OrdersDetailsEs() As EntitySet(Of OrdersDetailsE)
+		Get
+			Return Me._OrdersDetailsEs
+		End Get
+		Set
+			Me._OrdersDetailsEs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CategoryBalance_OrdersE", Storage:="_CategoryBalance", ThisKey:="CBID", OtherKey:="CBID", IsForeignKey:=true)>  _
+	Public Property CategoryBalance() As CategoryBalance
+		Get
+			Return Me._CategoryBalance.Entity
+		End Get
+		Set
+			Dim previousValue As CategoryBalance = Me._CategoryBalance.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._CategoryBalance.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._CategoryBalance.Entity = Nothing
+					previousValue.OrdersEs.Remove(Me)
+				End If
+				Me._CategoryBalance.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.OrdersEs.Add(Me)
+					Me._CBID = value.CBID
+				Else
+					Me._CBID = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("CategoryBalance")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_OrdersDetailsEs(ByVal entity As OrdersDetailsE)
+		Me.SendPropertyChanging
+		entity.OrdersE = Me
+	End Sub
+	
+	Private Sub detach_OrdersDetailsEs(ByVal entity As OrdersDetailsE)
+		Me.SendPropertyChanging
+		entity.OrdersE = Nothing
 	End Sub
 End Class
 

@@ -27,7 +27,7 @@ Public Class Form_Donate
         '
     End Sub
     Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        MessageBox.Show(Form_Login.emp_id)
 
         reloadDon()
 
@@ -49,6 +49,7 @@ Public Class Form_Donate
             .EndUpdate()
         End With
 
+        cboEmployee.SelectedValue = Form_Login.emp_id
 
         'ทำการเอาค่าจาก table CategoriesD มาแปะใน combobox เลือกประเภทบริจาค
         Dim es1 = From em1 In db.CategoriesDs
@@ -94,24 +95,6 @@ Public Class Form_Donate
         txtCustomerID.Text = ""
         lblContactName.Text = ""
     End Sub
-
-    'Private Sub txtProductID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProductDID.KeyDown
-    '    If txtProductDID.Text.Trim() = "" Then Exit Sub
-    '    If e.KeyCode = Keys.Enter Then
-    '        Dim ps = From p In db.ProductsDs Select p.ProductDID, p.ProductDName
-    '                 Where ProductDID = CInt(txtProductDID.Text)
-
-    '        If ps.Count() > 0 Then
-    '            txtProductDID.Text = ps.FirstOrDefault().ProductDID.ToString()
-    '            lblProductDName.Text = ps.FirstOrDefault().ProductDName.Trim()
-    '        Else
-    '            MessageBox.Show("รหัสสินค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    '            ClearCustomerData()
-    '            txtProductDID.Focus()
-    '        End If
-    '    End If
-    'End Sub
-
 
 
     Private Sub cmdAdd_Click(sender As Object, e As EventArgs) Handles cmdAdd.Click

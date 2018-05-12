@@ -9,7 +9,19 @@ Imports CrystalDecisions.CrystalReports.Engine
 Public Class Form_POS
     Dim db As New DataClassesDataContext
 
-    ' Public Shared Service_Bill As String = "" 'เป็นการประกาศตัวแปรเพื่อให้ใช้งานข้ามฟอร์มได้ แต่ในกรณีนี้นิว ให้ส่งค่า พารามิเตอร์ไปหา form Report เพื่อจะได้ปริ้น Report(ใบเสร็จออกมา)
+    Private Sub cc() 'เชื่อมกับฐานข้อมูล SQL SERVER
+        If connection.State = ConnectionState.Closed Then
+            connection.Open()
+        End If
+    End Sub
+
+    Public Sub whereCboVal()
+        MessageBox.Show(Form_Login.emp_id)
+    End Sub
+
+    Private Sub selflog()
+        cboEmployee.SelectedValue = Form_Login.emp_id
+    End Sub
     Private Sub reloadPOS()
         '<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
         'จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น 2
@@ -24,12 +36,15 @@ Public Class Form_POS
         Dim item As Integer
         item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
         txtOrderID.Text = Format(item + 1)
-
         'ปิด>>>
+
+
+
     End Sub
 
     Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        whereCboVal()
+        cc()
         reloadPOS()
 
         lsvProductList.Columns.Add("ประเภทสินค้า", 0, HorizontalAlignment.Left)
@@ -41,6 +56,8 @@ Public Class Form_POS
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True
+
+
 
         Dim es = From em In db.Employees
                  Select em.EmployeeID, em.EmployeeName
@@ -54,6 +71,7 @@ Public Class Form_POS
         txtProductID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"
+        selflog()
     End Sub
 
     Private Sub ClearProductData()
@@ -114,16 +132,6 @@ Public Class Form_POS
         End If
     End Sub
 
-    'Private Sub txtAmount_TextChanged(sender As Object, e As EventArgs) Handles txtStockLeft.TextChanged
-    'If (txtAmount.Text.Trim() = "") Then
-    '        txtAmount.Text = "1"
-    '    End If
-    '    If (CInt(txtAmount.Text) = 0) Then
-    '        txtAmount.Text = "1"
-    '    End If
-    '    CalculateTotal()
-    'End Sub
-
     Private Sub CalculateTotal()
         Dim Total As Double
         'Total = CDbl(lblSalePrice.Text) * CInt(txtAmount.Text)
@@ -136,11 +144,6 @@ Public Class Form_POS
             txtProductID.Focus()
             Exit Sub
         End If
-        'If CInt(txtAmount.Text) = 0 Then
-        '    txtAmount.Focus()
-        '    Exit Sub
-        'End If
-
 
 
         Dim i As Integer = 0
@@ -218,7 +221,8 @@ Public Class Form_POS
             If MessageBox.Show("คุณต้องการบันทึกรายการสั่งซื้อสินค้า ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                 Dim o As New Order()
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
-                o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
+                'o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
+                o.EmployeeID = CType(Form_Login.emp_id, Integer?)
                 o.OrderDate = Date.Now
                 o.CBID = 2
                 Dim p As New Product() 'บอกว่า p คือตาราง Product 
@@ -271,11 +275,11 @@ Public Class Form_POS
                 lblNet.Text = "0"
                 txtCustomerID.Focus()
 
-                Dim rpt As New ReportDocument
+                Dim rpt As New ReportDocument 'บอกว่า rpt คือ Report
                 Dim directory As String = My.Application.Info.DirectoryPath
 
-                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_POS.rpt")
-                rpt.SetParameterValue("ORDERID", Me.txtOrderID.Text)
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_POS.rpt") 'หาที่อยู่ของไฟล์Report
+                rpt.SetParameterValue("ORDERID", Me.txtOrderID.Text) 'ส่งค่าจาก  txtOrderId จาก Form นี้ไปหา ตัวรับ ORDERIDในไฟล์Report
 
                 Form_Report_CR_POS.CrystalReportViewer1.ReportSource = rpt
                 Form_Report_CR_POS.CrystalReportViewer1.Refresh()

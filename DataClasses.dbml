@@ -31,7 +31,7 @@
       <Column Name="CategoryEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CategoryEName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="CategoriesE_Expense" Member="Expenses" ThisKey="CategoryEID" OtherKey="CategoryEID" Type="Expense" />
+      <Association Name="CategoriesE_OrdersDetailsE" Member="OrdersDetailsEs" ThisKey="CategoryEID" OtherKey="CategoryEID" Type="OrdersDetailsE" />
     </Type>
   </Table>
   <Table Name="dbo.CategoryBalance" Member="CategoryBalances">
@@ -40,9 +40,9 @@
       <Column Name="CBNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Detail" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="CategoryBalance_TEST" Member="TESTs" ThisKey="CBID" OtherKey="CBID" Type="TEST" />
-      <Association Name="CategoryBalance_Expense" Member="Expenses" ThisKey="CBID" OtherKey="CBID" Type="Expense" />
       <Association Name="CategoryBalance_Order" Member="Orders" ThisKey="CBID" OtherKey="CBID" Type="Order" />
       <Association Name="CategoryBalance_OrdersD" Member="OrdersDs" ThisKey="CBID" OtherKey="CBID" Type="OrdersD" />
+      <Association Name="CategoryBalance_OrdersE" Member="OrdersEs" ThisKey="CBID" OtherKey="CBID" Type="OrdersE" />
     </Type>
   </Table>
   <Table Name="dbo.Customers" Member="Customers">
@@ -66,18 +66,6 @@
       <Column Name="Password" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="Employee_Order" Member="Orders" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Order" />
       <Association Name="Employee_OrdersD" Member="OrdersDs" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="OrdersD" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Expenses" Member="Expenses">
-    <Type Name="Expense">
-      <Column Name="ExpensesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CategoryEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ExpensesName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="ExpensesPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="ExpensesDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="CategoriesE_Expense" Member="CategoriesE" ThisKey="CategoryEID" OtherKey="CategoryEID" Type="CategoriesE" IsForeignKey="true" />
-      <Association Name="CategoryBalance_Expense" Member="CategoryBalance" ThisKey="CBID" OtherKey="CBID" Type="CategoryBalance" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Orders" Member="Orders">
@@ -125,6 +113,26 @@
       <Column Name="Detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Association Name="CategoriesD_OrdersDetailsD" Member="CategoriesD" ThisKey="CategoryDID" OtherKey="CategoryDID" Type="CategoriesD" IsForeignKey="true" />
       <Association Name="OrdersD_OrdersDetailsD" Member="OrdersD" ThisKey="OrderDID" OtherKey="OrderDID" Type="OrdersD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrdersDetailsE" Member="OrdersDetailsEs">
+    <Type Name="OrdersDetailsE">
+      <Column Name="OrderEID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryEID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Money" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="CategoriesE_OrdersDetailsE" Member="CategoriesE" ThisKey="CategoryEID" OtherKey="CategoryEID" Type="CategoriesE" IsForeignKey="true" />
+      <Association Name="OrdersE_OrdersDetailsE" Member="OrdersE" ThisKey="OrderEID" OtherKey="OrderEID" Type="OrdersE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrdersE" Member="OrdersEs">
+    <Type Name="OrdersE">
+      <Column Name="OrderEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderEDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrdersE_OrdersDetailsE" Member="OrdersDetailsEs" ThisKey="OrderEID" OtherKey="OrderEID" Type="OrdersDetailsE" />
+      <Association Name="CategoryBalance_OrdersE" Member="CategoryBalance" ThisKey="CBID" OtherKey="CBID" Type="CategoryBalance" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Products" Member="Products">

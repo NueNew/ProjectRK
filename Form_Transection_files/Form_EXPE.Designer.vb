@@ -22,7 +22,7 @@ Partial Class Form_EXPE
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtOrderDID = New System.Windows.Forms.TextBox()
+        Me.txtExpensesID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lblNet = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -38,18 +38,20 @@ Partial Class Form_EXPE
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.cmdSave = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.cboEmployee = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'txtOrderDID
+        'txtExpensesID
         '
-        Me.txtOrderDID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtOrderDID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtOrderDID.Location = New System.Drawing.Point(558, 53)
-        Me.txtOrderDID.Name = "txtOrderDID"
-        Me.txtOrderDID.ReadOnly = True
-        Me.txtOrderDID.Size = New System.Drawing.Size(127, 38)
-        Me.txtOrderDID.TabIndex = 32
+        Me.txtExpensesID.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtExpensesID.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtExpensesID.Location = New System.Drawing.Point(558, 53)
+        Me.txtExpensesID.Name = "txtExpensesID"
+        Me.txtExpensesID.ReadOnly = True
+        Me.txtExpensesID.Size = New System.Drawing.Size(127, 32)
+        Me.txtExpensesID.TabIndex = 32
         '
         'Label10
         '
@@ -58,7 +60,7 @@ Partial Class Form_EXPE
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label10.Location = New System.Drawing.Point(343, 59)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(209, 32)
+        Me.Label10.Size = New System.Drawing.Size(161, 26)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "เลขที่ใบค่าใช้จ่าย :"
         '
@@ -82,7 +84,7 @@ Partial Class Form_EXPE
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.Location = New System.Drawing.Point(296, 157)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(152, 32)
+        Me.Label4.Size = New System.Drawing.Size(121, 26)
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "รวมเป็นเงิน :"
         '
@@ -109,14 +111,14 @@ Partial Class Form_EXPE
         Me.cboCatE.FormattingEnabled = True
         Me.cboCatE.Location = New System.Drawing.Point(32, 71)
         Me.cboCatE.Name = "cboCatE"
-        Me.cboCatE.Size = New System.Drawing.Size(174, 39)
+        Me.cboCatE.Size = New System.Drawing.Size(174, 34)
         Me.cboCatE.TabIndex = 39
         '
         'txtDetail
         '
         Me.txtDetail.Location = New System.Drawing.Point(248, 71)
         Me.txtDetail.Name = "txtDetail"
-        Me.txtDetail.Size = New System.Drawing.Size(326, 38)
+        Me.txtDetail.Size = New System.Drawing.Size(326, 32)
         Me.txtDetail.TabIndex = 11
         '
         'lsvProductList
@@ -133,7 +135,7 @@ Partial Class Form_EXPE
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(577, 37)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(141, 32)
+        Me.Label9.Size = New System.Drawing.Size(112, 26)
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "จำนวนเงิน :"
         '
@@ -142,7 +144,7 @@ Partial Class Form_EXPE
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(242, 34)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(240, 32)
+        Me.Label6.Size = New System.Drawing.Size(184, 26)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "ชื่อรายการค่าใช้จ่าย :"
         '
@@ -151,7 +153,7 @@ Partial Class Form_EXPE
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(26, 34)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(195, 32)
+        Me.Label5.Size = New System.Drawing.Size(151, 26)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "ประเภทค่าใช้จ่าย"
         '
@@ -159,7 +161,7 @@ Partial Class Form_EXPE
         '
         Me.txtPrice.Location = New System.Drawing.Point(581, 71)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(124, 38)
+        Me.txtPrice.Size = New System.Drawing.Size(124, 32)
         Me.txtPrice.TabIndex = 0
         '
         'cmdClear
@@ -209,11 +211,35 @@ Partial Class Form_EXPE
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'cboEmployee
+        '
+        Me.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cboEmployee.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboEmployee.FormattingEnabled = True
+        Me.cboEmployee.Location = New System.Drawing.Point(701, 133)
+        Me.cboEmployee.Name = "cboEmployee"
+        Me.cboEmployee.Size = New System.Drawing.Size(262, 34)
+        Me.cboEmployee.TabIndex = 143
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(763, 98)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(158, 26)
+        Me.Label3.TabIndex = 142
+        Me.Label3.Text = "พนักงานรับเรื่อง :"
+        '
         'Form_EXPE
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.cboEmployee)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cmdClear)
@@ -221,7 +247,7 @@ Partial Class Form_EXPE
         Me.Controls.Add(Me.cmdSave)
         Me.Controls.Add(Me.lblNet)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtOrderDID)
+        Me.Controls.Add(Me.txtExpensesID)
         Me.Controls.Add(Me.Label10)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -236,7 +262,7 @@ Partial Class Form_EXPE
 
     End Sub
 
-    Friend WithEvents txtOrderDID As TextBox
+    Friend WithEvents txtExpensesID As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents lblNet As Label
     Friend WithEvents Label4 As Label
@@ -252,4 +278,6 @@ Partial Class Form_EXPE
     Friend WithEvents cboCatE As ComboBox
     Friend WithEvents txtDetail As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents cboEmployee As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

@@ -1,4 +1,11 @@
-﻿Public Class MF
+﻿Imports System.Data.SqlClient
+Imports System.Data
+
+Public Class MF
+
+
+
+
     Private Sub ผบรจาคToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ผบรจาคToolStripMenuItem.Click
         Me.Hide()
         From_Customers.Show()

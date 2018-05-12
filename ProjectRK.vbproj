@@ -120,12 +120,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms_Report_files\CR_BL.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -229,12 +223,6 @@
     <Compile Include="Form_Master_files\From_Customers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Transection_files\FindR_DON.Designer.vb">
-      <DependentUpon>FindR_DON.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Transection_files\FindR_DON.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_Transection_files\Form_Donate.Designer.vb">
       <DependentUpon>Form_Donate.vb</DependentUpon>
     </Compile>
@@ -251,12 +239,6 @@
       <DependentUpon>Form_POS.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Transection_files\Form_POS.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From_Main.Designer.vb">
-      <DependentUpon>From_Main.vb</DependentUpon>
-    </Compile>
-    <Compile Include="From_Main.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MF.Designer.vb">
@@ -340,9 +322,6 @@
     <EmbeddedResource Include="Form_Master_files\From_Customers.resx">
       <DependentUpon>From_Customers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Transection_files\FindR_DON.resx">
-      <DependentUpon>FindR_DON.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_Donate.resx">
       <DependentUpon>Form_Donate.vb</DependentUpon>
     </EmbeddedResource>
@@ -351,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Transection_files\Form_POS.resx">
       <DependentUpon>Form_POS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From_Main.resx">
-      <DependentUpon>From_Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MF.resx">
       <DependentUpon>MF.vb</DependentUpon>

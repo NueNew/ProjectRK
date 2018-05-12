@@ -146,11 +146,9 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_CategoryE.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Employee.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Product.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.From_Customers.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.FindR_DON.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Donate.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_EXPE.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_POS.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.From_Main.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Resources.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbproj.GenerateResource.cache
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbproj.CoreCompileInputs.cache

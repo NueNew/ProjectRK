@@ -31,12 +31,12 @@ Partial Class Form_Donate
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtDon = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cboEmployee = New System.Windows.Forms.ComboBox()
         Me.lblContactName = New System.Windows.Forms.Label()
         Me.txtCustomerID = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cboEmployee = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.cmdClear = New System.Windows.Forms.Button()
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.lblNet = New System.Windows.Forms.Label()
@@ -72,14 +72,14 @@ Partial Class Form_Donate
         Me.cboCatD.FormattingEnabled = True
         Me.cboCatD.Location = New System.Drawing.Point(44, 86)
         Me.cboCatD.Name = "cboCatD"
-        Me.cboCatD.Size = New System.Drawing.Size(174, 39)
+        Me.cboCatD.Size = New System.Drawing.Size(174, 34)
         Me.cboCatD.TabIndex = 43
         '
         'txtDetail
         '
         Me.txtDetail.Location = New System.Drawing.Point(238, 86)
         Me.txtDetail.Name = "txtDetail"
-        Me.txtDetail.Size = New System.Drawing.Size(280, 38)
+        Me.txtDetail.Size = New System.Drawing.Size(280, 32)
         Me.txtDetail.TabIndex = 42
         '
         'Label7
@@ -87,7 +87,7 @@ Partial Class Form_Donate
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(235, 41)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(150, 32)
+        Me.Label7.Size = New System.Drawing.Size(117, 26)
         Me.Label7.TabIndex = 41
         Me.Label7.Text = "รายละเอียด :"
         '
@@ -96,7 +96,7 @@ Partial Class Form_Donate
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(12, 41)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(219, 32)
+        Me.Label8.Size = New System.Drawing.Size(172, 26)
         Me.Label8.TabIndex = 40
         Me.Label8.Text = "ประเภทการบริจาค:"
         '
@@ -114,7 +114,7 @@ Partial Class Form_Donate
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(522, 43)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(141, 32)
+        Me.Label9.Size = New System.Drawing.Size(112, 26)
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "จำนวนเงิน :"
         '
@@ -122,16 +122,14 @@ Partial Class Form_Donate
         '
         Me.txtDon.Location = New System.Drawing.Point(524, 87)
         Me.txtDon.Name = "txtDon"
-        Me.txtDon.Size = New System.Drawing.Size(120, 38)
+        Me.txtDon.Size = New System.Drawing.Size(120, 32)
         Me.txtDon.TabIndex = 0
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GroupBox1.Controls.Add(Me.cboEmployee)
         Me.GroupBox1.Controls.Add(Me.lblContactName)
         Me.GroupBox1.Controls.Add(Me.txtCustomerID)
-        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -142,56 +140,58 @@ Partial Class Form_Donate
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ข้อมูลลูกค้า"
         '
-        'cboEmployee
-        '
-        Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cboEmployee.FormattingEnabled = True
-        Me.cboEmployee.Location = New System.Drawing.Point(68, 154)
-        Me.cboEmployee.Name = "cboEmployee"
-        Me.cboEmployee.Size = New System.Drawing.Size(307, 39)
-        Me.cboEmployee.TabIndex = 4
-        '
         'lblContactName
         '
         Me.lblContactName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblContactName.Location = New System.Drawing.Point(165, 79)
+        Me.lblContactName.Location = New System.Drawing.Point(192, 105)
         Me.lblContactName.Name = "lblContactName"
         Me.lblContactName.Size = New System.Drawing.Size(210, 30)
         Me.lblContactName.TabIndex = 4
         '
         'txtCustomerID
         '
-        Me.txtCustomerID.Location = New System.Drawing.Point(34, 77)
+        Me.txtCustomerID.Location = New System.Drawing.Point(61, 103)
         Me.txtCustomerID.Name = "txtCustomerID"
-        Me.txtCustomerID.Size = New System.Drawing.Size(77, 38)
+        Me.txtCustomerID.Size = New System.Drawing.Size(77, 32)
         Me.txtCustomerID.TabIndex = 0
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(62, 119)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(163, 32)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "พนักงานขาย :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(159, 40)
+        Me.Label2.Location = New System.Drawing.Point(186, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 32)
+        Me.Label2.Size = New System.Drawing.Size(90, 26)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ชื่อ-สกุล :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 42)
+        Me.Label1.Location = New System.Drawing.Point(39, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(133, 32)
+        Me.Label1.Size = New System.Drawing.Size(104, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "รหัสลูกค้า :"
+        '
+        'cboEmployee
+        '
+        Me.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cboEmployee.FormattingEnabled = True
+        Me.cboEmployee.Location = New System.Drawing.Point(615, 261)
+        Me.cboEmployee.Name = "cboEmployee"
+        Me.cboEmployee.Size = New System.Drawing.Size(307, 32)
+        Me.cboEmployee.TabIndex = 4
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(611, 234)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(111, 24)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "พนักงานขาย :"
         '
         'cmdClear
         '
@@ -236,7 +236,7 @@ Partial Class Form_Donate
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(682, 113)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(138, 29)
+        Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 27
         Me.Label4.Text = "รวมเป็นเงิน :"
         '
@@ -259,7 +259,7 @@ Partial Class Form_Donate
         Me.txtOrderDID.Location = New System.Drawing.Point(536, 45)
         Me.txtOrderDID.Name = "txtOrderDID"
         Me.txtOrderDID.ReadOnly = True
-        Me.txtOrderDID.Size = New System.Drawing.Size(127, 38)
+        Me.txtOrderDID.Size = New System.Drawing.Size(127, 32)
         Me.txtOrderDID.TabIndex = 30
         '
         'Label10
@@ -269,7 +269,7 @@ Partial Class Form_Donate
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(346, 45)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(184, 32)
+        Me.Label10.Size = New System.Drawing.Size(144, 26)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "เลขที่ใบบริจาค :"
         '
@@ -286,11 +286,13 @@ Partial Class Form_Donate
         '
         'Form_Donate
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.cboEmployee)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtOrderDID)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
