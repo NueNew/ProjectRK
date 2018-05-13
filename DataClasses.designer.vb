@@ -426,7 +426,7 @@ Partial Public Class TEST
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="DATE", Storage:="_DATE", DbType:="Date")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="DATE", Storage:="_DATE", DbType:="DateTime")>  _
 	Public Property [DATE]() As System.Nullable(Of Date)
 		Get
 			Return Me._DATE
@@ -1974,8 +1974,6 @@ Partial Public Class OrdersDetail
 	
 	Private _Quantity As System.Nullable(Of Short)
 	
-	Private _Discount As System.Nullable(Of Single)
-	
 	Private _Order As EntityRef(Of [Order])
 	
 	Private _Product As EntityRef(Of Product)
@@ -2002,10 +2000,6 @@ Partial Public Class OrdersDetail
     Partial Private Sub OnQuantityChanging(value As System.Nullable(Of Short))
     End Sub
     Partial Private Sub OnQuantityChanged()
-    End Sub
-    Partial Private Sub OnDiscountChanging(value As System.Nullable(Of Single))
-    End Sub
-    Partial Private Sub OnDiscountChanged()
     End Sub
     #End Region
 	
@@ -2084,22 +2078,6 @@ Partial Public Class OrdersDetail
 				Me._Quantity = value
 				Me.SendPropertyChanged("Quantity")
 				Me.OnQuantityChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Discount", DbType:="Real")>  _
-	Public Property Discount() As System.Nullable(Of Single)
-		Get
-			Return Me._Discount
-		End Get
-		Set
-			If (Me._Discount.Equals(value) = false) Then
-				Me.OnDiscountChanging(value)
-				Me.SendPropertyChanging
-				Me._Discount = value
-				Me.SendPropertyChanged("Discount")
-				Me.OnDiscountChanged
 			End If
 		End Set
 	End Property

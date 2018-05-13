@@ -23,10 +23,15 @@ Public Class Form_EXPE
         command.CommandText = "SELECT * from OrdersE where OrderEID = (select max(OrderEID) from OrdersE)"
         adapter = New SqlDataAdapter(command)
         dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
-        adapter.Fill(dataSt, "es") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        Dim item As Integer
-        item = CInt(dataSt.Tables("es").Rows(0).Item("OrderEID").ToString())
-        txtExpensesID.Text = Format(item + 1)
+        adapter.Fill(dataSt, "OrderE") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        If dataSt.Tables("OrderE").Rows.Count <> 0 Then
+            Dim item As Integer
+            item = CInt(dataSt.Tables("OrderE").Rows(0).Item("OrderEID").ToString())
+            txtExpensesID.Text = Format(item + 1)
+        Else
+            txtExpensesID.Text = "1"
+        End If
+
         ''ปิด>>>
         ClearData()
         ClearProductData()
@@ -65,7 +70,7 @@ Public Class Form_EXPE
         txtPrice.Text = ""
     End Sub
     Private Sub ClearProductData()
-
+        cboCatE.SelectedValue = 0
         txtPrice.Text = "0" 'ล้างค่าช่องจำนวนเงิน
     End Sub
 
@@ -124,7 +129,7 @@ Public Class Form_EXPE
 
                 Dim o As New OrdersE()
                 'o.EmployeeID = DirectCast()
-                o.OrderEDate = Date.Now
+                o.OrderEDate = DateTime.Now
                 o.EmployeeID = CType(Form_Login.emp_id, Integer?)
 
                 Dim t As New TEST() 'ทำการประกาศตัวแปร T เป็นตาราง TEST
@@ -172,18 +177,18 @@ Public Class Form_EXPE
 
 
 
-                ''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
-                Dim rpt As New ReportDocument
-                Dim directory As String = My.Application.Info.DirectoryPath
+                '''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
+                'Dim rpt As New ReportDocument
+                'Dim directory As String = My.Application.Info.DirectoryPath
 
-                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
-                rpt.SetParameterValue("EXPEID", Me.txtExpensesID.Text)
+                'rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
+                'rpt.SetParameterValue("EXPEID", Me.txtExpensesID.Text)
 
-                Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
-                Form_Report_CR_DON.CrystalReportViewer1.Refresh()
-                Form_Report_CR_DON.Show()
-                Form_Report_CR_DON.WindowState = FormWindowState.Maximized
-                ''
+                'Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
+                'Form_Report_CR_DON.CrystalReportViewer1.Refresh()
+                'Form_Report_CR_DON.Show()
+                'Form_Report_CR_DON.WindowState = FormWindowState.Maximized
+                '''
 
             End If
         End If

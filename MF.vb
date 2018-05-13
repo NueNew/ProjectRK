@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
-
+Imports CrystalDecisions.CrystalReports.Engine
 Public Class MF
 
 
@@ -54,5 +54,30 @@ Public Class MF
     Private Sub ออกจากระบบToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ออกจากระบบToolStripMenuItem.Click
         Me.Hide()
         Form_Login.Show()
+    End Sub
+
+    Private Sub ใบอนโมทนาบญToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ใบอนโมทนาบญToolStripMenuItem.Click
+        Me.Hide()
+        SRDON.Show()
+    End Sub
+
+    Private Sub ใบเสรจToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ใบเสรจToolStripMenuItem.Click
+        Me.Hide()
+        SRPOS.Show()
+    End Sub
+
+    Private Sub รายงานแสดงรายจายToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานแสดงรายจายToolStripMenuItem.Click
+        Me.Hide()
+        SROE.Show()
+    End Sub
+
+    Private Sub รายงานแสดงรายไดToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานแสดงรายไดToolStripMenuItem.Click
+        Me.Hide()
+        SRRNU.Show()
+    End Sub
+
+    Private Sub รายไดรายจายToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายไดรายจายToolStripMenuItem.Click
+        Me.Hide()
+        SRBL.Show()
     End Sub
 End Class

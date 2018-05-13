@@ -16,21 +16,18 @@ Public Class Form_Donate
             connection.Open()
         End If
 
-        '
         command.CommandText = "SELECT * from OrdersD where OrderDID = (select max(OrderDID) from OrdersD)"
         adapter = New SqlDataAdapter(command)
         dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
         adapter.Fill(dataSt, "OrdersD") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        Dim item As Integer
-        item = CInt(dataSt.Tables("OrdersD").Rows(0).Item("OrderDID").ToString())
-        txtOrderDID.Text = Format(item + 1)
-        '
+        If dataSt.Tables("OrdersD").Rows.Count <> 0 Then
+            Dim item As Integer
+            item = CInt(dataSt.Tables("OrdersD").Rows(0).Item("OrderDID").ToString())
+            txtOrderDID.Text = Format(item + 1)
+        Else
+            txtOrderDID.Text = "1"
+        End If
 
-    End Sub
-    Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MessageBox.Show(Form_Login.emp_id)
-
-        reloadDon()
 
         lsvProductList.Columns.Add("รหัส", 0, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ประเภทบริจาค", 200, HorizontalAlignment.Left)
@@ -57,6 +54,12 @@ Public Class Form_Donate
         ' txtProductDID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"
+    End Sub
+    Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MessageBox.Show(Form_Login.emp_id)
+
+        reloadDon()
+
     End Sub
 
     Private Sub ClearProductData()
@@ -163,7 +166,7 @@ Public Class Form_Donate
                 Dim o As New OrdersD()
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
                 o.EmployeeID = CType(Form_Login.emp_id, Integer?)
-                o.OrderDDate = Date.Now
+                o.OrderDDate = DateTime.Now
 
                 Dim i As Integer
                 Dim od As OrdersDetailsD
@@ -172,7 +175,7 @@ Public Class Form_Donate
                     od = New OrdersDetailsD()
                     od.CategoryDID = CInt(lsvProductList.Items(i).SubItems(0).Text)
                     od.Donation = CType(lsvProductList.Items(i).SubItems(3).Text, Decimal?) 'จำนวนเงินที่บริจาค 0 1 2
-                    o.CBID = CType(3, Integer?)
+                    o.CBID = CType(1, Integer?)
                     o.OrdersDetailsDs.Add(od) 'ทำการใส่ข้อมูลลงในตาราง OrdersDeatailsD
                 Next
 

@@ -120,28 +120,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Report_files\CR_BL.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CR_BL.rpt</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Forms_Report_files\ForSearch\SRBL.Designer.vb">
+      <DependentUpon>SRBL.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Report_files\CR_EXPE.vb">
+    <Compile Include="Forms_Report_files\ForSearch\SRBL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SROE.Designer.vb">
+      <DependentUpon>SROE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SROE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRPDLEFT.Designer.vb">
+      <DependentUpon>SRPDLEFT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRPDLEFT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SR_OrderE.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CR_EXPE.rpt</DependentUpon>
+      <DependentUpon>SR_OrderE.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\Form_REPORT_ADV.Designer.vb">
       <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms_Report_files\Form_REPORT_ADV.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_Report_CR_IMPORT.Designer.vb">
-      <DependentUpon>Form_Report_CR_IMPORT.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_Report_CR_IMPORT.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\Form_Report_CR_DON.Designer.vb">
@@ -156,16 +162,64 @@
     <Compile Include="Forms_Report_files\Form_Report_CR_POS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRPOS.Designer.vb">
+      <DependentUpon>SRPOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRPOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SR_POS.vb">
+      <DependentUpon>SR_POS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRDON.Designer.vb">
+      <DependentUpon>SRDON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRDON.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SR_DON.vb">
+      <DependentUpon>SR_DON.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRRNU.Designer.vb">
+      <DependentUpon>SRRNU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SRRNU.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms_Report_files\R_DON.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>R_DON.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms_Report_files\รายงานนำเข้าสินค้า.vb">
+    <Compile Include="Forms_Report_files\ForSearch\SR_RNU.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>รายงานนำเข้าสินค้า.rpt</DependentUpon>
+      <DependentUpon>SR_RNU.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SR_BL.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR_BL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\TEST\Revenue.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Revenue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms_Report_files\ForSearch\SR_PDLEFT.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR_PDLEFT.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form_Login.vb">
@@ -174,12 +228,6 @@
     <Compile Include="Form_Login.Designer.vb">
       <DependentUpon>Form_Login.vb</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\CR_DON.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CR_DON.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\CR_POS.vb">
       <AutoGen>True</AutoGen>
@@ -265,19 +313,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms_Report_files\CR_BL.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CR_BL.vb</LastGenOutput>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SRBL.resx">
+      <DependentUpon>SRBL.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\CR_EXPE.rpt">
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SROE.resx">
+      <DependentUpon>SROE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SRPDLEFT.resx">
+      <DependentUpon>SRPDLEFT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SRRNU.resx">
+      <DependentUpon>SRRNU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_OrderE.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CR_EXPE.vb</LastGenOutput>
+      <LastGenOutput>SR_OrderE.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_REPORT_ADV.resx">
       <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_IMPORT.resx">
-      <DependentUpon>Form_Report_CR_IMPORT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_DON.resx">
       <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
@@ -285,20 +338,42 @@
     <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_POS.resx">
       <DependentUpon>Form_Report_CR_POS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SRPOS.resx">
+      <DependentUpon>SRPOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_POS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SR_POS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SRDON.resx">
+      <DependentUpon>SRDON.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_DON.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SR_DON.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\R_DON.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>R_DON.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\รายงานนำเข้าสินค้า.rpt">
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_RNU.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>รายงานนำเข้าสินค้า.vb</LastGenOutput>
+      <LastGenOutput>SR_RNU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_BL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SR_BL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\TEST\Revenue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Revenue.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_PDLEFT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SR_PDLEFT.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\CR_DON.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CR_DON.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\CR_POS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

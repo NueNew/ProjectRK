@@ -46,6 +46,7 @@ Partial Class MF
         Me.ใบอนโมทนาบญToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.ใบเสรจToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.รายงานแสดงรายไดToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.รายงานแสดงรายจายToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -192,7 +193,7 @@ Partial Class MF
         '
         'รายงานToolStripMenuItem
         '
-        Me.รายงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ใบอนโมทนาบญToolStripMenuItem, Me.ToolStripSeparator8, Me.ใบเสรจToolStripMenuItem, Me.ToolStripSeparator7, Me.รายงานแสดงรายไดToolStripMenuItem, Me.รายงานแสดงรายจายToolStripMenuItem, Me.ToolStripSeparator9, Me.รายไดรายจายToolStripMenuItem})
+        Me.รายงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ใบอนโมทนาบญToolStripMenuItem, Me.ToolStripSeparator8, Me.ใบเสรจToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripSeparator7, Me.รายงานแสดงรายไดToolStripMenuItem, Me.รายงานแสดงรายจายToolStripMenuItem, Me.ToolStripSeparator9, Me.รายไดรายจายToolStripMenuItem})
         Me.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem"
         Me.รายงานToolStripMenuItem.Size = New System.Drawing.Size(102, 47)
         Me.รายงานToolStripMenuItem.Text = "รายงาน"
@@ -200,46 +201,52 @@ Partial Class MF
         'ใบอนโมทนาบญToolStripMenuItem
         '
         Me.ใบอนโมทนาบญToolStripMenuItem.Name = "ใบอนโมทนาบญToolStripMenuItem"
-        Me.ใบอนโมทนาบญToolStripMenuItem.Size = New System.Drawing.Size(291, 48)
+        Me.ใบอนโมทนาบญToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.ใบอนโมทนาบญToolStripMenuItem.Text = "ใบอนุโมทนาบุญ"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(288, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(290, 6)
         '
         'ใบเสรจToolStripMenuItem
         '
         Me.ใบเสรจToolStripMenuItem.Name = "ใบเสรจToolStripMenuItem"
-        Me.ใบเสรจToolStripMenuItem.Size = New System.Drawing.Size(291, 48)
-        Me.ใบเสรจToolStripMenuItem.Text = "ใบเสร็จ"
+        Me.ใบเสรจToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
+        Me.ใบเสรจToolStripMenuItem.Text = "ใบเสร็จรับเงิน"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(293, 48)
+        Me.ToolStripMenuItem1.Text = "รายงานสินค้าคงเหลือ"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(288, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(290, 6)
         '
         'รายงานแสดงรายไดToolStripMenuItem
         '
         Me.รายงานแสดงรายไดToolStripMenuItem.Name = "รายงานแสดงรายไดToolStripMenuItem"
-        Me.รายงานแสดงรายไดToolStripMenuItem.Size = New System.Drawing.Size(291, 48)
+        Me.รายงานแสดงรายไดToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.รายงานแสดงรายไดToolStripMenuItem.Text = "รายงานแสดงรายได้"
         '
         'รายงานแสดงรายจายToolStripMenuItem
         '
         Me.รายงานแสดงรายจายToolStripMenuItem.Name = "รายงานแสดงรายจายToolStripMenuItem"
-        Me.รายงานแสดงรายจายToolStripMenuItem.Size = New System.Drawing.Size(291, 48)
+        Me.รายงานแสดงรายจายToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.รายงานแสดงรายจายToolStripMenuItem.Text = "รายงานแสดงรายจ่าย"
         '
         'ToolStripSeparator9
         '
         Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(288, 6)
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(290, 6)
         '
         'รายไดรายจายToolStripMenuItem
         '
         Me.รายไดรายจายToolStripMenuItem.Name = "รายไดรายจายToolStripMenuItem"
-        Me.รายไดรายจายToolStripMenuItem.Size = New System.Drawing.Size(291, 48)
+        Me.รายไดรายจายToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.รายไดรายจายToolStripMenuItem.Text = "รายได้ - รายจ่าย"
         '
         'ออกจากระบบToolStripMenuItem
@@ -303,4 +310,5 @@ Partial Class MF
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

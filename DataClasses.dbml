@@ -11,7 +11,7 @@
   <Table Name="dbo.TEST" Member="TESTs">
     <Type Name="TEST">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MONEY" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="CBID" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -100,7 +100,6 @@
       <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="Quantity" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="Discount" Type="System.Single" DbType="Real" CanBeNull="true" />
       <Association Name="Order_OrdersDetail" Member="Order" ThisKey="OrderID" OtherKey="OrderID" Type="Order" IsForeignKey="true" />
       <Association Name="Product_OrdersDetail" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
     </Type>

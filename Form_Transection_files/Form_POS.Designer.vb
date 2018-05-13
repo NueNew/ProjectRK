@@ -23,6 +23,8 @@ Partial Class Form_POS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtCate = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.lsvProductList = New System.Windows.Forms.ListView()
         Me.num_exit = New System.Windows.Forms.NumericUpDown()
         Me.txtStockLeft = New System.Windows.Forms.TextBox()
@@ -41,8 +43,6 @@ Partial Class Form_POS
         Me.txtCustomerID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cboEmployee = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.cmdClear = New System.Windows.Forms.Button()
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.lblNet = New System.Windows.Forms.Label()
@@ -51,8 +51,6 @@ Partial Class Form_POS
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtOrderID = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtCate = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.num_exit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -84,6 +82,26 @@ Partial Class Form_POS
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "รายการสั่งซื้อ"
         '
+        'txtCate
+        '
+        Me.txtCate.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtCate.Location = New System.Drawing.Point(490, 43)
+        Me.txtCate.Name = "txtCate"
+        Me.txtCate.ReadOnly = True
+        Me.txtCate.Size = New System.Drawing.Size(175, 32)
+        Me.txtCate.TabIndex = 13
+        Me.txtCate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(311, 46)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(137, 26)
+        Me.Label12.TabIndex = 12
+        Me.Label12.Text = "ประเภทสินค้า :"
+        '
         'lsvProductList
         '
         Me.lsvProductList.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -100,7 +118,7 @@ Partial Class Form_POS
         Me.num_exit.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.num_exit.Location = New System.Drawing.Point(560, 123)
         Me.num_exit.Name = "num_exit"
-        Me.num_exit.Size = New System.Drawing.Size(85, 38)
+        Me.num_exit.Size = New System.Drawing.Size(85, 32)
         Me.num_exit.TabIndex = 11
         '
         'txtStockLeft
@@ -109,7 +127,7 @@ Partial Class Form_POS
         Me.txtStockLeft.Location = New System.Drawing.Point(194, 40)
         Me.txtStockLeft.Name = "txtStockLeft"
         Me.txtStockLeft.ReadOnly = True
-        Me.txtStockLeft.Size = New System.Drawing.Size(102, 38)
+        Me.txtStockLeft.Size = New System.Drawing.Size(102, 32)
         Me.txtStockLeft.TabIndex = 1
         Me.txtStockLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -148,7 +166,7 @@ Partial Class Form_POS
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(16, 43)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(172, 32)
+        Me.Label11.Size = New System.Drawing.Size(134, 26)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "สินค้าคงเหลือ :"
         '
@@ -157,7 +175,7 @@ Partial Class Form_POS
         Me.txtProductID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtProductID.Location = New System.Drawing.Point(20, 121)
         Me.txtProductID.Name = "txtProductID"
-        Me.txtProductID.Size = New System.Drawing.Size(132, 38)
+        Me.txtProductID.Size = New System.Drawing.Size(132, 32)
         Me.txtProductID.TabIndex = 0
         '
         'Label9
@@ -166,7 +184,7 @@ Partial Class Form_POS
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(651, 88)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(152, 32)
+        Me.Label9.Size = New System.Drawing.Size(121, 26)
         Me.Label9.TabIndex = 4
         Me.Label9.Text = "รวมเป็นเงิน :"
         '
@@ -176,7 +194,7 @@ Partial Class Form_POS
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(554, 88)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(104, 32)
+        Me.Label8.Size = New System.Drawing.Size(83, 26)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "จำนวน :"
         '
@@ -186,7 +204,7 @@ Partial Class Form_POS
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(422, 88)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(126, 32)
+        Me.Label7.Size = New System.Drawing.Size(97, 26)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "ราคาขาย :"
         '
@@ -196,7 +214,7 @@ Partial Class Form_POS
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(167, 88)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 32)
+        Me.Label6.Size = New System.Drawing.Size(95, 26)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "ชื่อสินค้า :"
         '
@@ -206,7 +224,7 @@ Partial Class Form_POS
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(16, 85)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(136, 32)
+        Me.Label5.Size = New System.Drawing.Size(107, 26)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "รหัสสินค้า :"
         '
@@ -239,7 +257,7 @@ Partial Class Form_POS
         Me.txtCustomerID.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtCustomerID.Location = New System.Drawing.Point(35, 84)
         Me.txtCustomerID.Name = "txtCustomerID"
-        Me.txtCustomerID.Size = New System.Drawing.Size(77, 38)
+        Me.txtCustomerID.Size = New System.Drawing.Size(77, 32)
         Me.txtCustomerID.TabIndex = 0
         '
         'Label2
@@ -248,7 +266,7 @@ Partial Class Form_POS
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(149, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 32)
+        Me.Label2.Size = New System.Drawing.Size(90, 26)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ชื่อ-สกุล :"
         '
@@ -258,31 +276,9 @@ Partial Class Form_POS
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(10, 43)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(133, 32)
+        Me.Label1.Size = New System.Drawing.Size(104, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "รหัสลูกค้า :"
-        '
-        'cboEmployee
-        '
-        Me.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.cboEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cboEmployee.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboEmployee.FormattingEnabled = True
-        Me.cboEmployee.Location = New System.Drawing.Point(733, 267)
-        Me.cboEmployee.Name = "cboEmployee"
-        Me.cboEmployee.Size = New System.Drawing.Size(262, 39)
-        Me.cboEmployee.TabIndex = 4
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(795, 232)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(200, 32)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "พนักงานรับเรื่อง :"
         '
         'cmdClear
         '
@@ -315,7 +311,7 @@ Partial Class Form_POS
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(733, 170)
+        Me.lblNet.Location = New System.Drawing.Point(718, 213)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(262, 53)
         Me.lblNet.TabIndex = 21
@@ -326,9 +322,9 @@ Partial Class Form_POS
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(843, 138)
+        Me.Label4.Location = New System.Drawing.Point(828, 181)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(152, 32)
+        Me.Label4.Size = New System.Drawing.Size(121, 26)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "รวมเป็นเงิน :"
         '
@@ -351,7 +347,7 @@ Partial Class Form_POS
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(384, 58)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(230, 32)
+        Me.Label10.Size = New System.Drawing.Size(181, 26)
         Me.Label10.TabIndex = 20
         Me.Label10.Text = "เลขที่ใบเสร็จรับเงิน :"
         '
@@ -362,7 +358,7 @@ Partial Class Form_POS
         Me.txtOrderID.Location = New System.Drawing.Point(631, 58)
         Me.txtOrderID.Name = "txtOrderID"
         Me.txtOrderID.ReadOnly = True
-        Me.txtOrderID.Size = New System.Drawing.Size(127, 38)
+        Me.txtOrderID.Size = New System.Drawing.Size(127, 32)
         Me.txtOrderID.TabIndex = 22
         '
         'Button1
@@ -376,35 +372,13 @@ Partial Class Form_POS
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Label12
-        '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(311, 46)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(173, 32)
-        Me.Label12.TabIndex = 12
-        Me.Label12.Text = "ประเภทสินค้า :"
-        '
-        'txtCate
-        '
-        Me.txtCate.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCate.Location = New System.Drawing.Point(490, 43)
-        Me.txtCate.Name = "txtCate"
-        Me.txtCate.ReadOnly = True
-        Me.txtCate.Size = New System.Drawing.Size(175, 38)
-        Me.txtCate.TabIndex = 13
-        Me.txtCate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Form_POS
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1085, 729)
-        Me.Controls.Add(Me.cboEmployee)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtOrderID)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdClear)
@@ -441,10 +415,8 @@ Partial Class Form_POS
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents cboEmployee As ComboBox
     Friend WithEvents lblContactName As Label
     Friend WithEvents txtCustomerID As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents cmdClear As Button

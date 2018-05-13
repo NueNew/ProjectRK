@@ -136,7 +136,6 @@ C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resource
 C:\MYPROJECT\ProjectRK\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.exe.config
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_REPORT_ADV.resources
-C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_IMPORT.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_DON.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Report_CR_POS.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.Form_Login.resources
@@ -158,3 +157,9 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.xml
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.pdb
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbprojAssemblyReference.cache
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.MF.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRDON.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRPOS.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SROE.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRBL.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRPDLEFT.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRRNU.resources

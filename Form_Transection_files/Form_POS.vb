@@ -19,9 +19,11 @@ Public Class Form_POS
         MessageBox.Show(Form_Login.emp_id)
     End Sub
 
-    Private Sub selflog()
-        cboEmployee.SelectedValue = Form_Login.emp_id
-    End Sub
+
+
+
+
+
     Private Sub reloadPOS()
         '<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
         'จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น 2
@@ -33,19 +35,14 @@ Public Class Form_POS
         adapter = New SqlDataAdapter(command)
         dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
         adapter.Fill(dataSt, "Orders") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
-        Dim item As Integer
-        item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
-        txtOrderID.Text = Format(item + 1)
+        If dataSt.Tables("Orders").Rows.Count <> 0 Then
+            Dim item As Integer
+            item = CInt(dataSt.Tables("Orders").Rows(0).Item("OrderID").ToString())
+            txtOrderID.Text = Format(item + 1)
+        Else
+            txtOrderID.Text = "1"
+        End If
         'ปิด>>>
-
-
-
-    End Sub
-
-    Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'whereCboVal()
-        cc()
-        reloadPOS()
 
         lsvProductList.Columns.Add("ประเภทสินค้า", 0, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("รหัสสินค้า", 100, HorizontalAlignment.Left)
@@ -60,7 +57,17 @@ Public Class Form_POS
         txtProductID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"
-        selflog()
+
+
+    End Sub
+
+    Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'whereCboVal()
+        cc()
+        reloadPOS()
+
+
+
     End Sub
 
     Private Sub ClearProductData()
@@ -212,7 +219,8 @@ Public Class Form_POS
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
                 'o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
                 o.EmployeeID = CType(Form_Login.emp_id, Integer?)
-                o.OrderDate = Date.Now
+                o.OrderDate = DateTime.Now
+                'o.OrderDate = Date.Now  <cc>
                 o.CBID = 2
                 Dim p As New Product() 'บอกว่า p คือตาราง Product 
 
@@ -224,7 +232,7 @@ Public Class Form_POS
                     od.ProductID = CInt(lsvProductList.Items(i).SubItems(1).Text)
                     od.UnitPrice = CDec(lsvProductList.Items(i).SubItems(3).Text)
                     od.Quantity = CShort(lsvProductList.Items(i).SubItems(4).Text)
-                    od.Discount = 0
+
                     o.OrdersDetails.Add(od) 'ใช้คำสั่ง Add
                 Next
 
