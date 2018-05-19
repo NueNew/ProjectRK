@@ -80,4 +80,9 @@ Public Class MF
         Me.Hide()
         SRBL.Show()
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Me.Hide()
+        SRPDLEFT.Show()
+    End Sub
 End Class

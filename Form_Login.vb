@@ -33,7 +33,7 @@ Public Class Form_Login
         adapter.Fill(dataSt, "Employees")
         If dataSt.Tables("Employees").Rows.Count() <= 0 Then
 
-            MessageBox.Show("Username Or Password Are Invalid")
+            MessageBox.Show("กรุณาใส่ข้อมูลให้ถูกต้อง")
 
         Else
 

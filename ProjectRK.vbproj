@@ -491,6 +491,26 @@
   <ItemGroup>
     <None Include="Resources\2887_renamed.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resouce\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\039-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\065-like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\066-bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\062-shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\022-levels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouce\026-bar-chart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
