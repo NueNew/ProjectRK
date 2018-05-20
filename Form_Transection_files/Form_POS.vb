@@ -7,21 +7,16 @@ Imports CrystalDecisions.CrystalReports.Engine
 
 
 Public Class Form_POS
-    Dim db As New DataClassesDataContext
+    Public sendIdCustomer As String 'ประกาศตัวแปร เพื่อไว้สำหรับส่งรับค่าข้าม ฟอร์ม
 
-    Private Sub cc() 'เชื่อมกับฐานข้อมูล SQL SERVER
+    Dim db As New DataClassesDataContext 'ประกาศ db เป็น dataclass ที่เราสร้างเอาไว้
+
+    'เชื่อมกับฐานข้อมูล SQL SERVER
+    Private Sub cc()
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
     End Sub
-
-    Public Sub whereCboVal()
-        MessageBox.Show(Form_Login.emp_id)
-    End Sub
-
-
-
-
 
 
     Private Sub reloadPOS()
@@ -30,7 +25,6 @@ Public Class Form_POS
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
-
         command.CommandText = "SELECT * from Orders where OrderID = (select max(OrderID) from Orders)"
         adapter = New SqlDataAdapter(command)
         dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
@@ -57,17 +51,11 @@ Public Class Form_POS
         txtProductID.ContextMenu = New ContextMenu()
         ClearProductData()
         lblNet.Text = "0"
-
-
     End Sub
 
     Private Sub Form_POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'whereCboVal()
         cc()
         reloadPOS()
-
-
-
     End Sub
 
     Private Sub ClearProductData()
@@ -78,6 +66,11 @@ Public Class Form_POS
         txtStockLeft.Text = "0"
         txtCate.Text = ""
         num_exit.Value = 1
+    End Sub
+
+    Private Sub ClearCustomerData()
+        txtCustomerID.Text = ""
+        lblContactName.Text = ""
     End Sub
 
     Private Sub txtCustomerID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCustomerID.KeyDown
@@ -91,16 +84,11 @@ Public Class Form_POS
                 lblContactName.Text = cs.FirstOrDefault().CustomerName.Trim()
                 txtProductID.Focus()
             Else
-                MessageBox.Show("รหัสลูกค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("รหัสผู้บริจาคที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 ClearCustomerData()
                 txtCustomerID.Focus()
             End If
         End If
-    End Sub
-
-    Private Sub ClearCustomerData()
-        txtCustomerID.Text = ""
-        lblContactName.Text = ""
     End Sub
 
     Private Sub txtProductID_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProductID.KeyDown
@@ -120,10 +108,7 @@ Public Class Form_POS
                 'ให้การเลือกจำนวนไม่เกิน ข้อมูลในตารางสินค้า โดยที่ได้แปลงค่าจาก String เป็น Decimal
                 CalculateTotal()
                 num_exit.Focus()
-            Else
-                MessageBox.Show("รหัสสินค้าที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                ClearCustomerData()
-                txtProductID.Focus()
+
             End If
         End If
     End Sub
@@ -288,36 +273,72 @@ Public Class Form_POS
         End If
     End Sub
 
-    Private Sub txtProductID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProductID.KeyPress
-        If e.KeyChar < "0" Or e.KeyChar > "9" Then
-            e.Handled = True
-        End If
-    End Sub
-
-    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStockLeft.KeyPress
-        If e.KeyChar < "0" Or e.KeyChar > "9" Then
-            e.Handled = True
-        End If
-    End Sub
-
     Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         db.Connection.Close()
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtOrderID.TextChanged
-
-    End Sub
-
-    Private Sub Form_POS_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-
     End Sub
 
     Private Sub num_exit_ValueChanged(sender As Object, e As EventArgs) Handles num_exit.ValueChanged
         CalculateTotal()
     End Sub
 
+    'เมื่อกดปุ่มบ้านจะกลับไปหน้าหลัก
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
         MF.Show()
+    End Sub
+
+    'เมื่อทำการกดปุ่มเลือกข้อมูลผู้บริจาคจะให้แสดง FormDCustomer ขึ้นมาแล้วรับค่าตามที่เลือกใน FormDCustomer
+    Private Sub SearchCustomerID_Click(sender As Object, e As EventArgs) Handles SearchCustomerID.Click
+        FormDCustomer.ShowDialog()
+        Me.txtCustomerID.Text = CType(FormDCustomer.id_customer, String)
+    End Sub
+
+    'เมื่อข้อมูลใน txtCustomerID เปลี่ยน ให้ใส่ข้อมูลที่นำมาจาก DB 
+    Private Sub txtCustomerID_TextChanged(sender As Object, e As EventArgs) Handles txtCustomerID.TextChanged
+        If txtCustomerID.Text.Trim() = "" Then Exit Sub
+
+        Dim cs = From c In db.Customers Select c.CustomerID, c.CustomerName
+                     Where CustomerID = CInt(txtCustomerID.Text)
+
+            If cs.Count() > 0 Then
+                txtCustomerID.Text = cs.FirstOrDefault.CustomerID.ToString 'ลองใส่เป็น tostring
+                lblContactName.Text = cs.FirstOrDefault().CustomerName.Trim()
+                txtProductID.Focus()
+            Else
+                MessageBox.Show("รหัสผู้บริจาคที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ClearCustomerData()
+                txtCustomerID.Focus()
+            End If
+
+    End Sub
+
+    'เมื่อทำการกด ปุ่ม เลือกวัตถุมงคล จะให้แสดง FormDProduct ขึ้นมาแล้วรับค่าตามที่เลือกใน FormDProduct
+    Private Sub SearchProductID_Click(sender As Object, e As EventArgs) Handles SearchProductID.Click
+        Dim pro = New FormDProduct
+        pro.ShowDialog()
+        Me.txtProductID.Text = CType(pro.id_product, String)
+    End Sub
+
+    'เมื่อข้อมูลใน txtProductID เปลี่ยน ให้ใส่ข้อมูลที่นำมาจาก DB
+    Private Sub txtProductID_TextChanged(sender As Object, e As EventArgs) Handles txtProductID.TextChanged
+        If txtProductID.Text.Trim() = "" Then Exit Sub
+
+        Dim ps = From p In db.Products Join c In db.Categories On p.CategoryID Equals c.CategoryID Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock, c.CategoryName
+                     Where ProductID = CInt(txtProductID.Text)
+
+            If ps.Count() > 0 Then
+                txtProductID.Text = ps.FirstOrDefault().ProductID.ToString()
+                lblProductName.Text = ps.FirstOrDefault().ProductName.Trim()
+                lblSalePrice.Text = ps.FirstOrDefault().UnitPrice.ToString()
+                txtStockLeft.Text = ps.FirstOrDefault().UnitsInStock.ToString()
+                txtCate.Text = ps.FirstOrDefault().CategoryName.ToString()
+
+                num_exit.Maximum = Convert.ToInt16(txtStockLeft.Text) 'ให้ค่าไม่เกินกับข้อมูลสินค้าในฐานข้อมูล 
+                'ให้การเลือกจำนวนไม่เกิน ข้อมูลในตารางสินค้า โดยที่ได้แปลงค่าจาก String เป็น Decimal
+                CalculateTotal()
+                num_exit.Focus()
+
+            End If
+
     End Sub
 End Class

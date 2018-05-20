@@ -39,6 +39,7 @@ Partial Class Form_POS
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.SearchCustomerID = New System.Windows.Forms.Button()
         Me.lblContactName = New System.Windows.Forms.Label()
         Me.txtCustomerID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -51,6 +52,7 @@ Partial Class Form_POS
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtOrderID = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.SearchProductID = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.num_exit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -59,6 +61,7 @@ Partial Class Form_POS
         'GroupBox2
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox2.Controls.Add(Me.SearchProductID)
         Me.GroupBox2.Controls.Add(Me.txtCate)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.lsvProductList)
@@ -85,7 +88,7 @@ Partial Class Form_POS
         'txtCate
         '
         Me.txtCate.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCate.Location = New System.Drawing.Point(490, 43)
+        Me.txtCate.Location = New System.Drawing.Point(247, 44)
         Me.txtCate.Name = "txtCate"
         Me.txtCate.ReadOnly = True
         Me.txtCate.Size = New System.Drawing.Size(175, 32)
@@ -96,7 +99,7 @@ Partial Class Form_POS
         '
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(311, 46)
+        Me.Label12.Location = New System.Drawing.Point(102, 47)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(137, 26)
         Me.Label12.TabIndex = 12
@@ -124,7 +127,7 @@ Partial Class Form_POS
         'txtStockLeft
         '
         Me.txtStockLeft.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtStockLeft.Location = New System.Drawing.Point(194, 40)
+        Me.txtStockLeft.Location = New System.Drawing.Point(563, 44)
         Me.txtStockLeft.Name = "txtStockLeft"
         Me.txtStockLeft.ReadOnly = True
         Me.txtStockLeft.Size = New System.Drawing.Size(102, 32)
@@ -164,7 +167,7 @@ Partial Class Form_POS
         '
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(16, 43)
+        Me.Label11.Location = New System.Drawing.Point(423, 47)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(134, 26)
         Me.Label11.TabIndex = 4
@@ -231,6 +234,7 @@ Partial Class Form_POS
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox1.Controls.Add(Me.SearchCustomerID)
         Me.GroupBox1.Controls.Add(Me.lblContactName)
         Me.GroupBox1.Controls.Add(Me.txtCustomerID)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -241,7 +245,16 @@ Partial Class Form_POS
         Me.GroupBox1.Size = New System.Drawing.Size(543, 168)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "ข้อมูลลูกค้า"
+        Me.GroupBox1.Text = "ข้อมูลผู้บริจาค"
+        '
+        'SearchCustomerID
+        '
+        Me.SearchCustomerID.Location = New System.Drawing.Point(119, 84)
+        Me.SearchCustomerID.Name = "SearchCustomerID"
+        Me.SearchCustomerID.Size = New System.Drawing.Size(30, 32)
+        Me.SearchCustomerID.TabIndex = 5
+        Me.SearchCustomerID.Text = "บ"
+        Me.SearchCustomerID.UseVisualStyleBackColor = True
         '
         'lblContactName
         '
@@ -276,9 +289,9 @@ Partial Class Form_POS
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(10, 43)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 26)
+        Me.Label1.Size = New System.Drawing.Size(122, 26)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "รหัสลูกค้า :"
+        Me.Label1.Text = "รหัสผู้บริจาค:"
         '
         'cmdClear
         '
@@ -372,6 +385,15 @@ Partial Class Form_POS
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'SearchProductID
+        '
+        Me.SearchProductID.Location = New System.Drawing.Point(51, 44)
+        Me.SearchProductID.Name = "SearchProductID"
+        Me.SearchProductID.Size = New System.Drawing.Size(30, 32)
+        Me.SearchProductID.TabIndex = 6
+        Me.SearchProductID.Text = "ว"
+        Me.SearchProductID.UseVisualStyleBackColor = True
+        '
         'Form_POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -432,4 +454,6 @@ Partial Class Form_POS
     Friend WithEvents Button1 As Button
     Friend WithEvents txtCate As TextBox
     Friend WithEvents Label12 As Label
+    Friend WithEvents SearchCustomerID As Button
+    Friend WithEvents SearchProductID As Button
 End Class

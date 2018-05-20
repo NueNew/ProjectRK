@@ -18,8 +18,8 @@ Public Class Form_Donate
 
         command.CommandText = "SELECT * from OrdersD where OrderDID = (select max(OrderDID) from OrdersD)"
         adapter = New SqlDataAdapter(command)
-        dataSt = New DataSet 'ให้เอาคำสั่ง sql ที่อยุ่ในตัวแปร sql book มาเกบไว้ในตัวแปร da แบบ text
-        adapter.Fill(dataSt, "OrdersD") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร ds
+        dataSt = New DataSet
+        adapter.Fill(dataSt, "OrdersD") 'แล้วเกบผลลัพท์ไว้ในบัพเฟิลผ่านตัวแปร dataSt
         If dataSt.Tables("OrdersD").Rows.Count <> 0 Then
             Dim item As Integer
             item = CInt(dataSt.Tables("OrdersD").Rows(0).Item("OrderDID").ToString())
@@ -55,6 +55,7 @@ Public Class Form_Donate
         ClearProductData()
         lblNet.Text = "0"
     End Sub
+
     Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MessageBox.Show(Form_Login.emp_id)
 
@@ -92,13 +93,7 @@ Public Class Form_Donate
         lblContactName.Text = ""
     End Sub
 
-
     Private Sub cmdAdd_Click(sender As Object, e As EventArgs) Handles cmdAdd.Click
-        'If (txtProductDID.Text.Trim() = "") Or (lblProductDName.Text.Trim() = "") Then
-        '    txtProductDID.Focus()
-        '    Exit Sub
-        'End If
-
         Dim i As Integer = 0
         Dim lvi As ListViewItem
         Dim tmpProductID As Integer = 0
@@ -162,7 +157,7 @@ Public Class Form_Donate
         End If
 
         If lsvProductList.Items.Count > 0 Then
-            If MessageBox.Show("คุณต้องการบันทึกรายการสั่งซื้อสินค้า ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+            If MessageBox.Show("คุณต้องการบันทึกรายการ ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                 Dim o As New OrdersD()
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
                 o.EmployeeID = CType(Form_Login.emp_id, Integer?)
@@ -184,7 +179,7 @@ Public Class Form_Donate
                     db.SubmitChanges()
                     ts.Complete()
                 End Using
-                MessageBox.Show("บันทึกรายการสั่งซื้อสินค้า เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("บันทึกรายการ เรียบร้อยแล้ว !!!", "ผลการทำงาน", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
                 'เอาข้อมูลเข้า TEST
@@ -198,6 +193,7 @@ Public Class Form_Donate
                     command.Parameters.AddWithValue("C", 1)
                     command.ExecuteNonQuery()
                 Next
+                '
 
                 lsvProductList.Clear()
                 ClearCustomerData()
@@ -222,31 +218,15 @@ Public Class Form_Donate
         End If
     End Sub
 
-    Private Sub txtProductID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDon.KeyPress
-        If e.KeyChar < "0" Or e.KeyChar > "9" Then
-            e.Handled = True
-        End If
-    End Sub
-
-    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs)
-        If e.KeyChar < "0" Or e.KeyChar > "9" Then
-            e.Handled = True
-        End If
-    End Sub
-
+    'เมื่อกดปุ่มบ้านจะกลับไปหน้าหลัก
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
         MF.Show()
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-
-    End Sub
-
     'สร้าง Sub มาเพื่อตรวจว่า ท่านได้เลือก ข้อมูลที่ซ้ำกับใน Listview หรือไม่
     Private Sub cboCatD_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboCatD.SelectedValueChanged
         Dim i As Integer = 0
-        Dim lvi As ListViewItem
         Dim tmpProductID As Integer = 0
         For i = 0 To lsvProductList.Items.Count - 1
             tmpProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)
@@ -255,6 +235,30 @@ Public Class Form_Donate
                 ClearProductData()
             End If
         Next
+    End Sub
+
+    'เมื่อทำการกดปุ่มเลือกข้อมูลผู้บริจาคจะให้แสดง FormDCustomer ขึ้นมาแล้วรับค่าตามที่เลือกใน FormDCustomer
+    Private Sub SearchCustomerID_Click(sender As Object, e As EventArgs) Handles SearchCustomerID.Click
+        FormDCustomer.ShowDialog()
+        Me.txtCustomerID.Text = CType(FormDCustomer.id_customer, String)
+    End Sub
+
+    'เมื่อข้อมูลใน txtCustomerID เปลี่ยน ให้ใส่ข้อมูลที่นำมาจาก DB 
+    Private Sub txtCustomerID_TextChanged(sender As Object, e As EventArgs) Handles txtCustomerID.TextChanged
+        If txtCustomerID.Text.Trim() = "" Then Exit Sub
+
+        Dim cs = From c In db.Customers Select c.CustomerID, c.CustomerName
+                 Where CustomerID = CInt(txtCustomerID.Text)
+
+        If cs.Count() > 0 Then
+            txtCustomerID.Text = cs.FirstOrDefault.CustomerID.ToString 'ลองใส่เป็น tostring
+            lblContactName.Text = cs.FirstOrDefault().CustomerName.Trim()
+        Else
+            MessageBox.Show("รหัสผู้บริจาคที่คุณป้อน ไม่มี !!!", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ClearCustomerData()
+            txtCustomerID.Focus()
+        End If
+
     End Sub
 
 End Class

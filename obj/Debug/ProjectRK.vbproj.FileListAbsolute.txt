@@ -163,3 +163,5 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SROE.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRBL.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRPDLEFT.resources
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.SRRNU.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.FormDCustomer.resources
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.FormDProduct.resources

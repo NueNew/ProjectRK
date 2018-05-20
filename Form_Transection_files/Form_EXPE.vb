@@ -202,7 +202,6 @@ Public Class Form_EXPE
     Private Sub cboCatE_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboCatE.SelectedValueChanged
 
         Dim i As Integer = 0
-        Dim lvi As ListViewItem
         Dim tmpProductID As Integer = 0
         For i = 0 To lsvProductList.Items.Count - 1
             tmpProductID = CInt(lsvProductList.Items(i).SubItems(0).Text)

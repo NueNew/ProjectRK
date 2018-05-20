@@ -115,10 +115,27 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_Form\FormDCustomer.Designer.vb">
+      <DependentUpon>FormDCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_Form\FormDCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog_Form\FormDProduct.Designer.vb">
+      <DependentUpon>FormDProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_Form\FormDProduct.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\ForSearch\SRBL.Designer.vb">
       <DependentUpon>SRBL.vb</DependentUpon>
@@ -311,8 +328,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProductDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialog_Form\FormDCustomer.resx">
+      <DependentUpon>FormDCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog_Form\FormDProduct.resx">
+      <DependentUpon>FormDProduct.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\ForSearch\SRBL.resx">
       <DependentUpon>SRBL.vb</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +445,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="CustomerDataset.xsc">
+      <DependentUpon>CustomerDataset.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerDataset.xss">
+      <DependentUpon>CustomerDataset.xsd</DependentUpon>
+    </None>
     <None Include="DataClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses.designer.vb</LastGenOutput>
@@ -443,6 +482,17 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ProductDataSet.xsc">
+      <DependentUpon>ProductDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductDataSet.xss">
+      <DependentUpon>ProductDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resouce\2887.jpg" />
     <None Include="Resouce\Bangkok-Vector.jpg" />
   </ItemGroup>
@@ -512,5 +562,9 @@
   <ItemGroup>
     <None Include="Resouce\026-bar-chart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

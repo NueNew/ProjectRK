@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_Donate
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form_Donate
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cboCatD = New System.Windows.Forms.ComboBox()
@@ -43,6 +43,7 @@ Partial Class Form_Donate
         Me.txtOrderDID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.SearchCustomerID = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -126,6 +127,7 @@ Partial Class Form_Donate
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox1.Controls.Add(Me.SearchCustomerID)
         Me.GroupBox1.Controls.Add(Me.lblContactName)
         Me.GroupBox1.Controls.Add(Me.txtCustomerID)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -133,7 +135,7 @@ Partial Class Form_Donate
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(111, 108)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(475, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(540, 209)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ข้อมูลลูกค้า"
@@ -141,9 +143,9 @@ Partial Class Form_Donate
         'lblContactName
         '
         Me.lblContactName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblContactName.Location = New System.Drawing.Point(192, 105)
+        Me.lblContactName.Location = New System.Drawing.Point(180, 105)
         Me.lblContactName.Name = "lblContactName"
-        Me.lblContactName.Size = New System.Drawing.Size(210, 30)
+        Me.lblContactName.Size = New System.Drawing.Size(338, 30)
         Me.lblContactName.TabIndex = 4
         '
         'txtCustomerID
@@ -156,7 +158,7 @@ Partial Class Form_Donate
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(186, 66)
+        Me.Label2.Location = New System.Drawing.Point(175, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 26)
         Me.Label2.TabIndex = 1
@@ -262,6 +264,15 @@ Partial Class Form_Donate
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'SearchCustomerID
+        '
+        Me.SearchCustomerID.Location = New System.Drawing.Point(144, 103)
+        Me.SearchCustomerID.Name = "SearchCustomerID"
+        Me.SearchCustomerID.Size = New System.Drawing.Size(30, 32)
+        Me.SearchCustomerID.TabIndex = 6
+        Me.SearchCustomerID.Text = "บ"
+        Me.SearchCustomerID.UseVisualStyleBackColor = True
+        '
         'Form_Donate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -313,4 +324,5 @@ Partial Class Form_Donate
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents SearchCustomerID As Button
 End Class
