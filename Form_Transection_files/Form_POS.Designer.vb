@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_POS
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form_POS
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtCate = New System.Windows.Forms.TextBox()
@@ -51,6 +51,8 @@ Partial Class Form_POS
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtOrderID = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSCus = New System.Windows.Forms.Button()
+        Me.btnSPro = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.num_exit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -59,6 +61,7 @@ Partial Class Form_POS
         'GroupBox2
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox2.Controls.Add(Me.btnSPro)
         Me.GroupBox2.Controls.Add(Me.txtCate)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.lsvProductList)
@@ -85,7 +88,7 @@ Partial Class Form_POS
         'txtCate
         '
         Me.txtCate.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCate.Location = New System.Drawing.Point(490, 43)
+        Me.txtCate.Location = New System.Drawing.Point(173, 41)
         Me.txtCate.Name = "txtCate"
         Me.txtCate.ReadOnly = True
         Me.txtCate.Size = New System.Drawing.Size(175, 32)
@@ -96,7 +99,7 @@ Partial Class Form_POS
         '
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(311, 46)
+        Me.Label12.Location = New System.Drawing.Point(24, 44)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(137, 26)
         Me.Label12.TabIndex = 12
@@ -124,7 +127,7 @@ Partial Class Form_POS
         'txtStockLeft
         '
         Me.txtStockLeft.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtStockLeft.Location = New System.Drawing.Point(194, 40)
+        Me.txtStockLeft.Location = New System.Drawing.Point(559, 40)
         Me.txtStockLeft.Name = "txtStockLeft"
         Me.txtStockLeft.ReadOnly = True
         Me.txtStockLeft.Size = New System.Drawing.Size(102, 32)
@@ -164,7 +167,7 @@ Partial Class Form_POS
         '
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(16, 43)
+        Me.Label11.Location = New System.Drawing.Point(422, 41)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(134, 26)
         Me.Label11.TabIndex = 4
@@ -222,7 +225,7 @@ Partial Class Form_POS
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 85)
+        Me.Label5.Location = New System.Drawing.Point(12, 85)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(107, 26)
         Me.Label5.TabIndex = 0
@@ -231,6 +234,7 @@ Partial Class Form_POS
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox1.Controls.Add(Me.BtnSCus)
         Me.GroupBox1.Controls.Add(Me.lblContactName)
         Me.GroupBox1.Controls.Add(Me.txtCustomerID)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -255,7 +259,7 @@ Partial Class Form_POS
         'txtCustomerID
         '
         Me.txtCustomerID.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCustomerID.Location = New System.Drawing.Point(35, 84)
+        Me.txtCustomerID.Location = New System.Drawing.Point(15, 85)
         Me.txtCustomerID.Name = "txtCustomerID"
         Me.txtCustomerID.Size = New System.Drawing.Size(77, 32)
         Me.txtCustomerID.TabIndex = 0
@@ -372,6 +376,24 @@ Partial Class Form_POS
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'BtnSCus
+        '
+        Me.BtnSCus.Location = New System.Drawing.Point(98, 84)
+        Me.BtnSCus.Name = "BtnSCus"
+        Me.BtnSCus.Size = New System.Drawing.Size(40, 35)
+        Me.BtnSCus.TabIndex = 142
+        Me.BtnSCus.Text = "บ"
+        Me.BtnSCus.UseVisualStyleBackColor = True
+        '
+        'btnSPro
+        '
+        Me.btnSPro.Location = New System.Drawing.Point(115, 81)
+        Me.btnSPro.Name = "btnSPro"
+        Me.btnSPro.Size = New System.Drawing.Size(37, 36)
+        Me.btnSPro.TabIndex = 142
+        Me.btnSPro.Text = "ว"
+        Me.btnSPro.UseVisualStyleBackColor = True
+        '
         'Form_POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -432,4 +454,6 @@ Partial Class Form_POS
     Friend WithEvents Button1 As Button
     Friend WithEvents txtCate As TextBox
     Friend WithEvents Label12 As Label
+    Friend WithEvents BtnSCus As Button
+    Friend WithEvents btnSPro As Button
 End Class

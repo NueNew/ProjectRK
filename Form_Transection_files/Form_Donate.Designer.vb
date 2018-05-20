@@ -43,6 +43,7 @@ Partial Class Form_Donate
         Me.txtOrderDID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSCus = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -126,6 +127,7 @@ Partial Class Form_Donate
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox1.Controls.Add(Me.BtnSCus)
         Me.GroupBox1.Controls.Add(Me.lblContactName)
         Me.GroupBox1.Controls.Add(Me.txtCustomerID)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -133,7 +135,7 @@ Partial Class Form_Donate
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(111, 108)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(475, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(540, 209)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ข้อมูลลูกค้า"
@@ -143,12 +145,12 @@ Partial Class Form_Donate
         Me.lblContactName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblContactName.Location = New System.Drawing.Point(192, 105)
         Me.lblContactName.Name = "lblContactName"
-        Me.lblContactName.Size = New System.Drawing.Size(210, 30)
+        Me.lblContactName.Size = New System.Drawing.Size(326, 30)
         Me.lblContactName.TabIndex = 4
         '
         'txtCustomerID
         '
-        Me.txtCustomerID.Location = New System.Drawing.Point(61, 103)
+        Me.txtCustomerID.Location = New System.Drawing.Point(44, 102)
         Me.txtCustomerID.Name = "txtCustomerID"
         Me.txtCustomerID.Size = New System.Drawing.Size(77, 32)
         Me.txtCustomerID.TabIndex = 0
@@ -262,6 +264,15 @@ Partial Class Form_Donate
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'BtnSCus
+        '
+        Me.BtnSCus.Location = New System.Drawing.Point(127, 102)
+        Me.BtnSCus.Name = "BtnSCus"
+        Me.BtnSCus.Size = New System.Drawing.Size(40, 35)
+        Me.BtnSCus.TabIndex = 143
+        Me.BtnSCus.Text = "บ"
+        Me.BtnSCus.UseVisualStyleBackColor = True
+        '
         'Form_Donate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -313,4 +324,5 @@ Partial Class Form_Donate
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents BtnSCus As Button
 End Class
