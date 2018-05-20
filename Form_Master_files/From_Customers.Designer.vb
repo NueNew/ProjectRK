@@ -41,7 +41,6 @@ Partial Class From_Customers
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -51,6 +50,7 @@ Partial Class From_Customers
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class From_Customers
         Me.Label5.Location = New System.Drawing.Point(237, 341)
         Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 32)
+        Me.Label5.Size = New System.Drawing.Size(48, 26)
         Me.Label5.TabIndex = 65
         Me.Label5.Text = "ที่อยู่"
         '
@@ -87,7 +87,7 @@ Partial Class From_Customers
         Me.TextPhone.Location = New System.Drawing.Point(315, 276)
         Me.TextPhone.Margin = New System.Windows.Forms.Padding(6)
         Me.TextPhone.Name = "TextPhone"
-        Me.TextPhone.Size = New System.Drawing.Size(435, 38)
+        Me.TextPhone.Size = New System.Drawing.Size(435, 32)
         Me.TextPhone.TabIndex = 62
         '
         'Label3
@@ -95,10 +95,10 @@ Partial Class From_Customers
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(190, 276)
+        Me.Label3.Location = New System.Drawing.Point(193, 276)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 32)
+        Me.Label3.Size = New System.Drawing.Size(84, 26)
         Me.Label3.TabIndex = 61
         Me.Label3.Text = "โทรศัพท์"
         '
@@ -109,7 +109,7 @@ Partial Class From_Customers
         Me.TextName.Location = New System.Drawing.Point(313, 202)
         Me.TextName.Margin = New System.Windows.Forms.Padding(6)
         Me.TextName.Name = "TextName"
-        Me.TextName.Size = New System.Drawing.Size(437, 38)
+        Me.TextName.Size = New System.Drawing.Size(437, 32)
         Me.TextName.TabIndex = 60
         '
         'Label2
@@ -117,10 +117,10 @@ Partial Class From_Customers
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(164, 202)
+        Me.Label2.Location = New System.Drawing.Point(175, 202)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(135, 32)
+        Me.Label2.Size = New System.Drawing.Size(104, 26)
         Me.Label2.TabIndex = 59
         Me.Label2.Text = "ชื่อผู้บริจาค"
         '
@@ -132,7 +132,7 @@ Partial Class From_Customers
         Me.TextID.Margin = New System.Windows.Forms.Padding(6)
         Me.TextID.Name = "TextID"
         Me.TextID.ReadOnly = True
-        Me.TextID.Size = New System.Drawing.Size(96, 38)
+        Me.TextID.Size = New System.Drawing.Size(96, 32)
         Me.TextID.TabIndex = 57
         '
         'Label1
@@ -143,7 +143,7 @@ Partial Class From_Customers
         Me.Label1.Location = New System.Drawing.Point(238, 139)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 32)
+        Me.Label1.Size = New System.Drawing.Size(48, 26)
         Me.Label1.TabIndex = 56
         Me.Label1.Text = "รหัส"
         '
@@ -172,7 +172,7 @@ Partial Class From_Customers
         Me.Label12.Location = New System.Drawing.Point(188, 23)
         Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(278, 39)
+        Me.Label12.Size = New System.Drawing.Size(222, 31)
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "จัดการข้อมูลผู้บริจาค"
         '
@@ -205,7 +205,7 @@ Partial Class From_Customers
         Me.Label10.Location = New System.Drawing.Point(483, 31)
         Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(109, 29)
+        Me.Label10.Size = New System.Drawing.Size(86, 24)
         Me.Label10.TabIndex = 20
         Me.Label10.Text = "ค้นหา(ชื่อ)"
         '
@@ -215,7 +215,7 @@ Partial Class From_Customers
         Me.TextSearch.Location = New System.Drawing.Point(600, 32)
         Me.TextSearch.Margin = New System.Windows.Forms.Padding(6)
         Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(277, 34)
+        Me.TextSearch.Size = New System.Drawing.Size(277, 29)
         Me.TextSearch.TabIndex = 21
         '
         'BindingNavigator1
@@ -225,11 +225,11 @@ Partial Class From_Customers
         Me.BindingNavigator1.BackColor = System.Drawing.SystemColors.HighlightText
         Me.BindingNavigator1.CountItem = Me.ToolStripLabel1
         Me.BindingNavigator1.CountItemFormat = "จาก    {0}"
-        Me.BindingNavigator1.DeleteItem = Me.ToolStripButton2
+        Me.BindingNavigator1.DeleteItem = Nothing
         Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
         Me.BindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(40, 40)
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton7})
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton8, Me.ToolStripButton7})
         Me.BindingNavigator1.Location = New System.Drawing.Point(261, 562)
         Me.BindingNavigator1.MoveFirstItem = Me.ToolStripButton3
         Me.BindingNavigator1.MoveLastItem = Me.ToolStripButton6
@@ -237,7 +237,7 @@ Partial Class From_Customers
         Me.BindingNavigator1.MovePreviousItem = Me.ToolStripButton4
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(483, 47)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(460, 47)
         Me.BindingNavigator1.TabIndex = 139
         Me.BindingNavigator1.Text = "BindingNavigator2"
         '
@@ -254,18 +254,9 @@ Partial Class From_Customers
         '
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(102, 44)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 44)
         Me.ToolStripLabel1.Text = "จาก    {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.RightToLeftAutoMirrorImage = True
-        Me.ToolStripButton2.Size = New System.Drawing.Size(44, 44)
-        Me.ToolStripButton2.Text = "Delete"
         '
         'ToolStripButton3
         '
@@ -338,9 +329,18 @@ Partial Class From_Customers
         Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton7.Text = "&Save"
         '
+        'ToolStripButton8
+        '
+        Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton8.Image = CType(resources.GetObject("ToolStripButton8.Image"), System.Drawing.Image)
+        Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton8.Name = "ToolStripButton8"
+        Me.ToolStripButton8.Size = New System.Drawing.Size(44, 44)
+        Me.ToolStripButton8.Text = "ToolStripButton8"
+        '
         'From_Customers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.BindingNavigator1)
@@ -384,7 +384,6 @@ Partial Class From_Customers
     Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
@@ -395,4 +394,5 @@ Partial Class From_Customers
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents ToolStripButton7 As ToolStripButton
     Friend WithEvents Button1 As Button
+    Friend WithEvents ToolStripButton8 As ToolStripButton
 End Class

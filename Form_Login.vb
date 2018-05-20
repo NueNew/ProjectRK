@@ -27,7 +27,6 @@ Public Class Form_Login
         command.Parameters.Add("@password", SqlDbType.VarChar).Value = TextBoxPassword.Text
 
 
-        Dim ds As DataSet
         adapter = New SqlDataAdapter(command)
         dataSt = New DataSet()
         adapter.Fill(dataSt, "Employees")

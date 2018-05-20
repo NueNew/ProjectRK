@@ -7,10 +7,10 @@ Public Class Form_Employee
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
-        BindingNavigator1.DeleteItem = Nothing
         BindingData()
     End Sub
 
+    'แปะข้อมูล
     Friend Sub BindingData(Optional cmd As SqlCommand = Nothing)
         Dim tbx As TextBox
         Dim pbx As PictureBox
@@ -61,6 +61,7 @@ Public Class Form_Employee
         CreateAutoComplete()
     End Sub
 
+    'กดเพื่อแสดงหน้าต่างเลือกภาพ
     Private Sub LinkImage_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkImage.LinkClicked
         OpenFileDialog1.Filter =
             "Image File(*.jpg,*.png,*.gif,*.bmp)|*.jpg;*.png;*.gif;*.bmp"
@@ -69,14 +70,8 @@ Public Class Form_Employee
             PictureBox1.Image = Bitmap.FromFile(OpenFileDialog1.FileName)
         End If
     End Sub
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) 
-        If TextID.Text = "" Then
-            InsertData()
-        Else
-            UpdateData()
-        End If
-    End Sub
 
+    'Sub เพิ่มข้อมูล()
     Private Sub InsertData()
         sql = "INSERT INTO Employees( EmployeeName, Address, Phone, Username, Password, Photo) 
                VALUES(@fname, @add,@ph ,@username,@password, @pic)"
@@ -107,12 +102,14 @@ Public Class Form_Employee
         End If
     End Sub
 
+    'ฟังชั่นอ่านภาพเพื่อมาบันทึก
     Private Function ReadImage() As Byte()
         Dim memStream As New IO.MemoryStream()
         PictureBox1.Image.Save(memStream, PictureBox1.Image.RawFormat)
         Return memStream.ToArray()
     End Function
 
+    'Sub แก้ไขข้อมูล()
     Private Sub UpdateData()
 
         sql = "UPDATE Employees Set EmployeeName = @fname,                Address = @add, Phone = @ph, Username = @username,               Password = @password, Photo = @pic WHERE EmployeeID = @eid "
@@ -143,28 +140,7 @@ Public Class Form_Employee
         End If
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) 
-        Dim result As DialogResult =
-            MessageBox.Show("ท่านต้องการลบข้อมูลรายนี้จริงหรือไม่", "ยืนยันการลบ",
-                            MessageBoxButtons.OKCancel)
 
-        If result = DialogResult.Cancel Then
-            Exit Sub
-        End If
-
-        sql = "DELETE FROM Employees WHERE EmployeeID = @id"
-        command.CommandText = sql
-        command.Parameters.Clear()
-        command.Parameters.AddWithValue("id", TextID.Text)
-
-        Dim r As Integer = command.ExecuteNonQuery()
-        If r = -1 Then
-            MessageBox.Show("เกิดข้อผิดพลาด ไม่สามารถลบข้อมูลได้")
-        Else
-            MessageBox.Show("ข้อมูลถูกลบแล้ว")
-            BindingData()
-        End If
-    End Sub
     Private Sub CreateAutoComplete()
         sql = "Select EmployeeName AS PerName FROM Employees"
         command.CommandText = sql
@@ -179,6 +155,7 @@ Public Class Form_Employee
         TextSearch.AutoCompleteCustomSource = autoComp
     End Sub
 
+    'ปุ่มค้นหาข้อมูล
     Private Sub ButtonOK_Click(sender As Object, e As EventArgs) Handles ButtonOK.Click
         If String.IsNullOrEmpty(TextSearch.Text) Then
             BindingData()
@@ -197,11 +174,7 @@ Public Class Form_Employee
         BindingData(command)
     End Sub
 
-    Private Sub Form_Employee_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        'Dim frm As New From_Main()
-        'frm.Show()
-    End Sub
-
+    'ปุ่มบันทึก
     Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
         If TextID.Text = "" Then
             InsertData()
@@ -210,16 +183,23 @@ Public Class Form_Employee
         End If
     End Sub
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+    'ปุ่มกลับบ้าน
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
+
+    'ปุ่มลบ
+    Private Sub ToolStripButton8_Click(sender As Object, e As EventArgs) Handles ToolStripButton8.Click
         Dim result As DialogResult =
-        MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
-                         MessageBoxButtons.OKCancel)
+MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
+                 MessageBoxButtons.OKCancel)
 
         If result = DialogResult.Cancel Then
             Exit Sub
         End If
 
-        sql = "DELETE FROM ProductsD WHERE ProductDID = @id"
+        sql = "DELETE FROM Employees WHERE EmployeeID = @id"
         command.CommandText = sql
         command.Parameters.Clear()
         command.Parameters.AddWithValue("id", TextID.Text)
@@ -231,10 +211,5 @@ Public Class Form_Employee
             MessageBox.Show("ข้อมูลถูกลบแล้ว")
             BindingData()
         End If
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-        MF.Show()
     End Sub
 End Class

@@ -7,7 +7,7 @@ Public Class Form_Category
             connection.Open()
         End If
 
-        BindingNavigator1.DeleteItem = Nothing
+        'BindingNavigator1.DeleteItem = Nothing
         BindingData()
     End Sub
 
@@ -75,27 +75,6 @@ Public Class Form_Category
         End If
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) 
-        Dim result As DialogResult =
-       MessageBox.Show("ท่านต้องการลบข้อมูลหมวดหมู่รายนี้จริงหรือไม่", "ยืนยันการลบ",
-                        MessageBoxButtons.OKCancel)
-
-        If result = DialogResult.Cancel Then
-            Exit Sub
-        End If
-
-        sql = "DELETE FROM Categories WHERE CategoryID = @id"
-        command.CommandText = sql
-        command.Parameters.Clear()
-        command.Parameters.AddWithValue("id", TextID.Text)
-        Dim r As Integer = command.ExecuteNonQuery()
-        If r = -1 Then
-            MessageBox.Show("เกิดข้อผิดพลาด ไม่สามารถลบข้อมูลได้")
-        Else
-            MessageBox.Show("ข้อมูลถูกลบแล้ว")
-            BindingData()
-        End If
-    End Sub
 
     Private Sub CreateAutoComplete()
         sql = "SELECT CategoryName FROM Categories"
@@ -111,6 +90,7 @@ Public Class Form_Category
         TextSearch.AutoCompleteCustomSource = autoComp
     End Sub
 
+    'ปุ่มค้นหา
     Private Sub ButtonOK_Click(sender As Object, e As EventArgs) Handles ButtonOK.Click
         If String.IsNullOrEmpty(TextSearch.Text) Then
             BindingData()
@@ -124,17 +104,35 @@ Public Class Form_Category
         BindingData(command)
     End Sub
 
+    'ปุ่มกลับบ้าน
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        MF.Show()
+    End Sub
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+
+    'ปุ่ม save
+    Private Sub ToolStripButton7_Click_1(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
+        If TextID.Text = "" Then
+            InsertData()
+        Else
+            UpdateData()
+        End If
+    End Sub
+
+
+
+    'ปุ่มลบ
+    Private Sub ToolStripButton8_Click(sender As Object, e As EventArgs) Handles ToolStripButton8.Click
         Dim result As DialogResult =
-        MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
-                         MessageBoxButtons.OKCancel)
+   MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",
+                    MessageBoxButtons.OKCancel)
 
         If result = DialogResult.Cancel Then
             Exit Sub
         End If
 
-        sql = "DELETE FROM ProductsD WHERE ProductDID = @id"
+        sql = "DELETE FROM Categories WHERE CategoryID = @id"
         command.CommandText = sql
         command.Parameters.Clear()
         command.Parameters.AddWithValue("id", TextID.Text)
@@ -145,19 +143,6 @@ Public Class Form_Category
         Else
             MessageBox.Show("ข้อมูลถูกลบแล้ว")
             BindingData()
-        End If
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-        MF.Show()
-    End Sub
-
-    Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
-        If TextID.Text = "" Then
-            InsertData()
-        Else
-            UpdateData()
         End If
     End Sub
 End Class

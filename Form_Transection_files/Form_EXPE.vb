@@ -174,22 +174,6 @@ Public Class Form_EXPE
                 ClearData()
                 lblNet.Text = "0"
                 reloadEX()
-
-
-
-                '''ทำการส่งค่าจาก Transaction นี้ไปยัง Crystalreport
-                'Dim rpt As New ReportDocument
-                'Dim directory As String = My.Application.Info.DirectoryPath
-
-                'rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\CR_EXPE.rpt")
-                'rpt.SetParameterValue("EXPEID", Me.txtExpensesID.Text)
-
-                'Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
-                'Form_Report_CR_DON.CrystalReportViewer1.Refresh()
-                'Form_Report_CR_DON.Show()
-                'Form_Report_CR_DON.WindowState = FormWindowState.Maximized
-                '''
-
             End If
         End If
     End Sub
