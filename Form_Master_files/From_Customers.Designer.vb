@@ -49,8 +49,8 @@ Partial Class From_Customers
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
@@ -73,7 +73,7 @@ Partial Class From_Customers
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(237, 341)
+        Me.Label5.Location = New System.Drawing.Point(238, 341)
         Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 26)
@@ -95,7 +95,7 @@ Partial Class From_Customers
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(193, 276)
+        Me.Label3.Location = New System.Drawing.Point(202, 276)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 26)
@@ -117,7 +117,7 @@ Partial Class From_Customers
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(175, 202)
+        Me.Label2.Location = New System.Drawing.Point(182, 202)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(104, 26)
@@ -320,15 +320,6 @@ Partial Class From_Customers
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 47)
         '
-        'ToolStripButton7
-        '
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
-        Me.ToolStripButton7.Text = "&Save"
-        '
         'ToolStripButton8
         '
         Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -337,6 +328,15 @@ Partial Class From_Customers
         Me.ToolStripButton8.Name = "ToolStripButton8"
         Me.ToolStripButton8.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton8.Text = "ToolStripButton8"
+        '
+        'ToolStripButton7
+        '
+        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
+        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton7.Name = "ToolStripButton7"
+        Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
+        Me.ToolStripButton7.Text = "&Save"
         '
         'From_Customers
         '

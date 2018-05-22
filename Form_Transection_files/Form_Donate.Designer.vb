@@ -31,6 +31,7 @@ Partial Class Form_Donate
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtDon = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BtnSCus = New System.Windows.Forms.Button()
         Me.lblContactName = New System.Windows.Forms.Label()
         Me.txtCustomerID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,7 +44,6 @@ Partial Class Form_Donate
         Me.txtOrderDID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnSCus = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -140,6 +140,15 @@ Partial Class Form_Donate
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ข้อมูลลูกค้า"
         '
+        'BtnSCus
+        '
+        Me.BtnSCus.Location = New System.Drawing.Point(127, 102)
+        Me.BtnSCus.Name = "BtnSCus"
+        Me.BtnSCus.Size = New System.Drawing.Size(40, 35)
+        Me.BtnSCus.TabIndex = 143
+        Me.BtnSCus.Text = "บ"
+        Me.BtnSCus.UseVisualStyleBackColor = True
+        '
         'lblContactName
         '
         Me.lblContactName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -169,9 +178,9 @@ Partial Class Form_Donate
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(39, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 26)
+        Me.Label1.Size = New System.Drawing.Size(128, 26)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "รหัสลูกค้า :"
+        Me.Label1.Text = "รหัสผู้บริจาค :"
         '
         'cmdClear
         '
@@ -204,7 +213,7 @@ Partial Class Form_Donate
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblNet.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblNet.Location = New System.Drawing.Point(657, 201)
+        Me.lblNet.Location = New System.Drawing.Point(706, 200)
         Me.lblNet.Name = "lblNet"
         Me.lblNet.Size = New System.Drawing.Size(205, 53)
         Me.lblNet.TabIndex = 28
@@ -214,7 +223,7 @@ Partial Class Form_Donate
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(724, 151)
+        Me.Label4.Location = New System.Drawing.Point(773, 150)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 27
@@ -263,15 +272,6 @@ Partial Class Form_Donate
         Me.Button1.Size = New System.Drawing.Size(79, 79)
         Me.Button1.TabIndex = 141
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'BtnSCus
-        '
-        Me.BtnSCus.Location = New System.Drawing.Point(127, 102)
-        Me.BtnSCus.Name = "BtnSCus"
-        Me.BtnSCus.Size = New System.Drawing.Size(40, 35)
-        Me.BtnSCus.TabIndex = 143
-        Me.BtnSCus.Text = "บ"
-        Me.BtnSCus.UseVisualStyleBackColor = True
         '
         'Form_Donate
         '

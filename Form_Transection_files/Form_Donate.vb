@@ -29,7 +29,7 @@ Public Class Form_Donate
         lsvProductList.Columns.Add("รหัส", 0, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ประเภทบริจาค", 200, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("รายละเอียด", 250, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("จำนวนเงิน", 100, HorizontalAlignment.Right)
+        lsvProductList.Columns.Add("จำนวนเงิน", 147, HorizontalAlignment.Right)
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True
@@ -52,7 +52,6 @@ Public Class Form_Donate
     End Sub
 
     Private Sub Form_Donate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'MessageBox.Show(Form_Login.emp_id)
         reloadDon()
     End Sub
 

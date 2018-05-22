@@ -41,9 +41,9 @@ Public Class Form_EXPE
 
         reloadEX()
         lsvProductList.Columns.Add("รหัส", 0, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ประเภทค่าใช้จ่าย", 150, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("ประเภทค่าใช้จ่าย", 210, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("รายละเอียดค่าใช้จ่าย", 300, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("จำนวนเงิน", 104, HorizontalAlignment.Right)
+        lsvProductList.Columns.Add("จำนวนเงิน", 154, HorizontalAlignment.Right)
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True

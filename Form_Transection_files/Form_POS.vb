@@ -36,11 +36,11 @@ Public Class Form_POS
         'ปิด>>>
 
         lsvProductList.Columns.Add("ประเภทสินค้า", 0, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("รหัสสินค้า", 100, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("ชื่อสินค้า", 210, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("รหัสสินค้า", 150, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("ชื่อสินค้า", 272, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("ราคาขาย", 100, HorizontalAlignment.Left)
         lsvProductList.Columns.Add("จำนวน", 90, HorizontalAlignment.Left)
-        lsvProductList.Columns.Add("รวมเป็นเงิน", 104, HorizontalAlignment.Left)
+        lsvProductList.Columns.Add("รวมเป็นเงิน", 154, HorizontalAlignment.Left)
         lsvProductList.View = View.Details
         lsvProductList.GridLines = True
         lsvProductList.FullRowSelect = True

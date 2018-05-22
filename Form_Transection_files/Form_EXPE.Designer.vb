@@ -142,9 +142,9 @@ Partial Class Form_EXPE
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(242, 34)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(184, 26)
+        Me.Label6.Size = New System.Drawing.Size(190, 26)
         Me.Label6.TabIndex = 1
-        Me.Label6.Text = "ชื่อรายการค่าใช้จ่าย :"
+        Me.Label6.Text = "รายละเอียดค่าใช้จ่าย :"
         '
         'Label5
         '

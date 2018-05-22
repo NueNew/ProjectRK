@@ -58,8 +58,8 @@ Partial Class Form_Product
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,7 +137,7 @@ Partial Class Form_Product
         Me.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.Location = New System.Drawing.Point(715, 385)
+        Me.LinkLabel1.Location = New System.Drawing.Point(761, 377)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(89, 26)
         Me.LinkLabel1.TabIndex = 116
@@ -160,7 +160,7 @@ Partial Class Form_Product
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(220, 148)
+        Me.Label9.Location = New System.Drawing.Point(228, 148)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(87, 26)
         Me.Label9.TabIndex = 113
@@ -170,7 +170,7 @@ Partial Class Form_Product
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(630, 148)
+        Me.PictureBox1.Location = New System.Drawing.Point(652, 151)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(198, 223)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -182,7 +182,7 @@ Partial Class Form_Product
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(93, 394)
+        Me.Label7.Location = New System.Drawing.Point(130, 394)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(185, 26)
         Me.Label7.TabIndex = 111
@@ -196,7 +196,7 @@ Partial Class Form_Product
         Me.TextDetail.Multiline = True
         Me.TextDetail.Name = "TextDetail"
         Me.TextDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextDetail.Size = New System.Drawing.Size(195, 99)
+        Me.TextDetail.Size = New System.Drawing.Size(265, 99)
         Me.TextDetail.TabIndex = 110
         '
         'TextStock
@@ -213,7 +213,7 @@ Partial Class Form_Product
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(234, 348)
+        Me.Label6.Location = New System.Drawing.Point(242, 348)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 26)
         Me.Label6.TabIndex = 108
@@ -224,7 +224,7 @@ Partial Class Form_Product
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(262, 304)
+        Me.Label3.Location = New System.Drawing.Point(264, 298)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 26)
         Me.Label3.TabIndex = 107
@@ -253,7 +253,7 @@ Partial Class Form_Product
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(181, 255)
+        Me.Label2.Location = New System.Drawing.Point(201, 249)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(116, 26)
         Me.Label2.TabIndex = 104
@@ -290,7 +290,7 @@ Partial Class Form_Product
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(364, 511)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 32)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(265, 32)
         Me.DateTimePicker1.TabIndex = 121
         '
         'Label4
@@ -298,7 +298,7 @@ Partial Class Form_Product
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(101, 511)
+        Me.Label4.Location = New System.Drawing.Point(135, 511)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(180, 26)
         Me.Label4.TabIndex = 111
@@ -406,15 +406,6 @@ Partial Class Form_Product
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 47)
         '
-        'ToolStripButton7
-        '
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
-        Me.ToolStripButton7.Text = "&Save"
-        '
         'ToolStripButton8
         '
         Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -423,6 +414,15 @@ Partial Class Form_Product
         Me.ToolStripButton8.Name = "ToolStripButton8"
         Me.ToolStripButton8.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton8.Text = "ToolStripButton8"
+        '
+        'ToolStripButton7
+        '
+        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
+        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton7.Name = "ToolStripButton7"
+        Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
+        Me.ToolStripButton7.Text = "&Save"
         '
         'Form_Product
         '
