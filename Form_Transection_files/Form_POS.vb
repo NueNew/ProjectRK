@@ -1,5 +1,5 @@
-﻿Option Explicit On
-Option Strict On
+﻿Option Explicit On 'คำสั่งนี้เป็นการบังคับให้ทุกๆตัวแปรที่ถูกใช้งานในโปรแกรมนี้ต้องถูกประกาศด้วยคำสั่ง Dim
+Option Strict On 'กาหนดให้มีการตรวจสอบโค้ดของภาษา VB อย่างเคร่งครัด ให้ภาษา VB มีระดับเช่นเดียวกับภาษา VC#
 Imports System.Transactions
 Imports System.Data
 Imports System.Data.SqlClient
@@ -155,9 +155,6 @@ Public Class Form_POS
         ' num_exit.Value.ToString, '
         'ลองเปลี่ยน txtAmount.Text เป็น num_exit.value.ToString
 
-
-
-
         lvi = New ListViewItem(anyData)
         lsvProductList.Items.Add(lvi)
         CalculateNet()
@@ -206,10 +203,8 @@ Public Class Form_POS
             If MessageBox.Show("คุณต้องการบันทึกรายการสั่งซื้อสินค้า ใช่หรือไม่ ?", "คำยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                 Dim o As New Order()
                 o.CustomerID = CType(txtCustomerID.Text, Integer?) 'ลองแปลงค่าเป็น Integer
-                'o.EmployeeID = DirectCast(cboEmployee.SelectedValue, Integer?)
                 o.EmployeeID = CType(Form_Login.emp_id, Integer?)
                 o.OrderDate = DateTime.Now
-                'o.OrderDate = Date.Now  <cc>
                 o.CBID = 2
                 Dim p As New Product() 'บอกว่า p คือตาราง Product 
 

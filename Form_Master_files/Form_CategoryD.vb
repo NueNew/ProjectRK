@@ -6,11 +6,9 @@ Public Class Form_CategoryD
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
-
-        'BindingNavigator1.DeleteItem = Nothing
         BindingData()
     End Sub
-
+    'แปะข้อมูล
     Private Sub BindingData(Optional cmd As SqlCommand = Nothing)
         For Each tbx As TextBox In Me.Controls.OfType(Of TextBox)
             tbx.DataBindings.Clear()
@@ -37,13 +35,6 @@ Public Class Form_CategoryD
         CreateAutoComplete()
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
-        If TextID.Text = "" Then
-            InsertData()
-        Else
-            UpdateData()
-        End If
-    End Sub
 
     Private Sub InsertData()
         sql = "INSERT INTO CategoriesD(CategoryDName, Description) 
@@ -82,28 +73,6 @@ Public Class Form_CategoryD
         End If
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs)
-        Dim result As DialogResult =
-       MessageBox.Show("ท่านต้องการลบข้อมูลหมวดหมู่รายนี้จริงหรือไม่", "ยืนยันการลบ",
-                        MessageBoxButtons.OKCancel)
-
-        If result = DialogResult.Cancel Then
-            Exit Sub
-        End If
-
-        sql = "DELETE FROM CategoriesD WHERE CategoryDID = @id"
-        command.CommandText = sql
-        command.Parameters.Clear()
-        command.Parameters.AddWithValue("id", TextID.Text)
-        Dim r As Integer = command.ExecuteNonQuery()
-        If r = -1 Then
-            MessageBox.Show("เกิดข้อผิดพลาด ไม่สามารถลบข้อมูลได้")
-        Else
-            MessageBox.Show("ข้อมูลถูกลบแล้ว")
-            BindingData()
-        End If
-    End Sub
-
     Private Sub CreateAutoComplete()
         sql = "SELECT CategoryDName FROM CategoriesD"
         command.CommandText = sql
@@ -117,7 +86,7 @@ Public Class Form_CategoryD
         TextSearch.AutoCompleteSource = AutoCompleteSource.CustomSource
         TextSearch.AutoCompleteCustomSource = autoComp
     End Sub
-
+    'ปุ่มค้นหา
     Private Sub ButtonOK_Click(sender As Object, e As EventArgs) Handles ButtonOK.Click
         If String.IsNullOrEmpty(TextSearch.Text) Then
             BindingData()
@@ -131,11 +100,7 @@ Public Class Form_CategoryD
         BindingData(command)
     End Sub
 
-    Private Sub Form_CategoryD_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        'Dim frm As New From_Main()
-        'frm.Show()
-    End Sub
-
+    'ปุ่มบันทึก
     Private Sub ToolStripButton7_Click(sender As Object, e As EventArgs) Handles ToolStripButton7.Click
         If TextID.Text = "" Then
             InsertData()
@@ -144,16 +109,12 @@ Public Class Form_CategoryD
         End If
     End Sub
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) 
-
-
-    End Sub
-
+    'ปุ่มกลับบ้าน
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
         MF.Show()
     End Sub
-
+    'ปุ่มลบ
     Private Sub ToolStripButton8_Click(sender As Object, e As EventArgs) Handles ToolStripButton8.Click
         Dim result As DialogResult =
         MessageBox.Show("ท่านต้องการลบข้อมูลนี้จริงหรือไม่", "ยืนยันการลบ",

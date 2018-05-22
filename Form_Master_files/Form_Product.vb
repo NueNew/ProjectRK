@@ -51,7 +51,6 @@ Public Class Form_Product
 
         TextID.DataBindings.Add("Text", bindingSrc, "ProductID")
         TextName.DataBindings.Add("Text", bindingSrc, "ProductName")
-        'TextPrice.Text = String.Format("#,#")
         TextPrice.DataBindings.Add("Text", bindingSrc, "UnitPrice")
         TextStock.DataBindings.Add("Text", bindingSrc, "UnitsInStock")
         TextDetail.DataBindings.Add("Text", bindingSrc, "QuantityPerUnit")
@@ -127,14 +126,6 @@ Public Class Form_Product
         command.Parameters.AddWithValue("stk", TextStock.Text)
         command.Parameters.AddWithValue("dtl", TextDetail.Text)
         command.Parameters.AddWithValue("date", DateTimePicker1.Value)
-
-        ''เกี่ยวกับเวันที่เวลา
-        'Dim dateStr = $"{DateTimePicker1.Value.Year}/
-        '{DateTimePicker1.Value.Month}/
-        '{DateTimePicker1.Value.Day}"
-
-        'command.Parameters.AddWithValue("date", dateStr)
-        ''
 
         If Not (PictureBox1.Image Is Nothing) Then
             Dim pic() As Byte = ReadImage()

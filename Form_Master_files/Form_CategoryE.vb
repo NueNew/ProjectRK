@@ -7,8 +7,6 @@ Public Class Form_CategoryE
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
-
-        BindingNavigator1.DeleteItem = Nothing
         BindingData()
     End Sub
 
@@ -107,7 +105,7 @@ Public Class Form_CategoryE
             Exit Sub
         End If
 
-        sql = "SELECT * FROM CategoriesD WHERE CategoryDName LIKE '%' + @n + '%'"
+        sql = "SELECT * FROM CategoriesE WHERE CategoryEName LIKE '%' + @n + '%'"
         command.CommandText = sql
         command.Parameters.Clear()
         command.Parameters.AddWithValue("n", TextSearch.Text)

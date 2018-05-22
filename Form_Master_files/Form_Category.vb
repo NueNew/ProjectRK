@@ -6,8 +6,6 @@ Public Class Form_Category
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
-
-        'BindingNavigator1.DeleteItem = Nothing
         BindingData()
     End Sub
 

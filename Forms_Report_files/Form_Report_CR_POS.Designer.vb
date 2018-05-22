@@ -37,14 +37,14 @@ Partial Class Form_Report_CR_POS
         Me.CrystalReportViewer1.TabIndex = 0
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
-        'Form_Report_CR_DON
+        'Form_Report_CR_POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Name = "Form_Report_CR_DON"
-        Me.Text = "Form_Report_CR_DON"
+        Me.Name = "Form_Report_CR_POS"
+        Me.Text = "แสดงใบเสร็จรับเงิน"
         Me.ResumeLayout(False)
 
     End Sub

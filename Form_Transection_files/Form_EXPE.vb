@@ -10,9 +10,6 @@ Imports CrystalDecisions.CrystalReports.Engine
 Public Class Form_EXPE
     Dim db As New DataClassesDataContext
 
-
-
-
     Private Sub reloadEX()
         ''<<<ในส่วนนี้ นิว ประกาศไว้หาในส่วนของ ORDERID เพราะนิวใช้ LinQ แต่ลืม Binding ID เฉยๆ เริ่มแถนะครับ 
         ''จะทำแบบว่าหาไอดีที่มากที่สุด แล้ว +1 เช่น ไอดีล่าสุดเป็น 1 ช่อง textboxID จะเป็น 2
