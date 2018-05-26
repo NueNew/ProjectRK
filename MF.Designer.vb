@@ -22,7 +22,6 @@ Partial Class MF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MF))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.header = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -96,14 +95,14 @@ Partial Class MF
         'ทะเบยนToolStripMenuItem
         '
         Me.ทะเบยนToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ผบรจาคToolStripMenuItem, Me.ToolStripSeparator1, Me.ประเภทบรจาคToolStripMenuItem, Me.ToolStripSeparator2, Me.ประเภทวตถมงคลToolStripMenuItem, Me.วตถมงคลToolStripMenuItem, Me.ToolStripSeparator3, Me.ประเภทคาใชจายToolStripMenuItem, Me.ToolStripSeparator4, Me.พนกงานวดมคนายกToolStripMenuItem})
-        Me.ทะเบยนToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._018_star1
+        Me.ทะเบยนToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m0
         Me.ทะเบยนToolStripMenuItem.Name = "ทะเบยนToolStripMenuItem"
         Me.ทะเบยนToolStripMenuItem.Size = New System.Drawing.Size(122, 47)
         Me.ทะเบยนToolStripMenuItem.Text = "ทะเบียน"
         '
         'ผบรจาคToolStripMenuItem
         '
-        Me.ผบรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._039_user
+        Me.ผบรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m1
         Me.ผบรจาคToolStripMenuItem.Name = "ผบรจาคToolStripMenuItem"
         Me.ผบรจาคToolStripMenuItem.Size = New System.Drawing.Size(305, 48)
         Me.ผบรจาคToolStripMenuItem.Text = "ผู้บริจาค"
@@ -115,7 +114,7 @@ Partial Class MF
         '
         'ประเภทบรจาคToolStripMenuItem
         '
-        Me.ประเภทบรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._004_pie_chart1
+        Me.ประเภทบรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m2
         Me.ประเภทบรจาคToolStripMenuItem.Name = "ประเภทบรจาคToolStripMenuItem"
         Me.ประเภทบรจาคToolStripMenuItem.Size = New System.Drawing.Size(305, 48)
         Me.ประเภทบรจาคToolStripMenuItem.Text = "ประเภทบริจาค"
@@ -127,14 +126,14 @@ Partial Class MF
         '
         'ประเภทวตถมงคลToolStripMenuItem
         '
-        Me.ประเภทวตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._066_bookmark
+        Me.ประเภทวตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m3
         Me.ประเภทวตถมงคลToolStripMenuItem.Name = "ประเภทวตถมงคลToolStripMenuItem"
         Me.ประเภทวตถมงคลToolStripMenuItem.Size = New System.Drawing.Size(305, 48)
         Me.ประเภทวตถมงคลToolStripMenuItem.Text = "ประเภทวัตถุมงคล"
         '
         'วตถมงคลToolStripMenuItem
         '
-        Me.วตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._062_shield
+        Me.วตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m4
         Me.วตถมงคลToolStripMenuItem.Name = "วตถมงคลToolStripMenuItem"
         Me.วตถมงคลToolStripMenuItem.Size = New System.Drawing.Size(305, 48)
         Me.วตถมงคลToolStripMenuItem.Text = "วัตถุมงคล"
@@ -146,7 +145,7 @@ Partial Class MF
         '
         'ประเภทคาใชจายToolStripMenuItem
         '
-        Me.ประเภทคาใชจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.change1
+        Me.ประเภทคาใชจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m5
         Me.ประเภทคาใชจายToolStripMenuItem.Name = "ประเภทคาใชจายToolStripMenuItem"
         Me.ประเภทคาใชจายToolStripMenuItem.Size = New System.Drawing.Size(305, 48)
         Me.ประเภทคาใชจายToolStripMenuItem.Text = "ประเภทค่าใช้จ่าย"
@@ -158,7 +157,7 @@ Partial Class MF
         '
         'พนกงานวดมคนายกToolStripMenuItem
         '
-        Me.พนกงานวดมคนายกToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._065_like
+        Me.พนกงานวดมคนายกToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.m6
         Me.พนกงานวดมคนายกToolStripMenuItem.Name = "พนกงานวดมคนายกToolStripMenuItem"
         Me.พนกงานวดมคนายกToolStripMenuItem.Size = New System.Drawing.Size(305, 48)
         Me.พนกงานวดมคนายกToolStripMenuItem.Text = "พนักงานวัด / มัคนายก"
@@ -166,14 +165,14 @@ Partial Class MF
         'รายการToolStripMenuItem
         '
         Me.รายการToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.จำหนายวตถมงคลToolStripMenuItem, Me.ToolStripSeparator5, Me.บรจาคToolStripMenuItem, Me.ToolStripSeparator6, Me.รายจายToolStripMenuItem})
-        Me.รายการToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._004_cash_register
+        Me.รายการToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.t0
         Me.รายการToolStripMenuItem.Name = "รายการToolStripMenuItem"
         Me.รายการToolStripMenuItem.Size = New System.Drawing.Size(117, 47)
         Me.รายการToolStripMenuItem.Text = "รายการ"
         '
         'จำหนายวตถมงคลToolStripMenuItem
         '
-        Me.จำหนายวตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._062_shield1
+        Me.จำหนายวตถมงคลToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.t1
         Me.จำหนายวตถมงคลToolStripMenuItem.Name = "จำหนายวตถมงคลToolStripMenuItem"
         Me.จำหนายวตถมงคลToolStripMenuItem.Size = New System.Drawing.Size(265, 48)
         Me.จำหนายวตถมงคลToolStripMenuItem.Text = "จำหน่ายวัตถุมงคล"
@@ -185,7 +184,7 @@ Partial Class MF
         '
         'บรจาคToolStripMenuItem
         '
-        Me.บรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._004_pie_chart
+        Me.บรจาคToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.t2
         Me.บรจาคToolStripMenuItem.Name = "บรจาคToolStripMenuItem"
         Me.บรจาคToolStripMenuItem.Size = New System.Drawing.Size(265, 48)
         Me.บรจาคToolStripMenuItem.Text = "บริจาค"
@@ -197,7 +196,7 @@ Partial Class MF
         '
         'รายจายToolStripMenuItem
         '
-        Me.รายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.change1
+        Me.รายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.t3
         Me.รายจายToolStripMenuItem.Name = "รายจายToolStripMenuItem"
         Me.รายจายToolStripMenuItem.Size = New System.Drawing.Size(265, 48)
         Me.รายจายToolStripMenuItem.Text = "รายจ่าย"
@@ -205,14 +204,14 @@ Partial Class MF
         'รายงานToolStripMenuItem
         '
         Me.รายงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ใบอนโมทนาบญToolStripMenuItem, Me.ToolStripSeparator8, Me.ใบเสรจToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripSeparator7, Me.รายงานแสดงรายไดToolStripMenuItem, Me.รายงานแสดงรายจายToolStripMenuItem, Me.ToolStripSeparator9, Me.รายไดรายจายToolStripMenuItem})
-        Me.รายงานToolStripMenuItem.Image = CType(resources.GetObject("รายงานToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.รายงานToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.r0
         Me.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem"
         Me.รายงานToolStripMenuItem.Size = New System.Drawing.Size(118, 47)
         Me.รายงานToolStripMenuItem.Text = "รายงาน"
         '
         'ใบอนโมทนาบญToolStripMenuItem
         '
-        Me.ใบอนโมทนาบญToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.investment1
+        Me.ใบอนโมทนาบญToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.r1
         Me.ใบอนโมทนาบญToolStripMenuItem.Name = "ใบอนโมทนาบญToolStripMenuItem"
         Me.ใบอนโมทนาบญToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.ใบอนโมทนาบญToolStripMenuItem.Text = "ใบอนุโมทนาบุญ"
@@ -224,14 +223,14 @@ Partial Class MF
         '
         'ใบเสรจToolStripMenuItem
         '
-        Me.ใบเสรจToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.receipt
+        Me.ใบเสรจToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.r2
         Me.ใบเสรจToolStripMenuItem.Name = "ใบเสรจToolStripMenuItem"
         Me.ใบเสรจToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.ใบเสรจToolStripMenuItem.Text = "ใบเสร็จรับเงิน"
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.Image = Global.ProjectRK.My.Resources.Resources._022_levels
+        Me.ToolStripMenuItem1.Image = Global.ProjectRK.My.Resources.Resources.r3
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(293, 48)
         Me.ToolStripMenuItem1.Text = "รายงานสินค้าคงเหลือ"
@@ -243,14 +242,14 @@ Partial Class MF
         '
         'รายงานแสดงรายไดToolStripMenuItem
         '
-        Me.รายงานแสดงรายไดToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._026_bar_chart
+        Me.รายงานแสดงรายไดToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.r4
         Me.รายงานแสดงรายไดToolStripMenuItem.Name = "รายงานแสดงรายไดToolStripMenuItem"
         Me.รายงานแสดงรายไดToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.รายงานแสดงรายไดToolStripMenuItem.Text = "รายงานแสดงรายได้"
         '
         'รายงานแสดงรายจายToolStripMenuItem
         '
-        Me.รายงานแสดงรายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.change1
+        Me.รายงานแสดงรายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.r5
         Me.รายงานแสดงรายจายToolStripMenuItem.Name = "รายงานแสดงรายจายToolStripMenuItem"
         Me.รายงานแสดงรายจายToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.รายงานแสดงรายจายToolStripMenuItem.Text = "รายงานแสดงรายจ่าย"
@@ -262,14 +261,14 @@ Partial Class MF
         '
         'รายไดรายจายToolStripMenuItem
         '
-        Me.รายไดรายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._019_shuffle1
+        Me.รายไดรายจายToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.r6
         Me.รายไดรายจายToolStripMenuItem.Name = "รายไดรายจายToolStripMenuItem"
         Me.รายไดรายจายToolStripMenuItem.Size = New System.Drawing.Size(293, 48)
         Me.รายไดรายจายToolStripMenuItem.Text = "รายได้ - รายจ่าย"
         '
         'ออกจากระบบToolStripMenuItem
         '
-        Me.ออกจากระบบToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources._068_padlock1
+        Me.ออกจากระบบToolStripMenuItem.Image = Global.ProjectRK.My.Resources.Resources.logout
         Me.ออกจากระบบToolStripMenuItem.Name = "ออกจากระบบToolStripMenuItem"
         Me.ออกจากระบบToolStripMenuItem.Size = New System.Drawing.Size(176, 47)
         Me.ออกจากระบบToolStripMenuItem.Text = "ออกจากระบบ"
@@ -278,7 +277,7 @@ Partial Class MF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.ProjectRK.My.Resources.Resources._2887_renamed
+        Me.BackgroundImage = Global.ProjectRK.My.Resources.Resources.background2887
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.Panel1)

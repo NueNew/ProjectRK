@@ -1,0 +1,321 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ProjectRK
+</name>
+</assembly>
+<members>
+<member name="T:ProjectRK.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._002_add_user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._004_cash_register">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._004_pie_chart">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._004_pie_chart1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._017_notepad">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._018_star">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._018_star1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._019_shuffle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._019_shuffle1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._022_levels">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._026_bar_chart">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._028_home">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._028_home1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._028_home2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._039_user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._057_diskette">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._062_shield">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._062_shield1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._065_like">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._066_bookmark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._068_padlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._068_padlock1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._2887">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._2887_renamed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources._7070_home">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.Bangkok_Vector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.change">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.change1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.change2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.get_money">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.investment">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.investment1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.receipt">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSet.CustomersDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSet.CustomersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSet.CustomersRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSetTableAdapters.CustomersTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProjectRK.CustomersDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ProjectRK.CustomersDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ProjectRK.CustomersDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.UpdateAll(ProjectRK.CustomersDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProjectRK.CustomersDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSet.ProductsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSet.ProductsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSet.ProductsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSetTableAdapters.ProductsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProjectRK.ProductsDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ProjectRK.ProductsDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ProjectRK.ProductsDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.UpdateAll(ProjectRK.ProductsDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProjectRK.ProductsDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

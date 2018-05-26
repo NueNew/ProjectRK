@@ -13,9 +13,25 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -23,9 +39,11 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>ProjectRK.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -33,6 +51,8 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>ProjectRK.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -46,16 +66,34 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>ABBF5C966ECAB91F5A1D5A80B440FC3562D9AFF1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProjectRK_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -85,6 +123,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
@@ -93,6 +132,7 @@
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -161,12 +201,6 @@
       <DependentUpon>SR_OrderE.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms_Report_files\Form_REPORT_ADV.Designer.vb">
-      <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms_Report_files\Form_REPORT_ADV.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms_Report_files\Form_Report_CR_DON.Designer.vb">
       <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
     </Compile>
@@ -225,12 +259,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SR_BL.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Forms_Report_files\TEST\Revenue.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Revenue.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms_Report_files\ForSearch\SR_PDLEFT.vb">
@@ -306,6 +334,7 @@
     <Compile Include="Form_Transection_files\Form_POS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="MF.Designer.vb">
       <DependentUpon>MF.vb</DependentUpon>
     </Compile>
@@ -357,9 +386,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SR_OrderE.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\Form_REPORT_ADV.resx">
-      <DependentUpon>Form_REPORT_ADV.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\Form_Report_CR_DON.resx">
       <DependentUpon>Form_Report_CR_DON.vb</DependentUpon>
     </EmbeddedResource>
@@ -391,10 +417,6 @@
     <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_BL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SR_BL.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Report_files\TEST\Revenue.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Revenue.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Report_files\ForSearch\SR_PDLEFT.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -439,9 +461,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -464,6 +486,7 @@
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -493,74 +516,105 @@
     <None Include="ProductsDataSet.xss">
       <DependentUpon>ProductsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Resouce\2887.jpg" />
-    <None Include="Resouce\Bangkok-Vector.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\057-diskette.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\017-notepad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\018-star.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\004-pie-chart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\068-padlock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\002-add-user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\investment.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\019-shuffle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\change.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resouce\004-cash-register.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\get-money.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\028-home.png" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\icon7070\7070-home.jpg" />
+    <None Include="Resources\Bangkok-Vector.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\icon7070\028-home.png" />
+    <None Include="Resources\Bhome.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\2887_renamed.jpg" />
+    <None Include="Resources\background2887.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\receipt.png" />
+    <None Include="Resources\img_nav\01first.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\039-user.png" />
+    <None Include="Resources\img_nav\02previous.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\065-like.png" />
+    <None Include="Resources\img_nav\03next.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\066-bookmark.png" />
+    <None Include="Resources\img_nav\04last.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\062-shield.png" />
+    <None Include="Resources\img_nav\bin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\022-levels.png" />
+    <None Include="Resources\img_nav\save.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resouce\026-bar-chart.png" />
+    <None Include="Resources\img_menu\m0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\t0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\m2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\m3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\m4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\m5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\m6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\t3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_menu\r6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

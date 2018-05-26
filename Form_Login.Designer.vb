@@ -23,13 +23,13 @@ Partial Class Form_Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.TextBoxUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,6 +52,17 @@ Partial Class Form_Login
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ยินดีต้อนรับสู่โปรแกรม บริหารจัดการ รายได้วัด"
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(291, 280)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(177, 45)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "ออกจากโปรแกรม"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -118,17 +129,6 @@ Partial Class Form_Login
         Me.Label1.Size = New System.Drawing.Size(83, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ชื่อผู้ใช้ :"
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.Font = New System.Drawing.Font("TH Sarabun New", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(291, 280)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(177, 45)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "ออกจากโปรแกรม"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form_Login
         '

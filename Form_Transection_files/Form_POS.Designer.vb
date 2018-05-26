@@ -387,7 +387,7 @@ Partial Class Form_POS
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources.Bhome
         Me.Button1.Location = New System.Drawing.Point(132, 31)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(79, 79)

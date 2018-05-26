@@ -47,8 +47,8 @@ Partial Class Form_CategoryD
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
@@ -176,7 +176,7 @@ Partial Class Form_CategoryD
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources._028_home1
+        Me.Button1.Image = Global.ProjectRK.My.Resources.Resources.Bhome
         Me.Button1.Location = New System.Drawing.Point(20, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(79, 79)
@@ -237,7 +237,7 @@ Partial Class Form_CategoryD
         'ToolStripButton3
         '
         Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.Image = Global.ProjectRK.My.Resources.Resources._01first
         Me.ToolStripButton3.Name = "ToolStripButton3"
         Me.ToolStripButton3.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton3.Size = New System.Drawing.Size(44, 44)
@@ -246,7 +246,7 @@ Partial Class Form_CategoryD
         'ToolStripButton4
         '
         Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
+        Me.ToolStripButton4.Image = Global.ProjectRK.My.Resources.Resources._02previous
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton4.Size = New System.Drawing.Size(44, 44)
@@ -276,7 +276,7 @@ Partial Class Form_CategoryD
         'ToolStripButton5
         '
         Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.Image = Global.ProjectRK.My.Resources.Resources._03next
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton5.Size = New System.Drawing.Size(44, 44)
@@ -285,7 +285,7 @@ Partial Class Form_CategoryD
         'ToolStripButton6
         '
         Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
+        Me.ToolStripButton6.Image = Global.ProjectRK.My.Resources.Resources._04last
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton6.Size = New System.Drawing.Size(44, 44)
@@ -296,23 +296,23 @@ Partial Class Form_CategoryD
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 47)
         '
-        'ToolStripButton7
-        '
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
-        Me.ToolStripButton7.Text = "&Save"
-        '
         'ToolStripButton8
         '
         Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton8.Image = CType(resources.GetObject("ToolStripButton8.Image"), System.Drawing.Image)
+        Me.ToolStripButton8.Image = Global.ProjectRK.My.Resources.Resources.bin
         Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton8.Name = "ToolStripButton8"
         Me.ToolStripButton8.Size = New System.Drawing.Size(44, 44)
         Me.ToolStripButton8.Text = "ToolStripButton8"
+        '
+        'ToolStripButton7
+        '
+        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton7.Image = Global.ProjectRK.My.Resources.Resources.save
+        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton7.Name = "ToolStripButton7"
+        Me.ToolStripButton7.Size = New System.Drawing.Size(44, 44)
+        Me.ToolStripButton7.Text = "&Save"
         '
         'Form_CategoryD
         '
