@@ -1598,14 +1598,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectRK.exe" size="5798840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectRK.exe" size="5590968">
       <assemblyIdentity name="ProjectRK" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>60hLrich/Amw6DaMTcTd21xR+I10THLz5TxPXR8mM7g=</dsig:DigestValue>
+        <dsig:DigestValue>ZaYz/SCID5Wpj3x3qBuPC+D7pcxvaso/VSuJthjISJU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
