@@ -217,7 +217,7 @@ Partial Class Form_Category
         'ToolStripButton4
         '
         Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton4.Image = Global.ProjectRK.My.Resources.Resources._02previous
+        Me.ToolStripButton4.Image = Global.ProjectRK.My.Resources.Resources.mprevious
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton4.Size = New System.Drawing.Size(44, 44)
@@ -247,7 +247,7 @@ Partial Class Form_Category
         'ToolStripButton5
         '
         Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton5.Image = Global.ProjectRK.My.Resources.Resources._03next
+        Me.ToolStripButton5.Image = Global.ProjectRK.My.Resources.Resources.mnext
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton5.Size = New System.Drawing.Size(44, 44)
@@ -256,7 +256,7 @@ Partial Class Form_Category
         'ToolStripButton6
         '
         Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton6.Image = Global.ProjectRK.My.Resources.Resources._04last
+        Me.ToolStripButton6.Image = Global.ProjectRK.My.Resources.Resources.mlast
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton6.Size = New System.Drawing.Size(44, 44)
@@ -279,7 +279,7 @@ Partial Class Form_Category
         'ToolStripButton3
         '
         Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = Global.ProjectRK.My.Resources.Resources._01first
+        Me.ToolStripButton3.Image = Global.ProjectRK.My.Resources.Resources.mfirst
         Me.ToolStripButton3.Name = "ToolStripButton3"
         Me.ToolStripButton3.RightToLeftAutoMirrorImage = True
         Me.ToolStripButton3.Size = New System.Drawing.Size(44, 44)

@@ -3,9 +3,9 @@ Imports System.Data.SqlClient
 
 Module Module1
 
-    Public conStr As String =
-        "Server= .\SQLEXPRESS; Database = ProjectV2; Integrated Security = true" 'your sql server me is RK570815\SQLEXPRESS and my sql server dont use sa account.
-    'เปลี่ยนจาก RK570815\SQLEXPRESS เป็น server ของคุณ
+    Public conStr As String = "Server = .\ SQLEXPRESS; Database = ProjectV2; Integrated Security = True"
+    'หรือ "Server= .\SQLEXPRESS; Database = ProjectV2; Integrated Security = true" 
+    ' "Server=(localDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\database\ProjectV2.mdf"
     Public connection As New SqlConnection(conStr)
     Public command As New SqlCommand("", connection)
     Public adapter As New SqlDataAdapter

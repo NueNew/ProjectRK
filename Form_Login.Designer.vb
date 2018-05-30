@@ -134,7 +134,7 @@ Partial Class Form_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 28.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.ProjectRK.My.Resources.Resources.Bangkok_Vector
+        Me.BackgroundImage = Global.ProjectRK.My.Resources.Resources.BangkokVector
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.GroupBox1)

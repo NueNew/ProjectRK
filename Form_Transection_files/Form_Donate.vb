@@ -194,7 +194,7 @@ Public Class Form_Donate
                 Dim rpt As New ReportDocument
                 Dim directory As String = My.Application.Info.DirectoryPath
 
-                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\R_DON.rpt")
+                rpt.Load("C:\MYPROJECT\ProjectRK\Forms_Report_files\R_DON.rpt") 'ทดสอบวันนี้
                 rpt.SetParameterValue("ORD", Me.txtOrderDID.Text)
 
                 Form_Report_CR_DON.CrystalReportViewer1.ReportSource = rpt
