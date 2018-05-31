@@ -22,32 +22,12 @@ ProjectRK
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:ProjectRK.My.Resources.Resources._01first">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:ProjectRK.My.Resources.Resources._02previous">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:ProjectRK.My.Resources.Resources._03next">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:ProjectRK.My.Resources.Resources._04last">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:ProjectRK.My.Resources.Resources.background2887">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:ProjectRK.My.Resources.Resources.Bangkok_Vector">
+<member name="P:ProjectRK.My.Resources.Resources.BangkokVector">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -98,6 +78,26 @@ ProjectRK
 </summary>
 </member>
 <member name="P:ProjectRK.My.Resources.Resources.m6">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.mfirst">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.mlast">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.mnext">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjectRK.My.Resources.Resources.mprevious">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

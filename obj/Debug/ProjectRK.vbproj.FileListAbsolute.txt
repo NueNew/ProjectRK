@@ -188,3 +188,4 @@ C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbproj.CopyComplete
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.exe
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.xml
 C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.pdb
+C:\MYPROJECT\ProjectRK\obj\Debug\ProjectRK.vbprojAssemblyReference.cache

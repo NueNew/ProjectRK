@@ -1598,14 +1598,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectRK.exe" size="5568440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectRK.exe" size="5567928">
       <assemblyIdentity name="ProjectRK" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g2xRiI15gXwZp5mNkdjBkiDBjxndOV9CxUvJnvPLSvQ=</dsig:DigestValue>
+        <dsig:DigestValue>FCnF/FwK6EPFOxIfJgmUACE0GKlchsckS5TJY2MPN2M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1681,13 +1681,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ProjectRK.exe.config" size="2701">
+  <file name="ProjectRK.exe.config" size="2904">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>g3/0K9stvq06XJ+FQu22+qXQrvX6/+ZqzKTSEXc0SNM=</dsig:DigestValue>
+      <dsig:DigestValue>nuwC6HNl3QnA+KxSPZiY1R6uA6taU3lhlHmHa3DTUV8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

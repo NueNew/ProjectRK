@@ -118,7 +118,7 @@ Partial Public Class DataClassesDataContext
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.ProjectRK.My.MySettings.Default.ProjectV2ConnectionString, mappingSource)
+		MyBase.New(Global.ProjectRK.My.MySettings.Default.ProjectV2ConnectionString1, mappingSource)
 		OnCreated
 	End Sub
 	

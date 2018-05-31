@@ -185,7 +185,6 @@ C:\MYPROJECT\ProjectRK\bin\Release\System.Web.Services.dll
 C:\MYPROJECT\ProjectRK\bin\Release\System.Windows.Forms.dll
 C:\MYPROJECT\ProjectRK\bin\Release\System.Xml.dll
 C:\MYPROJECT\ProjectRK\bin\Release\System.Xml.Linq.dll
-C:\MYPROJECT\ProjectRK\obj\Release\ProjectRK.vbprojAssemblyReference.cache
 C:\MYPROJECT\ProjectRK\obj\Release\ProjectRK.TrustInfo.xml
 C:\MYPROJECT\ProjectRK\obj\Release\ProjectRK.exe.manifest
 C:\MYPROJECT\ProjectRK\obj\Release\ProjectRK.application
